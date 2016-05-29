@@ -8,7 +8,7 @@ namespace LibreriaClasesPoi
 {
     public class CGP:Poi
     {
-        //ATRIBUTOS/
+        //ATRIBUTOS//
         public List<string> Servicios = new List<string>();
 
         //CONSTRUCTOR//
