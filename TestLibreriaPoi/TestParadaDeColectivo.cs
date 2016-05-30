@@ -22,5 +22,10 @@ namespace TestLibreriaPoi
             ParadaDeColectivo parada114 = new ParadaDeColectivo("114", new Coordenada(100, 600), new Direccion(200, "Av. Cordoba"), CrearListString("114", "parada", "colectivo"), new Dictionary<string, rango>());
             Assert.AreEqual(true, parada114.EstaDisponible(DateTime.Now));
         }
+
+        public void buscarPoi()
+        {
+            ParadaDeColectivo parada114 = new ParadaDeColectivo("114", new Coordenada(100, 600), new Direccion(200, "Av. Cordoba"), CrearListString("114", "parada", "colectivo"), new Dictionary<string, rango>());
+        }
     }
 }

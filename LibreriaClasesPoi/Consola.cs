@@ -8,10 +8,18 @@ namespace LibreriaClasesPoi
 {
     public class Consola
     {
+        //CONSTRUCTOR//
+        public Consola(Coordenada miCoordenada, int miComuna, List<Poi> missPois)
+        {
+            coordenada = miCoordenada;
+            Comuna = miComuna;
+            MisPois = missPois;
+        }
+
         //ATRIBUTOS//
         public Coordenada coordenada;
         public int Comuna { get; set; }
-        public List<Poi> misPois = new List<Poi>();
+        public List<Poi> MisPois { get; set; }
 
         //METODOS PRINCIPALES//
 
