@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibreriaPoi", "TestLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPoisAppVisual", "TestPoisAppVisual\TestPoisAppVisual.csproj", "{E0D3B224-5843-4B64-8ADB-18E403A89659}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj", "{61E9FC82-47B0-43C3-8749-95D3A9967060}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E0D3B224-5843-4B64-8ADB-18E403A89659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D3B224-5843-4B64-8ADB-18E403A89659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D3B224-5843-4B64-8ADB-18E403A89659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

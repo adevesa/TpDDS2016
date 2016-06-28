@@ -49,6 +49,12 @@
     <Compile Include="ParadaDeColectivo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj">
+      <Project>{61e9fc82-47b0-43c3-8749-95d3a9967060}</Project>
+      <Name>GoogleApi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

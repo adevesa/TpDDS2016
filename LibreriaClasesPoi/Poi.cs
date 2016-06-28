@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GoogleApi;
+using GoogleApi.Entities.Common;
+using GoogleApi.Entities.Maps.Directions.Request;
+using GoogleApi.Entities.Maps.DistanceMatrix.Request;
+using GoogleApi.Entities.Maps.Elevation.Request;
+using GoogleApi.Entities.Maps.Geocode.Request;
 
 namespace LibreriaClasesPoi
 {
     public partial class Poi
     {
-        //Atributos de la clase//
+        //Atributos de la clase////////////////
         public string Nombre { get; set; }
         public Coordenada coordenada;
         public Direccion direccion;
@@ -17,9 +23,20 @@ namespace LibreriaClasesPoi
         public List<string> PalabrasClaves { get; set; }
 
 
-        //Metodos PRINCIPALES//
-
-
+                            //Metodos PRINCIPALES//
+         //VALIDAR poi//
+         public bool Esvalido()
+        {
+            return (TieneNombre() && EsUbicable());
+        }
+        public bool TieneNombre()
+        {
+            return (this.Nombre != null);
+        }
+        public bool EsUbicable()
+        {
+            var _request = new GeocodingRequest{ Address = "285 Bedford Ave, Brooklyn, NY 11211, USA" };
+        }
         //Cercania con otra Coordenada//
         public virtual bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
         {
@@ -84,6 +101,11 @@ namespace LibreriaClasesPoi
             return Between(hora, turno.horarioInicio, turno.horarioFin);
         }
 
+        //CONVERTIR ESTRUCTURA DIRECCION EN STRING DIRECCION CON FORMA "CALLE ALTURA, CABA, BUENOS AIRES, ARGENTINA"//
+        public string ConvertirDireccion()
+        {
+            
+        }
         //METODO A MODO DE PRUEBA//
         public int primerComponent(rango reinchHours)
         {

@@ -39,7 +39,7 @@ namespace LibreriaClasesPoi
         //BUSCAR POIs//
         public List<string> BuscarPOIs(string pois)
         {
-            List<Poi> poisBuscados = misPois.FindAll(poi => poi.BuscarCoincidencia(pois));
+            List<Poi> poisBuscados = MisPois.FindAll(poi => poi.BuscarCoincidencia(pois));
             List<string> nombresPoi = AgarrarLosNombres(poisBuscados);
             return nombresPoi;
         }
