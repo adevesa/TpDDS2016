@@ -12,14 +12,15 @@ namespace LibreriaClasesPoi
 
         //METODOS PRINCIPALES//
         //ARMO EL CONSTRUCTOR//
-        public ParadaDeColectivo( string nombre, Coordenada suCoordenada, Direccion suDireccion, List<string> palabrasClaves, Dictionary<string, rango> suHorarioDeAtencion)
+        public ParadaDeColectivo( String nombre, Direccion suDireccion, List<string> palabrasClaves, Dictionary<string, rango> suHorarioDeAtencion)
         {
             Nombre = nombre;
-            coordenada = suCoordenada;
             direccion = suDireccion;
             PalabrasClaves = palabrasClaves;
             HorarioDeAtencion = suHorarioDeAtencion;
+            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
         }
+        
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//
         public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
         {
@@ -31,5 +32,7 @@ namespace LibreriaClasesPoi
         {
             return true;
         }
+
+        
     }
 }

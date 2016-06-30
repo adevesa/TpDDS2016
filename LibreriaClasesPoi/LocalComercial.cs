@@ -13,15 +13,16 @@ namespace LibreriaClasesPoi
         public List<string> Rubros { get; set; }
 
         //CONSTRUCTOR//
-        public  LocalComercial(string nombre, Coordenada suCoordenada, Direccion suDireccion, List<string> palabrasClaves, List<string> susRubros, Dictionary<string, rango> suHorarioDeAtencion)
+        public  LocalComercial(string nombre, Direccion suDireccion, List<string> palabrasClaves, List<string> susRubros, Dictionary<string, rango> suHorarioDeAtencion)
         {
             Nombre = nombre;
-            coordenada = suCoordenada;
             direccion = suDireccion;
             PalabrasClaves = palabrasClaves;
             Rubros = susRubros;
             HorarioDeAtencion = suHorarioDeAtencion;
+            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
         }
+        
         //METODOS PRINCIPALES//
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//
         public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)

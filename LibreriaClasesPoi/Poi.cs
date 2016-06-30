@@ -25,18 +25,36 @@ namespace LibreriaClasesPoi
 
                             //Metodos PRINCIPALES//
          //VALIDAR poi//
-         public bool Esvalido()
+        public bool Esvalido()
         {
             return (TieneNombre() && EsUbicable());
         }
+
         public bool TieneNombre()
         {
             return (this.Nombre != null);
         }
+
         public bool EsUbicable()
         {
-            var _request = new GeocodingRequest{ Address = "285 Bedford Ave, Brooklyn, NY 11211, USA" };
+            //Llamada a Google maps//
+
+            var _request = new GeocodingRequest{ Address = this.ConvertirDireccion() };
+            var _result = GoogleMaps.Geocode.Query(_request);
+            AgregarCoordenadas(_result.Results.First().Geometry.Location.Latitude, _result.Results.First().Geometry.Location.Longitude);
+            return (_result.Status == Status.OK);
+
+            //Status.OK, _result.Status//
+            // Assert.AreEqual("40.7140415,-73.9613119", _result.Results.First().Geometry.Location.LocationString);//
         }
+
+        //Agregar coordenadas//
+        public void AgregarCoordenadas(double latitude, double longitude)
+        {
+            this.coordenada.latitud = latitude;
+            this.coordenada.longitud = longitude;
+        }
+
         //Cercania con otra Coordenada//
         public virtual bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
         {
@@ -104,8 +122,11 @@ namespace LibreriaClasesPoi
         //CONVERTIR ESTRUCTURA DIRECCION EN STRING DIRECCION CON FORMA "CALLE ALTURA, CABA, BUENOS AIRES, ARGENTINA"//
         public string ConvertirDireccion()
         {
-            
+            string direcc;
+            direcc = this.direccion.callePrincipal + this.direccion.altura.ToString() + "," + "CABA Buenos Aires Argentina";
+            return direcc;
         }
+
         //METODO A MODO DE PRUEBA//
         public int primerComponent(rango reinchHours)
         {

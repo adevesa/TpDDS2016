@@ -9,17 +9,19 @@ namespace LibreriaClasesPoi
     public class Consola
     {
         //CONSTRUCTOR//
-        public Consola(Coordenada miCoordenada, int miComuna, List<Poi> missPois)
+        public Consola(Coordenada miCoordenada, int miComuna, PoiCollection gestorPoi, Dictionary<string, double> administradoresDePois)
         {
             coordenada = miCoordenada;
             Comuna = miComuna;
-            MisPois = missPois;
+            administracionPois = gestorPoi;
+            administradores = administradoresDePois;
         }
 
         //ATRIBUTOS//
         public Coordenada coordenada;
         public int Comuna { get; set; }
-        public List<Poi> MisPois { get; set; }
+        public PoiCollection administracionPois;
+        public Dictionary<string, double> administradores;
 
         //METODOS PRINCIPALES//
 
@@ -39,7 +41,7 @@ namespace LibreriaClasesPoi
         //BUSCAR POIs//
         public List<string> BuscarPOIs(string pois)
         {
-            List<Poi> poisBuscados = MisPois.FindAll(poi => poi.BuscarCoincidencia(pois));
+            List<Poi> poisBuscados = administracionPois.Pois.FindAll(poi => poi.BuscarCoincidencia(pois));
             List<string> nombresPoi = AgarrarLosNombres(poisBuscados);
             return nombresPoi;
         }
@@ -48,7 +50,7 @@ namespace LibreriaClasesPoi
         {
 
             List<string> nombres = new List<string>();
-            foreach (Poi poi in pois)
+            foreach (Poi poi in this.administracionPois.Pois)
             {
                 nombres.Add(poi.Nombre);
             }

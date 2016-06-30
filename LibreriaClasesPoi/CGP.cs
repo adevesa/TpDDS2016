@@ -12,15 +12,16 @@ namespace LibreriaClasesPoi
         public List<string> Servicios = new List<string>();
 
         //CONSTRUCTOR//
-        public CGP(string nombre, Coordenada suCoordenada, Direccion suDireccion, List<string> palabrasClaves, List<string> susServicios, Dictionary<string, rango> suHorarioDeAtencion)
+        public CGP(string nombre, Direccion suDireccion, List<string> palabrasClaves, List<string> susServicios, Dictionary<string, rango> suHorarioDeAtencion)
         {
             Nombre = nombre;
-            coordenada = suCoordenada;
             direccion = suDireccion;
             PalabrasClaves = palabrasClaves;
             Servicios = susServicios;
             HorarioDeAtencion = suHorarioDeAtencion;
+            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
         }
+        
         //METODOS PRINCIPALES//
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//
         public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
