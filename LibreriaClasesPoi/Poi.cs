@@ -16,6 +16,7 @@ namespace LibreriaClasesPoi
     {
         //Atributos de la clase////////////////
         public string Nombre { get; set; }
+        public int Id { get; set; }
         public Coordenada coordenada;
         public Direccion direccion;
         public int ZonaDeComuna { get; set; }

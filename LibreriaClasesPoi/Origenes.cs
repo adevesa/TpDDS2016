@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace LibreriaClasesPoi
 {
-    public class PoiBDO
+    public interface Origenes
     {
-        public virtual void guardarPoi(Poi unPoi) { }
+       List<Poi> find (String criterio);
     }
 }

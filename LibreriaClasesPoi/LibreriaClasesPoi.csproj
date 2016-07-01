@@ -41,18 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Administrador.cs" />
+    <Compile Include="Buscador.cs" />
     <Compile Include="CGP.cs" />
-    <Compile Include="CreadorDePoi.cs" />
-    <Compile Include="CreadorPoiCollection.cs" />
-    <Compile Include="MetodosAuxiliares.cs" />
+    <Compile Include="Origenes.cs" />
+    <Compile Include="OrigenLocal.cs" />
     <Compile Include="Poi.cs" />
     <Compile Include="Consola.cs" />
     <Compile Include="EstructurasAux.cs" />
     <Compile Include="LocalComercial.cs" />
     <Compile Include="ParadaDeColectivo.cs" />
-    <Compile Include="PoiBDO.cs" />
-    <Compile Include="PoiCollection.cs" />
+    <Compile Include="PoiDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositorioDePois.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
