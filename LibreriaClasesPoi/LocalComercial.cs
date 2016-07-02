@@ -13,7 +13,7 @@ namespace LibreriaClasesPoi
         public List<string> Rubros { get; set; }
 
         //CONSTRUCTOR//
-        public  LocalComercial(int id,string nombre, Direccion suDireccion, Coordenada coordenadaa)
+        public  LocalComercial(int id,string nombre, string suDireccion, Coordenada coordenadaa)
         {
             base.init(id, nombre, coordenadaa);
             base.agregarDireccion(suDireccion);

@@ -34,7 +34,7 @@ namespace Adapters
         {
             foreach(string servicio in modeloBanco.servicios)
             {
-                bancoModelado.agregarServicios(servicio);
+                bancoModelado.agregarServicioSinLimiteHorario(servicio);
             }
         }
     }

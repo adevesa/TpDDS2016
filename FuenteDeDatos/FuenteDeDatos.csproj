@@ -40,10 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EstructurasRecibidas.cs" />
     <Compile Include="FuenteDeDatosBanco.cs" />
     <Compile Include="FuenteDeDatosCGPS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
+      <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
+      <Name>LibreriaClasesPoi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

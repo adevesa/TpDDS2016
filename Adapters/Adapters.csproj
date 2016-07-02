@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BancoAdapter.cs" />
-    <Compile Include="BancoDTO.cs" />
+    <Compile Include="CgpAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

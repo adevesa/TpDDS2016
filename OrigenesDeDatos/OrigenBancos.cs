@@ -11,7 +11,7 @@ namespace OrigenesDeDatos
 {
     public class OrigenBancos : Origenes
     {
-        public FuenteDeDatosBanco fuente;
+        private FuenteDeDatosBanco fuente;
 
         OrigenBancos(FuenteDeDatosBanco fuentee)
         {

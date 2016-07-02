@@ -8,6 +8,6 @@ namespace FuenteDeDatos
 {
     public interface FuenteDeDatosCGPS
     {
-        List<string> buscar(string criterio);
+        List<DatosExternosCGP> buscar(string criterio);
     }
 }

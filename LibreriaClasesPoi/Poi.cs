@@ -18,7 +18,7 @@ namespace LibreriaClasesPoi
         public string Nombre { get; set; }
         public int Id { get; set; }
         public Coordenada coordenada;
-        public Direccion direccion;
+        public string direccion;
         public int ZonaDeComuna { get; set; }
         public Dictionary<string, rango> HorarioDeAtencion { get; set; }
         public List<string> PalabrasClaves { get; set; }
@@ -132,7 +132,7 @@ namespace LibreriaClasesPoi
         public string ConvertirDireccion()
         {
             string direcc;
-            direcc = this.direccion.callePrincipal + this.direccion.altura.ToString() + "," + "CABA Buenos Aires Argentina";
+            direcc = this.direccion + "," + "CABA Buenos Aires Argentina";
             return direcc;
         }
 
@@ -155,7 +155,7 @@ namespace LibreriaClasesPoi
         }
 
         //Agregar direccion//
-        public void agregarDireccion(Direccion dir)
+        public void agregarDireccion(string dir)
         {
             this.direccion = dir;
         }

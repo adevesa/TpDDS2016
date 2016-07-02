@@ -16,19 +16,7 @@ namespace LibreriaClasesPoi
                 longitud = longi;
             }
         }
-
-        public struct Direccion
-        {
-            public int altura;
-            public string callePrincipal;
-            public Direccion(int alt, string calle)
-            {
-                altura = alt;
-                callePrincipal = calle;
-            }
-
-        }
-
+    
         public struct turno
         {
             public int horarioInicio;
@@ -52,5 +40,12 @@ namespace LibreriaClasesPoi
                 turno3 = tres;
             }
         }
+
+        public struct servicio
+    {
+        public string nombreServicio;
+        public rango rangoDeAtencion;
+
     }
+}
 
