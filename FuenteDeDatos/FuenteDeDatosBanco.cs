@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibreriaClasesPoi
+namespace FuenteDeDatos
 {
-    public interface Origenes
+    public interface FuenteDeDatosBanco
     {
-       List<Poi> find (String criterio);
+        List<string> buscar(string criterio);
     }
 }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibreriaClasesPoi.CGP" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CGP.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibreriaClasesPoi.LocalComercial" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAEAAAAIAgAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>LocalComercial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibreriaClasesPoi.ParadaDeColectivo" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ParadaDeColectivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibreriaClasesPoi.Poi" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECACQABACAIQIEAIwAAAoAgAAAAAAIYAAAAAAAABgAg=</HashCode>
+      <FileName>Poi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}</ProjectGuid>
+    <ProjectGuid>{9B6F1FEE-B454-467E-A5E1-DCFBF9BC7119}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibreriaClasesPoi</RootNamespace>
-    <AssemblyName>LibreriaClasesPoi</AssemblyName>
+    <RootNamespace>OrigenesDeDatos</RootNamespace>
+    <AssemblyName>OrigenesDeDatos</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,23 +40,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.cs" />
-    <Compile Include="CGP.cs" />
-    <Compile Include="Poi.cs" />
-    <Compile Include="EstructurasAux.cs" />
-    <Compile Include="LocalComercial.cs" />
-    <Compile Include="ParadaDeColectivo.cs" />
-    <Compile Include="PoiConServicios.cs" />
+    <Compile Include="OrigenBancos.cs" />
+    <Compile Include="OrigenCGPS.cs" />
+    <Compile Include="Origenes.cs" />
+    <Compile Include="OrigenLocal.cs" />
+    <Compile Include="PoiDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj">
-      <Project>{61e9fc82-47b0-43c3-8749-95d3a9967060}</Project>
-      <Name>GoogleApi</Name>
+    <ProjectReference Include="..\Adapters\Adapters.csproj">
+      <Project>{c8578b28-9434-4baf-af5c-b390599ccf81}</Project>
+      <Name>Adapters</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
+    <ProjectReference Include="..\FuenteDeDatos\FuenteDeDatos.csproj">
+      <Project>{bef03d31-d549-4e5c-8bfd-a708f6c12f20}</Project>
+      <Name>FuenteDeDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
+      <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
+      <Name>LibreriaClasesPoi</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

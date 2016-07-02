@@ -13,28 +13,34 @@ namespace LibreriaClasesPoi
         public List<string> Rubros { get; set; }
 
         //CONSTRUCTOR//
-        public  LocalComercial(string nombre, Direccion suDireccion, List<string> palabrasClaves, List<string> susRubros, Dictionary<string, rango> suHorarioDeAtencion)
+        public  LocalComercial(int id,string nombre, Direccion suDireccion, Coordenada coordenadaa)
         {
-            Nombre = nombre;
-            direccion = suDireccion;
-            PalabrasClaves = palabrasClaves;
-            Rubros = susRubros;
-            HorarioDeAtencion = suHorarioDeAtencion;
-            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
+            base.init(id, nombre, coordenadaa);
+            base.agregarDireccion(suDireccion);
+            this.Rubros = new List<string>();
+ 
         }
         
         //METODOS PRINCIPALES//
+
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//
         public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
         {
             return (DistanciaMenorA(coordenadaDelOtroPunto, CriterioDeCercania));
         }
 
-        // Responde al metodo "BuscarPoi" de Consolita
+        
         public override bool BuscarCoincidencia(string palabraBuscada)
         {
             return (this.Rubros.Contains(palabraBuscada) || this.PalabrasClaves.Contains(palabraBuscada));
         }
+
+        //Agregar rubros//
+        public void agregarRubro(string rubro)
+        {
+            agregarElemA(Rubros, rubro);
+        }
+
 
     }
 }

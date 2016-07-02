@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibreriaClasesPoi
+namespace FuenteDeDatos
 {
-    public abstract class Usuario
+    public interface FuenteDeDatosCGPS
     {
+        List<string> buscar(string criterio);
     }
 }

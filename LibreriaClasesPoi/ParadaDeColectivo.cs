@@ -8,17 +8,12 @@ namespace LibreriaClasesPoi
 {
     public class ParadaDeColectivo:Poi
     {
-        //ATRIBUTOS//
-
         //METODOS PRINCIPALES//
-        //ARMO EL CONSTRUCTOR//
-        public ParadaDeColectivo( String nombre, Direccion suDireccion, List<string> palabrasClaves, Dictionary<string, rango> suHorarioDeAtencion)
+        //CONSTRUCTOR//
+        public ParadaDeColectivo(int id, string nombre, Coordenada coordenadaa)
         {
-            Nombre = nombre;
-            direccion = suDireccion;
-            PalabrasClaves = palabrasClaves;
-            HorarioDeAtencion = suHorarioDeAtencion;
-            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
+            base.init(id, nombre, coordenada);
+       
         }
         
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//

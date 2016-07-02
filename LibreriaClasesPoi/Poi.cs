@@ -23,7 +23,15 @@ namespace LibreriaClasesPoi
         public Dictionary<string, rango> HorarioDeAtencion { get; set; }
         public List<string> PalabrasClaves { get; set; }
 
-
+        public void init(int id, string nombre, Coordenada coordenadaa)
+        {
+            PalabrasClaves = new List<string>();
+            HorarioDeAtencion = new Dictionary<string, rango>();
+            this.Id = id;
+            this.Nombre = nombre;
+            this.coordenada = coordenadaa;
+        }
+        
                             //Metodos PRINCIPALES//
          //VALIDAR poi//
         public bool Esvalido()
@@ -72,7 +80,7 @@ namespace LibreriaClasesPoi
             return ((HorarioDeAtencion.ContainsKey(diaActual)) && (EstaEnRangoHorario(diaActual, hora)));
         }
 
-        // Responde al metodo "BuscarPoi" de Consolita
+        //Buscar Coincidencia//
         public virtual bool BuscarCoincidencia(string palabraBuscada)
         {
             return (this.PalabrasClaves.Contains(palabraBuscada));
@@ -128,13 +136,29 @@ namespace LibreriaClasesPoi
             return direcc;
         }
 
-        //METODO A MODO DE PRUEBA//
-        public int primerComponent(rango reinchHours)
+        //Agregar Horarios de atención//
+        public void agregarDiaYHorario(Dictionary<string, rango> diccionario, string dia, int inicio1t, int fin1t, int inicio2t, int fin2t, int inicio3t, int fin3t)
         {
-            return (reinchHours.turno1.horarioInicio);
+            diccionario[dia] = new rango(new turno(inicio1t, fin2t), new turno(inicio2t, fin2t), new turno(inicio3t, fin3t));
         }
 
-   
+        //Agregar Elementos a lista//
+        public void agregarElemA(List<string> lista, string palabra)
+        {
+            lista.Add(palabra);
+        }
 
+        //Agregar palabras claves//
+        public void agregarPalabraClave(string palabra)
+        {
+            agregarElemA(PalabrasClaves, palabra);
+        }
+
+        //Agregar direccion//
+        public void agregarDireccion(Direccion dir)
+        {
+            this.direccion = dir;
+        }
+       
     }
 }

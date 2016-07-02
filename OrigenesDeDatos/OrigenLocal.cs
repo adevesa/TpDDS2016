@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibreriaClasesPoi;
 
-namespace LibreriaClasesPoi
+
+namespace OrigenesDeDatos
 {
-    class OrigenLocal : Origenes
+    public class OrigenLocal : Origenes
     {
+        //BASE DE DATOS PROPIA DEL SISTEMA//
+
         public PoiDAO dao;
 
         //Constructor//
@@ -35,12 +39,11 @@ namespace LibreriaClasesPoi
         }
 
         //Buscar//
-        public List<Poi> find(String criteria)
+        public List<Poi> find(String criterio)
         {
-            return dao.pois.FindAll(poi => poi.BuscarCoincidencia(criteria));
+            return dao.pois.FindAll(poi => poi.BuscarCoincidencia(criterio));
 
         }
-
 
     }
 }

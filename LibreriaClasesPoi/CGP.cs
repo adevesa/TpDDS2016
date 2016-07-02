@@ -6,20 +6,14 @@ using System.Threading.Tasks;
 
 namespace LibreriaClasesPoi
 {
-    public class CGP:Poi
+    public class CGP: PoiConServicios
     {
-        //ATRIBUTOS//
-        public List<string> Servicios = new List<string>();
-
         //CONSTRUCTOR//
-        public CGP(string nombre, Direccion suDireccion, List<string> palabrasClaves, List<string> susServicios, Dictionary<string, rango> suHorarioDeAtencion)
+        public CGP(int id,string nombre,Coordenada coordenadaa, Direccion suDireccion)
         {
-            Nombre = nombre;
-            direccion = suDireccion;
-            PalabrasClaves = palabrasClaves;
-            Servicios = susServicios;
-            HorarioDeAtencion = suHorarioDeAtencion;
-            if (!Esvalido()) { throw new System.ArgumentException("El POI no es válido"); }
+            base.init(id, nombre, coordenadaa);
+            base.agregarDireccion(suDireccion);
+            base.initService();
         }
         
         //METODOS PRINCIPALES//
