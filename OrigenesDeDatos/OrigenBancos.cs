@@ -20,7 +20,7 @@ namespace OrigenesDeDatos
 
         public List<Poi> find(string criterio)
         {
-            List<String> result = fuente.buscar(criterio);
+            List<DatosExternosBanco> result = fuente.buscar(criterio);
             return BancoAdapter.adapt(result);
 
         }

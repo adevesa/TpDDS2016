@@ -21,11 +21,8 @@ namespace LibreriaClasesPoi
         public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
         { return (ZonaDeComuna == comunaDelOtroPunto); }
 
-        // Responde al metodo "BuscarPoi" de Consolita
-        public override bool BuscarCoincidencia(string palabraBuscada)
-        {
-            return (this.Servicios.Contains(palabraBuscada) || this.PalabrasClaves.Contains(palabraBuscada));
-        }
+        
+        
 
     }
 }
