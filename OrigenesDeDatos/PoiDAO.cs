@@ -42,14 +42,14 @@ namespace OrigenesDeDatos
         //Algunos pois locales//
         private List<Poi> basedPois()
         {
-            List<Poi> listBased= new List<Poi>();
+            List<Poi> listBased = new List<Poi>();
 
             //Locales comerciales//
 
             LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247", new Coordenada(-34.6034261, -58.4109124));
             abastoShopping.agregarPalabraClave("compras", "distraccion", "cine", "comida", "ropa", "abasto shopping");
             listBased.Add(abastoShopping);
-            LocalComercial galeriaJardin = new LocalComercial(2, "galeri jardin", "florida 537", new Coordenada(-34.6016993, -58.3751937));
+            LocalComercial galeriaJardin = new LocalComercial(2, "galeria jardin", "florida 537", new Coordenada(-34.6016993, -58.3751937));
             galeriaJardin.agregarPalabraClave("tecnologia", "computadoras", "computadora", "tablets", "notebooks", "bajos precios", "placa madre", "galeria jardin");
             listBased.Add(galeriaJardin);
             LocalComercial mcDonaldCordoba = new LocalComercial(3, "mc donald cordoba", "avenida córdoba 1188", new Coordenada(-34.59458879999999, -58.4124393));
@@ -80,7 +80,7 @@ namespace OrigenesDeDatos
             cgpComunal5.agregarPalabraClave("cgp comunal 5", "cgp", "centro de gestion y participacion", "comuna 5");
             listBased.Add(cgpComunal5);
 
-            CGP cgpComunal1= new CGP(7, "cgp comunal 1", new Coordenada(-34.6003536, -58.3868185), "uruguay 740 monserrat", 1);
+            CGP cgpComunal1 = new CGP(7, "cgp comunal 1", new Coordenada(-34.6003536, -58.3868185), "uruguay 740 monserrat", 1);
             cgpComunal1.agregarPalabraClave("cgp comunal 1", "cgp", "centro de gestion y participacion", "comuna 1");
             listBased.Add(cgpComunal1);
 
@@ -91,16 +91,27 @@ namespace OrigenesDeDatos
         //Cargar pois bases//
         private void cargarPoisBasicos()
         {
-            foreach(Poi unPoi in (this.basedPois()))
+            foreach (Poi unPoi in (this.basedPois()))
             {
                 this.crear(unPoi);
             }
         }
 
+        public List<string> mappearNombresPois(List<Poi> pois)
+        {
 
-    
+            List<string> nombres = new List<string>();
+            foreach (Poi poi in pois)
+            {
+                nombres.Add(poi.Nombre);
+            }
+            return nombres;
 
-        
 
+
+
+
+
+        }
     }
 }

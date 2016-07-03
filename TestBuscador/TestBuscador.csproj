@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}</ProjectGuid>
+    <ProjectGuid>{1A9B2811-5D4D-4574-A46E-23C3017E9BEE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestLibreríaPoi</RootNamespace>
-    <AssemblyName>TestLibreríaPoi</AssemblyName>
+    <RootNamespace>TestBuscador</RootNamespace>
+    <AssemblyName>TestBuscador</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -45,12 +45,37 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Buscar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consola\Consola.csproj">
+      <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
+      <Name>Consola</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FuenteDeDatos\FuenteDeDatos.csproj">
+      <Project>{bef03d31-d549-4e5c-8bfd-a708f6c12f20}</Project>
+      <Name>FuenteDeDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
+      <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
+      <Name>LibreriaClasesPoi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OrigenesDeDatos\OrigenesDeDatos.csproj">
+      <Project>{9b6f1fee-b454-467e-a5e1-dcfbf9bc7119}</Project>
+      <Name>OrigenesDeDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+      <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
+      <Name>Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

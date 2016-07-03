@@ -9,10 +9,17 @@ using Repositorio;
 
 namespace Consola
 {
-    public class Consola
+    public class TerminalConsola
     {
+
+        //ATRIBUTOS//
+        public string nombre;
+        public Coordenada coordenada;
+        public int comuna;
+        public Buscador buscador;
+
         //CONSTRUCTOR//
-        public Consola(string nombreTerminal, int miComuna, Buscador unBuscador)
+        public TerminalConsola(string nombreTerminal, int miComuna, Buscador unBuscador)
         {
             this.nombre = nombreTerminal;
             this.comuna = miComuna;
@@ -20,11 +27,6 @@ namespace Consola
 
         }
 
-        //ATRIBUTOS//
-        public string nombre;
-        public Coordenada coordenada;
-        public int comuna;
-        public Buscador buscador;
 
 
         //METODOS PRINCIPALES//
@@ -49,7 +51,7 @@ namespace Consola
             return lista;
         }
 
-        public List<string> AgarrarLosNombres(List<Poi> pois)
+        public List<string> mappearNombresPois(List<Poi> pois)
         {
 
             List<string> nombres = new List<string>();
