@@ -31,12 +31,7 @@ namespace Consola
 
         //METODOS PRINCIPALES//
 
-        //Consultar CERCANIA//
-        public bool consultarCercania(Poi unPoi)
-        {
-            return unPoi.CercanoDe(coordenada, comuna);
-        }
-
+      
         //Consultar DISPONIBILIDAD ACTUAL//
         public bool estaDisponible(Poi puntoDeInteres)
         {

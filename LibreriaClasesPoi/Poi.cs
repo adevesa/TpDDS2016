@@ -17,9 +17,10 @@ namespace LibreriaClasesPoi
         //Atributos de la clase////////////////
         public string Nombre { get; set; }
         public int Id { get; set; }
-        public Coordenada coordenada;
+        private Coordenada coordenada;
+        public Coordenada getCoordenada() { return coordenada; }
         public string direccion;
-        public int ZonaDeComuna { get; set; }
+        public int comuna { get; set; }
         public Dictionary<string, rango> HorarioDeAtencion { get; set; }
         private List<string> PalabrasClaves;
         public List<string> getPalabrasClaves() { return PalabrasClaves; }
@@ -66,9 +67,9 @@ namespace LibreriaClasesPoi
         }
 
         //Cercania con otra Coordenada//
-        public virtual bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
+        public virtual bool CercanoDe(Poi poi)
         {
-            return (DistanciaMenorA(coordenadaDelOtroPunto, 500));
+            return (DistanciaMenorA(poi.getCoordenada(), 500));
         }
 
         //Calculo de disponibilidad//

@@ -11,6 +11,7 @@ namespace LibreriaClasesPoi
         public string zonasAledañas { get; set; }
         public string nombreDirector { get; set; }
         public string telefono { get; set; }
+        
 
 
         //CONSTRUCTORES//
@@ -19,21 +20,21 @@ namespace LibreriaClasesPoi
             base.init(id, nombre, coordenadaa);
             base.agregarDireccion(suDireccion);
             base.initService();
-            base.ZonaDeComuna = comuna;
+            this.comuna = comuna;
         }
         
         public CGP(int id,int comuna, string direccion)
         {
             base.agregarDireccion(direccion);
-            base.ZonaDeComuna = comuna;
+            this.comuna = comuna;
             base.Id = id;
             base.initService();
         }
 
         //METODOS PRINCIPALES//
         //CERCANIA con otra Coordenada//
-        public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
-        { return (ZonaDeComuna == comunaDelOtroPunto); }
+        public override bool CercanoDe(Poi poi)
+        { return (this.comuna == poi.comuna); }
 
         
         

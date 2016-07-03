@@ -8,7 +8,8 @@ namespace LibreriaClasesPoi
 {
     public abstract class PoiConServicios:Poi
     {
-        public List<servicio> Servicios;
+        private List<servicio> Servicios;
+        public List<servicio> getServicios() { return Servicios; }
 
         public void initService()
         {
@@ -17,7 +18,7 @@ namespace LibreriaClasesPoi
 
         public override bool BuscarCoincidencia(string palabraBuscada)
         {
-            return (this.getService().Any(servicio => servicio.nombreServicio == palabraBuscada) || this.getPalabrasClaves().Contains(palabraBuscada));
+            return (this.getService().Any(servicio => servicio.nombreServicio == palabraBuscada) || base.BuscarCoincidencia(palabraBuscada));
         }
 
         public List<servicio> getService() { return Servicios; }

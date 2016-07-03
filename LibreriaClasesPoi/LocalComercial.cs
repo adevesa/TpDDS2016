@@ -10,7 +10,8 @@ namespace LibreriaClasesPoi
     {
         //ATRIBUTOS//
         public double CriterioDeCercania { get; set; }
-        public List<string> Rubros { get; set; }
+        private List<string> Rubros;
+        public  List<string> getRubros() { return Rubros; }
 
         //CONSTRUCTOR//
         public  LocalComercial(int id,string nombre, string suDireccion, Coordenada coordenadaa)
@@ -24,21 +25,22 @@ namespace LibreriaClasesPoi
         //METODOS PRINCIPALES//
 
         //CERCANIA con otra Coordenada (Sea coordenada de otro POI o de Consola)//
-        public override bool CercanoDe(Coordenada coordenadaDelOtroPunto, int comunaDelOtroPunto)
+        public override bool CercanoDe(Poi poi)
         {
-            return (DistanciaMenorA(coordenadaDelOtroPunto, CriterioDeCercania));
+            return (DistanciaMenorA(poi.getCoordenada(), this.CriterioDeCercania));
         }
 
         
         public override bool BuscarCoincidencia(string palabraBuscada)
         {
-            return (this.Rubros.Contains(palabraBuscada) || base.getPalabrasClaves().Contains(palabraBuscada));
+            return (this.getRubros().Contains(palabraBuscada) || base.getPalabrasClaves().Contains(palabraBuscada));
         }
 
         //Agregar rubros//
-        public void agregarRubro(string rubro)
+        public void agregarRubro(params string[] rubro)
         {
-            agregarElemA(Rubros, rubro);
+            foreach(string unRubro in rubro)
+            agregarElemA(this.getRubros(), unRubro);
         }
 
 

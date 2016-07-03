@@ -14,7 +14,7 @@ namespace LibreriaClasesPoi
             base.initService();
             agregarHorariosFijos();
         }
-        public void agregarHorariosFijos()
+        private void agregarHorariosFijos()
         {
             Dictionary<string, rango> horariosDeBancos = new Dictionary<string, rango>();
             agregarDiaYHorario( "lunes",new rango(10, 12, 12, 15, 0, 0));
@@ -24,5 +24,16 @@ namespace LibreriaClasesPoi
             agregarDiaYHorario("viernes", new rango(10, 12, 12, 15, 0, 0));
 
         }
+
+     
+        private List<string> mappearNombresServicios(List<servicio> listaDeServicios)
+        {
+            List<string> lista = new List<string>();
+            foreach(servicio unServicio in listaDeServicios)
+            {
+                lista.Add(unServicio.nombreServicio);
+            }
+            return lista;       
+         }
     }
 }
