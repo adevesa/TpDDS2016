@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AdministrarPois.cs" />
     <Compile Include="BuscarPoiEnOrigenLocal.cs" />
     <Compile Include="CreacionOrigenLocal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

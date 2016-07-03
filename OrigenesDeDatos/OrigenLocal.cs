@@ -33,9 +33,9 @@ namespace OrigenesDeDatos
         }
 
         //Borrar un Poi//
-        public void borrar(int indice)
+        public void borrar(Poi poi)
         {
-            this.dao.borrar(indice);
+            this.dao.borrar(poi.Id);
         }
 
         //Buscar//
