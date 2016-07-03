@@ -108,7 +108,7 @@ namespace LibreriaClasesPoi
             else return false;
         }
 
-        //CREAMOS BETWEEN//
+        //BETWEEN//
         public bool Between(int x, int minimo, int maximo)
         {
             return ((minimo <= x) && (x < maximo));
@@ -137,9 +137,9 @@ namespace LibreriaClasesPoi
         }
 
         //Agregar Horarios de atención//
-        public void agregarDiaYHorario(Dictionary<string, rango> diccionario, string dia, int inicio1t, int fin1t, int inicio2t, int fin2t, int inicio3t, int fin3t)
+        public void agregarDiaYHorario(string dia, rango horariosDeAtencionDelDia)
         {
-            diccionario[dia] = new rango(new turno(inicio1t, fin2t), new turno(inicio2t, fin2t), new turno(inicio3t, fin3t));
+            this.HorarioDeAtencion[dia] = horariosDeAtencionDelDia;
         }
 
         //Agregar Elementos a lista//
@@ -160,5 +160,6 @@ namespace LibreriaClasesPoi
             this.direccion = dir;
         }
        
+ 
     }
 }

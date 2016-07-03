@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClasesPoi", "LibreriaClasesPoi\LibreriaClasesPoi.csproj", "{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibreriaPoi", "TestLibreriaPoi\TestLibreriaPoi.csproj", "{4AD721EE-47AE-46DD-9C5C-1F2471B22AE9}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj", "{61E9FC82-47B0-43C3-8749-95D3A9967060}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{5E63776B-4098-4AAC-B082-6AC8720A7ACF}"
@@ -19,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuenteDeDatos", "FuenteDeDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters", "Adapters\Adapters.csproj", "{C8578B28-9434-4BAF-AF5C-B390599CCF81}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibreríaPoi", "TestLibreríaPoi\TestLibreríaPoi.csproj", "{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +29,6 @@ Global
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4AD721EE-47AE-46DD-9C5C-1F2471B22AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4AD721EE-47AE-46DD-9C5C-1F2471B22AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4AD721EE-47AE-46DD-9C5C-1F2471B22AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4AD721EE-47AE-46DD-9C5C-1F2471B22AE9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +53,10 @@ Global
 		{C8578B28-9434-4BAF-AF5C-B390599CCF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8578B28-9434-4BAF-AF5C-B390599CCF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8578B28-9434-4BAF-AF5C-B390599CCF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B5E8178-9F6C-4ED2-A9A9-DE1D56A6DEE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

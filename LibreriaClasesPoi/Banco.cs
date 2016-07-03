@@ -17,11 +17,11 @@ namespace LibreriaClasesPoi
         public void agregarHorariosFijos()
         {
             Dictionary<string, rango> horariosDeBancos = new Dictionary<string, rango>();
-            agregarDiaYHorario(horariosDeBancos, "lunes", 10, 12, 12, 15, 0,0 );
-            agregarDiaYHorario(horariosDeBancos, "martes", 10, 12, 12, 15, 0, 0);
-            agregarDiaYHorario(horariosDeBancos, "miercoles", 10, 12, 12, 15, 0, 0);
-            agregarDiaYHorario(horariosDeBancos, "jueves", 10, 12, 12, 15, 0, 0);
-            agregarDiaYHorario(horariosDeBancos, "viernes", 10, 12, 12, 15, 0, 0);
+            agregarDiaYHorario( "lunes",new rango(10, 12, 12, 15, 0, 0));
+            agregarDiaYHorario("martes", new rango(10, 12, 12, 15, 0, 0));
+            agregarDiaYHorario("miercoles", new rango(10, 12, 12, 15, 0, 0));
+            agregarDiaYHorario("jueves", new rango(10, 12, 12, 15, 0, 0));
+            agregarDiaYHorario("viernes", new rango(10, 12, 12, 15, 0, 0));
 
         }
     }

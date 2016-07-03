@@ -10,10 +10,12 @@ namespace Repositorio
 {
     public class Buscador
     {
+
         public List<Poi> find(string criterio)
         {
             RepositorioDePois repositorio = RepositorioDePois.getInstance();
             List<Poi> poisBuscados = repositorio.localOrigin.find(criterio);
+
             return poisBuscados;
         }
     }

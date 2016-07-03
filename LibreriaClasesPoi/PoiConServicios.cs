@@ -8,7 +8,7 @@ namespace LibreriaClasesPoi
 {
     public abstract class PoiConServicios:Poi
     {
-        private List<servicio> Servicios;
+        public List<servicio> Servicios;
 
         public void initService()
         {
@@ -33,5 +33,6 @@ namespace LibreriaClasesPoi
             this.Servicios.Add(nuevoServicio);
         }
 
+ 
     }
 }
