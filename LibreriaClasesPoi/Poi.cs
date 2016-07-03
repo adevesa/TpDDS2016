@@ -21,7 +21,8 @@ namespace LibreriaClasesPoi
         public string direccion;
         public int ZonaDeComuna { get; set; }
         public Dictionary<string, rango> HorarioDeAtencion { get; set; }
-        public List<string> PalabrasClaves { get; set; }
+        private List<string> PalabrasClaves;
+        public List<string> getPalabrasClaves() { return PalabrasClaves; }
 
         public void init(int id, string nombre, Coordenada coordenadaa)
         {
@@ -149,9 +150,13 @@ namespace LibreriaClasesPoi
         }
 
         //Agregar palabras claves//
-        public void agregarPalabraClave(string palabra)
+        public void agregarPalabraClave(params string[] palabras)
         {
-            agregarElemA(PalabrasClaves, palabra);
+            foreach(string palabra in palabras)
+            {
+                agregarElemA(this.PalabrasClaves, palabra);
+            }
+            
         }
 
         //Agregar direccion//

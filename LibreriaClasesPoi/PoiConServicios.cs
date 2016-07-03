@@ -17,7 +17,7 @@ namespace LibreriaClasesPoi
 
         public override bool BuscarCoincidencia(string palabraBuscada)
         {
-            return (this.getService().Any(servicio => servicio.nombreServicio == palabraBuscada) || this.PalabrasClaves.Contains(palabraBuscada));
+            return (this.getService().Any(servicio => servicio.nombreServicio == palabraBuscada) || this.getPalabrasClaves().Contains(palabraBuscada));
         }
 
         public List<servicio> getService() { return Servicios; }

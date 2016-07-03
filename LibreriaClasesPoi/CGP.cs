@@ -14,11 +14,12 @@ namespace LibreriaClasesPoi
 
 
         //CONSTRUCTORES//
-        public CGP(int id,string nombre,Coordenada coordenadaa, string suDireccion)
+        public CGP(int id,string nombre,Coordenada coordenadaa, string suDireccion, int comuna)
         {
             base.init(id, nombre, coordenadaa);
             base.agregarDireccion(suDireccion);
             base.initService();
+            base.ZonaDeComuna = comuna;
         }
         
         public CGP(int id,int comuna, string direccion)

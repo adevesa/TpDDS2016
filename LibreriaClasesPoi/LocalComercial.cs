@@ -32,7 +32,7 @@ namespace LibreriaClasesPoi
         
         public override bool BuscarCoincidencia(string palabraBuscada)
         {
-            return (this.Rubros.Contains(palabraBuscada) || this.PalabrasClaves.Contains(palabraBuscada));
+            return (this.Rubros.Contains(palabraBuscada) || base.getPalabrasClaves().Contains(palabraBuscada));
         }
 
         //Agregar rubros//
