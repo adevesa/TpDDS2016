@@ -23,7 +23,6 @@ namespace Repositorio
             localOrigin = new OrigenLocal();
             origenes = new List<Origenes>();
             buscadorDePOI = new Buscador();
-            
 
         }
 

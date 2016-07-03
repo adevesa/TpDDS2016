@@ -71,7 +71,7 @@ namespace OrigenesDeDatos
             parada115Once.agregarPalabraClave("parada 115 once", "115", "bondi", "colectivo");
             listBased.Add(parada115Once);
             ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo(6, "parada 100 obelisco", new Coordenada(-34.6037389, -58.3815704));
-            parada100Obelisco.agregarPalabraClave("parada 100 once", "115", "bondi", "colectivo");
+            parada100Obelisco.agregarPalabraClave("parada 100 once", "100", "bondi", "colectivo");
             listBased.Add(parada100Obelisco);
 
             //CGPS//

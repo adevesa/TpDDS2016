@@ -18,5 +18,16 @@ namespace Repositorio
 
             return poisBuscados;
         }
+
+        public List<string> mappearNombresPois(List<Poi> pois)
+        {
+
+            List<string> nombres = new List<string>();
+            foreach (Poi poi in pois)
+            {
+                nombres.Add(poi.Nombre);
+            }
+            return nombres;
+        }
     }
 }

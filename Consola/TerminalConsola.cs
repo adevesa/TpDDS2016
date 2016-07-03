@@ -19,11 +19,11 @@ namespace Consola
         public Buscador buscador;
 
         //CONSTRUCTOR//
-        public TerminalConsola(string nombreTerminal, int miComuna, Buscador unBuscador)
+        public TerminalConsola(string nombreTerminal, int comuna, Buscador buscador)
         {
             this.nombre = nombreTerminal;
-            this.comuna = miComuna;
-            this.buscador = unBuscador;
+            this.comuna = comuna;
+            this.buscador = buscador;
 
         }
 

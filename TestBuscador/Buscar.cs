@@ -12,15 +12,17 @@ namespace TestBuscador
     [TestClass]
     public class Buscar
     {
-        TerminalConsola terminal = new TerminalConsola("la esquina de la facu", 5, new Buscador());
+        Buscador buscador = new Buscador();
 
         [TestMethod]
-        public void BuscarLocalComercial1()
+        public void BuscarPoisEnBuscador()
         {
-            List<Poi> listaPois =terminal.buscar("abasto shoppig");
-            List<string> listaNombrePois = terminal.mappearNombresPois(listaPois);
+            List<Poi> listaPois =buscador.find("comida");
+            List<string> listaNombrePois = buscador.mappearNombresPois(listaPois);
+
             Assert.IsTrue(listaNombrePois.Contains("abasto shopping"));
-        
+            Assert.IsTrue(listaNombrePois.Contains("mc donald cordoba"));
+
         }
     }
 }
