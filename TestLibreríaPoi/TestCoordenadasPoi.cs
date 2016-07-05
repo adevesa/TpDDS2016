@@ -18,13 +18,18 @@ namespace TestLibreríaPoi
 
 
             double latitudGoogleana = abastoShopping.getCoordenada().latitud;
+            double longitudGoogleana = abastoShopping.getCoordenada().longitud;
+
             Assert.IsFalse(-30 == latitudGoogleana );
+            Assert.IsFalse(-58 == longitudGoogleana);
 
             //Por buscar en Google maps (A mano desde el navegador) obtenemos:
-            double esperado = -34.603329;
+            double latitudAproximadaEsperada = -34.603329;
+            double longitudAproximadaEsperada = -58.410789;
 
-
-            Assert.AreEqual(esperado, latitudGoogleana, "no es correcta");
+            //Se espera que falle para mostrar que recibimos un valor efectivamente//
+            Assert.AreEqual(latitudAproximadaEsperada, latitudGoogleana, "No es correcta");
+            Assert.AreEqual(longitudAproximadaEsperada, longitudGoogleana, "No es correcta");
         }
     }
 }
