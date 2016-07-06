@@ -60,13 +60,13 @@
     <Compile Include="TestParadaDeColectivo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GoogleApi\GoogleApi.csproj">
+      <Project>{61e9fc82-47b0-43c3-8749-95d3a9967060}</Project>
+      <Name>GoogleApi</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj">
-      <Project>{61e9fc82-47b0-43c3-8749-95d3a9967060}</Project>
-      <Name>GoogleApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

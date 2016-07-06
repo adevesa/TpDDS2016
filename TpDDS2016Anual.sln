@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClasesPoi", "LibreriaClasesPoi\LibreriaClasesPoi.csproj", "{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "C:\Users\Ezequiel\Desktop\Programming\GoogleApi-master\GoogleApi\GoogleApi.csproj", "{61E9FC82-47B0-43C3-8749-95D3A9967060}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{5E63776B-4098-4AAC-B082-6AC8720A7ACF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Repositorio\Repositorio.csproj", "{5B09D534-2D22-40E8-A09F-7DEDFFD3E296}"
@@ -29,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOrigenLocal", "TestOrig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTerminalConsola", "TestTerminalConsola\TestTerminalConsola.csproj", "{652885D6-32EB-48EC-A35D-C435115B9BAE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "GoogleApi\GoogleApi.csproj", "{61E9FC82-47B0-43C3-8749-95D3A9967060}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,14 +45,6 @@ Global
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Release|x86.ActiveCfg = Release|Any CPU
 		{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}.Release|x86.Build.0 = Release|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|x86.Build.0 = Debug|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.ActiveCfg = Release|Any CPU
-		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.Build.0 = Release|Any CPU
 		{5E63776B-4098-4AAC-B082-6AC8720A7ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5E63776B-4098-4AAC-B082-6AC8720A7ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E63776B-4098-4AAC-B082-6AC8720A7ACF}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -141,6 +133,14 @@ Global
 		{652885D6-32EB-48EC-A35D-C435115B9BAE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{652885D6-32EB-48EC-A35D-C435115B9BAE}.Release|x86.ActiveCfg = Release|Any CPU
 		{652885D6-32EB-48EC-A35D-C435115B9BAE}.Release|x86.Build.0 = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Debug|x86.Build.0 = Debug|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.ActiveCfg = Release|Any CPU
+		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
