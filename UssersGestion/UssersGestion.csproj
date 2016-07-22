@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Consola\Consola.csproj">
+      <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
+      <Name>Consola</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
       <Name>Usuarios</Name>

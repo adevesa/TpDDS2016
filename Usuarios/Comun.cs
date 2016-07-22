@@ -15,7 +15,7 @@ namespace Usuarios
         private TerminalConsola terminal;
         private String nombreCompleto;
         private String direccion;
-        private Double numeroDecontacto;
+        private int numeroDecontacto;
         private int idUsuario;
 
         //Setters y getters
@@ -38,7 +38,7 @@ namespace Usuarios
         public string getDireccion() { return this.direccion; }
 
         public void setNumeroDeContacto(double numero) { this.numeroDecontacto = numero; }
-        public double getNumeroDeContacto() { return this.numeroDecontacto; }
+        public int getNumeroDeContacto() { return this.numeroDecontacto; }
 
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
         public int getIdUsuario() { return this.idUsuario; }

@@ -11,7 +11,18 @@ namespace Usuarios
     public interface Usuario
     {
         List<Poi> buscar(string palabraClave);
-      
+        void loggearEn(TerminalConsola terminal);
+        void setTerminal(TerminalConsola terminal);
+        TerminalConsola getTerminal();
+        void setNombreCompleto(string nombreCompleto);
+        string getNombreCompleto();
+        void setDireccion(string direccion);
+        string getDireccion();
+        void setNumeroDeContacto(double numero);
+        int getNumeroDeContacto();
+        void setIdUsuario(int numero);
+        int getIdUsuario();
+
 
     }
 }
