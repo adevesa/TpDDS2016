@@ -10,11 +10,64 @@ namespace Usuarios
 {
     public class Comun:Usuario
     {
+        //Atributos
+        private SearchStorer almacenadorDeBusquedas;
+        private TerminalConsola terminal;
+        private String nombreCompleto;
+        private String direccion;
+        private Double numeroDecontacto;
+        private int idUsuario;
+
+        //Setters y getters
+        public SearchStorer getAlmacenador() { return almacenadorDeBusquedas; }
+        private void setAlmacenador(SearchStorer almacenador)
+        {
+            this.almacenadorDeBusquedas = almacenador;
+        }
+
+        public void setTerminal(TerminalConsola terminal)
+        {
+            this.terminal = terminal;
+        }
+        public TerminalConsola getTerminal() { return this.terminal; }
+
+        public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
+        public string getNombreCompleto() { return this.nombreCompleto; }
+
+        public void setDireccion(string direccion) { this.direccion = direccion; }
+        public string getDireccion() { return this.direccion; }
+
+        public void setNumeroDeContacto(double numero) { this.numeroDecontacto = numero; }
+        public double getNumeroDeContacto() { return this.numeroDecontacto; }
+
+        public void setIdUsuario(int numero) { this.idUsuario = numero; }
+        public int getIdUsuario() { return this.idUsuario; }
+
+        //Constructor
+        public Comun(string nombreCompleto, double numeroDeContacto, string direccion)
+        {
+            setNombreCompleto(nombreCompleto);
+            setNumeroDeContacto(numeroDeContacto);
+            setDireccion(direccion);
+        }
+
+        //Metodos
+        public void loggearEn(TerminalConsola terminal)
+        {
+            setTerminal(terminal);
+        }
+
+        private void almacenarBusqueda(string palabraClave, List<Poi> resultado)
+        {
+
+        }
+
+
         public List<Poi> buscar(string palabraClave)
         {
             List<Poi> resultado;
             resultado = getTerminal().buscar(palabraClave);
-            base.almacenarBusqueda(palabraClave, resultado);
+            almacenarBusqueda(palabraClave, resultado);
             return resultado;
         }
     }

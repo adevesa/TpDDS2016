@@ -42,6 +42,9 @@
   <ItemGroup>
     <Compile Include="Administrador.cs" />
     <Compile Include="Comun.cs" />
+    <Compile Include="GeneradorAdministrador.cs" />
+    <Compile Include="GeneradorDeUsuario.cs" />
+    <Compile Include="GeneradorUsuarioComun.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

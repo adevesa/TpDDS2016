@@ -43,6 +43,12 @@
     <Compile Include="HandlerUsser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
+      <Name>Usuarios</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,35 +8,10 @@ using LibreriaClasesPoi;
 
 namespace Usuarios
 {
-    public abstract class Usuario
+    public interface Usuario
     {
-        private SearchStorer almacenadorDeBusquedas;
-        public SearchStorer getAlmacenador() { return almacenadorDeBusquedas; }
-        private void setAlmacenador(SearchStorer almacenador)
-        {
-            this.almacenadorDeBusquedas = almacenador;
-        }
+        List<Poi> buscar(string palabraClave);
+      
 
-        private TerminalConsola terminal;
-        public void setTerminal(TerminalConsola terminal)
-        {
-            this.terminal = terminal;
-        }
-        public TerminalConsola getTerminal() { return this.terminal; }
-
-        public void init()
-        {
-
-        }
-
-        public void loggearEn(TerminalConsola terminal)
-        {
-            setTerminal(terminal);
-        }
-
-        private void almacenarBusqueda(string palabraClave, List<Poi> resultado)
-        {
-
-        }
     }
 }
