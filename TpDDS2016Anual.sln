@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClasesPoi", "LibreriaClasesPoi\LibreriaClasesPoi.csproj", "{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}"
 EndProject
@@ -28,6 +28,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTerminalConsola", "TestTerminalConsola\TestTerminalConsola.csproj", "{652885D6-32EB-48EC-A35D-C435115B9BAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoogleApi", "GoogleApi\GoogleApi.csproj", "{61E9FC82-47B0-43C3-8749-95D3A9967060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UssersGestion", "UssersGestion\UssersGestion.csproj", "{357F6FB7-9913-4C60-AFAA-602149DC2239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Usuarios", "Usuarios\Usuarios.csproj", "{D0360FB9-421F-43C9-ABC7-A2E39140419E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +145,22 @@ Global
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|Any CPU.Build.0 = Release|Any CPU
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.ActiveCfg = Release|Any CPU
 		{61E9FC82-47B0-43C3-8749-95D3A9967060}.Release|x86.Build.0 = Release|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Debug|x86.Build.0 = Debug|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Release|x86.ActiveCfg = Release|Any CPU
+		{357F6FB7-9913-4C60-AFAA-602149DC2239}.Release|x86.Build.0 = Release|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Debug|x86.Build.0 = Debug|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Release|x86.ActiveCfg = Release|Any CPU
+		{D0360FB9-421F-43C9-ABC7-A2E39140419E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
