@@ -39,7 +39,7 @@ namespace Usuarios
         public void setDireccion(string direccion) { this.direccion = direccion; }
         public string getDireccion() { return this.direccion; }
 
-        public void setNumeroDeContacto(double numero) { this.numeroDecontacto = numero; }
+        public void setNumeroDeContacto(int numero) { this.numeroDecontacto = numero; }
         public int getNumeroDeContacto() { return this.numeroDecontacto; }
 
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
@@ -47,7 +47,7 @@ namespace Usuarios
 
 
         //Constructor
-        public Administrador(string nombreCompleto, double numeroDeContacto, string direccion, int numeroDeComuna)
+        public Administrador(string nombreCompleto, int numeroDeContacto, string direccion, int numeroDeComuna)
         {
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);

@@ -37,14 +37,14 @@ namespace Usuarios
         public void setDireccion(string direccion) { this.direccion = direccion; }
         public string getDireccion() { return this.direccion; }
 
-        public void setNumeroDeContacto(double numero) { this.numeroDecontacto = numero; }
+        public void setNumeroDeContacto(int numero) { this.numeroDecontacto = numero; }
         public int getNumeroDeContacto() { return this.numeroDecontacto; }
 
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
         public int getIdUsuario() { return this.idUsuario; }
 
         //Constructor
-        public Comun(string nombreCompleto, double numeroDeContacto, string direccion)
+        public Comun(string nombreCompleto, int numeroDeContacto, string direccion)
         {
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);

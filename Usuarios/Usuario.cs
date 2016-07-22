@@ -18,7 +18,7 @@ namespace Usuarios
         string getNombreCompleto();
         void setDireccion(string direccion);
         string getDireccion();
-        void setNumeroDeContacto(double numero);
+        void setNumeroDeContacto(int numero);
         int getNumeroDeContacto();
         void setIdUsuario(int numero);
         int getIdUsuario();
