@@ -14,6 +14,7 @@ namespace Usuarios
         //Atributos
         private String nombreCompleto;
         private String direccion;
+        private String mail;
         private int numeroDecontacto;
         private int idUsuario;
         private int numeroDeComuna;
@@ -24,6 +25,9 @@ namespace Usuarios
 
         public void setDireccion(string direccion) { this.direccion = direccion; }
         public string getDireccion() { return this.direccion; }
+
+        public void setMail(string eMail) { this.mail = eMail; }
+        public string getMail() { return this.mail; }
 
         public void setNumeroDeContacto(int numero) { this.numeroDecontacto = numero; }
         public int getNumeroDeContacto() { return this.numeroDecontacto; }

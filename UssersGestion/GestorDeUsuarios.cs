@@ -12,8 +12,6 @@ namespace UssersGestion
     {
         private List<Usuario> ussers = new List<Usuario>();
         public List<Usuario> getUssers() { return ussers; }
-       
-
 
         public int crearUsuario(Usuario tipoUsuario, string nombreCompleto, int numeroDeContacto, string direccion)
         {

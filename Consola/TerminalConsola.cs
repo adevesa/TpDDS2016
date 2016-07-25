@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using LibreriaClasesPoi;
 using Repositorio;
 using Usuarios;
 using AlmacenadorBusquedas;
+using Procesos;
 
 namespace Consola
 {
     public class TerminalConsola
     {
 
-        //ATRIBUTOS//
+        //Atributos
         private string nombre;
         private Coordenada coordenada;
         private int comuna;
         private Buscador buscador;
         private Administrador administrador;
         private Usuario usuarioActivo;
+        private int duracionMaximaDeBusqueda;
 
-        //Setters y getters//
+        //Setters y getters
         public void setCoordenada(Coordenada coordenadaDeTerminal) { this.coordenada = coordenadaDeTerminal; }
         public Coordenada getCoordenada() { return this.coordenada; }
 
@@ -31,7 +34,10 @@ namespace Consola
         public void setUsuarioActivo(Usuario usuario) { this.usuarioActivo = usuario; }
         public Usuario getUsuarioActivo() { return this.usuarioActivo; }
 
-        //CONSTRUCTOR//
+        public void setDuracionMaximaDeBusqueda(int duracionMaxima) { this.duracionMaximaDeBusqueda = duracionMaxima; }
+        public int getDuracionMaxcimaDeBusqueda() { return this.duracionMaximaDeBusqueda; }
+
+        //Constructor
         public TerminalConsola(string nombreTerminal, int comuna, Buscador buscador)
         {
             this.nombre = nombreTerminal;
@@ -51,7 +57,18 @@ namespace Consola
 
         public List<Poi> buscar(string criterio)
         {
+            //Se declara e inicializa el temporizador
+            Stopwatch temporizador;
+            temporizador = Stopwatch.StartNew();
+
+            //Se realiza la búsqueda
             List<Poi> resultadoObtenido = buscador.find(criterio);
+
+            //Se detiene el temporizador y se verifica si necesita notificar al administrador
+            int segundosDemorados = temporizador.Elapsed.Seconds;
+            AdministradorDeProcesos.notificarSiEsNecesario(segundosDemorados, this.getDuracionMaxcimaDeBusqueda(), this.getAdministrador().getMail());
+
+            //Continúa el flujo normal
             AlmacenadorDeBusquedas.almacenarBusqueda(getUsuarioActivo().getNombreCompleto(), criterio, resultadoObtenido, DateTime.Now);
             return resultadoObtenido;
         }
