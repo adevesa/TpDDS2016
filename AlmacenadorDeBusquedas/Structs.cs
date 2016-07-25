@@ -22,6 +22,7 @@ namespace AlmacenadorBusquedas
             this.fecha = fechaDeBusqueda;
         }
     }
+
     public struct busquedaPorFecha
     {
         public DateTime fecha;

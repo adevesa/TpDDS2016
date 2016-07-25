@@ -6,9 +6,26 @@ using System.Threading.Tasks;
 
 namespace AlmacenadorBusquedas
 {
-    public class BusquedasPorUsuario
+    static public class BusquedasPorUsuario
     {
-        private List<busquedaPorUsuario> busquedas = new List<busquedaPorUsuario>();
-        public List<busquedaPorUsuario> getBusquedas() { return this.busquedas; }
+        
+        static public List<busquedaPorUsuario> generarReportePorUsuario(string nombreDelUsuario, List<busqueda> busquedas)
+        {
+            
+            List<busqueda> resultadosParciales = busquedas.FindAll(busqueda => busqueda.nombreDeUsuario == nombreDelUsuario);
+            return generarLista(resultadosParciales);
+
+        }
+
+        static private List<busquedaPorUsuario> generarLista(List<busqueda> busquedasParciales)
+        {
+            List<busquedaPorUsuario> listaBusquedaPorUsuario = new List<busquedaPorUsuario>();
+            foreach(busqueda unaBusqueda in busquedasParciales)
+            {
+                listaBusquedaPorUsuario.Add(new busquedaPorUsuario(unaBusqueda.nombreDeUsuario, unaBusqueda.resultadoDeLaBusqueda));
+
+            }
+            return listaBusquedaPorUsuario;
+        }
     }
 }

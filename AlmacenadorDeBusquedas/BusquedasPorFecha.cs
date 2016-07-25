@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace AlmacenadorBusquedas
 {
-    public class BusquedasPorFecha
+     static public class BusquedasPorFecha
     {
-        private List<busquedaPorFecha> busquedas = new List<busquedaPorFecha>();
-        public List<busquedaPorFecha> getBusquedas() { return this.busquedas; }
+        static public List<busquedaPorFecha> generarReportePorFecha(string fecha, List<busqueda> busquedas)
+        {
+            List<busqueda> resultadosParciales = busquedas.FindAll(busqueda => busqueda.fecha.ToString()==fecha);
+            return generarLista(resultadosParciales);
+        }
 
-       
+        static private List<busquedaPorFecha> generarLista(List<busqueda> busquedaParcial)
+        {
+            List<busquedaPorFecha> listaBusquedaPorFecha = new List<busquedaPorFecha>();
+            foreach(busqueda unaBusqueda in busquedaParcial)
+            {
+                listaBusquedaPorFecha.Add(new busquedaPorFecha(unaBusqueda.fecha, unaBusqueda.resultadoDeLaBusqueda));
+            }
+            return listaBusquedaPorFecha;
+        }
+        
     }
 }
