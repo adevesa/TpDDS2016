@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
 using Repositorio;
-
+using Usuarios;
+using AlmacenadorBusquedas;
 
 namespace Consola
 {
@@ -13,10 +14,22 @@ namespace Consola
     {
 
         //ATRIBUTOS//
-        public string nombre;
-        public Coordenada coordenada;
-        public int comuna;
-        public Buscador buscador;
+        private string nombre;
+        private Coordenada coordenada;
+        private int comuna;
+        private Buscador buscador;
+        private Administrador administrador;
+        private Usuario usuarioActivo;
+
+        //Setters y getters//
+        public void setCoordenada(Coordenada coordenadaDeTerminal) { this.coordenada = coordenadaDeTerminal; }
+        public Coordenada getCoordenada() { return this.coordenada; }
+
+        public void setAdministrador(Administrador administradorDeTerminal) { this.administrador = administradorDeTerminal; }
+        public Administrador getAdministrador() { return this.administrador; }
+
+        public void setUsuarioActivo(Usuario usuario) { this.usuarioActivo = usuario; }
+        public Usuario getUsuarioActivo() { return this.usuarioActivo; }
 
         //CONSTRUCTOR//
         public TerminalConsola(string nombreTerminal, int comuna, Buscador buscador)
@@ -28,24 +41,27 @@ namespace Consola
         }
 
 
+                            //METODOS PRINCIPALES//
 
-        //METODOS PRINCIPALES//
-
-      
-        //Consultar DISPONIBILIDAD ACTUAL//
         public bool estaDisponible(Poi puntoDeInteres)
         {
             DateTime fechaYhoraActual = DateTime.Now;
             return puntoDeInteres.EstaDisponible(fechaYhoraActual);
         }
 
-        //BUSCAR POIs//
         public List<Poi> buscar(string criterio)
         {
-            List<Poi> lista = buscador.find(criterio);
-            return lista;
+            List<Poi> resultadoObtenido = buscador.find(criterio);
+            AlmacenadorDeBusquedas.almacenarBusqueda(getUsuarioActivo().getNombreCompleto(), criterio, resultadoObtenido, DateTime.Now);
+            return resultadoObtenido;
         }
 
+        public void loggearUsuario(Usuario usuario)
+        {
+            setUsuarioActivo(usuario);
+        }
+
+                            //METODOS SECUNDARIOS//
         public List<string> mappearNombresPois(List<Poi> pois)
         {
 

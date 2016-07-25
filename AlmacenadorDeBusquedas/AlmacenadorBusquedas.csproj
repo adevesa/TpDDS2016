@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D0360FB9-421F-43C9-ABC7-A2E39140419E}</ProjectGuid>
+    <ProjectGuid>{B9106923-859B-4CE0-A5DC-ABFCDF7EADC5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Usuarios</RootNamespace>
-    <AssemblyName>Usuarios</AssemblyName>
+    <RootNamespace>AlmacenadorDeBusquedas</RootNamespace>
+    <AssemblyName>AlmacenadorDeBusquedas</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,16 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador.cs" />
-    <Compile Include="Comun.cs" />
-    <Compile Include="GeneradorDeUsuario.cs" />
+    <Compile Include="AlmacenadorDeBusquedas.cs" />
+    <Compile Include="BusquedasPorFecha.cs" />
+    <Compile Include="BusquedasPorUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Structs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
+      <Name>Usuarios</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

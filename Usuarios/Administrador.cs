@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
-using Consola;
+
 
 
 namespace Usuarios
@@ -12,8 +12,6 @@ namespace Usuarios
     public class Administrador:Usuario
     {
         //Atributos
-        private SearchStorer almacenadorDeBusquedas;
-        private TerminalConsola terminal;
         private String nombreCompleto;
         private String direccion;
         private int numeroDecontacto;
@@ -21,18 +19,6 @@ namespace Usuarios
         private int numeroDeComuna;
 
         //Setters y getters
-        public SearchStorer getAlmacenador() { return almacenadorDeBusquedas; }
-        private void setAlmacenador(SearchStorer almacenador)
-        {
-            this.almacenadorDeBusquedas = almacenador;
-        }
-
-        public void setTerminal(TerminalConsola terminal)
-        {
-            this.terminal = terminal;
-        }
-        public TerminalConsola getTerminal() { return this.terminal; }
-
         public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
         public string getNombreCompleto() { return this.nombreCompleto; }
 
@@ -56,25 +42,5 @@ namespace Usuarios
         }
 
 
-        //Metodos
-        public void loggearEn(TerminalConsola terminal)
-        {
-            setTerminal(terminal);
-        }
-
-        private void almacenarBusqueda(string palabraClave, List<Poi> resultado)
-        {
-
-        }
-
-        public  List<Poi> buscar(string palabraClave)
-        {
-            List<Poi> resultado;
-            resultado = getTerminal().buscar(palabraClave);
-            almacenarBusqueda(palabraClave, resultado);
-            return resultado;
-        }
-
-        
     }
 }

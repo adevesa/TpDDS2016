@@ -10,9 +10,10 @@ namespace UssersGestion
 {
     public class GestorDeUsuarios
     {
-        private List<Usuario> ussers;
+        private List<Usuario> ussers = new List<Usuario>();
         public List<Usuario> getUssers() { return ussers; }
        
+
 
         public int crearUsuario(Usuario tipoUsuario, string nombreCompleto, int numeroDeContacto, string direccion)
         {
@@ -32,8 +33,8 @@ namespace UssersGestion
         {
             Usuario usserBuscado = mapearUsser(idUsuario);
             if(usserBuscado != null)
-            { usserBuscado.loggearEn(terminal); }
-            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos."); }
+            { terminal.loggearUsuario(usserBuscado); }
+            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
                 
         }
 

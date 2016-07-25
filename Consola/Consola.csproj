@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlmacenadorDeBusquedas\AlmacenadorBusquedas.csproj">
+      <Project>{b9106923-859b-4ce0-a5dc-abfcdf7eadc5}</Project>
+      <Name>AlmacenadorBusquedas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
@@ -51,6 +55,10 @@
     <ProjectReference Include="..\Repositorio\Repositorio.csproj">
       <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
       <Name>Repositorio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
+      <Name>Usuarios</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
