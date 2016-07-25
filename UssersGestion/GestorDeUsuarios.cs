@@ -8,7 +8,7 @@ using Consola;
 
 namespace UssersGestion
 {
-    public class HandlerUsser
+    public class GestorDeUsuarios
     {
         private List<Usuario> ussers;
         public List<Usuario> getUssers() { return ussers; }
@@ -16,9 +16,9 @@ namespace UssersGestion
 
         public int crearUsuario(Usuario tipoUsuario, string nombreCompleto, int numeroDeContacto, string direccion)
         {
-            int code = GeneradorDeUsuario.crearUsuario(tipoUsuario, nombreCompleto, numeroDeContacto, direccion);
+            int codigoDeIdentificacion = GeneradorDeUsuario.crearUsuario(tipoUsuario, nombreCompleto, numeroDeContacto, direccion);
             agregarUsuario(tipoUsuario);
-            return (code);
+            return (codigoDeIdentificacion);
             
         }
 
@@ -30,8 +30,11 @@ namespace UssersGestion
 
         public void loggearUsuarioEn(int idUsuario, TerminalConsola terminal)
         {
-            mapearUsser(idUsuario).loggearEn(terminal);
-
+            Usuario usserBuscado = mapearUsser(idUsuario);
+            if(usserBuscado != null)
+            { usserBuscado.loggearEn(terminal); }
+            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos."); }
+                
         }
 
         private Usuario mapearUsser(int idUsser)

@@ -67,7 +67,6 @@ namespace Usuarios
 
         }
 
-
         public  List<Poi> buscar(string palabraClave)
         {
             List<Poi> resultado;
