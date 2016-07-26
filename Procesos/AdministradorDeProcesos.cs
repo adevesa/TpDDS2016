@@ -30,11 +30,16 @@ namespace Procesos
                                                     "Exceso de tiempo en búsqueda", 
                                                     "Se ha registrado que una búsqueda ha demorado más de lo esperado");
 
-            //Envía el mensaje.
+            
             SmtpClient cliente = new SmtpClient(servidor);
-
             //Añade credenciales si el servidor lo requiere.
-            cliente.Credentials = CredentialCache.DefaultNetworkCredentials;
+            cliente.Credentials= new System.Net.NetworkCredential("xyz@gmail.com", "password");
+            cliente.Port = 587;
+            cliente.Host = "smtp.gmail.com";
+            cliente.EnableSsl = true;
+            cliente.UseDefaultCredentials = false;
+
+            //Envía el mensaje.
             cliente.Send(mensaje);
 
         }
