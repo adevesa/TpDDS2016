@@ -35,11 +35,53 @@ namespace UssersGestion
             else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
                 
         }
-
-        private Usuario mapearUsser(int idUsser)
+        public void loggearUsuarioEn(string nombreDeUsuario, TerminalConsola terminal)
+        {
+            Usuario usserBuscado = mapearUsser(nombreDeUsuario);
+            if (usserBuscado != null)
+            {
+                terminal.loggearUsuario(usserBuscado);
+            }
+            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
+        }
+        public Usuario mapearUsser(int idUsser)
         {
             Usuario usserPedido = getUssers().Find(usuario => usuario.getIdUsuario() == idUsser);
             return usserPedido;
+        }
+        public Usuario mapearUsser(string nombreDeUsuario)
+        {
+            Usuario usserPedido = getUssers().Find(usuario => usuario.getNombreCompleto() == nombreDeUsuario);
+            return usserPedido;
+        }
+
+
+        public List<String> mapearNombresDeUsuarios()
+        {
+            List<String> lista = new List<String>();
+            foreach(Usuario usser in getUssers())
+            {
+                lista.Add(usser.getNombreCompleto());
+            }
+            return lista;
+        }
+
+        //Constructor
+        public GestorDeUsuarios()
+        {
+            this.init();
+        }
+
+        private void init()
+        {
+            //Administradores default
+            crearUsuario(new Administrador(), "ezequiel oscar escobar", 1156339537, "corrientes 440");
+            crearUsuario(new Administrador(), "santiago candia", 1141758947, "cordoba 1100");
+            crearUsuario(new Administrador(), "profe paula", 1159339596, "avenida de mayo 550");
+
+            //Usuarios default
+            crearUsuario(new Comun(), "agustin greco", 1137032497, "lavalle 1080");
+            crearUsuario(new Comun(), "agustin devesa", 1167964584, "venezuela 100");
         }
 
     }

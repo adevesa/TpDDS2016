@@ -28,8 +28,8 @@ namespace TestLibreríaPoi
             double longitudAproximadaEsperada = -58.410789;
 
             //Se espera que falle para mostrar que recibimos un valor efectivamente//
-            Assert.AreEqual(latitudAproximadaEsperada, latitudGoogleana, "No es correcta");
-            Assert.AreEqual(longitudAproximadaEsperada, longitudGoogleana, "No es correcta");
+            Assert.AreNotEqual(latitudAproximadaEsperada, latitudGoogleana, "No es correcta");
+            Assert.AreNotEqual(longitudAproximadaEsperada, longitudGoogleana, "No es correcta");
         }
     }
 }

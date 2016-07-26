@@ -12,13 +12,13 @@ namespace TestTerminalConsola
     [TestClass]
     public class CreacionDeTerminal
     {
-        TerminalConsola terminal = new TerminalConsola("terminal la esquina de medrano", 5, new Buscador());
+        TerminalConsola terminal = new TerminalConsola("terminal la esquina de medrano", 5);
 
         [TestMethod]
         public void TerminalCreadaExitosamente()
         {
             Assert.IsInstanceOfType(terminal, terminal.GetType());
-            Assert.IsInstanceOfType(terminal.buscador, terminal.buscador.GetType());
+           
         }
     }
 }

@@ -12,9 +12,9 @@ namespace Usuarios
     public class Administrador:Usuario
     {
         //Atributos
-        private String nombreCompleto;
-        private String direccion;
-        private String mail;
+        private string nombreCompleto;
+        private string direccion;
+        private string mail;
         private int numeroDecontacto;
         private int idUsuario;
         private int numeroDeComuna;
@@ -35,14 +35,18 @@ namespace Usuarios
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
         public int getIdUsuario() { return this.idUsuario; }
 
+        public void setNumeroComuna(int numeroComuna) { this.numeroDeComuna = numeroComuna; }
+        public int getNumeroComuna() { return this.numeroDeComuna; }
 
-        //Constructor
-        public Administrador(string nombreCompleto, int numeroDeContacto, string direccion, int numeroDeComuna)
+
+        //Constructores
+        public Administrador() { }
+        public Administrador(string nombreCompleto, int numeroDeContacto, string direccion)
         {
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);
             setDireccion(direccion);
-            this.numeroDeComuna = numeroDeComuna;
+            
         }
 
 

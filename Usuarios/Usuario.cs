@@ -18,6 +18,8 @@ namespace Usuarios
         int getNumeroDeContacto();
         void setIdUsuario(int numero);
         int getIdUsuario();
+        string getMail();
+        void setMail(string mail);
 
 
     }

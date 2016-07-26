@@ -6,6 +6,8 @@ using LibreriaClasesPoi;
 using FuenteDeDatos;
 using OrigenesDeDatos;
 using Repositorio;
+using UssersGestion;
+using Usuarios;
 
 
 namespace TestTerminalConsola
@@ -13,11 +15,23 @@ namespace TestTerminalConsola
     [TestClass]
     public class BuscarEnTerminal
     {
-        TerminalConsola terminal = new TerminalConsola("terminal la esquina de medrano", 5, new Buscador());
+        TerminalConsola terminal = new TerminalConsola("terminal la esquina de medrano", 5);
+        GestorDeUsuarios gestor = new GestorDeUsuarios();
+
+        private void iniciar()
+        {
+            Usuario admin = gestor.mapearUsser("ezequiel oscar escobar");
+            terminal.setAdministrador(admin);
+            terminal.setDuracionMaximaDeBusqueda(4);
+            string usuarioDePrueba = "agustin greco";
+            gestor.loggearUsuarioEn(usuarioDePrueba, terminal);
+        }
 
         [TestMethod]
         public void BuscarColectivosEnTerminal()
         {
+            iniciar();
+
             List<Poi> listaPoisBuscados = terminal.buscar("colectivo");
             List<string> listaNombresPoisBuscados = terminal.mappearNombresPois(listaPoisBuscados);
 
@@ -30,6 +44,7 @@ namespace TestTerminalConsola
         [TestMethod]
         public void BuscarLocalesEnTerminal()
         {
+            iniciar();
             List<Poi> listaPoisBuscados = terminal.buscar("tablets");
             List<string> listaNombresPoisBuscados = terminal.mappearNombresPois(listaPoisBuscados);
 

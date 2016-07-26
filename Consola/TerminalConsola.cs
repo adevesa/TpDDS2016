@@ -20,7 +20,7 @@ namespace Consola
         private Coordenada coordenada;
         private int comuna;
         private Buscador buscador;
-        private Administrador administrador;
+        private Usuario administrador;
         private Usuario usuarioActivo;
         private int duracionMaximaDeBusqueda;
 
@@ -28,8 +28,8 @@ namespace Consola
         public void setCoordenada(Coordenada coordenadaDeTerminal) { this.coordenada = coordenadaDeTerminal; }
         public Coordenada getCoordenada() { return this.coordenada; }
 
-        public void setAdministrador(Administrador administradorDeTerminal) { this.administrador = administradorDeTerminal; }
-        public Administrador getAdministrador() { return this.administrador; }
+        public void setAdministrador(Usuario administradorDeTerminal) { this.administrador = administradorDeTerminal; }
+        public Usuario getAdministrador() { return this.administrador; }
 
         public void setUsuarioActivo(Usuario usuario) { this.usuarioActivo = usuario; }
         public Usuario getUsuarioActivo() { return this.usuarioActivo; }
@@ -38,11 +38,11 @@ namespace Consola
         public int getDuracionMaxcimaDeBusqueda() { return this.duracionMaximaDeBusqueda; }
 
         //Constructor
-        public TerminalConsola(string nombreTerminal, int comuna, Buscador buscador)
+        public TerminalConsola(string nombreTerminal, int comuna)
         {
             this.nombre = nombreTerminal;
             this.comuna = comuna;
-            this.buscador = buscador;
+            this.buscador = new Buscador();
 
         }
 
