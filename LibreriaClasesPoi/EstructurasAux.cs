@@ -6,16 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibreriaClasesPoi
 {
-    public struct Coordenada
-    {
-        public double latitud;
-        public double longitud;
-        public Coordenada(double lat, double longi)
-        {
-            latitud = lat;
-            longitud = longi;
-        }
-    }
+    
 
     public struct turno
     {

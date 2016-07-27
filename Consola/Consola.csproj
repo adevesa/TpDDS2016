@@ -56,9 +56,9 @@
       <Project>{147dfad4-c578-4281-941d-dfa7851365ce}</Project>
       <Name>Procesos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+    <ProjectReference Include="..\Repositorio\RepositorioYbuscador.csproj">
       <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
-      <Name>Repositorio</Name>
+      <Name>RepositorioYbuscador</Name>
     </ProjectReference>
     <ProjectReference Include="..\Usuarios\Usuarios.csproj">
       <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>

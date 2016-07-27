@@ -3,34 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GoogleApi;
-using GoogleApi.Entities.Common;
-using GoogleApi.Entities.Maps.Directions.Request;
-using GoogleApi.Entities.Maps.DistanceMatrix.Request;
-using GoogleApi.Entities.Maps.Elevation.Request;
-using GoogleApi.Entities.Maps.Geocode.Request;
+using 
+
+
 
 namespace LibreriaClasesPoi
 {
-    public partial class Poi
+    public  class Poi
     {
-        //Atributos de la clase////////////////
-        public string Nombre { get; set; }
-        public int Id { get; set; }
-        private Coordenada coordenada;
+        //Atributos 
+        private string nombre;
+        private int id;
+        private  coordenada;
         public Coordenada getCoordenada() { return coordenada; }
-        public string direccion;
-        public int comuna { get; set; }
-        public Dictionary<string, rango> HorarioDeAtencion { get; set; }
-        private List<string> PalabrasClaves;
-        public List<string> getPalabrasClaves() { return PalabrasClaves; }
+        private string direccion;
+        private int comuna;
+        private Dictionary<string, rango> horarioDeAtencion;
+        private List<string> palabrasClaves;
+        public List<string> getPalabrasClaves() { return palabrasClaves; }
 
         public void init(int id, string nombre, Coordenada coordenadaa)
         {
-            PalabrasClaves = new List<string>();
-            HorarioDeAtencion = new Dictionary<string, rango>();
-            this.Id = id;
-            this.Nombre = nombre;
+            palabrasClaves = new List<string>();
+            horarioDeAtencion = new Dictionary<string, rango>();
+            this.id = id;
+            this.nombre = nombre;
             this.coordenada = coordenadaa;
         }
         
@@ -43,7 +40,7 @@ namespace LibreriaClasesPoi
 
         public bool TieneNombre()
         {
-            return (this.Nombre != null);
+            return (this.nombre != null);
         }
 
         public bool EsUbicable()
@@ -79,13 +76,13 @@ namespace LibreriaClasesPoi
             int hora;
             diaActual = horarioYfechaActual.ToString("dddd");
             hora = horarioYfechaActual.Hour;
-            return ((HorarioDeAtencion.ContainsKey(diaActual)) && (EstaEnRangoHorario(diaActual, hora)));
+            return ((horarioDeAtencion.ContainsKey(diaActual)) && (EstaEnRangoHorario(diaActual, hora)));
         }
 
         //Buscar Coincidencia//
         public virtual bool BuscarCoincidencia(string palabraBuscada)
         {
-            return (this.PalabrasClaves.Contains(palabraBuscada));
+            return (this.palabrasClaves.Contains(palabraBuscada));
         }
 
 
@@ -119,7 +116,7 @@ namespace LibreriaClasesPoi
         //VERFICA SI VALOR X ESTA EN RANGO HORARIO//
         public bool EstaEnRangoHorario(string dia, int hora)
         {
-            rango rangoDeldia = HorarioDeAtencion[dia];
+            rango rangoDeldia = horarioDeAtencion[dia];
             turno turno1 = rangoDeldia.turno1;
             turno turno2 = rangoDeldia.turno2;
             turno turno3 = rangoDeldia.turno3;
@@ -141,7 +138,7 @@ namespace LibreriaClasesPoi
         //Agregar Horarios de atención//
         public void agregarDiaYHorario(string dia, rango horariosDeAtencionDelDia)
         {
-            this.HorarioDeAtencion[dia] = horariosDeAtencionDelDia;
+            this.horarioDeAtencion[dia] = horariosDeAtencionDelDia;
         }
 
         //Agregar Elementos a lista//
@@ -155,7 +152,7 @@ namespace LibreriaClasesPoi
         {
             foreach(string palabra in palabras)
             {
-                agregarElemA(this.PalabrasClaves, palabra);
+                agregarElemA(this.palabrasClaves, palabra);
             }
             
         }

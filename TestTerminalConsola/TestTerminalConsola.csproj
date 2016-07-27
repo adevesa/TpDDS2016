@@ -77,9 +77,9 @@
       <Project>{9b6f1fee-b454-467e-a5e1-dcfbf9bc7119}</Project>
       <Name>OrigenesDeDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repositorio\Repositorio.csproj">
+    <ProjectReference Include="..\Repositorio\RepositorioYbuscador.csproj">
       <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
-      <Name>Repositorio</Name>
+      <Name>RepositorioYbuscador</Name>
     </ProjectReference>
     <ProjectReference Include="..\UssersGestion\UssersGestion.csproj">
       <Project>{357f6fb7-9913-4c60-afaa-602149dc2239}</Project>

@@ -7,19 +7,31 @@ using LibreriaClasesPoi;
 
 namespace Usuarios
 {
-    public interface Usuario
+    public abstract class Usuario
     {
-        
-        void setNombreCompleto(string nombreCompleto);
-        string getNombreCompleto();
-        void setDireccion(string direccion);
-        string getDireccion();
-        void setNumeroDeContacto(int numero);
-        int getNumeroDeContacto();
-        void setIdUsuario(int numero);
-        int getIdUsuario();
-        string getMail();
-        void setMail(string mail);
+
+        //Atributos
+        private string nombreCompleto;
+        private string direccion;
+        private string mail;
+        private int numeroDecontacto;
+        private int idUsuario;
+
+        //Setters y getters
+        public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
+        public string getNombreCompleto() { return this.nombreCompleto; }
+
+        public void setDireccion(string direccion) { this.direccion = direccion; }
+        public string getDireccion() { return this.direccion; }
+
+        public void setMail(string eMail) { this.mail = eMail; }
+        public string getMail() { return this.mail; }
+
+        public void setNumeroDeContacto(int numero) { this.numeroDecontacto = numero; }
+        public int getNumeroDeContacto() { return this.numeroDecontacto; }
+
+        public void setIdUsuario(int numero) { this.idUsuario = numero; }
+        public int getIdUsuario() { return this.idUsuario; }
 
 
     }

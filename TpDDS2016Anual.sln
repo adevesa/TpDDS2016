@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poi", "LibreriaClasesPoi\Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{5E63776B-4098-4AAC-B082-6AC8720A7ACF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio", "Repositorio\Repositorio.csproj", "{5B09D534-2D22-40E8-A09F-7DEDFFD3E296}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositorioYbuscador", "Repositorio\RepositorioYbuscador.csproj", "{5B09D534-2D22-40E8-A09F-7DEDFFD3E296}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrigenesDeDatos", "OrigenesDeDatos\OrigenesDeDatos.csproj", "{9B6F1FEE-B454-467E-A5E1-DCFBF9BC7119}"
 EndProject
@@ -38,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Procesos", "Procesos\Procesos.csproj", "{147DFAD4-C578-4281-941D-DFA7851365CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUsuario", "TestUsuario\TestUsuario.csproj", "{169CF5F0-0DF4-4233-B655-FAFBCFF38930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordenadaGeografica", "CoordenadaGeografica\CoordenadaGeografica.csproj", "{188F9533-3661-4E87-B199-71622A9F8D0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +193,14 @@ Global
 		{169CF5F0-0DF4-4233-B655-FAFBCFF38930}.Release|Any CPU.Build.0 = Release|Any CPU
 		{169CF5F0-0DF4-4233-B655-FAFBCFF38930}.Release|x86.ActiveCfg = Release|Any CPU
 		{169CF5F0-0DF4-4233-B655-FAFBCFF38930}.Release|x86.Build.0 = Release|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Debug|x86.Build.0 = Debug|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Release|x86.ActiveCfg = Release|Any CPU
+		{188F9533-3661-4E87-B199-71622A9F8D0B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

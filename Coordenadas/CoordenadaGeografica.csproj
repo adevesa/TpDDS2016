@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}</ProjectGuid>
+    <ProjectGuid>{D0CC2DB3-BA1F-49FE-A945-16463D8DE5C7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibreriaClasesPoi</RootNamespace>
-    <AssemblyName>LibreriaClasesPoi</AssemblyName>
+    <RootNamespace>Coordenadas</RootNamespace>
+    <AssemblyName>Coordenadas</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,24 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco.cs" />
-    <Compile Include="CGP.cs" />
-    <Compile Include="Poi.cs" />
-    <Compile Include="EstructurasAux.cs" />
-    <Compile Include="LocalComercial.cs" />
-    <Compile Include="ParadaDeColectivo.cs" />
-    <Compile Include="PoiConServicios.cs" />
+    <Compile Include="Coordenada.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CoordenadaGeografica\CoordenadaGeografica.csproj">
-      <Project>{188f9533-3661-4e87-b199-71622a9f8d0b}</Project>
-      <Name>CoordenadaGeografica</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GoogleApi\GoogleApi.csproj">
-      <Project>{61e9fc82-47b0-43c3-8749-95d3a9967060}</Project>
-      <Name>GoogleApi</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
