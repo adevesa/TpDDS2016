@@ -46,9 +46,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
+    <ProjectReference Include="..\LibreriaClasesPoi\Poi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
-      <Name>LibreriaClasesPoi</Name>
+      <Name>Poi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

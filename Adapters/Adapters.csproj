@@ -49,9 +49,9 @@
       <Project>{bef03d31-d549-4e5c-8bfd-a708f6c12f20}</Project>
       <Name>FuenteDeDatos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
+    <ProjectReference Include="..\LibreriaClasesPoi\Poi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
-      <Name>LibreriaClasesPoi</Name>
+      <Name>Poi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
