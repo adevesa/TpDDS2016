@@ -7,9 +7,9 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestLocalComercial
     {
-        LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247", new Coordenada(-34.6034261, -58.4109124));
-        LocalComercial galeriaJardin = new LocalComercial(2, "galeria jardin", "florida 537", new Coordenada(-34.6016993, -58.3751937));
-        LocalComercial mcDonaldCordoba = new LocalComercial(3, "mc donald cordoba", "avenida córdoba 1188", new Coordenada(-34.59458879999999, -58.4124393));
+        LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247");
+        LocalComercial galeriaJardin = new LocalComercial(2, "galeria jardin", "florida 537");
+        LocalComercial mcDonaldCordoba = new LocalComercial(3, "mc donald cordoba", "avenida córdoba 1188");
 
         public void init()
         {
@@ -30,9 +30,9 @@ namespace TestLibreríaPoi
         {
             this.init();
 
-            Assert.IsTrue(abastoShopping.BuscarCoincidencia("compras"));
-            Assert.IsTrue(abastoShopping.BuscarCoincidencia("abasto shopping"));
-            Assert.IsTrue(galeriaJardin.BuscarCoincidencia("ventas"));
+            Assert.IsTrue(abastoShopping.buscarCoincidencia("compras"));
+            Assert.IsTrue(abastoShopping.buscarCoincidencia("abasto shopping"));
+            Assert.IsTrue(galeriaJardin.buscarCoincidencia("ventas"));
         }
     }
 }

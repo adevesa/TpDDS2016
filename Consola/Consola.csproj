@@ -48,9 +48,13 @@
       <Project>{b9106923-859b-4ce0-a5dc-abfcdf7eadc5}</Project>
       <Name>AlmacenadorBusquedas</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LibreriaClasesPoi\Poi.csproj">
+    <ProjectReference Include="..\CoordenadaGeografica\CoordenadaGeografica.csproj">
+      <Project>{188f9533-3661-4e87-b199-71622a9f8d0b}</Project>
+      <Name>CoordenadaGeografica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
-      <Name>Poi</Name>
+      <Name>LibreriaClasesPoi</Name>
     </ProjectReference>
     <ProjectReference Include="..\Procesos\Procesos.csproj">
       <Project>{147dfad4-c578-4281-941d-dfa7851365ce}</Project>

@@ -7,7 +7,7 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestBanco
     {
-        Banco bancoNacion = new Banco(4, "banco nacion", new Coordenada(-34.7437649, -58.393226));
+        Banco bancoNacion = new Banco(4, "banco nacion");
 
         public void init()
         {
@@ -23,7 +23,7 @@ namespace TestLibreríaPoi
         public void BancoCumpleCriterioDeBusqueda()
         {
             init();
-            Assert.IsTrue(bancoNacion.BuscarCoincidencia("depositos"));
+            Assert.IsTrue(bancoNacion.buscarCoincidencia("depositos"));
         }
     }
 }

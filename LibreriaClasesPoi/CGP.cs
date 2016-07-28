@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
@@ -14,27 +15,27 @@ namespace LibreriaClasesPoi
         
 
 
-        //CONSTRUCTORES//
-        public CGP(int id,string nombre,Coordenada coordenadaa, string suDireccion, int comuna)
+        //Constructores
+        public CGP(int id,string nombre,string direccion, int comuna)
         {
-            base.init(id, nombre, coordenadaa);
-            base.agregarDireccion(suDireccion);
+            base.init(id, nombre);
+            base.setDireccion(direccion);
             base.initService();
-            this.comuna = comuna;
-        }
-        
-        public CGP(int id,int comuna, string direccion)
-        {
-            base.agregarDireccion(direccion);
-            this.comuna = comuna;
-            base.Id = id;
-            base.initService();
+            this.setComuna(comuna);
         }
 
-        //METODOS PRINCIPALES//
-        //CERCANIA con otra Coordenada//
-        public override bool CercanoDe(Poi poi)
-        { return (this.comuna == poi.comuna); }
+        public CGP(int id, int numeroComuna, string domicilio)
+        {
+            setId(id);
+            setDireccion(domicilio);
+            base.initService();
+            this.setComuna(numeroComuna);
+        }
+
+        //Métodos
+        //Cercanía
+        public override bool cercanoDe(Poi poi)
+        { return (this.getComuna() == poi.getComuna()); }
 
         
         

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
 using FuenteDeDatos;
+using CoordenadaGeografica;
 
 
 namespace Adapters
@@ -25,8 +26,8 @@ namespace Adapters
 
         static public Banco modelarBanco(DatosExternosBanco modeloBanco)
         {
-            Coordenada coordenadaDelBanco = new Coordenada(modeloBanco.x, modeloBanco.y);
-            Banco bancoModelado = new Banco(modeloBanco.id, modeloBanco.nombre, coordenadaDelBanco);
+            
+            Banco bancoModelado = new Banco(modeloBanco.id, modeloBanco.nombre);
             agregarServicios(bancoModelado, modeloBanco);
             return bancoModelado;
         }

@@ -25,7 +25,7 @@ namespace Repositorio
             List<string> nombres = new List<string>();
             foreach (Poi poi in pois)
             {
-                nombres.Add(poi.Nombre);
+                nombres.Add(poi.getNombre());
             }
             return nombres;
         }

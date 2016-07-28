@@ -35,13 +35,13 @@ namespace OrigenesDeDatos
         //Borrar un Poi//
         public void borrar(Poi poi)
         {
-            this.dao.borrar(poi.Id);
+            this.dao.borrar(poi.getId());
         }
 
         //Buscar//
         public List<Poi> find(String criterio)
         {
-            return dao.pois.FindAll(poi => poi.BuscarCoincidencia(criterio));
+            return dao.pois.FindAll(poi => poi.buscarCoincidencia(criterio));
 
         }
 

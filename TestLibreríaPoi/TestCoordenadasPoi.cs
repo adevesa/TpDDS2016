@@ -2,23 +2,24 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LibreriaClasesPoi;
 using GoogleApi;
+using CoordenadaGeografica;
 
 namespace TestLibreríaPoi
 {
     [TestClass]
     public class TestCoordenadasPoi
     {
-        Poi abastoShopping = new LocalComercial(8, "abasto shopping", "avenida corrientes 3274", new Coordenada(-30, -58));
+        Poi abastoShopping = new LocalComercial(8, "abasto shopping", "avenida corrientes 3274");
 
         [TestMethod]
         public void UbicacionPorCoordenadasGoogle()
         {
-            bool esUbi =abastoShopping.EsUbicable();
+            bool esUbi =abastoShopping.esUbicable();
             Assert.IsTrue(esUbi);
 
 
-            double latitudGoogleana = abastoShopping.getCoordenada().latitud;
-            double longitudGoogleana = abastoShopping.getCoordenada().longitud;
+            double latitudGoogleana = abastoShopping.getCoordenada().getLatitud();
+            double longitudGoogleana = abastoShopping.getCoordenada().getLongitud();
 
             Assert.IsFalse(-30 == latitudGoogleana );
             Assert.IsFalse(-58 == longitudGoogleana);

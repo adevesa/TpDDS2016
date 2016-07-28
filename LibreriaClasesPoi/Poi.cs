@@ -3,74 +3,77 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using 
-
-
+using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
-    public  class Poi
+    public abstract class Poi
     {
         //Atributos 
         private string nombre;
         private int id;
-        private  coordenada;
-        public Coordenada getCoordenada() { return coordenada; }
+        private Coordenada coordenada;
         private string direccion;
         private int comuna;
         private Dictionary<string, rango> horarioDeAtencion;
         private List<string> palabrasClaves;
-        public List<string> getPalabrasClaves() { return palabrasClaves; }
+        
 
-        public void init(int id, string nombre, Coordenada coordenadaa)
+        public void init(int id, string nombre)
         {
             palabrasClaves = new List<string>();
             horarioDeAtencion = new Dictionary<string, rango>();
             this.id = id;
             this.nombre = nombre;
-            this.coordenada = coordenadaa;
-        }
-        
-                            //Metodos PRINCIPALES//
-         //VALIDAR poi//
-        public bool Esvalido()
-        {
-            return (TieneNombre() && EsUbicable());
+            this.coordenada = new Coordenada();
+            this.getCoordenada().localizar(this.direccion);
+
         }
 
-        public bool TieneNombre()
+        
+
+        //Setters y getters
+        public string getNombre() { return this.nombre; }
+
+        public void setDireccion(string direccion) { this.direccion = direccion; }
+        public string getDireccion() { return this.direccion; }
+
+        public void setComuna(int comuna) { this.comuna = comuna; }
+        public int getComuna() { return this.comuna; }
+
+        public void setId(int id) { this.id = id; }
+        public int getId() { return this.id; }
+
+        public Coordenada getCoordenada() { return coordenada; }
+
+        public List<string> getPalabrasClaves() { return palabrasClaves; }
+
+        //Metodos PRINCIPALES//
+        //VALIDAR poi//
+        public bool esvalido()
+        {
+            return (tieneNombre() && esUbicable());
+        }
+
+        public bool tieneNombre()
         {
             return (this.nombre != null);
         }
 
-        public bool EsUbicable()
+        public bool esUbicable()
         {
-            //Llamada a Google maps//
-
-            var _request = new GeocodingRequest{ Address = this.ConvertirDireccion() };
-            var _result = GoogleMaps.Geocode.Query(_request);
-            AgregarCoordenadas(_result.Results.First().Geometry.Location.Latitude, _result.Results.First().Geometry.Location.Longitude);
-            return (_result.Status == Status.OK);
-
-            //Status.OK, _result.Status//
-            // Assert.AreEqual("40.7140415,-73.9613119", _result.Results.First().Geometry.Location.LocationString);//
+            return this.getCoordenada().tieneCoordenadas();
         }
 
-        //Agregar coordenadas//
-        public void AgregarCoordenadas(double latitude, double longitude)
+   
+        //Cercania con con otro POI por defecto //
+        public virtual bool cercanoDe(Poi poi)
         {
-            this.coordenada.latitud = latitude;
-            this.coordenada.longitud = longitude;
-        }
-
-        //Cercania con otra Coordenada//
-        public virtual bool CercanoDe(Poi poi)
-        {
-            return (DistanciaMenorA(poi.getCoordenada(), 500));
+            return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(),500));
         }
 
         //Calculo de disponibilidad//
-        public virtual bool EstaDisponible(DateTime horarioYfechaActual)
+        public virtual bool estaDisponible(DateTime horarioYfechaActual)
         {
             string diaActual;
             int hora;
@@ -80,33 +83,14 @@ namespace LibreriaClasesPoi
         }
 
         //Buscar Coincidencia//
-        public virtual bool BuscarCoincidencia(string palabraBuscada)
+        public virtual bool buscarCoincidencia(string palabraBuscada)
         {
             return (this.palabrasClaves.Contains(palabraBuscada));
         }
 
 
                          //DELEGACIONES//
-        //Distancia entre dos puntos dados por COORDENADA//
-        public double GetDistance(Coordenada point1, Coordenada point2)
-        {
-            double distance = 0;
-            double Lat = (point2.latitud - point1.latitud) * (Math.PI / 180);
-            double Lon = (point2.longitud - point1.longitud) * (Math.PI / 180);
-            double a = Math.Sin(Lat / 2) * Math.Sin(Lat / 2) + Math.Cos(point1.latitud * (Math.PI / 180)) * Math.Cos(point2.latitud * (Math.PI / 180)) * Math.Sin(Lon / 2) * Math.Sin(Lon / 2);
-            double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-            distance = 6371 * c;
-            return distance;
-        }
-
-        //Distancia del POI menor a otra coordenada//
-        public bool DistanciaMenorA(Coordenada coordenadaDelOtroPoi, double metros)
-        {
-            if (GetDistance(coordenada, coordenadaDelOtroPoi) < metros)
-            { return true; }
-            else return false;
-        }
-
+        
         //BETWEEN//
         public bool Between(int x, int minimo, int maximo)
         {
@@ -127,14 +111,7 @@ namespace LibreriaClasesPoi
             return Between(hora, turno.horarioInicio, turno.horarioFin);
         }
 
-        //CONVERTIR ESTRUCTURA DIRECCION EN STRING DIRECCION CON FORMA "CALLE ALTURA, CABA, BUENOS AIRES, ARGENTINA"//
-        public string ConvertirDireccion()
-        {
-            string direcc;
-            direcc = this.direccion + "," + "CABA Buenos Aires Argentina";
-            return direcc;
-        }
-
+        
         //Agregar Horarios de atención//
         public void agregarDiaYHorario(string dia, rango horariosDeAtencionDelDia)
         {
@@ -157,11 +134,7 @@ namespace LibreriaClasesPoi
             
         }
 
-        //Agregar direccion//
-        public void agregarDireccion(string dir)
-        {
-            this.direccion = dir;
-        }
+        
        
  
     }

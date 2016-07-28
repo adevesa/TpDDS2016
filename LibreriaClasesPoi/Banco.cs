@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
     public class Banco:PoiConServicios
     {
-        public Banco(int id, string nombre, Coordenada coordenadaa) 
+        //Constructor
+        public Banco(int id, string nombre) 
         {
-            base.init(id, nombre, coordenadaa);
+            base.init(id, nombre);
             base.initService();
             agregarHorariosFijos();
         }
+
         private void agregarHorariosFijos()
         {
             Dictionary<string, rango> horariosDeBancos = new Dictionary<string, rango>();

@@ -7,8 +7,8 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestParadaDeColectivo
     {
-        ParadaDeColectivo parada115Once = new ParadaDeColectivo(5, "parada 115 once", new Coordenada(-34.6083803, -58.4071322));
-        ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo(6, "parada 100 obelisco", new Coordenada(-34.6037389, -58.3815704));
+        ParadaDeColectivo parada115Once = new ParadaDeColectivo(5, "parada 115 once");
+        ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo(6, "parada 100 obelisco");
 
 
         public void init()
@@ -25,11 +25,11 @@ namespace TestLibreríaPoi
         public void ParadaDeColectivoCumpleCriteroDeBusqueda()
         {
             init();
-            Assert.IsTrue(parada115Once.BuscarCoincidencia("115"));
-            Assert.IsFalse(parada115Once.BuscarCoincidencia("100"));
+            Assert.IsTrue(parada115Once.buscarCoincidencia("115"));
+            Assert.IsFalse(parada115Once.buscarCoincidencia("100"));
 
-            Assert.IsTrue(parada100Obelisco.BuscarCoincidencia("100"));
-            Assert.IsFalse(parada100Obelisco.BuscarCoincidencia("115"));
+            Assert.IsTrue(parada100Obelisco.buscarCoincidencia("100"));
+            Assert.IsFalse(parada100Obelisco.buscarCoincidencia("115"));
         }
     }
 }

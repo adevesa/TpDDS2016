@@ -9,6 +9,7 @@ using Repositorio;
 using Usuarios;
 using AlmacenadorBusquedas;
 using Procesos;
+using CoordenadaGeografica;
 
 namespace Consola
 {
@@ -52,7 +53,7 @@ namespace Consola
         public bool estaDisponible(Poi puntoDeInteres)
         {
             DateTime fechaYhoraActual = DateTime.Now;
-            return puntoDeInteres.EstaDisponible(fechaYhoraActual);
+            return puntoDeInteres.estaDisponible(fechaYhoraActual);
         }
 
         public List<Poi> buscar(string criterio)
@@ -85,7 +86,7 @@ namespace Consola
             List<string> nombres = new List<string>();
             foreach (Poi poi in pois)
             {
-                nombres.Add(poi.Nombre);
+                nombres.Add(poi.getNombre());
             }
             return nombres;
         }
