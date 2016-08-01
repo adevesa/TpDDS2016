@@ -49,9 +49,11 @@ namespace LibreriaClasesPoi
 
         public List<string> getPalabrasClaves() { return palabrasClaves; }
 
-        //Metodos PRINCIPALES//
-        
-            //VALIDAR poi//
+                    //Metodos 
+
+        //* @name: esValido()
+        //* @decryp: verifica si el poi tiene nombre y si es ubicable. Para cumplir con ser ubicable
+        //* la googleApi debe poder rellenar los campos de coordenadas.
         public bool esvalido()
         {
             return (tieneNombre() && esUbicable());
@@ -67,27 +69,35 @@ namespace LibreriaClasesPoi
             return this.getCoordenada().tieneCoordenadas();
         }
 
-        //Cercania con con otro POI por defecto //
+        //* @name: cercanoDe(POI poi)
+        //* @decryp: verifica si el poi se encuentra cercano a otro poi. Por defecto,
+        //* decimos que un poi está cerca de otro si estan a menos de 500 metros.
         public virtual bool cercanoDe(POI poi)
         {
             return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(),500));
         }
 
-        //Calculo de disponibilidad//
-        public virtual bool estaDisponible(DateTime horarioYfechaActual)
+        //* @name: estaDisponible(DateTime horarioYfechaActual)
+        //* @decryp: recibe un objeto de la clase DateTime y verifica si el poi se encuentra
+        //* disponible en dicho horario y fecha.
+        public virtual bool estaDisponible(DateTime horarioYfecha)
         {
-            return (horarioDeAtencion.Any(unHorarioDeAtencion => unHorarioDeAtencion.estaDisponible(horarioYfechaActual)));
+            return (horarioDeAtencion.Any(unHorarioDeAtencion => unHorarioDeAtencion.estaDisponible(horarioYfecha)));
         
         }
 
-        //Buscar Coincidencia//
+        //* @name: buscarConcidencia(string palabraBuscada)
+        //* @decryp: rebibe un string y verifica si se encuentra en las palabras claves
         public virtual bool buscarCoincidencia(string palabraBuscada)
         {
             return (this.palabrasClaves.Contains(palabraBuscada));
         }
 
 
-        //Agregar Horario de atención//
+        //* @name: agregarDiaYHorario(string dia, string turno, int apertura, int cierre) 
+        //* @decryp: recibe por parámetro un string día, un string turno (mañana, tarde o noche),
+        //* un int que representa el horario de apertura del turno y un int que representa
+        //* el hoarrio de cierre del turno. Agrega dicha informacion a la lista de hoariosDeAtencion.
         public void agregarDiaYHorario(string dia, string turno, int horarioDeApertura, int horarioDeCierre)
         {
             HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
@@ -95,24 +105,23 @@ namespace LibreriaClasesPoi
             this.horarioDeAtencion.Add(nuevoHorarioDeAtencion);
         }
 
-        //Agregar Elementos a lista//
-        public void agregarElemA(List<string> lista, string palabra)
-        {
-            lista.Add(palabra);
-        }
 
-        //Agregar palabras claves//
+        //* @name: agregarPalabraClave(strings palabras) 
+        //* @decryp: rebibe una o varios string que representan palabras claves y los agrega
+        //* a la lista de palabrasClaves
         public void agregarPalabraClave(params string[] palabras)
         {
             foreach(string palabra in palabras)
             {
                 agregarElemA(this.palabrasClaves, palabra);
             }
-            
+        }
+        public void agregarElemA(List<string> lista, string palabra)
+        {
+            lista.Add(palabra);
         }
 
-        
-       
- 
+
+
     }
 }
