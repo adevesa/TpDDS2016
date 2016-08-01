@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
+using Poi.Servicios;
 
 namespace FuenteDeDatos
 {
@@ -24,7 +25,7 @@ namespace FuenteDeDatos
         public string nombreDelDirector;
         public string domicilio;
         public string telefono;
-        public List<servicio> servicios;
+        public List<Servicio> servicios;
         public int id;
 
     }

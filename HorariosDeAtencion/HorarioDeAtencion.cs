@@ -20,7 +20,7 @@ namespace HorariosDeAtencion
         public void setHorarioDeInicio(int horaInicio) { this.horarioInicio = horaInicio; }
         public int getHoraDeInicio() { return this.horarioInicio; }
 
-        public void setHorarioDeFin(int horaFin) { this.horarioInicio = horaFin; }
+        public void setHorarioDeFin(int horaFin) { this.horarioFin = horaFin; }
         public int getHoraDeFin() { return this.horarioFin; }
 
     }

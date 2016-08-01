@@ -72,8 +72,8 @@ namespace CoordenadaGeografica
         //Verifica que los atributos no estén vacios
         public bool tieneCoordenadas()
         {
-            bool tieneLatitud = this.getLatitud() != null;
-            bool tieneLongitud = this.getLongitud() != null;
+            bool tieneLatitud = this.getLatitud() != 0;
+            bool tieneLongitud = this.getLongitud() != 0;
             return (tieneLatitud && tieneLatitud);
         }
     }

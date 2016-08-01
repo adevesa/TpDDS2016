@@ -9,6 +9,7 @@ namespace LibreriaClasesPoi
 {
     public class CGP: PoiConServicios
     {
+        //Atributos
         public string zonasAledañas { get; set; }
         public string nombreDirector { get; set; }
         public string telefono { get; set; }

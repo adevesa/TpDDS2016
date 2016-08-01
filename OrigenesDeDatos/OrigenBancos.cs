@@ -7,10 +7,12 @@ using LibreriaClasesPoi;
 using FuenteDeDatos;
 using Adapters;
 
+
 namespace OrigenesDeDatos
 {
     public class OrigenBancos : Origenes
     {
+   
         private FuenteDeDatosBanco fuente;
 
         OrigenBancos(FuenteDeDatosBanco fuentee)
