@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoordenadaGeografica;
+using HorariosDeAtencion;
 
 namespace LibreriaClasesPoi
 {
@@ -15,24 +16,23 @@ namespace LibreriaClasesPoi
         private Coordenada coordenada;
         private string direccion;
         private int comuna;
-        private Dictionary<string, rango> horarioDeAtencion;
+        private List<HorarioDeAtencion> horarioDeAtencion;
         private List<string> palabrasClaves;
         
 
         public void init(int id, string nombre)
         {
             palabrasClaves = new List<string>();
-            horarioDeAtencion = new Dictionary<string, rango>();
-            this.id = id;
+            horarioDeAtencion = new List<HorarioDeAtencion>();
+            this.setId(id);
             this.nombre = nombre;
             this.coordenada = new Coordenada();
             this.getCoordenada().localizar(this.direccion);
 
         }
 
-        
-
         //Setters y getters
+
         public string getNombre() { return this.nombre; }
 
         public void setDireccion(string direccion) { this.direccion = direccion; }
@@ -49,7 +49,8 @@ namespace LibreriaClasesPoi
         public List<string> getPalabrasClaves() { return palabrasClaves; }
 
         //Metodos PRINCIPALES//
-        //VALIDAR poi//
+        
+            //VALIDAR poi//
         public bool esvalido()
         {
             return (tieneNombre() && esUbicable());
@@ -65,7 +66,6 @@ namespace LibreriaClasesPoi
             return this.getCoordenada().tieneCoordenadas();
         }
 
-   
         //Cercania con con otro POI por defecto //
         public virtual bool cercanoDe(Poi poi)
         {
@@ -75,11 +75,8 @@ namespace LibreriaClasesPoi
         //Calculo de disponibilidad//
         public virtual bool estaDisponible(DateTime horarioYfechaActual)
         {
-            string diaActual;
-            int hora;
-            diaActual = horarioYfechaActual.ToString("dddd");
-            hora = horarioYfechaActual.Hour;
-            return ((horarioDeAtencion.ContainsKey(diaActual)) && (EstaEnRangoHorario(diaActual, hora)));
+            return (horarioDeAtencion.Any(unHorarioDeAtencion => unHorarioDeAtencion.estaDisponible(horarioYfechaActual)));
+        
         }
 
         //Buscar Coincidencia//
@@ -89,33 +86,12 @@ namespace LibreriaClasesPoi
         }
 
 
-                         //DELEGACIONES//
-        
-        //BETWEEN//
-        public bool Between(int x, int minimo, int maximo)
+        //Agregar Horario de atención//
+        public void agregarDiaYHorario(string dia, string turno, int horarioDeApertura, int horarioDeCierre)
         {
-            return ((minimo <= x) && (x < maximo));
-        }
-
-        //VERFICA SI VALOR X ESTA EN RANGO HORARIO//
-        public bool EstaEnRangoHorario(string dia, int hora)
-        {
-            rango rangoDeldia = horarioDeAtencion[dia];
-            turno turno1 = rangoDeldia.turno1;
-            turno turno2 = rangoDeldia.turno2;
-            turno turno3 = rangoDeldia.turno3;
-            return (EstaEnRango(hora, turno1) || EstaEnRango(hora, turno2) || EstaEnRango(hora, turno3));
-        }
-        public bool EstaEnRango(int hora, turno turno)
-        {
-            return Between(hora, turno.horarioInicio, turno.horarioFin);
-        }
-
-        
-        //Agregar Horarios de atención//
-        public void agregarDiaYHorario(string dia, rango horariosDeAtencionDelDia)
-        {
-            this.horarioDeAtencion[dia] = horariosDeAtencionDelDia;
+            HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
+            nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
+            this.horarioDeAtencion.Add(nuevoHorarioDeAtencion);
         }
 
         //Agregar Elementos a lista//

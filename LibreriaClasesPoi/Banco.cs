@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoordenadaGeografica;
+using Poi.Servicios;
 
 namespace LibreriaClasesPoi
 {
@@ -19,24 +20,14 @@ namespace LibreriaClasesPoi
 
         private void agregarHorariosFijos()
         {
-            Dictionary<string, rango> horariosDeBancos = new Dictionary<string, rango>();
-            agregarDiaYHorario( "lunes",new rango(10, 12, 12, 15, 0, 0));
-            agregarDiaYHorario("martes", new rango(10, 12, 12, 15, 0, 0));
-            agregarDiaYHorario("miercoles", new rango(10, 12, 12, 15, 0, 0));
-            agregarDiaYHorario("jueves", new rango(10, 12, 12, 15, 0, 0));
-            agregarDiaYHorario("viernes", new rango(10, 12, 12, 15, 0, 0));
+            agregarDiaYHorario("lunes", "mañana", 10, 15);
+            agregarDiaYHorario("martes", "mañana", 10, 15);
+            agregarDiaYHorario("miercoles", "mañana", 10, 15);
+            agregarDiaYHorario("jueves", "mañana", 10, 15);
+            agregarDiaYHorario("viernes", "mañana", 10, 15);
 
         }
 
-     
-        private List<string> mappearNombresServicios(List<servicio> listaDeServicios)
-        {
-            List<string> lista = new List<string>();
-            foreach(servicio unServicio in listaDeServicios)
-            {
-                lista.Add(unServicio.nombreServicio);
-            }
-            return lista;       
-         }
+       
     }
 }

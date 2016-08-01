@@ -12,8 +12,6 @@ namespace LibreriaClasesPoi
         public string zonasAledañas { get; set; }
         public string nombreDirector { get; set; }
         public string telefono { get; set; }
-        
-
 
         //Constructores
         public CGP(int id,string nombre,string direccion, int comuna)
