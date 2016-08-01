@@ -32,7 +32,7 @@ namespace TestTerminalConsola
         {
             iniciar();
 
-            List<Poi> listaPoisBuscados = terminal.buscar("colectivo");
+            List<POI> listaPoisBuscados = terminal.buscar("colectivo");
             List<string> listaNombresPoisBuscados = terminal.mappearNombresPois(listaPoisBuscados);
 
             Assert.IsTrue(listaNombresPoisBuscados.Contains("parada 115 once"));
@@ -45,7 +45,7 @@ namespace TestTerminalConsola
         public void BuscarLocalesEnTerminal()
         {
             iniciar();
-            List<Poi> listaPoisBuscados = terminal.buscar("tablets");
+            List<POI> listaPoisBuscados = terminal.buscar("tablets");
             List<string> listaNombresPoisBuscados = terminal.mappearNombresPois(listaPoisBuscados);
 
             Assert.IsTrue(listaNombresPoisBuscados.Contains("galeria jardin"));

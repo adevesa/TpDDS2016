@@ -50,20 +50,20 @@ namespace Consola
 
                             //METODOS PRINCIPALES//
 
-        public bool estaDisponible(Poi puntoDeInteres)
+        public bool estaDisponible(POI puntoDeInteres)
         {
             DateTime fechaYhoraActual = DateTime.Now;
             return puntoDeInteres.estaDisponible(fechaYhoraActual);
         }
 
-        public List<Poi> buscar(string criterio)
+        public List<POI> buscar(string criterio)
         {
             //Se declara e inicializa el temporizador
             Stopwatch temporizador;
             temporizador = Stopwatch.StartNew();
 
             //Se realiza la búsqueda
-            List<Poi> resultadoObtenido = buscador.find(criterio);
+            List<POI> resultadoObtenido = buscador.find(criterio);
 
             //Se detiene el temporizador y se verifica si necesita notificar al administrador
             int segundosDemorados = temporizador.Elapsed.Seconds;
@@ -80,11 +80,11 @@ namespace Consola
         }
 
                             //METODOS SECUNDARIOS//
-        public List<string> mappearNombresPois(List<Poi> pois)
+        public List<string> mappearNombresPois(List<POI> pois)
         {
 
             List<string> nombres = new List<string>();
-            foreach (Poi poi in pois)
+            foreach (POI poi in pois)
             {
                 nombres.Add(poi.getNombre());
             }

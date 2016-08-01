@@ -9,7 +9,7 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestCoordenadasPoi
     {
-        Poi abastoShopping = new LocalComercial(8, "abasto shopping", "avenida corrientes 3274");
+        POI abastoShopping = new LocalComercial(8, "abasto shopping", "avenida corrientes 3274");
 
         [TestMethod]
         public void UbicacionPorCoordenadasGoogle()

@@ -17,7 +17,7 @@ namespace TestBuscador
         [TestMethod]
         public void BuscarPoisEnBuscador()
         {
-            List<Poi> listaPois =buscador.find("comida");
+            List<POI> listaPois =buscador.find("comida");
             List<string> listaNombrePois = buscador.mappearNombresPois(listaPois);
 
             Assert.IsTrue(listaNombrePois.Contains("abasto shopping"));

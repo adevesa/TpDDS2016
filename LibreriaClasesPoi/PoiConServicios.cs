@@ -7,7 +7,7 @@ using Poi.Servicios;
 
 namespace LibreriaClasesPoi
 {
-    public abstract class PoiConServicios:Poi
+    public abstract class PoiConServicios:POI
     {
         private List<Servicio> servicios;
         public List<Servicio> getServicios() { return this.servicios; }
@@ -28,6 +28,11 @@ namespace LibreriaClasesPoi
             Servicio nuevoServicio = new Servicio();
             nuevoServicio.setNombreDelServicio(nombreDelServicio);
             this.getServicios().Add(nuevoServicio);
+        }
+        
+        public void agregarServicios(Servicio servicio)
+        {
+            this.servicios.Add(servicio);
         }
 
         public void agregarHorarioDeAtencionAServicio(string nombreDelServicio, string dia, string turno, int horarioDeApertura, int horarioDeCierre)

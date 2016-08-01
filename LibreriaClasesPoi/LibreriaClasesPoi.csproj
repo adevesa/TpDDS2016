@@ -51,7 +51,6 @@
     <Compile Include="Banco.cs" />
     <Compile Include="CGP.cs" />
     <Compile Include="Poi.cs" />
-    <Compile Include="EstructurasAux.cs" />
     <Compile Include="LocalComercial.cs" />
     <Compile Include="ParadaDeColectivo.cs" />
     <Compile Include="PoiConServicios.cs" />

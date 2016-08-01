@@ -9,7 +9,7 @@ using NHibernate.Mapping.ByCode.Conformist;
 
 namespace Mapeo
 {
-    public class PoiMap: ClassMapping<Poi>
+    public class PoiMap: ClassMapping<POI>
     {
         public PoiMap()
         {

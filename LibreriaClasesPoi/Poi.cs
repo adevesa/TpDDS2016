@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using CoordenadaGeografica;
 using HorariosDeAtencion;
+using Poi;
 
 namespace LibreriaClasesPoi
 {
-    public abstract class Poi
+    public abstract class POI
     {
         //Atributos 
         private string nombre;
@@ -67,7 +68,7 @@ namespace LibreriaClasesPoi
         }
 
         //Cercania con con otro POI por defecto //
-        public virtual bool cercanoDe(Poi poi)
+        public virtual bool cercanoDe(POI poi)
         {
             return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(),500));
         }

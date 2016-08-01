@@ -18,7 +18,7 @@ namespace OrigenesDeDatos
             this.fuente = fuentee;
         }
 
-        public List<Poi> find(string criterio)
+        public List<POI> find(string criterio)
         {
             List<DatosExternosCGP> result = fuente.buscar(criterio);
             return CgpAdapter.adapt(result);

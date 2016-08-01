@@ -37,11 +37,11 @@ namespace TestOrigenLocal
             origenLocal.editar(abastoShopping);
 
             //Busco el objeto modificado//
-            List<Poi> listaPoisBuscados = origenLocal.find("moda");
+            List<POI> listaPoisBuscados = origenLocal.find("moda");
             List<string> listaNombresPoisBuscados = origenLocal.dao.mappearNombresPois(listaPoisBuscados);
             Assert.IsTrue(listaNombresPoisBuscados.Contains("abasto shopping"));
 
-            
+           
 
         }
 

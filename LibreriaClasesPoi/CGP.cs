@@ -33,7 +33,7 @@ namespace LibreriaClasesPoi
 
         //Métodos
         //Cercanía
-        public override bool cercanoDe(Poi poi)
+        public override bool cercanoDe(POI poi)
         { return (this.getComuna() == poi.getComuna()); }
 
         

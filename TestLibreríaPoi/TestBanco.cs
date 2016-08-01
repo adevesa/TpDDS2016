@@ -13,9 +13,9 @@ namespace TestLibreríaPoi
         {
             
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
-            bancoNacion.agregarServicios(new servicio("cobro cheques", new rango(10, 12, 12, 15, 0, 0)));
-            bancoNacion.agregarServicios(new servicio("depositos", new rango(10, 12, 12, 15, 0, 0)));
-            bancoNacion.agregarServicios(new servicio("extracciones", new rango(10, 12, 12, 15, 0, 0)));
+            bancoNacion.agregarServicios("cobro cheques");
+            bancoNacion.agregarServicios("depositos");
+            bancoNacion.agregarServicios("extracciones");
             
         }
 

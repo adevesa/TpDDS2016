@@ -11,19 +11,19 @@ namespace Repositorio
     public class Buscador
     {
 
-        public List<Poi> find(string criterio)
+        public List<POI> find(string criterio)
         {
             RepositorioDePois repositorio = RepositorioDePois.getInstance();
-            List<Poi> poisBuscados = repositorio.localOrigin.find(criterio);
+            List<POI> poisBuscados = repositorio.localOrigin.find(criterio);
 
             return poisBuscados;
         }
 
-        public List<string> mappearNombresPois(List<Poi> pois)
+        public List<string> mappearNombresPois(List<POI> pois)
         {
 
             List<string> nombres = new List<string>();
-            foreach (Poi poi in pois)
+            foreach (POI poi in pois)
             {
                 nombres.Add(poi.getNombre());
             }

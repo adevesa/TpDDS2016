@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
 using FuenteDeDatos;
+using Poi.Servicios;
 
 namespace Adapters
 {
    public class CgpAdapter
     {
-        static public List<Poi> adapt(List<DatosExternosCGP> lista)
+        static public List<POI> adapt(List<DatosExternosCGP> lista)
         {
-            List<Poi> listaAdaptada = new List<Poi>();
+            List<POI> listaAdaptada = new List<POI>();
 
             foreach (DatosExternosCGP modeloDeCGP in lista)
             {
-                CGP banco = modelarCGP(modeloDeCGP);
-                listaAdaptada.Add(banco);
+                CGP nuevoCGP = modelarCGP(modeloDeCGP);
+                listaAdaptada.Add(nuevoCGP);
             }
             return listaAdaptada;
         }
+
         static public CGP modelarCGP(DatosExternosCGP modeloRecibido)
         {
             CGP cgpNuevo = new CGP(modeloRecibido.id, modeloRecibido.numeroComuna, modeloRecibido.domicilio);
@@ -31,9 +33,9 @@ namespace Adapters
             return cgpNuevo;
         }
         
-        static public void agregarServicios(CGP nuevoCgp, List<servicio> servicios)
+        static public void agregarServicios(CGP nuevoCgp, List<Servicio> servicios)
         {
-            foreach(servicio unServicio in servicios)
+            foreach(Servicio unServicio in servicios)
             {
                 nuevoCgp.agregarServicios(unServicio);
             }

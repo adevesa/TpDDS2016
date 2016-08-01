@@ -10,23 +10,23 @@ namespace OrigenesDeDatos
 {
     public class PoiDAO
     {
-        public List<Poi> pois;
+        public List<POI> pois;
 
 
         public PoiDAO()
         {
-            this.pois = new List<Poi>();
+            this.pois = new List<POI>();
             cargarPoisBasicos();
         }
 
         //Crear Poi//
-        public void crear(Poi unPoi)
+        public void crear(POI unPoi)
         {
             pois.Add(unPoi);
         }
 
         //Actualizar Poi//
-        public void actualizar(Poi unPoi)
+        public void actualizar(POI unPoi)
         {
             borrar(unPoi.getId());
             crear(unPoi);
@@ -40,9 +40,9 @@ namespace OrigenesDeDatos
         }
 
         //Algunos pois locales//
-        private List<Poi> basedPois()
+        private List<POI> basedPois()
         {
-            List<Poi> listBased = new List<Poi>();
+            List<POI> listBased = new List<POI>();
 
             //Locales comerciales//
 
@@ -60,9 +60,9 @@ namespace OrigenesDeDatos
 
             Banco bancoNacion = new Banco(4, "banco nacion");
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
-            bancoNacion.agregarServicios(new servicio("cobro cheques", new rango(10, 12, 12, 15, 0, 0)));
-            bancoNacion.agregarServicios(new servicio("depositos", new rango(10, 12, 12, 15, 0, 0)));
-            bancoNacion.agregarServicios(new servicio("extracciones", new rango(10, 12, 12, 15, 0, 0)));
+            bancoNacion.agregarServicios("cobro cheques");
+            bancoNacion.agregarServicios("depositos");
+            bancoNacion.agregarServicios("extracciones");
             listBased.Add(bancoNacion);
 
             //Parada de colectivos//
@@ -91,17 +91,17 @@ namespace OrigenesDeDatos
         //Cargar pois bases//
         private void cargarPoisBasicos()
         {
-            foreach (Poi unPoi in (this.basedPois()))
+            foreach (POI unPoi in (this.basedPois()))
             {
                 this.crear(unPoi);
             }
         }
 
-        public List<string> mappearNombresPois(List<Poi> pois)
+        public List<string> mappearNombresPois(List<POI> pois)
         {
 
             List<string> nombres = new List<string>();
-            foreach (Poi poi in pois)
+            foreach (POI poi in pois)
             {
                 nombres.Add(poi.getNombre());
             }

@@ -14,7 +14,7 @@ namespace AlmacenadorBusquedas
         
         static List<busqueda> getbusquedas() { return busquedas; }
 
-        static public void almacenarBusqueda(string nombreDeUsuario, string palabraBuscada,List<Poi> resultadoDeLaBusqueda, DateTime fecha)
+        static public void almacenarBusqueda(string nombreDeUsuario, string palabraBuscada,List<POI> resultadoDeLaBusqueda, DateTime fecha)
         {
             int cantidadResultadosObtenidos = resultadoDeLaBusqueda.Count;
             busqueda nuevaBusqueda = new busqueda(nombreDeUsuario, palabraBuscada, cantidadResultadosObtenidos, fecha);

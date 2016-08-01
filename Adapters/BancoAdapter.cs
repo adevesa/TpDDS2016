@@ -12,9 +12,9 @@ namespace Adapters
 {
     public class BancoAdapter
     {
-       static public List<Poi> adapt(List<DatosExternosBanco> lista)
+       static public List<POI> adapt(List<DatosExternosBanco> lista)
         {
-            List<Poi> listaAdaptada = new List<Poi>();
+            List<POI> listaAdaptada = new List<POI>();
 
             foreach(DatosExternosBanco modeloDeBanco in lista)
             {

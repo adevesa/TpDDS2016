@@ -7,7 +7,7 @@ using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
-    public class LocalComercial:Poi 
+    public class LocalComercial:POI 
     {
         //Atributos
         private double criterioDeCercania;
@@ -31,7 +31,7 @@ namespace LibreriaClasesPoi
         //METODOS PRINCIPALES//
 
         //Cercania
-        public override bool cercanoDe(Poi poi)
+        public override bool cercanoDe(POI poi)
         {
             return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(), this.criterioDeCercania));
         }

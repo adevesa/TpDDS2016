@@ -7,7 +7,7 @@ using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
-    public class ParadaDeColectivo:Poi
+    public class ParadaDeColectivo:POI
     {
         
         //CONSTRUCTOR//
@@ -18,7 +18,7 @@ namespace LibreriaClasesPoi
         }
         
         //Cercanía
-        public override bool cercanoDe(Poi poi)
+        public override bool cercanoDe(POI poi)
         {
             return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(), 100));
         }
