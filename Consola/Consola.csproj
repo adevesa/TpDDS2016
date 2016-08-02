@@ -64,10 +64,6 @@
       <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
       <Name>RepositorioYbuscador</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
-      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
-      <Name>Usuarios</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

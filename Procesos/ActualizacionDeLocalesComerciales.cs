@@ -10,9 +10,14 @@ using System.IO;
 
 namespace Procesos
 {
-    public class ActualizacionDeLocalesComerciales
+    public class ActualizacionDeLocalesComerciales:Proceso
     {
+        private string rutaDeAccesoAtxt;
+        private string nombreDelProceso = "actualizacion de locales comerciales";
         RepositorioDePois repositorio = RepositorioDePois.getInstance();
+
+        public void setRutaDeAccesoAtxt(string ruta) { this.rutaDeAccesoAtxt = ruta; }
+        public string getNombreDelProceso() { return this.nombreDelProceso; }
 
         //* @name: actualizarLocalesComerciales(string rutaDeAccesoATxt)
         //* @decryp: recibe por parámetro un string con la ruta a un .txt, que contiene información de la siguiente forma:
@@ -72,6 +77,11 @@ namespace Procesos
                 palabrasClaves[i] = palabras[i];
             }
             return palabrasClaves;
+        }
+
+        public int ejercutarProceso()
+        {
+            return actualizarLocalesComerciales(this.rutaDeAccesoAtxt);
         }
     }
     

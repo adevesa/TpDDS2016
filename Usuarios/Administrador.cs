@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
+using Procesos;
 
 
 
@@ -13,6 +14,7 @@ namespace Usuarios
     {
         //Atributos
         private int numeroDeComuna;
+        private List<Proceso> procesos;
 
         //Setters y getters
 
@@ -21,15 +23,18 @@ namespace Usuarios
 
 
         //Constructores
-        public Administrador() { }
+        public Administrador() { this.procesos = new List<Proceso>(); }
         public Administrador(string nombreCompleto, int numeroDeContacto, string direccion)
         {
+            this.procesos = new List<Proceso>();
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);
             setDireccion(direccion);
             
         }
 
+        //Metodos
+        public override bool esAdministrador() { return true; }
 
     }
 }

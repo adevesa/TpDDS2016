@@ -10,6 +10,7 @@ namespace Usuarios
 {
     public class Comun:Usuario
     {
+        
         //Constructores
         public Comun() { }
         public Comun(string nombreCompleto, int numeroDeContacto, string direccion)
@@ -19,6 +20,7 @@ namespace Usuarios
             setDireccion(direccion);
         }
 
-   
+        //Metodos
+        public override bool esAdministrador() { return true; }
     }
 }

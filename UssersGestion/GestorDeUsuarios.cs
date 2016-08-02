@@ -10,9 +10,11 @@ namespace UssersGestion
 {
     public class GestorDeUsuarios
     {
+        //Atributos
         private List<Usuario> ussers = new List<Usuario>();
         public List<Usuario> getUssers() { return ussers; }
 
+        //Metodos
         public int crearUsuario(Usuario tipoUsuario, string nombreCompleto, int numeroDeContacto, string direccion)
         {
             int codigoDeIdentificacion = GeneradorDeUsuario.crearUsuario(tipoUsuario, nombreCompleto, numeroDeContacto, direccion);
@@ -30,19 +32,21 @@ namespace UssersGestion
         public void loggearUsuarioEn(int idUsuario, TerminalConsola terminal)
         {
             Usuario usserBuscado = mapearUsser(idUsuario);
-            if(usserBuscado != null)
-            { terminal.loggearUsuario(usserBuscado); }
-            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
-                
+            if(usserBuscado != null) { loggerUsuario(usserBuscado, terminal); }
+            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }     
         }
         public void loggearUsuarioEn(string nombreDeUsuario, TerminalConsola terminal)
         {
             Usuario usserBuscado = mapearUsser(nombreDeUsuario);
-            if (usserBuscado != null)
-            {
-                terminal.loggearUsuario(usserBuscado);
-            }
+            if (usserBuscado != null) { loggerUsuario(usserBuscado, terminal); }
             else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
+        }
+
+        private void loggerUsuario(Usuario usser, TerminalConsola terminal)
+        {
+            terminal.loggearUsuario(usser.getNombreCompleto());
+            usser.setTerminalUtilizada(terminal);
+            terminal.setUsuarioCuentaConPrivilegiosEspeciales(usser.esAdministrador());
         }
         public Usuario mapearUsser(int idUsser)
         {

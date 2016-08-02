@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
+using Consola;
+ 
 
 namespace Usuarios
 {
@@ -16,6 +18,8 @@ namespace Usuarios
         private string mail;
         private int numeroDecontacto;
         private int idUsuario;
+        private TerminalConsola terminalUtilizada;
+         
 
         //Setters y getters
         public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
@@ -33,6 +37,16 @@ namespace Usuarios
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
         public int getIdUsuario() { return this.idUsuario; }
 
+        public void setTerminalUtilizada(TerminalConsola terminal) { this.terminalUtilizada = terminal; }
+        public TerminalConsola getTerminalUtilizada() { return this.terminalUtilizada; }
+
+        //Metodos
+        public virtual bool esAdministrador() { return false; }
+
+        public List<POI> buscar(string criterio)
+        {
+            return getTerminalUtilizada().buscar(criterio);
+        }
 
     }
 }

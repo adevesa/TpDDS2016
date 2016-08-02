@@ -51,10 +51,6 @@
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
-      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
-      <Name>Usuarios</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -47,9 +47,17 @@
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Consola\Consola.csproj">
+      <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
+      <Name>Consola</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Procesos\Procesos.csproj">
+      <Project>{147dfad4-c578-4281-941d-dfa7851365ce}</Project>
+      <Name>Procesos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

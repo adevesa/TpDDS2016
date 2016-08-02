@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Usuarios
 {
     public  class GeneradorDeUsuario
@@ -12,7 +13,7 @@ namespace Usuarios
 
         static public int generarId()
         {
-            return aleatorio.Next(0, 800);
+            return aleatorio.Next(0, 888);
             
         }
 
