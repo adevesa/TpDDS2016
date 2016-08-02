@@ -6,8 +6,17 @@ using System.Threading.Tasks;
 
 namespace Procesos
 {
-    public interface Proceso
+    public abstract class Proceso
     {
-        int ejercutarProceso();
+        //Atributos
+        private string nombreDelProceso;
+
+        //Setters y getters
+        protected void setNombreDelProceso(string nombre) { this.nombreDelProceso = nombre; }
+        public string getNombreDelProceso() { return this.nombreDelProceso; }
+
+        //Metodos
+
+        public virtual int ejecutar() { return 0; }
     }
 }

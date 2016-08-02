@@ -7,17 +7,29 @@ using OrigenesDeDatos;
 using Repositorio;
 using LibreriaClasesPoi;
 using System.IO;
+using Procesos.MiniProcess;
+
 
 namespace Procesos
 {
     public class ActualizacionDeLocalesComerciales:Proceso
     {
+        //Atributos
         private string rutaDeAccesoAtxt;
-        private string nombreDelProceso = "actualizacion de locales comerciales";
         RepositorioDePois repositorio = RepositorioDePois.getInstance();
+        ManejadorString modeladorDePalabra;
 
+        //Setters y getters
         public void setRutaDeAccesoAtxt(string ruta) { this.rutaDeAccesoAtxt = ruta; }
-        public string getNombreDelProceso() { return this.nombreDelProceso; }
+        
+        //Constructor
+        public ActualizacionDeLocalesComerciales()
+        {
+            this.setNombreDelProceso("actualizacion de locales comerciales");
+            this.modeladorDePalabra = new ManejadorString();
+        }
+
+        //Metodos
 
         //* @name: actualizarLocalesComerciales(string rutaDeAccesoATxt)
         //* @decryp: recibe por parámetro un string con la ruta a un .txt, que contiene información de la siguiente forma:
@@ -27,12 +39,11 @@ namespace Procesos
         public int actualizarLocalesComerciales(string rutaDeAccesoATxt)
         {
             StreamReader archivoDeTexto = new StreamReader(rutaDeAccesoATxt);
-            string linea = archivoDeTexto.ReadLine();
+            string linea;
             bool hayError = false;
-            while((linea != null) && !hayError)
+            while(((linea = archivoDeTexto.ReadLine()) != null) && !hayError)
             {
-                int resultadoDelProceso=actualizarOCrearLocalComercial(linea);
-                if (resultadoDelProceso != 0)
+                if (actualizarOCrearLocalComercial(linea) != 0)
                 {
                     hayError = true;
                     return 1;
@@ -43,10 +54,8 @@ namespace Procesos
 
         private int actualizarOCrearLocalComercial(string lineaLeia)
         {
-            //* split separa palabras con un delimitador, en este caso ";"
-            string[] split = lineaLeia.Split(new Char[] { ';' });
-            string nombreDelPoi = split.First();
-            string [] palabrasClaves = desglosarPalabrasClavesLeidas(split);
+            string nombreDelPoi = this.modeladorDePalabra.primerElemento(lineaLeia);
+            string[] palabrasClaves = this.modeladorDePalabra.segundoElemento(lineaLeia);
             if (repositorio.verificarExistencia(nombreDelPoi))
             {
                 return actualizarLocalComercial(nombreDelPoi, palabrasClaves);
@@ -68,18 +77,8 @@ namespace Procesos
             return 0;
         }
 
-        private string[] desglosarPalabrasClavesLeidas(string[] palabras)
-        {
-            int cantidadDePalabras = palabras.Count();
-            string[] palabrasClaves = new string[cantidadDePalabras - 1];
-            for(int i=1; i<=cantidadDePalabras; i++)
-            {
-                palabrasClaves[i] = palabras[i];
-            }
-            return palabrasClaves;
-        }
 
-        public int ejercutarProceso()
+        public override int ejecutar()
         {
             return actualizarLocalesComerciales(this.rutaDeAccesoAtxt);
         }
