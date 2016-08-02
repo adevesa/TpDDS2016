@@ -19,13 +19,18 @@ namespace LibreriaClasesPoi
 
         public List<string> getRubros() { return this.rubros; }
 
-        //Constructor
-        public  LocalComercial(int id,string nombre, string direccion)
+        //Constructores
+        public  LocalComercial(string nombre, string direccion)
         {
-            base.init(id, nombre);
+            base.init(nombre);
             base.setDireccion(direccion);
             this.rubros = new List<string>();
  
+        }
+        public LocalComercial(string nombre)
+        {
+            base.init(nombre);
+            this.rubros = new List<string>();
         }
         
         //METODOS PRINCIPALES//

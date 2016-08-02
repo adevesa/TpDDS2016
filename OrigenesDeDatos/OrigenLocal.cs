@@ -12,7 +12,7 @@ namespace OrigenesDeDatos
     {
         //BASE DE DATOS PROPIA DEL SISTEMA//
 
-        public PoiDAO dao;
+        private PoiDAO dao;
 
         //Constructor//
         public OrigenLocal()
@@ -45,5 +45,15 @@ namespace OrigenesDeDatos
 
         }
 
+        //Buscar poi x nombre
+        public POI buscarPoiLlamado(string nombreDelPoiBuscado)
+        {
+            POI poiBuscado;
+           return poiBuscado = dao.obtenerPoiLlamado(nombreDelPoiBuscado);
+        }
+        public bool verificarExistencia(string nombreDelPoi)
+        {
+            return (this.dao.verificarExistencia(nombreDelPoi));
+        }
     }
 }

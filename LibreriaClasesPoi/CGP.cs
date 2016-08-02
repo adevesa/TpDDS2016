@@ -15,17 +15,16 @@ namespace LibreriaClasesPoi
         public string telefono { get; set; }
 
         //Constructores
-        public CGP(int id,string nombre,string direccion, int comuna)
+        public CGP(string nombre,string direccion, int comuna)
         {
-            base.init(id, nombre);
+            base.init(nombre);
             base.setDireccion(direccion);
             base.initService();
             this.setComuna(comuna);
         }
 
-        public CGP(int id, int numeroComuna, string domicilio)
+        public CGP(int numeroComuna, string domicilio)
         {
-            setId(id);
             setDireccion(domicilio);
             base.initService();
             this.setComuna(numeroComuna);

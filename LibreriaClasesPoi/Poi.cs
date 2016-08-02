@@ -21,7 +21,7 @@ namespace LibreriaClasesPoi
         private List<string> palabrasClaves;
         
 
-        public void init(int id, string nombre)
+        public void init(string nombre)
         {
             palabrasClaves = new List<string>();
             horarioDeAtencion = new List<HorarioDeAtencion>();
@@ -122,6 +122,6 @@ namespace LibreriaClasesPoi
         }
 
 
-
+       
     }
 }

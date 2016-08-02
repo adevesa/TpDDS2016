@@ -11,9 +11,9 @@ namespace LibreriaClasesPoi
     public class Banco:PoiConServicios
     {
         //Constructor
-        public Banco(int id, string nombre) 
+        public Banco(string nombre) 
         {
-            base.init(id, nombre);
+            base.init(nombre);
             base.initService();
             agregarHorariosFijos();
         }

@@ -37,6 +37,9 @@ namespace Repositorio
             this.origenes.Add(algunOrigen);
         }
 
-      
+        public bool verificarExistencia(string nombreDelPoi)
+        {
+            return (localOrigin.verificarExistencia(nombreDelPoi));
+        }
     }
 }

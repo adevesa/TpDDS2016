@@ -46,19 +46,19 @@ namespace OrigenesDeDatos
 
             //Locales comerciales//
 
-            LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247");
+            LocalComercial abastoShopping = new LocalComercial("abasto shopping", "avenida corrientes 3247");
             abastoShopping.agregarPalabraClave("compras", "distraccion", "cine", "comida", "ropa", "abasto shopping");
             listBased.Add(abastoShopping);
-            LocalComercial galeriaJardin = new LocalComercial(2, "galeria jardin", "florida 537");
+            LocalComercial galeriaJardin = new LocalComercial("galeria jardin", "florida 537");
             galeriaJardin.agregarPalabraClave("tecnologia", "computadoras", "computadora", "tablets", "notebooks", "bajos precios", "placa madre", "galeria jardin");
             listBased.Add(galeriaJardin);
-            LocalComercial mcDonaldCordoba = new LocalComercial(3, "mc donald cordoba", "avenida córdoba 1188");
+            LocalComercial mcDonaldCordoba = new LocalComercial( "mc donald cordoba", "avenida córdoba 1188");
             mcDonaldCordoba.agregarPalabraClave("comida", "comida rapida", "hamburguesas", "papas fritas", "doble cuarto de libra", "mc flurry", "mc donald");
             listBased.Add(mcDonaldCordoba);
 
             //Bancos//
 
-            Banco bancoNacion = new Banco(4, "banco nacion");
+            Banco bancoNacion = new Banco( "banco nacion");
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
             bancoNacion.agregarServicios("cobro cheques");
             bancoNacion.agregarServicios("depositos");
@@ -67,20 +67,20 @@ namespace OrigenesDeDatos
 
             //Parada de colectivos//
 
-            ParadaDeColectivo parada115Once = new ParadaDeColectivo(5, "parada 115 once");
+            ParadaDeColectivo parada115Once = new ParadaDeColectivo("parada 115 once");
             parada115Once.agregarPalabraClave("parada 115 once", "115", "bondi", "colectivo");
             listBased.Add(parada115Once);
-            ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo(6, "parada 100 obelisco");
+            ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo("parada 100 obelisco");
             parada100Obelisco.agregarPalabraClave("parada 100 once", "100", "bondi", "colectivo");
             listBased.Add(parada100Obelisco);
 
             //CGPS//
 
-            CGP cgpComunal5 = new CGP(6, "cgp comunal 5", "sarandí 1273 almagro", 5);
+            CGP cgpComunal5 = new CGP("cgp comunal 5", "sarandí 1273 almagro", 5);
             cgpComunal5.agregarPalabraClave("cgp comunal 5", "cgp", "centro de gestion y participacion", "comuna 5");
             listBased.Add(cgpComunal5);
 
-            CGP cgpComunal1 = new CGP(7, "cgp comunal 1", "uruguay 740 monserrat", 1);
+            CGP cgpComunal1 = new CGP("cgp comunal 1", "uruguay 740 monserrat", 1);
             cgpComunal1.agregarPalabraClave("cgp comunal 1", "cgp", "centro de gestion y participacion", "comuna 1");
             listBased.Add(cgpComunal1);
 
@@ -106,6 +106,19 @@ namespace OrigenesDeDatos
                 nombres.Add(poi.getNombre());
             }
             return nombres;
+        }
+
+       
+         public bool verificarExistencia(string nombreDelPoi)
+        {
+            List<string> nombreDePois = mappearNombresPois(pois);
+            return nombreDePois.Contains(nombreDelPoi);
+        }
+
+        public POI obtenerPoiLlamado(string nombreDelPoiBuscado)
+        {
+            POI poiBuscado = this.pois.Find(unPoi => unPoi.getNombre() == nombreDelPoiBuscado);
+            return poiBuscado;
         }
     }
 }
