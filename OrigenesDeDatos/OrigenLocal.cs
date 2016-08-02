@@ -12,7 +12,7 @@ namespace OrigenesDeDatos
     {
         //BASE DE DATOS PROPIA DEL SISTEMA//
 
-        private PoiDAO dao;
+        public PoiDAO dao;
 
         //Constructor//
         public OrigenLocal()

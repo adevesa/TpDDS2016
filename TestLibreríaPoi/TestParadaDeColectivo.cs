@@ -7,8 +7,8 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestParadaDeColectivo
     {
-        ParadaDeColectivo parada115Once = new ParadaDeColectivo(5, "parada 115 once");
-        ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo(6, "parada 100 obelisco");
+        ParadaDeColectivo parada115Once = new ParadaDeColectivo("parada 115 once");
+        ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo("parada 100 obelisco");
 
 
         public void init()

@@ -25,9 +25,11 @@ namespace LibreriaClasesPoi
 
         public CGP(int numeroComuna, string domicilio)
         {
+            
             setDireccion(domicilio);
             base.initService();
             this.setComuna(numeroComuna);
+
         }
 
         //Métodos

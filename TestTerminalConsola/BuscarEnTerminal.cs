@@ -21,7 +21,8 @@ namespace TestTerminalConsola
         private void iniciar()
         {
             Usuario admin = gestor.mapearUsser("ezequiel oscar escobar");
-            terminal.setAdministrador(admin);
+            admin.setMail("ezequieloscarescobar2@gmail.com");
+            terminal.setMailAdministrador(admin.getMail());
             terminal.setDuracionMaximaDeBusqueda(4);
             string usuarioDePrueba = "agustin greco";
             gestor.loggearUsuarioEn(usuarioDePrueba, terminal);

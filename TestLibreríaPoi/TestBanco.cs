@@ -7,7 +7,7 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestBanco
     {
-        Banco bancoNacion = new Banco(4, "banco nacion");
+        Banco bancoNacion = new Banco("banco nacion");
 
         public void init()
         {

@@ -12,6 +12,7 @@ namespace LibreriaClasesPoi
     public abstract class POI
     {
         //Atributos 
+        static private Random aleatorio = new Random();
         private string nombre;
         private int id;
         private Coordenada coordenada;
@@ -25,7 +26,7 @@ namespace LibreriaClasesPoi
         {
             palabrasClaves = new List<string>();
             horarioDeAtencion = new List<HorarioDeAtencion>();
-            this.setId(id);
+            this.setId(generarId());
             this.nombre = nombre;
             this.coordenada = new Coordenada();
             this.getCoordenada().localizar(this.direccion);
@@ -90,7 +91,7 @@ namespace LibreriaClasesPoi
         //* @decryp: rebibe un string y verifica si se encuentra en las palabras claves
         public virtual bool buscarCoincidencia(string palabraBuscada)
         {
-            return (this.palabrasClaves.Contains(palabraBuscada));
+            return (this.getPalabrasClaves().Contains(palabraBuscada));
         }
 
 
@@ -121,7 +122,11 @@ namespace LibreriaClasesPoi
             lista.Add(palabra);
         }
 
+        static private int generarId()
+        {
+            return aleatorio.Next(0, 888);
 
-       
+        }
+
     }
 }

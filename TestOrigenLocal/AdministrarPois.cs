@@ -15,7 +15,7 @@ namespace TestOrigenLocal
         [TestMethod]
         public void AgregarPoiABaseLocal()
         {
-            ParadaDeColectivo parada7Virreyes = new ParadaDeColectivo(10, "parada 7 virreyes");
+            ParadaDeColectivo parada7Virreyes = new ParadaDeColectivo("parada 7 virreyes");
 
             origenLocal.agregar(parada7Virreyes);
 
@@ -26,7 +26,7 @@ namespace TestOrigenLocal
         public void EditarPoiEnBaseLocal()
         {
             //Objeto inicial//
-            LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247");
+            LocalComercial abastoShopping = new LocalComercial("abasto shopping", "avenida corrientes 3247");
             abastoShopping.agregarPalabraClave("compras", "distraccion", "cine", "comida", "ropa", "abasto shopping");
 
             origenLocal.agregar(abastoShopping);
@@ -49,7 +49,7 @@ namespace TestOrigenLocal
         public void BorrarPoiEnBaseLocal()
         {
             //Objeto inicial//
-            LocalComercial brooklynBar  = new LocalComercial(13, "brooklyn bar", "costa Rica 4588");
+            LocalComercial brooklynBar  = new LocalComercial("brooklyn bar", "costa Rica 4588");
             brooklynBar.agregarPalabraClave("noche", "distraccion", "musica", "baile", "diversion");
 
             origenLocal.agregar(brooklynBar);

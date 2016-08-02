@@ -27,7 +27,7 @@ namespace Adapters
         static public Banco modelarBanco(DatosExternosBanco modeloBanco)
         {
             
-            Banco bancoModelado = new Banco(modeloBanco.id, modeloBanco.nombre);
+            Banco bancoModelado = new Banco(modeloBanco.nombre);
             agregarServicios(bancoModelado, modeloBanco);
             return bancoModelado;
         }

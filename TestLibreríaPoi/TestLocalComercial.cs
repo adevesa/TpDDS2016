@@ -7,9 +7,9 @@ namespace TestLibreríaPoi
     [TestClass]
     public class TestLocalComercial
     {
-        LocalComercial abastoShopping = new LocalComercial(1, "abasto shopping", "avenida corrientes 3247");
-        LocalComercial galeriaJardin = new LocalComercial(2, "galeria jardin", "florida 537");
-        LocalComercial mcDonaldCordoba = new LocalComercial(3, "mc donald cordoba", "avenida córdoba 1188");
+        LocalComercial abastoShopping = new LocalComercial("abasto shopping", "avenida corrientes 3247");
+        LocalComercial galeriaJardin = new LocalComercial("galeria jardin", "florida 537");
+        LocalComercial mcDonaldCordoba = new LocalComercial( "mc donald cordoba", "avenida córdoba 1188");
 
         public void init()
         {

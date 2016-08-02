@@ -29,29 +29,22 @@ namespace TestUsuario
         {
             string usuarioDePrueba = "ezequiel oscar escobar";
             gestor.loggearUsuarioEn(usuarioDePrueba, terminalCentral);
-            Assert.IsTrue(terminalCentral.getUsuarioActivo().getNombreCompleto() == usuarioDePrueba);
+            Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba);
         }
 
 
-        [TestMethod]
-        public void LoggearUsuarioEnTerminalPorId()
-        {
-            string nombreUsuarioDePrueba = "santiago candia";
-            Usuario usuarioDePrueba=gestor.mapearUsser(nombreUsuarioDePrueba);
-            gestor.loggearUsuarioEn(usuarioDePrueba.getIdUsuario(), terminalCentral);
-            Assert.IsTrue(terminalCentral.getUsuarioActivo().getIdUsuario() == usuarioDePrueba.getIdUsuario());
-        }
+        
 
         [TestMethod]
         public void CambiarUsserActivo()
         {
             string usuarioDePrueba1 = "ezequiel oscar escobar";
             gestor.loggearUsuarioEn(usuarioDePrueba1, terminalCentral);
-            Assert.IsTrue(terminalCentral.getUsuarioActivo().getNombreCompleto() == usuarioDePrueba1);
+            Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba1);
 
             string usuarioDePrueba2 = "agustin greco";
             gestor.loggearUsuarioEn(usuarioDePrueba2, terminalCentral);
-            Assert.IsTrue(terminalCentral.getUsuarioActivo().getNombreCompleto() == usuarioDePrueba2);
+            Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba2);
 
 
 
