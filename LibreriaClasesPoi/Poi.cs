@@ -13,11 +13,11 @@ namespace LibreriaClasesPoi
     {
         //Atributos 
         static private Random aleatorio = new Random();
-        private string nombre;
-        private int id;
+        public string Nombre { get; set; }
+        public int Id { get; set; }
         private Coordenada coordenada;
-        private string direccion;
-        private int comuna;
+        public string Direccion { get; set; }
+        public int Comuna { get; set; }
         private List<HorarioDeAtencion> horarioDeAtencion;
         private List<string> palabrasClaves;
         
@@ -27,24 +27,24 @@ namespace LibreriaClasesPoi
             palabrasClaves = new List<string>();
             horarioDeAtencion = new List<HorarioDeAtencion>();
             this.setId(generarId());
-            this.nombre = nombre;
+            this.Nombre = nombre;
             this.coordenada = new Coordenada();
-            this.getCoordenada().localizar(this.direccion);
+            this.getCoordenada().localizar(this.Direccion);
 
         }
 
         //Setters y getters
 
-        public string getNombre() { return this.nombre; }
+        public string getNombre() { return this.Nombre; }
 
-        public void setDireccion(string direccion) { this.direccion = direccion; }
-        public string getDireccion() { return this.direccion; }
+        public void setDireccion(string direccion) { this.Direccion = direccion; }
+        public string getDireccion() { return this.Direccion; }
 
-        public void setComuna(int comuna) { this.comuna = comuna; }
-        public int getComuna() { return this.comuna; }
+        public void setComuna(int comuna) { this.Comuna = comuna; }
+        public int getComuna() { return this.Comuna; }
 
-        public void setId(int id) { this.id = id; }
-        public int getId() { return this.id; }
+        public void setId(int id) { this.Id = id; }
+        public int getId() { return this.Id; }
 
         public Coordenada getCoordenada() { return coordenada; }
 
@@ -62,7 +62,7 @@ namespace LibreriaClasesPoi
 
         public bool tieneNombre()
         {
-            return (this.nombre != null);
+            return (this.Nombre != null);
         }
 
         public bool esUbicable()
