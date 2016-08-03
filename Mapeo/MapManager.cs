@@ -36,11 +36,12 @@ namespace Mapeo
             );
 
             var mapper = new ConventionModelMapper();
-            var mappings = new []
-            {
-                typeof(PoiMap)
-            };
-            mapper.AddMapping(mappings);
+            var mapping = new PoiMap();
+            //var mappings = new []
+            //{
+                //typeof(PoiMap)
+            //};
+            mapper.AddMapping(mapping);
             config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
 
             new SchemaExport(config).Execute(false, true, false);
