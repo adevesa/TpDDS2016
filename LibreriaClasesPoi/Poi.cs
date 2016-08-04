@@ -102,6 +102,7 @@ namespace LibreriaClasesPoi
         public void agregarDiaYHorario(string dia, string turno, int horarioDeApertura, int horarioDeCierre)
         {
             HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
+            nuevoHorarioDeAtencion.setPoiId(this.Id);
             nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
             this.horarioDeAtencion.Add(nuevoHorarioDeAtencion);
         }

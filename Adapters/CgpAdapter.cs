@@ -37,7 +37,7 @@ namespace Adapters
         {
             foreach(Servicio unServicio in servicios)
             {
-                nuevoCgp.agregarServicios(unServicio);
+                nuevoCgp.agregarServicio(unServicio);
             }
         }
 

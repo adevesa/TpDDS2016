@@ -10,13 +10,20 @@ namespace Poi.Servicios
     public class Servicio
     {
         //Atributos
-        private string nombreServicio;
+        public int Id { get; set; }
+        public int PoiId { get; set; }
+        public string NombreServicio { get; set; }
         private List<HorarioDeAtencion> horariosDeAtencion;
+        public bool TieneLimiteHorario { get; set; }
 
         //Setters y getters
-        public void setNombreDelServicio(string nombre) { this.nombreServicio = nombre; }
-        public string getNombreDelServicio() { return this.nombreServicio; }
+        public void setNombreDelServicio(string nombre) { this.NombreServicio = nombre; }
+        public string getNombreDelServicio() { return this.NombreServicio; }
 
+        public void setTieneLimiteHorario(bool valorDeVerdad) { this.TieneLimiteHorario = valorDeVerdad; }
+        public bool getTieneLimiteHorario() { return this.TieneLimiteHorario; }
+
+        public void setPoiId(int idPoi) { this.PoiId = idPoi; }
         //Constructor
         public Servicio()
         {
@@ -24,16 +31,34 @@ namespace Poi.Servicios
         }
 
         //Metodos
+
+        //* @name: servicioCoincide(string)
+        //* @decryp: recibe un string  y verifica si el nombre del servicio es igual al string recibido.
         public bool servicioCoincide(string palabraBuscada)
         {
             return this.getNombreDelServicio() == palabraBuscada;
         }
 
+        //* @name: agregarDiaYHorario(string dia, string turno, int inico, int fin)
+        //* @decryp: crea un nueo objeto "horario de atencion" con sus atributos correspondientes y los agrega
+        //* a la lista de horariosDeAtencion
         public void agregarDiaYHorario(string dia, string turno, int horarioDeApertura, int horarioDeCierre)
         {
             HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
             nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
             this.horariosDeAtencion.Add(nuevoHorarioDeAtencion);
+        }
+
+        //* @name: estaDisponible(DateTime horarioYfechaActual)
+        //* @decryp: recibe un objeto de la clase DateTime y verifica si el poi se encuentra
+        //* disponible en dicho horario y fecha.
+        public bool estaDisponible(DateTime horarioYfecha)
+        {
+            if (TieneLimiteHorario)
+            {
+                return (horariosDeAtencion.Any(unHorarioDeAtencion => unHorarioDeAtencion.estaDisponible(horarioYfecha)));
+            }
+            else return false;
         }
     }
 }

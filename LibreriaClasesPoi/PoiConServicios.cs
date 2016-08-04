@@ -33,14 +33,20 @@ namespace LibreriaClasesPoi
         }
 
         //Metodos de manipulación de servicios 
-        public void agregarServicios(Servicio servicio)
+        public bool estaServicioDisponible(string servicio, DateTime momento)
+        {
+            Servicio service = buscarServicio(servicio);
+            return service.estaDisponible(momento);
+        }
+
+        public void agregarServicio(Servicio servicio)
         {
             this.servicios.Add(servicio);
         }
 
         public void agregarHorarioDeAtencionAServicio(string nombreDelServicio, string dia, string turno, int horarioDeApertura, int horarioDeCierre)
         {
-            Servicio serviceBuscado = this.getServicios().Find(servicio => servicio.servicioCoincide(nombreDelServicio));
+            Servicio serviceBuscado = buscarServicio(nombreDelServicio);
             serviceBuscado.agregarDiaYHorario(dia, turno, horarioDeApertura, horarioDeCierre);
         }
         public void agregarServicioSinLimiteHorario(string servicio)
@@ -50,7 +56,14 @@ namespace LibreriaClasesPoi
             getServicios().Add(nuevoServicio);
         }
 
-        private List<string> mappearNombresServicios(List<Servicio> listaDeServicios)
+        private Servicio buscarServicio(string servicioBuscado)
+        {
+            Servicio service = new Servicio();
+            service = this.getServicios().Find(unServico => unServico.servicioCoincide(servicioBuscado));
+            return service;
+        }
+
+        private List<string> filtrarNombresServicios(List<Servicio> listaDeServicios)
         {
             List<string> lista = new List<string>();
             foreach (Servicio unServicio in listaDeServicios)
