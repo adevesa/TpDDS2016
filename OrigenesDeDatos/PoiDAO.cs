@@ -60,9 +60,9 @@ namespace OrigenesDeDatos
 
             Banco bancoNacion = new Banco( "banco nacion");
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
-            bancoNacion.agregarServicios("cobro cheques");
-            bancoNacion.agregarServicios("depositos");
-            bancoNacion.agregarServicios("extracciones");
+            bancoNacion.agregarServicioSinLimiteHorario("cobro cheques");
+            bancoNacion.agregarServicioSinLimiteHorario("depositos");
+            bancoNacion.agregarServicioSinLimiteHorario("extracciones");
             listBased.Add(bancoNacion);
 
             //Parada de colectivos//

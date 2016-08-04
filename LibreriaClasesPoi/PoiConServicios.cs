@@ -9,27 +9,30 @@ namespace LibreriaClasesPoi
 {
     public abstract class PoiConServicios:POI
     {
+        //Atributos
         private List<Servicio> servicios;
+
+        //Getters
         public List<Servicio> getServicios() { return this.servicios; }
 
+                //Metodos abstractos
+
+        //* @name: initService()
+        //* @decryp: genera una nueva lista de servicios y la settea.
         public void initService()
         {
             servicios = new List<Servicio>();
         }
 
+        //* @name: buscarCoincidencia(string criterio)
+        //* @decryp: recibe un string y comprueba si se cumple el método "buscarCoincidencia" de clase que hereda
+        //* o bien si algún servicio verifica con la palabra buscada.
         public override bool buscarCoincidencia(string palabraBuscada)
         {
             return (this.getServicios().Any(servicio => servicio.servicioCoincide(palabraBuscada) || base.buscarCoincidencia(palabraBuscada)));
         }
 
-
-        public void agregarServicios(string nombreDelServicio)
-        {
-            Servicio nuevoServicio = new Servicio();
-            nuevoServicio.setNombreDelServicio(nombreDelServicio);
-            this.getServicios().Add(nuevoServicio);
-        }
-        
+        //Metodos de manipulación de servicios 
         public void agregarServicios(Servicio servicio)
         {
             this.servicios.Add(servicio);

@@ -10,12 +10,12 @@ namespace LibreriaClasesPoi
     public class LocalComercial:POI 
     {
         //Atributos
-        private double criterioDeCercania;
+        public double CriterioDeCercania { get; set; }
         private List<string> rubros;
         
         //Setters y getters
-        public void setCriterioDeCercania(double criterio) { this.criterioDeCercania = criterio; }
-        public double getCriterioDeCercania() { return this.criterioDeCercania; }
+        public void setCriterioDeCercania(double criterio) { this.CriterioDeCercania = criterio; }
+        public double getCriterioDeCercania() { return this.CriterioDeCercania; }
 
         public List<string> getRubros() { return this.rubros; }
 
@@ -38,7 +38,7 @@ namespace LibreriaClasesPoi
         //Cercania
         public override bool cercanoDe(POI poi)
         {
-            return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(), this.criterioDeCercania));
+            return (this.getCoordenada().distanciaMenorA(poi.getCoordenada(), this.CriterioDeCercania));
         }
 
         

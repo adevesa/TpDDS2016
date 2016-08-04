@@ -13,9 +13,9 @@ namespace TestLibreríaPoi
         {
             
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
-            bancoNacion.agregarServicios("cobro cheques");
-            bancoNacion.agregarServicios("depositos");
-            bancoNacion.agregarServicios("extracciones");
+            bancoNacion.agregarServicioSinLimiteHorario("cobro cheques");
+            bancoNacion.agregarServicioSinLimiteHorario("depositos");
+            bancoNacion.agregarServicioSinLimiteHorario("extracciones");
             
         }
 

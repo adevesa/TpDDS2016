@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NHibernate.Connection;
-using NHibernate.Dialect;
-using NHibernate.Driver;
-using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Mapping.ByCode.Conformist;
 using NHibernate.Tool.hbm2ddl;
-using FluentNHibernate.Mapping;
+using Mapper;
+
 
 namespace Mapeo
 {
@@ -19,33 +16,30 @@ namespace Mapeo
     {
         public void init()
         {
-            var config = new Configuration();
-            config.DataBaseIntegration(db =>
-            {
-                db.ConnectionProvider<DriverConnectionProvider>();
-                db.Dialect<MsSql2012Dialect>();
-                db.Driver<SqlClientDriver>();
-                db.ConnectionString = @"Server=.\SQLEXPRESS;Database=****;User=sqlUser;Password=****;";
-                db.BatchSize = 30;
-                db.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
-                db.Timeout = 10;
-                db.LogFormattedSql = true;
-                db.LogSqlInConsole = false;
-                db.HqlToSqlSubstitutions = "true 1, false 0, yes 'Y', no 'N'";
-            }
-            );
+            var config = CreateAndConfigure.nuevaConfiguracion();
+
+            //* se crea un objeto mapper y cada uno de los mappings que se necesitan sincronizar
 
             var mapper = new ConventionModelMapper();
-            var mapping = new PoiMap();
-            //var mappings = new []
-            //{
-                //typeof(PoiMap)
-            //};
-            mapper.AddMapping(mapping);
-            config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
+            var mappingBanco = new BancoMap();
+            var mappingCGP = new CGPMap();
+            var mappingLocalComercial = new LocalComercialMap();
+            var mappingParadaDeColectivo = new ParadaDeColectivoMap();
 
+            //* se agregan los mapeos al objeto mapper
+            agregarMapeos(mapper, mappingBanco, mappingCGP, mappingLocalComercial, mappingParadaDeColectivo);
+
+            config.AddMapping(mapper.CompileMappingForAllExplicitlyAddedEntities());
             new SchemaExport(config).Execute(false, true, false);
         }
+         private void agregarMapeos(ConventionModelMapper mapper, params IConformistHoldersProvider[] mapeos)
+        {
+            foreach(IConformistHoldersProvider claseAMapear in mapeos)
+            {
+                mapper.AddMapping(claseAMapear);
+            }
+        }
+
         
     }
 }

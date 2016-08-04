@@ -26,9 +26,9 @@ namespace Adapters
         static public CGP modelarCGP(DatosExternosCGP modeloRecibido)
         {
             CGP cgpNuevo = new CGP(modeloRecibido.numeroComuna, modeloRecibido.domicilio);
-            cgpNuevo.zonasAledañas = modeloRecibido.zonasQueIncluye;
-            cgpNuevo.telefono = modeloRecibido.telefono;
-            cgpNuevo.nombreDirector = modeloRecibido.nombreDelDirector;
+            cgpNuevo.ZonasAledañas = modeloRecibido.zonasQueIncluye;
+            cgpNuevo.Telefono = modeloRecibido.telefono;
+            cgpNuevo.NombreDirector = modeloRecibido.nombreDelDirector;
             agregarServicios(cgpNuevo, modeloRecibido.servicios);
             return cgpNuevo;
         }
