@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="GestorDeUsuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Consola\Consola.csproj">

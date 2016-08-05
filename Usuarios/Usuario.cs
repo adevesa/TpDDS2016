@@ -14,6 +14,7 @@ namespace Usuarios
 
         //Atributos
         private string nombreCompleto;
+        private string nombreDeUsuario;
         private string direccion;
         private string mail;
         private int numeroDecontacto;
@@ -24,6 +25,9 @@ namespace Usuarios
         //Setters y getters
         public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
         public string getNombreCompleto() { return this.nombreCompleto; }
+
+        public void setNombreDeUsuario(string nombreDeUsuario) { this.nombreDeUsuario = nombreDeUsuario; }
+        public string getNombreDeUsuario() { return this.nombreDeUsuario; }
 
         public void setDireccion(string direccion) { this.direccion = direccion; }
         public string getDireccion() { return this.direccion; }

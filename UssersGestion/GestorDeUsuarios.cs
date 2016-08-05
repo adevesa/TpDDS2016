@@ -11,82 +11,52 @@ namespace UssersGestion
     public class GestorDeUsuarios
     {
         //Atributos
-        private List<Usuario> ussers = new List<Usuario>();
-        public List<Usuario> getUssers() { return ussers; }
+        private UsuarioDao usserDao;
+        private bool esAdministradorUsuarioActivo;
 
-        //Metodos
-        public int crearUsuario(Usuario tipoUsuario, string nombreCompleto, int numeroDeContacto, string direccion)
+        //Setters y getters
+        public List<Usuario> getUssers() { return this.usserDao.getUssers(); }
+
+                //Metodos
+
+        //* @name: crearUsuario(tipo, nombre, numero, direccion)
+        //* @decryp: delega al factory la creación del usuario.
+        public void crearUsuario(string tipoUsuario, string nombreDeUsuario, string nombreCompleto, string mail)
         {
-            int codigoDeIdentificacion = GeneradorDeUsuario.crearUsuario(tipoUsuario, nombreCompleto, numeroDeContacto, direccion);
-            agregarUsuario(tipoUsuario);
-            return (codigoDeIdentificacion);
+            this.usserDao.crearUsuario(tipoUsuario, nombreDeUsuario, nombreCompleto, mail, this.esAdministradorUsuarioActivo);
             
         }
 
-        public void agregarUsuario(Usuario usuario)
-        {
-            getUssers().Add(usuario);
-
-        }
-
-        public void loggearUsuarioEn(int idUsuario, TerminalConsola terminal)
-        {
-            Usuario usserBuscado = mapearUsser(idUsuario);
-            if(usserBuscado != null) { loggerUsuario(usserBuscado, terminal); }
-            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }     
-        }
+        //* @name: loggearUsuarioEn(nombreDeUsuario, terminal)
+        //* @decryp: recibe un nombre de usuario (NO NOMBRE COMPLETO; recibe por ejemplo:"fede_capo2007"),
+        //*  y una terminal. Establece la conexión entre ambos setteandole a la terminal que el usserActivo
+        //* es el que realiza la petición. Además se settea en el usuario que la terminal utilizada es la recibida.
         public void loggearUsuarioEn(string nombreDeUsuario, TerminalConsola terminal)
         {
-            Usuario usserBuscado = mapearUsser(nombreDeUsuario);
+            Usuario usserBuscado = usserDao.buscarUsser(nombreDeUsuario);
             if (usserBuscado != null) { loggerUsuario(usserBuscado, terminal); }
             else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
         }
-
         private void loggerUsuario(Usuario usser, TerminalConsola terminal)
         {
-            terminal.loggearUsuario(usser.getNombreCompleto());
+            terminal.loggearUsuario(usser.getNombreDeUsuario());
             usser.setTerminalUtilizada(terminal);
             terminal.setUsuarioCuentaConPrivilegiosEspeciales(usser.esAdministrador());
+            this.esAdministradorUsuarioActivo=usser.esAdministrador();
         }
-        public Usuario mapearUsser(int idUsser)
-        {
-            Usuario usserPedido = getUssers().Find(usuario => usuario.getIdUsuario() == idUsser);
-            return usserPedido;
-        }
-        public Usuario mapearUsser(string nombreDeUsuario)
-        {
-            Usuario usserPedido = getUssers().Find(usuario => usuario.getNombreCompleto() == nombreDeUsuario);
-            return usserPedido;
-        }
-
-
+        
         public List<String> mapearNombresDeUsuarios()
         {
-            List<String> lista = new List<String>();
-            foreach(Usuario usser in getUssers())
-            {
-                lista.Add(usser.getNombreCompleto());
-            }
-            return lista;
+            return this.usserDao.filtrarNombresDeUsuarios();
         }
 
         //Constructor
         public GestorDeUsuarios()
         {
-            this.init();
+            this.usserDao = new UsuarioDao();
+            
         }
 
-        private void init()
-        {
-            //Administradores default
-            crearUsuario(new Administrador(), "ezequiel oscar escobar", 1156339537, "corrientes 440");
-            crearUsuario(new Administrador(), "santiago candia", 1141758947, "cordoba 1100");
-            crearUsuario(new Administrador(), "profe paula", 1159339596, "avenida de mayo 550");
-
-            //Usuarios default
-            crearUsuario(new Comun(), "agustin greco", 1137032497, "lavalle 1080");
-            crearUsuario(new Comun(), "agustin devesa", 1167964584, "venezuela 100");
-        }
 
     }
 }
