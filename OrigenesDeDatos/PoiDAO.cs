@@ -39,6 +39,11 @@ namespace OrigenesDeDatos
             pois.RemoveAt(indexBuscado);
         }
 
+        public void borrar2(POI unPoi)
+        {
+            pois.Remove(unPoi);
+        }
+
         //Algunos pois locales//
         private List<POI> basedPois()
         {

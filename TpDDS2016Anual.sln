@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClasesPoi", "LibreriaClasesPoi\LibreriaClasesPoi.csproj", "{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}"
 EndProject
@@ -58,6 +58,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{ADBDF795-4736-4D75-A45E-75F1FF7A421E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Process", "Process", "{EA5BBB10-42D6-4DD6-9BBF-32FC7F250783}"
+	ProjectSection(SolutionItems) = preProject
+		BajaDePois.cs = BajaDePois.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PoiMap", "PoiMap", "{9339D17E-69BD-4071-B69E-B381D2F76727}"
 EndProject

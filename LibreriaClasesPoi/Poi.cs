@@ -7,6 +7,9 @@ using CoordenadaGeografica;
 using HorariosDeAtencion;
 using Poi;
 
+using System.Globalization;
+using System.Threading;
+
 namespace LibreriaClasesPoi
 {
     public abstract class POI
@@ -129,5 +132,12 @@ namespace LibreriaClasesPoi
 
         }
 
+        //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
+        public bool estaActivo()
+        {
+         DateTime fechaDeBaja = serviceRest.EjercutarService(this); //Supuestamente tendria que devolver una fecha de baja, pero no especifica en que formato, asi que lo interpreto como un tipo DateTime
+         DateTime fechaActual = DateTime.Today;
+         return (Compare(fechaDeBaja, fechaActual) >= 0); //No me reconoce el Compare, despues averiguo si es por culpa de alguna biblioteca faltante
+        }
     }
 }
