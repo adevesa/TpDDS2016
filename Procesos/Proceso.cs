@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Repositorio;
 
 namespace Procesos
 {
@@ -10,6 +11,7 @@ namespace Procesos
     {
         //Atributos
         private string nombreDelProceso;
+        
 
         //Setters y getters
         protected void setNombreDelProceso(string nombre) { this.nombreDelProceso = nombre; }

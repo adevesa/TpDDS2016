@@ -12,7 +12,7 @@ namespace OrigenesDeDatos
     {
         public List<POI> pois;
 
-
+        //Constructor
         public PoiDAO()
         {
             this.pois = new List<POI>();
