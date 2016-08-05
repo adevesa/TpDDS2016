@@ -13,8 +13,7 @@ namespace LibreriaClasesPoi
         //Constructor
         public Banco(string nombre) 
         {
-            base.init(nombre);
-            base.initService();
+            initService(nombre);
             agregarHorariosFijos();
         }
 

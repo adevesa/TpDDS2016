@@ -46,6 +46,7 @@ namespace Consola
         {
             this.nombre = nombreTerminal;
             this.comuna = comuna;
+            this.duracionMaximaDeBusqueda = 50;
             this.buscador = new Buscador();
 
         }

@@ -11,23 +11,26 @@ namespace TestUsuario
     public class AgregarNuevoUsuario
     {
         GestorDeUsuarios gestor = new GestorDeUsuarios();
+        TerminalConsola terminalCentral = new TerminalConsola("terminal central", 1);
 
 
         [TestMethod]
         public void CrearAdministrador()
         {
-            gestor.crearUsuario(new Administrador(), "juan pedro valenzuela", 1133505660, "pueyrredon 4800");
+            //*Primero se loggea a un administrador quien tiene permiso de crear admins
+            gestor.loggearUsuarioEn("ezequiel_escobar", terminalCentral);
+            gestor.crearUsuario("administrador","juan_pedro", "juan pedro valenzuela","juanpe@gmail.com");
 
             Assert.IsTrue(gestor.mapearNombresDeUsuarios().Contains("juan pedro valenzuela"));
         }
 
-        TerminalConsola terminalCentral = new TerminalConsola("terminal central", 1);
+        
 
 
         [TestMethod]
         public void LoggearUsuarioEnTerminalPorNombre()
         {
-            string usuarioDePrueba = "ezequiel oscar escobar";
+            string usuarioDePrueba = "ezequiel_escobar";
             gestor.loggearUsuarioEn(usuarioDePrueba, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba);
         }
@@ -38,11 +41,11 @@ namespace TestUsuario
         [TestMethod]
         public void CambiarUsserActivo()
         {
-            string usuarioDePrueba1 = "ezequiel oscar escobar";
+            string usuarioDePrueba1 = "ezequiel_escobar";
             gestor.loggearUsuarioEn(usuarioDePrueba1, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba1);
 
-            string usuarioDePrueba2 = "agustin greco";
+            string usuarioDePrueba2 = "agus_grec";
             gestor.loggearUsuarioEn(usuarioDePrueba2, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba2);
 

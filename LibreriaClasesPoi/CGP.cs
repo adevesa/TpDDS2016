@@ -17,17 +17,17 @@ namespace LibreriaClasesPoi
         //Constructores
         public CGP(string nombre,string direccion, int comuna)
         {
-            base.init(nombre);
             base.setDireccion(direccion);
-            base.initService();
             this.setComuna(comuna);
+            base.initService(nombre);
+            
         }
 
         public CGP(int numeroComuna, string domicilio)
         {
             
             setDireccion(domicilio);
-            base.initService();
+            base.initService("sin nombre");
             this.setComuna(numeroComuna);
 
         }

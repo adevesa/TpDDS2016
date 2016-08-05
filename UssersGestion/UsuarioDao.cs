@@ -60,6 +60,7 @@ namespace UssersGestion
             return lista;
         }
 
+      
         private void init()
         {
             //Administradores default
@@ -69,6 +70,8 @@ namespace UssersGestion
             //Usuarios default
             crearUsuario("comun","agus_grec", "agustin greco","grec.grec@gmail.com",false);
             crearUsuario("comun","agus_dev", "agustin devesa","agus.devesa@gmail.com",false );
+
+            
         }
     }
 }

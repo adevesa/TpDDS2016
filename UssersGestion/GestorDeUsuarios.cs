@@ -33,7 +33,7 @@ namespace UssersGestion
         //* es el que realiza la petición. Además se settea en el usuario que la terminal utilizada es la recibida.
         public void loggearUsuarioEn(string nombreDeUsuario, TerminalConsola terminal)
         {
-            Usuario usserBuscado = usserDao.buscarUsser(nombreDeUsuario);
+            Usuario usserBuscado = buscarUsuario(nombreDeUsuario);
             if (usserBuscado != null) { loggerUsuario(usserBuscado, terminal); }
             else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
         }
@@ -45,6 +45,10 @@ namespace UssersGestion
             this.esAdministradorUsuarioActivo=usser.esAdministrador();
         }
         
+        public Usuario buscarUsuario(string nombreDeUsuario)
+        {
+            return this.usserDao.buscarUsser(nombreDeUsuario);
+        }
         public List<String> mapearNombresDeUsuarios()
         {
             return this.usserDao.filtrarNombresDeUsuarios();
@@ -53,7 +57,7 @@ namespace UssersGestion
         //Constructor
         public GestorDeUsuarios()
         {
-            this.usserDao = new UsuarioDao();
+            this.usserDao = UsuarioDao.getInstance();
             
         }
 

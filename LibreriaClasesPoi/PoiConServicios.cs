@@ -19,8 +19,9 @@ namespace LibreriaClasesPoi
 
         //* @name: initService()
         //* @decryp: genera una nueva lista de servicios y la settea.
-        public void initService()
+        public void initService(string nombre)
         {
+            base.init(nombre);
             servicios = new List<Servicio>();
         }
 
@@ -29,7 +30,7 @@ namespace LibreriaClasesPoi
         //* o bien si algún servicio verifica con la palabra buscada.
         public override bool buscarCoincidencia(string palabraBuscada)
         {
-            return (this.getServicios().Any(servicio => servicio.servicioCoincide(palabraBuscada) || base.buscarCoincidencia(palabraBuscada)));
+            return (this.getServicios().Any(servicio => servicio.servicioCoincide(palabraBuscada)) || base.buscarCoincidencia(palabraBuscada));
         }
 
         //Metodos de manipulación de servicios 
@@ -39,8 +40,17 @@ namespace LibreriaClasesPoi
             return service.estaDisponible(momento);
         }
 
-        public void agregarServicio(Servicio servicio)
+        public void crearServicio(string nombreDelServicio)
         {
+            Servicio service = new Servicio();
+            service.setNombreDelServicio(nombreDelServicio);
+            service.setNoTieneLimiteHorario(true);
+            agregarServicio(service);
+        }
+
+        private void agregarServicio(Servicio servicio)
+        {
+            servicio.setPoiId(this.getId());
             this.servicios.Add(servicio);
         }
 
@@ -49,11 +59,13 @@ namespace LibreriaClasesPoi
             Servicio serviceBuscado = buscarServicio(nombreDelServicio);
             serviceBuscado.agregarDiaYHorario(dia, turno, horarioDeApertura, horarioDeCierre);
         }
+
         public void agregarServicioSinLimiteHorario(string servicio)
         {
             Servicio nuevoServicio = new Servicio();
             nuevoServicio.setNombreDelServicio(servicio);
-            getServicios().Add(nuevoServicio);
+            nuevoServicio.setNoTieneLimiteHorario(false);
+            agregarServicio(nuevoServicio);
         }
 
         private Servicio buscarServicio(string servicioBuscado)

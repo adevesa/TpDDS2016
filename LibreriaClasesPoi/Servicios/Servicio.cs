@@ -14,14 +14,14 @@ namespace Poi.Servicios
         public int PoiId { get; set; }
         public string NombreServicio { get; set; }
         private List<HorarioDeAtencion> horariosDeAtencion;
-        public bool TieneLimiteHorario { get; set; }
+        public bool NoTieneLimiteHorario { get; set; }
 
         //Setters y getters
         public void setNombreDelServicio(string nombre) { this.NombreServicio = nombre; }
         public string getNombreDelServicio() { return this.NombreServicio; }
 
-        public void setTieneLimiteHorario(bool valorDeVerdad) { this.TieneLimiteHorario = valorDeVerdad; }
-        public bool getTieneLimiteHorario() { return this.TieneLimiteHorario; }
+        public void setNoTieneLimiteHorario(bool valorDeVerdad) { this.NoTieneLimiteHorario = valorDeVerdad; }
+        public bool getNoTieneLimiteHorario() { return this.NoTieneLimiteHorario; }
 
         public void setPoiId(int idPoi) { this.PoiId = idPoi; }
         //Constructor
@@ -54,7 +54,7 @@ namespace Poi.Servicios
         //* disponible en dicho horario y fecha.
         public bool estaDisponible(DateTime horarioYfecha)
         {
-            if (TieneLimiteHorario)
+            if (NoTieneLimiteHorario)
             {
                 return (horariosDeAtencion.Any(unHorarioDeAtencion => unHorarioDeAtencion.estaDisponible(horarioYfecha)));
             }
