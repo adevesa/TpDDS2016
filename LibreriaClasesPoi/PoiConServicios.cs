@@ -48,7 +48,7 @@ namespace LibreriaClasesPoi
             agregarServicio(service);
         }
 
-        private void agregarServicio(Servicio servicio)
+        public void agregarServicio(Servicio servicio)
         {
             servicio.setPoiId(this.getId());
             this.servicios.Add(servicio);

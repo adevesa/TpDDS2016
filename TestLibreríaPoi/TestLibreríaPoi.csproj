@@ -54,8 +54,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestBanco.cs" />
-    <Compile Include="TestCGP.cs" />
     <Compile Include="TestCoordenadasPoi.cs" />
+    <Compile Include="TestingCGP.cs" />
     <Compile Include="TestLocalComercial.cs" />
     <Compile Include="TestParadaDeColectivo.cs" />
   </ItemGroup>

@@ -5,7 +5,7 @@ using LibreriaClasesPoi;
 namespace TestLibreríaPoi
 {
     [TestClass]
-    public class TestCGP
+    public class TestingCGP
     {
         CGP cgpComunal5 = new CGP("cgp comunal 5", "sarandí 1273 almagro", 5);
         CGP cgpComunal1 = new CGP("cgp comunal 1", "uruguay 740 monserrat", 1);
@@ -31,7 +31,13 @@ namespace TestLibreríaPoi
             Assert.IsTrue(cgpComunal1.getNombre() == "cgp comunal 1");
         }
 
+        [TestMethod]
+        public void CgpCumpleCriterioDeBusqueda()
+        {
+            init();
+            Assert.IsTrue(cgpComunal1.buscarCoincidencia("cgp"));
+            Assert.IsTrue(cgpComunal5.buscarCoincidencia("consultas afip"));
+        }
 
-       
     }
 }

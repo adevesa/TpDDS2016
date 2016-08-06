@@ -135,9 +135,10 @@ namespace LibreriaClasesPoi
         //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
         public bool estaActivo()
         {
-         DateTime fechaDeBaja = serviceRest.ejecutarService(this); //Supuestamente tendria que devolver una fecha de baja, pero no especifica en que formato, asi que lo interpreto como un tipo DateTime
-         DateTime fechaActual = DateTime.Today;                     //Despues le pregunto a la profe o a algún ayudante como es la movida con esto. 
-         return (DateTime.Compare(fechaDeBaja, fechaActual) > 0); 
+         //DateTime fechaDeBaja = serviceRest.ejecutarService(this); //Supuestamente tendria que devolver una fecha de baja, pero no especifica en que formato, asi que lo interpreto como un tipo DateTime
+         //DateTime fechaActual = DateTime.Today;                     //Despues le pregunto a la profe o a algún ayudante como es la movida con esto. 
+         //return (DateTime.Compare(fechaDeBaja, fechaActual) > 0);
+            return true;
         }
        
     }
