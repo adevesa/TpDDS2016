@@ -7,7 +7,7 @@ using CoordenadaGeografica;
 
 namespace LibreriaClasesPoi
 {
-    public class CGP: PoiConServicios
+    public class CGP:PoiConServicios
     {
         //Atributos
         public string ZonasAledañas { get; set; }
@@ -17,9 +17,9 @@ namespace LibreriaClasesPoi
         //Constructores
         public CGP(string nombre,string direccion, int comuna)
         {
-            base.setDireccion(direccion);
-            this.setComuna(comuna);
-            base.initService(nombre);
+            setDireccion(direccion);
+            setComuna(comuna);
+            initService(nombre);
             
         }
 
@@ -27,8 +27,8 @@ namespace LibreriaClasesPoi
         {
             
             setDireccion(domicilio);
-            base.initService("sin nombre");
-            this.setComuna(numeroComuna);
+            initService("sin nombre");
+            setComuna(numeroComuna);
 
         }
 

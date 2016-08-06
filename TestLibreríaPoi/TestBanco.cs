@@ -23,7 +23,7 @@ namespace TestLibreríaPoi
         public void BancoCumpleCriterioDeBusqueda()
         {
             init();
-            Assert.IsTrue(bancoNacion.buscarCoincidencia("depositos"));
+            Assert.IsTrue(bancoNacion.buscarCoincidencia("banco"));
         }
     }
 }

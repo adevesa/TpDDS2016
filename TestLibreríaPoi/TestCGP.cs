@@ -8,7 +8,7 @@ namespace TestLibreríaPoi
     public class TestCGP
     {
         CGP cgpComunal5 = new CGP("cgp comunal 5", "sarandí 1273 almagro", 5);
-        CGP cgpComunal1 = new CGP("cgp comunal 1","uruguay 740 monserrat", 1);
+        CGP cgpComunal1 = new CGP("cgp comunal 1", "uruguay 740 monserrat", 1);
 
         public void init()
         {
@@ -25,12 +25,13 @@ namespace TestLibreríaPoi
         }
 
         [TestMethod]
-        public void CgpCumpleCriterioDeBusqueda()
+        public void CgpSeCreaExitosamente()
         {
             init();
-
-            Assert.IsTrue(cgpComunal1.buscarCoincidencia("consultas afip"));
-            
+            Assert.IsTrue(cgpComunal1.getNombre() == "cgp comunal 1");
         }
+
+
+       
     }
 }
