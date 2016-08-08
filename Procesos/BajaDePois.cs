@@ -15,18 +15,26 @@ namespace Procesos
         RepositorioDePois repositorio = RepositorioDePois.getInstance();
 
         //Metodos
-        public void darDeBajaPoi(POI unPoi)
+        public void darDeBajaSiEsNecesario(POI unPoi)
         {
             if (!(unPoi.estaActivo()))  //Le pregunta al POI si NO (!) esta activo
             {
-                repositorio.localOrigin.dao.borrar2(unPoi); //en el codigo le mandaste en vez de un POI un 
-                                       //indice para buscar al POI y despues borrarlo
-                                       //yo lo pense de otra forma, fijate como definí 
-                                       //el nuevo metodo de borrar en PoiDAO a ver cual te gusta más.
+                repositorio.localOrigin.dao.borrar2(unPoi);
             }
 
-
-
         }
+
+        //Método polimórfico
+        public override int ejecutar()
+        {
+            List<POI> listPoi = repositorio.localOrigin.dao.pois; //acá tendría que usar el método buscar pero me parece que es al pedo. Además, bajo que criterio de busqueda?
+            foreach(POI poi in listPoi)
+            {
+                darDeBajaSiEsNecesario(poi);
+            }
+            return 0;
+        }
+
+
     }
 }

@@ -45,7 +45,7 @@ namespace OrigenesDeDatos
         }
 
         //Algunos pois locales//
-        private List<POI> basedPois()
+       private List<POI> basedPois()
         {
             List<POI> listBased = new List<POI>();
 
