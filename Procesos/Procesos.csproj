@@ -45,7 +45,7 @@
     <Compile Include="BajaDePois.cs" />
     <Compile Include="MiniProcess\ManejadorString.cs" />
     <Compile Include="Proceso.cs" />
-    <Compile Include="ProcesoMultuple.cs" />
+    <Compile Include="ProcesoMultiple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

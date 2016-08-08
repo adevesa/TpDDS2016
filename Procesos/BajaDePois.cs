@@ -17,9 +17,9 @@ namespace Procesos
         //Metodos
         public void darDeBajaSiEsNecesario(POI unPoi)
         {
-            if (!(unPoi.estaActivo()))  //Le pregunta al POI si NO (!) esta activo
+            if (!unPoi.estaActivo())
             {
-                repositorio.localOrigin.dao.borrar2(unPoi);
+                repositorio.localOrigin.borrar(unPoi);
             }
 
         }
