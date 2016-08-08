@@ -12,12 +12,13 @@ namespace Usuarios
     {
         
         //Constructores
-        public Comun() { }
+        public Comun() { init(); }
         public Comun(string nombreCompleto, int numeroDeContacto, string direccion)
         {
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);
             setDireccion(direccion);
+            init();
         }
 
         //Metodos

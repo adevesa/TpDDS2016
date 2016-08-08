@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="ActualizacionDeLocalesComerciales.cs" />
     <Compile Include="AdministradorDeProcesos.cs" />
-    <Compile Include="AgregarAccionesAUsuarios.cs" />
     <Compile Include="BajaDePois.cs" />
     <Compile Include="MiniProcess\ManejadorString.cs" />
     <Compile Include="Proceso.cs" />

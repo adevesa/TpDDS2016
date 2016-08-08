@@ -23,13 +23,14 @@ namespace Usuarios
 
 
         //Constructores
-        public Administrador() { this.procesos = new List<Proceso>(); }
+        public Administrador() { this.procesos = new List<Proceso>(); init(); }
         public Administrador(string nombreCompleto, int numeroDeContacto, string direccion)
         {
             this.procesos = new List<Proceso>();
             setNombreCompleto(nombreCompleto);
             setNumeroDeContacto(numeroDeContacto);
             setDireccion(direccion);
+            init();
             
         }
 
@@ -50,8 +51,13 @@ namespace Usuarios
         //* PD: coincidenStrings es una simple delegación sin mas importancia.
         public void ejecutarProceso(string nombreDelProceso)
         {
-            Proceso procesoAEjecutar=this.procesos.Find(proceso=>coincidenStrings(proceso.getNombreDelProceso(),nombreDelProceso));
+            Proceso procesoAEjecutar = buscarProceso(nombreDelProceso);
             procesoAEjecutar.ejecutar();
+        }
+
+        private Proceso buscarProceso(string nombre)
+        {
+            return this.procesos.Find(proceso => coincidenStrings(proceso.getNombreDelProceso(), nombre));
         }
         private bool coincidenStrings(string palabra1, string palabra2)
         {

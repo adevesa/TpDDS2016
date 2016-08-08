@@ -47,6 +47,10 @@
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccionesPorUsuarios\AccionesPorUsuarios.csproj">
+      <Project>{0ba99977-8496-4f4b-a8c3-53129c77143e}</Project>
+      <Name>AccionesPorUsuarios</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Consola\Consola.csproj">
       <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
       <Name>Consola</Name>

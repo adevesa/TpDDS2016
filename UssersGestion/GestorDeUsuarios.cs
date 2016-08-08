@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Usuarios;
 using Consola;
+using AccionesPorUsuarios;
 
 namespace UssersGestion
 {
@@ -13,6 +14,13 @@ namespace UssersGestion
         //Atributos
         private UsuarioDao usserDao;
         private bool esAdministradorUsuarioActivo;
+        
+        //Constructor
+        public GestorDeUsuarios()
+        {
+            this.usserDao = UsuarioDao.getInstance();
+
+        }
 
         //Setters y getters
         public List<Usuario> getUssers() { return this.usserDao.getUssers(); }
@@ -54,12 +62,8 @@ namespace UssersGestion
             return this.usserDao.filtrarNombresDeUsuarios();
         }
 
-        //Constructor
-        public GestorDeUsuarios()
-        {
-            this.usserDao = UsuarioDao.getInstance();
-            
-        }
+
+        
 
 
     }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
 using Consola;
+using AccionesPorUsuarios;
  
 
 namespace Usuarios
@@ -20,7 +21,7 @@ namespace Usuarios
         private int numeroDecontacto;
         private int idUsuario;
         private TerminalConsola terminalUtilizada;
-         
+        private List<Accion> acciones;
 
         //Setters y getters
         public void setNombreCompleto(string nombreCompleto) { this.nombreCompleto = nombreCompleto; }
@@ -44,13 +45,50 @@ namespace Usuarios
         public void setTerminalUtilizada(TerminalConsola terminal) { this.terminalUtilizada = terminal; }
         public TerminalConsola getTerminalUtilizada() { return this.terminalUtilizada; }
 
+        public List<Accion> getAcciones() { return this.acciones; }
+
+        //Initializer
+        protected void init()
+        {
+            this.acciones = new List<Accion>();
+        }
+        
         //Metodos
+
+        //* @name: esAdministrador()
+        //* @decryp: por defecto retornará false. Cada clase hija redefinirá a true en caso de que cumpla
+        //* con el criterio.
         public virtual bool esAdministrador() { return false; }
+
 
         public List<POI> buscar(string criterio)
         {
             return getTerminalUtilizada().buscar(criterio);
         }
 
+ 
+        //* @name: ejecutarAccion(nombreDeLaAccion)
+        //* @decryp: recibe el nombre de la acción y realiza la ejecución de la misma.
+        public void ejecutarAccion(string accion)
+        {
+            Accion accionAEjecutar = buscarAccion(accion);
+            accionAEjecutar.ejecutar();
+        }
+
+        //* Métodos de manipulación de acciones
+        public Accion buscarAccion(string nombre)
+        {
+            return this.acciones.Find(accion => accion.getNombre() == nombre);
+        }
+
+        public void agregarAccion(Accion accion)
+        {
+            this.acciones.Add(accion);
+        }
+
+        public void borrarAccion(Accion accion)
+        {
+            this.acciones.Remove(accion);
+        }
     }
 }
