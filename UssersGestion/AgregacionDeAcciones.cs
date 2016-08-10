@@ -11,6 +11,8 @@ namespace UssersGestion
 {
     public class AgregacionDeAcciones : Proceso
     {
+        //* @comment: la lista de acciones está modelada por usuario, es decir por ejemplo:
+        //* [("usser", consultarDisponibilidad), ("usser_2", consultarDistancia)] 
         private List<Tuple<String, Accion>> acciones;
         private GestorDeAcciones gestor;
 
@@ -25,12 +27,12 @@ namespace UssersGestion
         }
 
         //Metodos
-        public override int ejecutar()
+        public override void ejecutar(string mailDelUsuario)
         {
+            setMailDelUsserQueEjecuta(mailDelUsuario);
             gestor.guardarEstados(this.acciones);
             realizarAcciones(this.acciones);
-
-            return 0;
+            
         }
 
         private void realizarAcciones(List<Tuple<String, Accion>> acciones)

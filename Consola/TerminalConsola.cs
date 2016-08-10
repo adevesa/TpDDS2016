@@ -95,6 +95,13 @@ namespace Consola
             
         }
 
+        //* @name: cerrarSesion()
+        //* @decryp: settea el usuario activo a "null"
+        public void cerrarSesion()
+        {
+            this.setUsuarioActivo(null);
+        }
+
                             //METODOS SECUNDARIOS//
         public List<string> mappearNombresPois(List<POI> pois)
         {

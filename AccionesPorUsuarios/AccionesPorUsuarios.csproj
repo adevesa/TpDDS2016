@@ -43,6 +43,12 @@
     <Compile Include="Accion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consola\Consola.csproj">
+      <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
+      <Name>Consola</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -40,12 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActualizacionDeLocalesComerciales.cs" />
+    <Compile Include="ManejoDeErrores\ComunicarFalloPorMail.cs" />
+    <Compile Include="ManejoDeErrores\ErrorGestion.cs" />
+    <Compile Include="ManejoDeErrores\Reintentar.cs" />
+    <Compile Include="Procesos\ActualizacionDeLocalesComerciales.cs" />
     <Compile Include="AdministradorDeProcesos.cs" />
-    <Compile Include="BajaDePois.cs" />
+    <Compile Include="Procesos\BajaDePois.cs" />
     <Compile Include="MiniProcess\ManejadorString.cs" />
-    <Compile Include="Proceso.cs" />
-    <Compile Include="ProcesoMultiple.cs" />
+    <Compile Include="Procesos\Proceso.cs" />
+    <Compile Include="Procesos\ProcesoMultiple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +65,7 @@
       <Name>RepositorioYbuscador</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

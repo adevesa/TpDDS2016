@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
 using Procesos;
+using Procesos.ManejoDeErrores;
 
 
 
@@ -52,7 +53,7 @@ namespace Usuarios
         public void ejecutarProceso(string nombreDelProceso)
         {
             Proceso procesoAEjecutar = buscarProceso(nombreDelProceso);
-            procesoAEjecutar.ejecutar();
+            procesoAEjecutar.ejecutar(getMail());
         }
 
         private Proceso buscarProceso(string nombre)
@@ -62,6 +63,14 @@ namespace Usuarios
         private bool coincidenStrings(string palabra1, string palabra2)
         {
             return palabra1 == palabra2;
+        }
+
+        public void configurarTipoDeManejoDeErrores(ErrorGestion tipoDeManejoDeError)
+        {
+            foreach(Proceso proceso in procesos)
+            {
+                proceso.setTipoDeManejoDeError(tipoDeManejoDeError);
+            }
         }
     }
 }

@@ -25,14 +25,15 @@ namespace Procesos
         }
 
         //Método polimórfico
-        public override int ejecutar()
+        public override void ejecutar(string mailDelUsuario)
         {
+            setMailDelUsserQueEjecuta(mailDelUsuario);
             List<POI> listPoi = repositorio.localOrigin.dao.pois; //acá tendría que usar el método buscar pero me parece que es al pedo. Además, bajo que criterio de busqueda?
             foreach(POI poi in listPoi)
             {
                 darDeBajaSiEsNecesario(poi);
             }
-            return 0;
+            
         }
 
 

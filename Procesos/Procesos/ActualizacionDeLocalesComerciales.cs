@@ -36,51 +36,51 @@ namespace Procesos
         //* nombre de fantasía;palabras clave (separadas por espacios) 
         //* por cada línea leida, se actualiza (o se crea si no existiese) el local en cuestión,
         //* y se verifica que no haya errores. En caso de que EXISTAN ERRORES, el método devuelve 1(int UNO).
-        public int actualizarLocalesComerciales(string rutaDeAccesoATxt)
+        public  void actualizarLocalesComerciales(string rutaDeAccesoATxt)
         {
             StreamReader archivoDeTexto = new StreamReader(rutaDeAccesoATxt);
             string linea;
-            bool hayError = false;
             while(((linea = archivoDeTexto.ReadLine()) != null) && !hayError)
             {
-                if (actualizarOCrearLocalComercial(linea) != 0)
-                {
-                    hayError = true;
-                    return 1;
-                }
+                actualizarOCrearLocalComercial(linea); 
             }
-            return 0;
+            
         }
 
-        private int actualizarOCrearLocalComercial(string lineaLeia)
+        private void actualizarOCrearLocalComercial(string lineaLeia)
         {
             string nombreDelPoi = this.modeladorDePalabra.primerElemento(lineaLeia);
             string[] palabrasClaves = this.modeladorDePalabra.segundoElemento(lineaLeia);
             if (repositorio.verificarExistencia(nombreDelPoi))
             {
-                return actualizarLocalComercial(nombreDelPoi, palabrasClaves);
+                actualizarLocalComercial(nombreDelPoi, palabrasClaves);
             }
-            else return crearLocalComercial(nombreDelPoi, palabrasClaves);
+            else crearLocalComercial(nombreDelPoi, palabrasClaves);
         }
 
-        private int actualizarLocalComercial(string nombreDelPoi,string[] palabrasClaves)
+        private void actualizarLocalComercial(string nombreDelPoi,string[] palabrasClaves)
         {
             POI poiBuscado = repositorio.localOrigin.buscarPoiLlamado(nombreDelPoi);
             poiBuscado.agregarPalabraClave(palabrasClaves);
             repositorio.localOrigin.editar(poiBuscado);
-            return 0;
+            cambiarEstadoSiEsNecesario(poiBuscado, palabrasClaves);
+
         }
-        private int crearLocalComercial(string nombreDelPoi,string[] palabrasClaves)
+        private void crearLocalComercial(string nombreDelPoi,string[] palabrasClaves)
         {
             LocalComercial nuevoLocal = new LocalComercial(nombreDelPoi);
             nuevoLocal.agregarPalabraClave(palabrasClaves);
-            return 0;
+            cambiarEstadoSiEsNecesario(nuevoLocal, palabrasClaves);
         }
 
-
-        public override int ejecutar()
+        private void cambiarEstadoSiEsNecesario(POI local, string[] palabras)
         {
-            return actualizarLocalesComerciales(this.rutaDeAccesoAtxt);
+           
+        }
+        public override void ejecutar(string mailDelUsuario)
+        {
+            setMailDelUsserQueEjecuta(mailDelUsuario);
+            actualizarLocalesComerciales(this.rutaDeAccesoAtxt);
         }
     }
     

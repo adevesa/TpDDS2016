@@ -53,10 +53,23 @@ namespace UssersGestion
             this.esAdministradorUsuarioActivo=usser.esAdministrador();
         }
         
+        //* @name: cerrarSesionDe(nombreDeUsuario, terminal)
+        //* @decryp: recibe el nombre del usuario que desea cerrar sension en la terminal solicitada.
+        //* Se settea que la terminal utilizada por el usuario es "null", y se ejecuta el método
+        //* cerrarSesion de la terminal.
+        public void cerrarSesionDe(string nombreDeUsuario, TerminalConsola terminal)
+        {
+            buscarUsuario(nombreDeUsuario).setTerminalUtilizada(null);
+            terminal.cerrarSesion();
+        }
+
+        //* @name: buscarUsuario(nombreDeUsuario)
+        //* @decryp: recibe un nombre de usuario y retorna el usuario (tipo usuario) buscado
         public Usuario buscarUsuario(string nombreDeUsuario)
         {
             return this.usserDao.buscarUsser(nombreDeUsuario);
         }
+
         public List<String> mapearNombresDeUsuarios()
         {
             return this.usserDao.filtrarNombresDeUsuarios();
