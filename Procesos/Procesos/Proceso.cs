@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Repositorio;
 using Procesos.ManejoDeErrores;
+using Procesos.Procesos.Estados;
 
 
 namespace Procesos
@@ -14,7 +15,7 @@ namespace Procesos
         //Atributos
         private string nombreDelProceso;
         private string mailDelUsserQueEjecuta;
-        public bool hayError;
+        private Estado estado;
         private ErrorGestion tipoDeError;
         
 
@@ -26,22 +27,20 @@ namespace Procesos
         public string getMailDelUsserQueEjecuta() { return this.mailDelUsserQueEjecuta; }
 
         public void setTipoDeManejoDeError(ErrorGestion tipoDeManejador) { this.tipoDeError = tipoDeManejador; }
+        public ErrorGestion getTipoManejoDeError() { return this.tipoDeError; }
+
+        public void setEstado(Estado estadoNuevo) { this.estado = estadoNuevo; }
+        public Estado getEstado() { return this.estado; }
 
         //Metodos
-        protected void init() { this.hayError = false; }
+
+        protected void init()
+        {
+            this.estado = new Correcto(this);
+        }
 
         public virtual void ejecutar(string mailDelUsuario) {  }
 
-        protected void cambiarEstado(bool valor)
-        {
-            hayError = valor;
-            tratarErrorSiEsNecesario();
-        }
-
-        private void tratarErrorSiEsNecesario()
-        {
-            this.tipoDeError.manipularResultado(this);
-        }
        
     }
 }

@@ -15,19 +15,14 @@ namespace Procesos.ManejoDeErrores
         public ComunicarFalloPorMail(string mailDelUsuario)
         {
             setMailDelUsuario(mailDelUsuario);
-            init();
+            
         }
 
-        public override void manipularResultado(Proceso proceso)
+        public override void lanzar(Proceso proceso)
         {
-            if (proceso.hayError)
-            {
-                enviarAviso();
-                almacenarResultadoNegativo(proceso.getNombreDelProceso());
-            }
-            else almacenarResultadoPositivo(proceso.getNombreDelProceso());
+            enviarAviso();
         }
-
+       
         private void enviarAviso()
         {
             //La cadena "servidor" es el servidor de correo que enviará tu mensaje

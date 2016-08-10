@@ -19,25 +19,14 @@ namespace Procesos.ManejoDeErrores
         {
             setCantidadMaximaDeIntentos(cantidad);
             cantidadDeIntentosRealizados = 0;
-            init();
         }
 
-        public override void manipularResultado(Proceso proceso)
-        {
-            if (proceso.hayError)
-            {
-                if (cantidadDeIntentosRealizados <= cantidadMaximaDeIntentos)
-                    { realizarSiguienteIteracion(proceso); }
-                almacenarResultadoNegativo(proceso.getNombreDelProceso());
-            }
-            almacenarResultadoPositivo(proceso.getNombreDelProceso());
-        }
-
-        private void realizarSiguienteIteracion(Proceso proceso)
+        public override void lanzar(Proceso proceso)
         {
             incrementarCantidad();
             proceso.ejecutar(proceso.getMailDelUsserQueEjecuta());
         }
+
         private void incrementarCantidad()
         {
             cantidadDeIntentosRealizados++;

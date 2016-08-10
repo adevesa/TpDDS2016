@@ -47,6 +47,9 @@
     <Compile Include="AdministradorDeProcesos.cs" />
     <Compile Include="Procesos\BajaDePois.cs" />
     <Compile Include="MiniProcess\ManejadorString.cs" />
+    <Compile Include="Procesos\Estados\Correcto.cs" />
+    <Compile Include="Procesos\Estados\Erroneo.cs" />
+    <Compile Include="Procesos\Estados\Estado.cs" />
     <Compile Include="Procesos\Proceso.cs" />
     <Compile Include="Procesos\ProcesoMultiple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -22,14 +22,13 @@ namespace Procesos
 
 
         //Método polimórfico
-        public override int ejecutar(string mailDelUsuario)
+        public override void ejecutar(string mailDelUsuario)
         {
             setMailDelUsserQueEjecuta(mailDelUsuario);
             foreach (Proceso unProceso in procesosAsociados)
             {
                 unProceso.ejecutar(mailDelUsuario);
             }
-            return 0;
         }
 
         public void agregarProceso(Proceso proceso)

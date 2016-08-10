@@ -40,7 +40,7 @@ namespace Procesos
         {
             StreamReader archivoDeTexto = new StreamReader(rutaDeAccesoATxt);
             string linea;
-            while(((linea = archivoDeTexto.ReadLine()) != null) && !hayError)
+            while(((linea = archivoDeTexto.ReadLine()) != null))
             {
                 actualizarOCrearLocalComercial(linea); 
             }
