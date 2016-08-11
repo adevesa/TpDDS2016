@@ -8,6 +8,7 @@ using Repositorio;
 using LibreriaClasesPoi;
 using System.IO;
 using Procesos.MiniProcess;
+using Procesos.Procesos.Estados;
 
 
 namespace Procesos
@@ -40,7 +41,7 @@ namespace Procesos
         {
             StreamReader archivoDeTexto = new StreamReader(rutaDeAccesoATxt);
             string linea;
-            while(((linea = archivoDeTexto.ReadLine()) != null))
+            while(((linea = archivoDeTexto.ReadLine()) != null) && getEstado().esCorrecto())
             {
                 actualizarOCrearLocalComercial(linea); 
             }
@@ -73,10 +74,27 @@ namespace Procesos
             cambiarEstadoSiEsNecesario(nuevoLocal, palabrasClaves);
         }
 
+        //* @name: cambiarEstadoSiEsNecesario()
+        //* @decryp: verifica si existen errores en alguna actualizacion y coloca el estado a:
+        //* erroneo en caso de falla, o correcto en caso de que no existan fallas.
         private void cambiarEstadoSiEsNecesario(POI local, string[] palabras)
         {
-           
+            if(estanEnLaLista(local.getPalabrasClaves(), palabras))
+            {
+                this.getEstado().manipularResultado();
+            }
+            this.getEstado().cambiarEstado();
+            this.getEstado().manipularResultado();
         }
+
+        private bool estanEnLaLista(List<string> lista, string [] palabras)
+        {
+            return palabras.All(palabra => lista.Contains(palabra));
+        }
+
+
+        // *@name: ejecutar(mailDelUsuario)
+        //* @decryp: es el método polimorfico a todos los procesos.
         public override void ejecutar(string mailDelUsuario)
         {
             setMailDelUsserQueEjecuta(mailDelUsuario);

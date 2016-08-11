@@ -18,6 +18,7 @@ namespace Procesos.Procesos.Estados
 
         //Metodos
         
+        public bool esCorrecto() { return true;}
 
         public void cambiarEstado()
         {

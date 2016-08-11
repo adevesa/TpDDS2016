@@ -10,5 +10,6 @@ namespace Procesos.Procesos.Estados
     {
         void manipularResultado();
         void cambiarEstado();
+        bool esCorrecto();
     }
 }
