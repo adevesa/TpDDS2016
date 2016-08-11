@@ -38,6 +38,12 @@ namespace OrigenesDeDatos
             this.dao.borrar(poi.getId());
         }
 
+        //Borrar que si funciona en el test//
+        public void borrar2(POI poi)
+        {
+            this.dao.borrar2(poi);
+        }
+
         //Buscar//
         public List<POI> find(String criterio)
         {

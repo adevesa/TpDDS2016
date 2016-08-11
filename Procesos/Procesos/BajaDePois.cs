@@ -14,12 +14,18 @@ namespace Procesos
         //Atributos
         RepositorioDePois repositorio = RepositorioDePois.getInstance();
 
+        //Constructor
+        public BajaDePois()
+        {
+            this.setNombreDelProceso("baja de pois");
+        }
+
         //Metodos
         public void darDeBajaSiEsNecesario(POI unPoi)
         {
             if (!unPoi.estaActivo())
             {
-                repositorio.localOrigin.borrar(unPoi);
+                repositorio.localOrigin.borrar2(unPoi);
             }
 
         }
