@@ -23,7 +23,7 @@ namespace LibreriaClasesPoi
         public int Comuna { get; set; }
         private List<HorarioDeAtencion> horarioDeAtencion;
         private List<string> palabrasClaves;
-        
+        private DateTime FechaDeBaja;
 
         public void init(string nombre)
         {
@@ -53,7 +53,9 @@ namespace LibreriaClasesPoi
 
         public List<string> getPalabrasClaves() { return palabrasClaves; }
 
-                    //Metodos 
+        public void setFechaDeBaja(DateTime fechaDeBaja) { this.FechaDeBaja = fechaDeBaja; }
+
+        //Metodos 
 
         //* @name: esValido()
         //* @decryp: verifica si el poi tiene nombre y si es ubicable. Para cumplir con ser ubicable
@@ -135,10 +137,9 @@ namespace LibreriaClasesPoi
         //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
         public bool estaActivo()
         {
-         //DateTime fechaDeBaja = serviceRest.ejecutarService(this); //Supuestamente tendria que devolver una fecha de baja, pero no especifica en que formato, asi que lo interpreto como un tipo DateTime
-         //DateTime fechaActual = DateTime.Today;                     //Despues le pregunto a la profe o a algún ayudante como es la movida con esto. 
-         //return (DateTime.Compare(fechaDeBaja, fechaActual) > 0);
-            return true;
+         //DateTime fechaDeBaja = serviceRest.ejecutarService(this); //Al final no usamos service Rest
+         DateTime fechaActual = DateTime.Today;                     
+         return (DateTime.Compare(this.FechaDeBaja, fechaActual) > 0);
         }
        
     }

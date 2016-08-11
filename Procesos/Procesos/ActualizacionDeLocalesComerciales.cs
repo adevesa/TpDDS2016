@@ -59,7 +59,7 @@ namespace Procesos
             else crearLocalComercial(nombreDelPoi, palabrasClaves);
         }
 
-        private void actualizarLocalComercial(string nombreDelPoi,string[] palabrasClaves)
+        public void actualizarLocalComercial(string nombreDelPoi,string[] palabrasClaves)
         {
             POI poiBuscado = repositorio.localOrigin.buscarPoiLlamado(nombreDelPoi);
             poiBuscado.agregarPalabraClave(palabrasClaves);
