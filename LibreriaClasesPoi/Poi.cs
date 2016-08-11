@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CoordenadaGeografica;
 using HorariosDeAtencion;
-using Poi;
-
+using Poi.GeneraciónDeIDs;
 using System.Globalization;
 using System.Threading;
 
@@ -15,7 +14,6 @@ namespace LibreriaClasesPoi
     public abstract class POI
     {
         //Atributos 
-        static private Random aleatorio = new Random();
         public string Nombre { get; set; }
         public int Id { get; set; }
         private Coordenada coordenada;
@@ -25,11 +23,12 @@ namespace LibreriaClasesPoi
         private List<string> palabrasClaves;
         private DateTime FechaDeBaja;
 
+        //INIT
         public void init(string nombre)
         {
             palabrasClaves = new List<string>();
             horarioDeAtencion = new List<HorarioDeAtencion>();
-            this.setId(generarId());
+            this.setId(IDGenerator.getRandomValue(1800));
             this.Nombre = nombre;
             this.coordenada = new Coordenada();
             this.getCoordenada().localizar(this.Direccion);
@@ -128,18 +127,15 @@ namespace LibreriaClasesPoi
             lista.Add(palabra);
         }
 
-        static private int generarId()
-        {
-            return aleatorio.Next(0, 888);
-
-        }
-
-        //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
+        //* @name: bool estaActivo()
+        //* @decryp: compara la fecha de baja con la fecha ACTUAL (la que posee el sistema)
+        //* y devuelve TRUE en caso de que aun no se haya "vencido", caso omiso falso.
         public bool estaActivo()
         {
-         //DateTime fechaDeBaja = serviceRest.ejecutarService(this); //Al final no usamos service Rest
-         DateTime fechaActual = DateTime.Today;                     
-         return (DateTime.Compare(this.FechaDeBaja, fechaActual) > 0);
+            //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica
+            //* si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
+            DateTime fechaActual = DateTime.Today;                     
+            return (DateTime.Compare(this.FechaDeBaja, fechaActual) > 0);
         }
        
     }

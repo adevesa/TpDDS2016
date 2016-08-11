@@ -57,7 +57,7 @@ namespace TestOrigenLocal
 
             //Borramos objeto y comprobamos//
             origenLocal.borrar(brooklynBar);
-            Assert.IsFalse(origenLocal.dao.pois.Contains(brooklynBar));
+            Assert.IsFalse(origenLocal.verificarExistencia("brooklyn bar"));
 
         }
     }

@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="Banco.cs" />
     <Compile Include="CGP.cs" />
+    <Compile Include="GeneraciónDeIDs\IDGenerator.cs" />
     <Compile Include="Poi.cs" />
     <Compile Include="LocalComercial.cs" />
     <Compile Include="ParadaDeColectivo.cs" />

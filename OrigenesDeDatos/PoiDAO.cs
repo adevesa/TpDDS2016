@@ -35,8 +35,7 @@ namespace OrigenesDeDatos
         //Borrar un Poi//
         public void borrar(int index)
         {
-            int indexBuscado = pois.FindIndex(poiLocal => poiLocal.getId().Equals(index));
-            pois.RemoveAt(indexBuscado);
+            pois.RemoveAll(unPoi => unPoi.getId() == index);
         }
 
         public void borrar2(POI unPoi)
@@ -46,7 +45,6 @@ namespace OrigenesDeDatos
                 pois.Remove(unPoi);
             }
         }
-
 
 
         //Algunos pois locales//
@@ -124,8 +122,7 @@ namespace OrigenesDeDatos
 
         public bool verificarExistencia(string nombreDelPoi)
         {
-            List<string> nombreDePois = mappearNombresPois(pois);
-            return nombreDePois.Contains(nombreDelPoi);
+            return (pois.Any(unPoi => unPoi.getNombre() == nombreDelPoi));
         }
 
         public POI obtenerPoiLlamado(string nombreDelPoiBuscado)

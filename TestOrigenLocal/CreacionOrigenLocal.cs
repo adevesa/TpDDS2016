@@ -15,7 +15,7 @@ namespace TestOrigenLocal
         public void OrigenLocalCreadoExitosamente()
         {
             Assert.IsInstanceOfType(origenLocal, origenLocal.GetType());
-            Assert.IsInstanceOfType(origenLocal.dao, origenLocal.dao.GetType());
+            
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Procesos
         //Constructor
         public BajaDePois()
         {
+            init();
             this.setNombreDelProceso("baja de pois");
         }
 
@@ -25,7 +26,7 @@ namespace Procesos
         {
             if (!unPoi.estaActivo())
             {
-                repositorio.localOrigin.borrar2(unPoi);
+                repositorio.localOrigin.borrar(unPoi);
             }
 
         }
