@@ -14,6 +14,8 @@ namespace OrigenesDeDatos
 
         public PoiDAO dao;
 
+        public List<POI> getPois() { return dao.pois; }
+
         //Constructor//
         public OrigenLocal()
         {

@@ -26,5 +26,9 @@ namespace OrigenesDeDatos
             return BancoAdapter.adapt(result);
 
         }
+
+        public void agregar(POI poi) { }
+        public void borrar(POI poi) { }
+        public bool verificarExistencia(string poi) { return true; }
     }
 }

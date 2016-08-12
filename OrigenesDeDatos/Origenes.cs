@@ -9,7 +9,10 @@ using FuenteDeDatos;
 namespace OrigenesDeDatos
 {
     public interface Origenes
-    {  List<POI> find(String criterio);
-        
+    {
+        List<POI> find(String criterio);
+        void agregar(POI poi);
+        void borrar(POI poi);
+        bool verificarExistencia(string poi);
     }
 }

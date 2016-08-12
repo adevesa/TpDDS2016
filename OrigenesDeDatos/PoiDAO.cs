@@ -46,7 +46,6 @@ namespace OrigenesDeDatos
             }
         }
 
-
         //Algunos pois locales//
         private List<POI> basedPois()
         {

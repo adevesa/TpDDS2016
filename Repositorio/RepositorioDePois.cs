@@ -9,15 +9,11 @@ namespace Repositorio
 {
     public class RepositorioDePois
     {
-        //CONTENDRÁ TODA LA INFO DE LOS POIS//
+                //CONTENDRÁ TODA LA INFO DE LOS POIS//
 
+        //Aplicación del SINGLETON
         private static RepositorioDePois instance = null;
-        private List<Origenes> origenes;
-        public OrigenLocal localOrigin { get; set; }
-        public Buscador buscadorDePOI { get; set; }
 
-
-        //Constructor//
         public RepositorioDePois()
         {
             localOrigin = new OrigenLocal();
@@ -28,10 +24,17 @@ namespace Repositorio
 
         public static RepositorioDePois getInstance()
         {
-                if (instance == null) { instance = new RepositorioDePois(); }
-                return instance;      
+            if (instance == null) { instance = new RepositorioDePois(); }
+            return instance;
         }
 
+        //Atributos
+        private List<Origenes> origenes;
+        public OrigenLocal localOrigin { get; set; }
+        public Buscador buscadorDePOI { get; set; }
+        
+        //Metodos 
+    
         public void agregarOrigenes(Origenes algunOrigen)
         {
             this.origenes.Add(algunOrigen);

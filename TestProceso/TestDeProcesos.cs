@@ -12,8 +12,8 @@ namespace TestProceso
     [TestClass]
     public class TestDeProcesos
     {
-                //Instancias necesarias para los test
-        PoiDAO poiDao = new PoiDAO();
+            //Instancias necesarias para los test
+        private Origenes origenLocal;
 
         //Algunos Locales instanciados
         LocalComercial coto = new LocalComercial("coto", "agüero 616");
@@ -33,6 +33,7 @@ namespace TestProceso
         //Initialize
         private void init()
         {
+            this.origenLocal = new OrigenLocal();
             bajaDePois.setTipoDeManejoDeError(comunicarFalloPorMail);
             actualizacionDeLocalesComerciales.setTipoDeManejoDeError(reintentar);
         }
@@ -58,21 +59,21 @@ namespace TestProceso
         {
             init();
             coto.setFechaDeBaja(fechaDeBaja2);
-            poiDao.crear(coto);
+            origenLocal.agregar(coto);
             bajaDePois.darDeBajaSiEsNecesario(coto);
-            Assert.IsTrue(poiDao.verificarExistencia("coto"));
+            Assert.IsTrue(origenLocal.verificarExistencia("coto"));
         }
 
         [TestMethod]
         public void BajaDePoisQuitaUnPOI()
         {
             init();
-            coto.setFechaDeBaja(fechaDeBaja1);
-            poiDao.crear(coto);
-            bajaDePois.darDeBajaSiEsNecesario(coto); //no se que mierda esta mal
-            //ListaDePois.borrar2(coto); //tanto borrar2 como estaActivo funcionan perfectamente
-
-            Assert.IsFalse(poiDao.verificarExistencia("coto")); 
+            jumbo.setFechaDeBaja(fechaDeBaja1);
+            origenLocal.agregar(jumbo);
+            bajaDePois.darDeBajaSiEsNecesario(jumbo); 
+            //origenLocal.borrar(jumbo);
+            Assert.IsFalse(origenLocal.verificarExistencia("jumbo")); 
+            //Assert.IsFalse(jumbo.estaActivo());
         }
 
        // [TestMethod]

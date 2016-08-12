@@ -16,8 +16,7 @@ namespace Procesos
         private string nombreDelProceso;
         private string mailDelUsserQueEjecuta;
         private Estado estado;
-        private ErrorGestion tipoDeError;
-        
+        private ErrorGestion tipoDeError;       
 
         //Setters y getters
         protected void setNombreDelProceso(string nombre) { this.nombreDelProceso = nombre; }

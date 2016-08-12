@@ -21,7 +21,7 @@ namespace LibreriaClasesPoi
         public int Comuna { get; set; }
         private List<HorarioDeAtencion> horarioDeAtencion;
         private List<string> palabrasClaves;
-        private DateTime FechaDeBaja;
+        private DateTime fechaDeBaja;
 
         //INIT
         public void init(string nombre)
@@ -52,7 +52,7 @@ namespace LibreriaClasesPoi
 
         public List<string> getPalabrasClaves() { return palabrasClaves; }
 
-        public void setFechaDeBaja(DateTime fechaDeBaja) { this.FechaDeBaja = fechaDeBaja; }
+        public void setFechaDeBaja(DateTime fechaDeBaja) { this.fechaDeBaja = fechaDeBaja; }
 
         //Metodos 
 
@@ -134,8 +134,9 @@ namespace LibreriaClasesPoi
         {
             //*Compare: Compara dos instancias de DateTime y devuelve un entero que indica
             //* si la primera instancia es anterior que, el mismo que, o posterior a la segunda instancia.
-            DateTime fechaActual = DateTime.Today;                     
-            return (DateTime.Compare(this.FechaDeBaja, fechaActual) > 0);
+            DateTime fechaActual = DateTime.Today;
+            return this.fechaDeBaja.CompareTo(fechaActual) > 0;              
+            //return (DateTime.Compare(this.fechaDeBaja, fechaActual) > 0);
         }
        
     }

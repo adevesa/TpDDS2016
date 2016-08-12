@@ -12,30 +12,37 @@ namespace Procesos
     public class BajaDePois: Proceso
     {
         //Atributos
-        RepositorioDePois repositorio = RepositorioDePois.getInstance();
+        private RepositorioDePois repositorio;
 
         //Constructor
         public BajaDePois()
         {
             init();
+            this.repositorio = RepositorioDePois.getInstance();
             this.setNombreDelProceso("baja de pois");
         }
 
         //Metodos
-        public void darDeBajaSiEsNecesario(POI unPoi)
+        public void darDeBajaSiEsNecesario(POI poi)
         {
-            if (!unPoi.estaActivo())
+            if (poi.estaActivo())
             {
-                repositorio.localOrigin.borrar(unPoi);
+                noHacerNada();
             }
+            else borrar(poi);
+        }
 
+        private void noHacerNada() { }
+        private void borrar(POI poi)
+        {
+            this.repositorio.localOrigin.borrar(poi);
         }
 
         //Método polimórfico
         public override void ejecutar(string mailDelUsuario)
         {
             setMailDelUsserQueEjecuta(mailDelUsuario);
-            List<POI> listPoi = repositorio.localOrigin.dao.pois; //acá tendría que usar el método buscar pero me parece que es al pedo. Además, bajo que criterio de busqueda?
+            List<POI> listPoi = repositorio.localOrigin.getPois();
             foreach(POI poi in listPoi)
             {
                 darDeBajaSiEsNecesario(poi);
