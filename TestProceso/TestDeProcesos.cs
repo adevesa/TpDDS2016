@@ -13,7 +13,7 @@ namespace TestProceso
     public class TestDeProcesos
     {
             //Instancias necesarias para los test
-        private Origenes origenLocal;
+        private RepositorioDePois repositorio;
 
         //Algunos Locales instanciados
         LocalComercial coto = new LocalComercial("coto", "agüero 616");
@@ -33,7 +33,7 @@ namespace TestProceso
         //Initialize
         private void init()
         {
-            this.origenLocal = new OrigenLocal();
+            this.repositorio = RepositorioDePois.getInstance();
             bajaDePois.setTipoDeManejoDeError(comunicarFalloPorMail);
             actualizacionDeLocalesComerciales.setTipoDeManejoDeError(reintentar);
         }
@@ -59,9 +59,9 @@ namespace TestProceso
         {
             init();
             coto.setFechaDeBaja(fechaDeBaja2);
-            origenLocal.agregar(coto);
+            repositorio.localOrigin.agregar(coto);
             bajaDePois.darDeBajaSiEsNecesario(coto);
-            Assert.IsTrue(origenLocal.verificarExistencia("coto"));
+            Assert.IsTrue(repositorio.localOrigin.verificarExistencia("coto"));
         }
 
         [TestMethod]
@@ -69,11 +69,10 @@ namespace TestProceso
         {
             init();
             jumbo.setFechaDeBaja(fechaDeBaja1);
-            origenLocal.agregar(jumbo);
+            repositorio.localOrigin.agregar(jumbo);
             bajaDePois.darDeBajaSiEsNecesario(jumbo); 
-            //origenLocal.borrar(jumbo);
-            Assert.IsFalse(origenLocal.verificarExistencia("jumbo")); 
-            //Assert.IsFalse(jumbo.estaActivo());
+            Assert.IsFalse(repositorio.localOrigin.verificarExistencia("jumbo")); 
+            
         }
 
        // [TestMethod]

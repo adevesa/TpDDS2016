@@ -119,7 +119,8 @@ namespace LibreriaClasesPoi
         {
             foreach(string palabra in palabras)
             {
-                agregarElemA(this.palabrasClaves, palabra);
+                if (this.getPalabrasClaves().Contains(palabra)) { }
+                else agregarElemA(this.palabrasClaves, palabra);
             }
         }
         public void agregarElemA(List<string> lista, string palabra)

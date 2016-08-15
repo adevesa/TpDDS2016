@@ -29,13 +29,26 @@ namespace Procesos
             {
                 noHacerNada();
             }
-            else borrar(poi);
+            else
+            {
+                borrar(poi);
+                cambiarEstadoSiEsNecesario(poi);
+            }
         }
 
         private void noHacerNada() { }
         private void borrar(POI poi)
         {
             this.repositorio.localOrigin.borrar(poi);
+        }
+
+        private void cambiarEstadoSiEsNecesario(POI poi)
+        {
+            if (repositorio.localOrigin.verificarExistencia(poi.getNombre()))
+            {
+                this.getEstado().cambiarEstado();
+                this.getEstado().manipularResultado();
+            }
         }
 
         //Método polimórfico
