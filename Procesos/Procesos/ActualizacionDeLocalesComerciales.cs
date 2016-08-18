@@ -48,7 +48,7 @@ namespace Procesos
             
         }
 
-        private void actualizarOCrearLocalComercial(string lineaLeia)
+        public void actualizarOCrearLocalComercial(string lineaLeia)
         {
             string nombreDelPoi = this.modeladorDePalabra.primerElemento(lineaLeia);
             string[] palabrasClaves = this.modeladorDePalabra.segundoElemento(lineaLeia);
@@ -67,17 +67,19 @@ namespace Procesos
             cambiarEstadoSiEsNecesario(poiBuscado, palabrasClaves);
 
         }
-        private void crearLocalComercial(string nombreDelPoi,string[] palabrasClaves)
+        public void crearLocalComercial(string nombreDelPoi,string[] palabrasClaves)
         {
             LocalComercial nuevoLocal = new LocalComercial(nombreDelPoi);
+            
             nuevoLocal.agregarPalabraClave(palabrasClaves);
-            cambiarEstadoSiEsNecesario(nuevoLocal, palabrasClaves);
+         //   cambiarEstadoSiEsNecesario(nuevoLocal, palabrasClaves);
+            repositorio.localOrigin.agregar(nuevoLocal);
         }
 
         //* @name: cambiarEstadoSiEsNecesario()
         //* @decryp: verifica si existen errores en alguna actualizacion y coloca el estado a:
         //* erroneo en caso de falla, o correcto en caso de que no existan fallas.
-        private void cambiarEstadoSiEsNecesario(POI local, string[] palabras)
+        public void cambiarEstadoSiEsNecesario(POI local, string[] palabras)
         {
             if(estanEnLaLista(local.getPalabrasClaves(), palabras))
             {
