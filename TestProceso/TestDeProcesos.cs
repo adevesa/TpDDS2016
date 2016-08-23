@@ -7,6 +7,7 @@ using FuenteDeDatos;
 using OrigenesDeDatos;
 using Repositorio;
 
+
 namespace TestProceso
 {
     [TestClass]
@@ -14,6 +15,7 @@ namespace TestProceso
     {
             //Instancias necesarias para los test
         private RepositorioDePois repositorio;
+
 
         //Algunos Locales instanciados
         LocalComercial coto = new LocalComercial("coto", "agüero 616");
@@ -30,6 +32,9 @@ namespace TestProceso
         ActualizacionDeLocalesComerciales actualizacionDeLocalesComerciales = new ActualizacionDeLocalesComerciales();
         ErrorGestion reintentar = new Reintentar(2);
 
+        ProcesoMultiple procesoMultiple = new ProcesoMultiple();
+       
+       
         //Initialize
         private void init()
         {
@@ -37,6 +42,7 @@ namespace TestProceso
             bajaDePois.setTipoDeManejoDeError(comunicarFalloPorMail);
             actualizacionDeLocalesComerciales.setTipoDeManejoDeError(reintentar);
         }
+
 
         [TestMethod]
         public void TestPOIActivo()
@@ -75,15 +81,26 @@ namespace TestProceso
             
         }
 
-       // [TestMethod]
-       // public void ActualizarLocalComercialInexistente()
-       // { 
-        //    jumbo.Nombre = "jumbo";
-       //     actualizacionDeLocalesComerciales.actualizarLocalComercial("jumbo", );
-       //
-       //     Assert.IsTrue(ListaDePois.verificarExistencia("jumbo"));
+        [TestMethod]
+        public void ActualizarLocalComercialInexistente()
+        {
+            init();
+            string unTexto = "carrefour;super mercado";
+            actualizacionDeLocalesComerciales.actualizarOCrearLocalComercial(unTexto); 
+            Assert.IsTrue(repositorio.localOrigin.verificarExistencia("carrefour"));
+ 
+        }
 
-        //}
+        [TestMethod]
+        public void CrearUnLocalComercialAPartirDeUnTexto()
+        {
+            init();
+            string[] palabrasClaves = new string[2] { "super", "mercado" };
+            actualizacionDeLocalesComerciales.crearLocalComercial("carrefour", palabrasClaves);
+            Assert.IsTrue(repositorio.localOrigin.verificarExistencia("carrefour"));
+        }
 
-    }
+        
+
+}
 }
