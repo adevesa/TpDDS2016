@@ -24,9 +24,6 @@ namespace TestUsuario
             Assert.IsTrue(gestor.mapearNombresDeUsuarios().Contains("juan pedro valenzuela"));
         }
 
-        
-
-
         [TestMethod]
         public void LoggearUsuarioEnTerminalPorNombre()
         {
@@ -34,9 +31,6 @@ namespace TestUsuario
             gestor.loggearUsuarioEn(usuarioDePrueba, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba);
         }
-
-
-        
 
         [TestMethod]
         public void CambiarUsserActivo()

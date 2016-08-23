@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaClasesPoi", "LibreriaClasesPoi\LibreriaClasesPoi.csproj", "{9004CCCC-5C91-41A9-B5F1-E6E176F40C73}"
 EndProject
@@ -76,6 +76,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccionesDeUsuarios", "AccionesDeUsuarios", "{B74ADE80-78B3-4C7B-B251-915209FACCD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProceso", "TestProceso\TestProceso.csproj", "{801B30AE-F513-4B39-8EEA-E3B0D95BE458}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GraphicInterface", "GraphicInterface", "{A0F89C84-4BBB-43AF-94AE-DB1DC0D2EFCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceGrafica", "InterfaceGrafica\InterfaceGrafica.csproj", "{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -277,6 +281,14 @@ Global
 		{801B30AE-F513-4B39-8EEA-E3B0D95BE458}.Release|Any CPU.Build.0 = Release|Any CPU
 		{801B30AE-F513-4B39-8EEA-E3B0D95BE458}.Release|x86.ActiveCfg = Release|Any CPU
 		{801B30AE-F513-4B39-8EEA-E3B0D95BE458}.Release|x86.Build.0 = Release|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Debug|x86.Build.0 = Debug|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Release|x86.ActiveCfg = Release|Any CPU
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -317,5 +329,6 @@ Global
 		{0BA99977-8496-4F4B-A8C3-53129C77143E} = {B74ADE80-78B3-4C7B-B251-915209FACCD1}
 		{B74ADE80-78B3-4C7B-B251-915209FACCD1} = {E1F88079-27FB-4748-8A48-631B867C006C}
 		{801B30AE-F513-4B39-8EEA-E3B0D95BE458} = {BCC60AEF-BB05-48D8-8EC0-18CEDD61B14F}
+		{D965F7D2-EC37-40F1-BFDB-BA94AEA971EA} = {A0F89C84-4BBB-43AF-94AE-DB1DC0D2EFCD}
 	EndGlobalSection
 EndGlobal
