@@ -47,7 +47,7 @@
             this.label1.Location = new System.Drawing.Point(13, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 46);
+            this.label1.Size = new System.Drawing.Size(306, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar por:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -78,7 +78,7 @@
             // 
             this.BotonAgregar.BackColor = System.Drawing.Color.Transparent;
             this.BotonAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BotonAgregar.Image = global::InterfaceGrafica.Properties.Resources.agregar1;
+            this.BotonAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonAgregar.Location = new System.Drawing.Point(277, 90);
             this.BotonAgregar.Name = "BotonAgregar";
             this.BotonAgregar.Size = new System.Drawing.Size(125, 60);
@@ -135,6 +135,7 @@
             this.Name = "PantallaBusqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaBusqueda";
+            this.Load += new System.EventHandler(this.PantallaBusqueda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BotonAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).EndInit();
             this.ResumeLayout(false);

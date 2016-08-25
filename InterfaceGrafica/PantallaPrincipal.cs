@@ -39,6 +39,8 @@ namespace InterfaceGrafica
 
         private void PantallaPrincipal_Load(object sender, EventArgs e)
         {
+            timer1.Enabled = true;
+
             Usuario.Text = "Usuario:" + Program.usuario;
 
             //Mostrar Fecha y Hora
@@ -46,10 +48,38 @@ namespace InterfaceGrafica
             Hora.Text = DateTime.Now.ToLongTimeString();
             timer1.Enabled = true;
 
-            //Centrar Panel2
+            //Centrar imagenes
             Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //captura el tamaño del monitor
-            Int32 ancho = (this.Width - panel2.Width) / 2;
-            panel1.Location = new Point(ancho, panel1.Location.Y);
+
+            //Lupa
+            Int32 anchoDeLupa = (this.Width - BotonBuscar.Width) / 2;
+            BotonBuscar.Location = new Point(anchoDeLupa, BotonBuscar.Location.Y);
+
+            //Libro
+            Int32 anchoDeLibro = (this.Width - BotonHistorial.Width) / 4;
+            BotonHistorial.Location = new Point(anchoDeLibro , BotonHistorial.Location.Y);
+
+            //Tuerca
+            Int32 anchoDeTuerca = (this.Width + BotonConfig.Width) / 8 ;
+            //Int32 anchoDeTuerca = (anchoDeLupa - anchoDeLibro) + (this.Width / 2);
+            BotonConfig.Location = new Point(anchoDeTuerca * 5 , BotonConfig.Location.Y);
+
+            //Cerrar
+            Int32 anchoDeX = (this.Width - BotonCerrar.Width) - 10;
+            BotonCerrar.Location = new Point(anchoDeX, BotonCerrar.Location.Y);
+
+            //CerrarSecion
+            Int32 anchoDeCerrarSecion = (this.Width - CerrarSecion.Width) / 2;
+            Int32 largoDeCerrarSecion = (this.Width - CerrarSecion.Width) / 4;
+            CerrarSecion.Location = new Point(anchoDeCerrarSecion, largoDeCerrarSecion * 3);
+
+            //Usuario
+            Int32 anchoUsuario = (this.Width - Usuario.Width) / 2;
+            Usuario.Location = new Point(anchoUsuario, Usuario.Location.Y);
+
+            //Fecha
+            Int32 anchoFecha = (this.Width - Fecha.Width);
+            Fecha.Location = new Point(anchoFecha, Fecha.Location.Y);
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -76,7 +106,7 @@ namespace InterfaceGrafica
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            BotonConfig.Size = new Size(93, 103);
+            BotonConfig.Size = new Size(175, 175);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -87,27 +117,27 @@ namespace InterfaceGrafica
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            BotonConfig.Size = new Size(83, 93);
+            BotonConfig.Size = new Size(150, 150);
         }
 
         private void BotonBuscar_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(130, 130);
+            BotonBuscar.Size = new Size(225, 225);
         }
 
         private void BotonBuscar_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(120, 120);
+            BotonBuscar.Size = new Size(200, 200);
         }
 
         private void BotonHistorial_MouseHover(object sender, EventArgs e)
         {
-            BotonHistorial.Size = new Size(93, 103);
+            BotonHistorial.Size = new Size(175, 175);
         }
 
         private void BotonHistorial_MouseLeave(object sender, EventArgs e)
         {
-            BotonHistorial.Size = new Size(83, 93);
+            BotonHistorial.Size = new Size(150, 150);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -123,6 +153,13 @@ namespace InterfaceGrafica
         private void BotonCerrarSecion_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void CerrarSecion_Click(object sender, EventArgs e)
+        {
+            PantallaLogueo loguin = new PantallaLogueo();
+            loguin.Show();
+            
         }
     }
 }

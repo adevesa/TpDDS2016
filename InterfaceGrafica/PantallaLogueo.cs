@@ -25,7 +25,34 @@ namespace InterfaceGrafica
 
         private void PantallaLogueo_Load(object sender, EventArgs e)
         {
+            BotonComenzar.BackgroundImage = Properties.Resources.comenzar;
 
+            //Centrar Componentes
+            Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //captura el tamaño del monitor
+
+            //Texto Usuario
+            Int32 anchoDeTextoU = (this.Width - NombreDeUsuario.Width) / 2;
+            NombreDeUsuario.Location = new Point(anchoDeTextoU, IngresarUsuario.Location.Y - 30);
+
+            //Texto Contraseña
+            Int32 anchoDeTextoC = (this.Width - Contraseña.Width) / 2;
+            Contraseña.Location = new Point(anchoDeTextoC, IngresarContraseña.Location.Y -30);
+
+            //Usuario
+            Int32 anchoDeUsuario = (this.Width - IngresarUsuario.Width) / 2;
+            IngresarUsuario.Location = new Point(anchoDeUsuario, IngresarUsuario.Location.Y);
+
+            //Usuario
+            Int32 anchoDeContraseña = (this.Width - IngresarContraseña.Width) / 2;
+            IngresarContraseña.Location = new Point(anchoDeContraseña, IngresarContraseña.Location.Y);
+
+            //Cerrar
+            Int32 anchoDeX = (this.Width - BotonCerrar.Width) - 10;
+            BotonCerrar.Location = new Point(anchoDeX, BotonCerrar.Location.Y);
+
+            //Cerrar
+            Int32 anchoDeComenzar = (this.Width - BotonComenzar.Width) / 2;
+            BotonComenzar.Location = new Point(anchoDeComenzar, BotonComenzar.Location.Y);
         }
 
         private void Contraseña_Click(object sender, EventArgs e)

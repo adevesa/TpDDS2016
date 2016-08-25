@@ -73,5 +73,10 @@ namespace InterfaceGrafica
         {
 
         }
+
+        private void PantallaBusqueda_Load(object sender, EventArgs e)
+        {
+            BotonAgregar.BackgroundImage = Properties.Resources.agregar1;
+        }
     }
 }

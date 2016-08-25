@@ -71,9 +71,8 @@
             // BotonComenzar
             // 
             this.BotonComenzar.BackColor = System.Drawing.Color.Transparent;
-            this.BotonComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonComenzar.Image = global::InterfaceGrafica.Properties.Resources.comenzar;
             resources.ApplyResources(this.BotonComenzar, "BotonComenzar");
+            this.BotonComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonComenzar.Name = "BotonComenzar";
             this.BotonComenzar.TabStop = false;
             this.BotonComenzar.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -105,6 +104,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaLogueo";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PantallaLogueo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BotonComenzar)).EndInit();
             this.ResumeLayout(false);
