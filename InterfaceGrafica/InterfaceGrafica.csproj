@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -211,6 +214,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cerrar_sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Consola\Consola.csproj">
+      <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
+      <Name>Consola</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UssersGestion\UssersGestion.csproj">
+      <Project>{357f6fb7-9913-4c60-afaa-602149dc2239}</Project>
+      <Name>UssersGestion</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

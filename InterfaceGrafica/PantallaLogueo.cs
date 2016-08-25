@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consola;
+using UssersGestion;
+
 
 namespace InterfaceGrafica
 {
     public partial class PantallaLogueo : Form
     {
+        TerminalConsola terminal = new TerminalConsola("Terminal de prueba", 5);
+        GestorDeUsuarios gestorDeUsuario = new GestorDeUsuarios();
+
         public PantallaLogueo()
         {
             InitializeComponent();
@@ -54,7 +60,8 @@ namespace InterfaceGrafica
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Program.usuario = IngresarUsuario.Text;
+
+            gestorDeUsuario.loggearUsuarioEn(IngresarUsuario.Text,IngresarContraseña.Text, terminal);
             this.Close();
             PantallaPrincipal principal = new PantallaPrincipal();
             principal.Show();

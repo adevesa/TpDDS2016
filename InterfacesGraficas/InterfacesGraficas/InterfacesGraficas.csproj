@@ -76,6 +76,90 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09_search-128.7251238b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1440x900-city_skyline_minimalism-30121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18902_en_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54528.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\787538-dark-blue-digital-art-gray-minimalistic-orange-pastel-pastels-red-simple-simple-background-simplistic-squares-tapeta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\big_thumb_178c9f57852b89a220ba586c26d85e84.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonBuscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonBuscar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botoncerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar_sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome_accept_apply_22369.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuadro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuadro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cuadro2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-maps-new-interface.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libro1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lineamarron.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-libro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa-psd-468x468.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings-circle-blue-128.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

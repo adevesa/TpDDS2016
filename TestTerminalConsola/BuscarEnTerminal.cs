@@ -24,7 +24,8 @@ namespace TestTerminalConsola
             terminal.setMailAdministrador(admin.getMail());
             terminal.setDuracionMaximaDeBusqueda(4);
             string usuarioDePrueba = "agus_grec";
-            gestor.loggearUsuarioEn(usuarioDePrueba, terminal);
+            string contraseñaDelUsuarioDePrueba = "sueñoconjugar";
+            gestor.loggearUsuarioEn(usuarioDePrueba,contraseñaDelUsuarioDePrueba, terminal);
         }
 
         [TestMethod]

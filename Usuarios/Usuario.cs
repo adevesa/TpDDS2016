@@ -15,6 +15,7 @@ namespace Usuarios
 
         //Atributos
         private string nombreCompleto;
+        private string contraseña;
         private string nombreDeUsuario;
         private string direccion;
         private string mail;
@@ -41,6 +42,9 @@ namespace Usuarios
 
         public void setIdUsuario(int numero) { this.idUsuario = numero; }
         public int getIdUsuario() { return this.idUsuario; }
+
+        public void setContraseña(string contraseña) { this.contraseña = contraseña; }
+        public string getContraseña() { return this.contraseña; }
 
         public void setTerminalUtilizada(TerminalConsola terminal) { this.terminalUtilizada = terminal; }
         public TerminalConsola getTerminalUtilizada() { return this.terminalUtilizada; }
@@ -89,6 +93,11 @@ namespace Usuarios
         public void borrarAccion(Accion accion)
         {
             this.acciones.Remove(accion);
+        }
+
+        public bool coincideContraseña(string supuestaContraseña)
+        {
+            return getContraseña() == supuestaContraseña;
         }
     }
 }

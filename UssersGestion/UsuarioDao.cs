@@ -32,9 +32,9 @@ namespace UssersGestion
         public List<Usuario> getUssers(){ return this.ussers; }
 
         //Métodos
-        public void crearUsuario(string tipoUsuario, string nombreDeUsuario, string nombreCompleto, string mail, bool usuarioGeneradorEsAdmin)
+        public void crearUsuario(string tipoUsuario, string nombreDeUsuario, string contraseña, string nombreCompleto, string mail, bool usuarioGeneradorEsAdmin)
         {
-            Usuario nuevoUsser = this.factory.crearUsuario(tipoUsuario, nombreDeUsuario, nombreCompleto, mail, usuarioGeneradorEsAdmin);
+            Usuario nuevoUsser = this.factory.crearUsuario(tipoUsuario, nombreDeUsuario, contraseña, nombreCompleto, mail, usuarioGeneradorEsAdmin);
             agregarUsuario(nuevoUsser);
         }
 
@@ -64,12 +64,12 @@ namespace UssersGestion
         private void init()
         {
             //Administradores default
-            crearUsuario("administrador","ezequiel_escobar", "ezequiel oscar escobar", "ezequieloscarescobar2@gmail.com", true);
-            crearUsuario("administrador", "santi_candi","santiago candia","santiago.gcandia@gmail.com", true);
+            crearUsuario("administrador","ezequiel_escobar","sueñoconoperativos", "ezequiel oscar escobar", "ezequieloscarescobar2@gmail.com", true);
+            crearUsuario("administrador", "santi_candi","sueñoconfaltar","santiago candia","santiago.gcandia@gmail.com", true);
             
             //Usuarios default
-            crearUsuario("comun","agus_grec", "agustin greco","grec.grec@gmail.com",false);
-            crearUsuario("comun","agus_dev", "agustin devesa","agus.devesa@gmail.com",false );
+            crearUsuario("comun","agus_grec","sueñoconjugar", "agustin greco","grec.grec@gmail.com",false);
+            crearUsuario("comun","agus_dev","sueñoconminovia", "agustin devesa","agus.devesa@gmail.com",false );
 
             
         }

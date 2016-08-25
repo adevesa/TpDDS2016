@@ -18,8 +18,8 @@ namespace TestUsuario
         public void CrearAdministrador()
         {
             //*Primero se loggea a un administrador quien tiene permiso de crear admins
-            gestor.loggearUsuarioEn("ezequiel_escobar", terminalCentral);
-            gestor.crearUsuario("administrador","juan_pedro", "juan pedro valenzuela","juanpe@gmail.com");
+            gestor.loggearUsuarioEn("ezequiel_escobar","sueñoconoperativos", terminalCentral);
+            gestor.crearUsuario("administrador","juan_pedro","juance", "juan pedro valenzuela","juanpe@gmail.com");
 
             Assert.IsTrue(gestor.mapearNombresDeUsuarios().Contains("juan pedro valenzuela"));
         }
@@ -28,7 +28,8 @@ namespace TestUsuario
         public void LoggearUsuarioEnTerminalPorNombre()
         {
             string usuarioDePrueba = "ezequiel_escobar";
-            gestor.loggearUsuarioEn(usuarioDePrueba, terminalCentral);
+            string contraseñaUsser = "sueñoconoperativos";
+            gestor.loggearUsuarioEn(usuarioDePrueba,contraseñaUsser, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba);
         }
 
@@ -36,11 +37,13 @@ namespace TestUsuario
         public void CambiarUsserActivo()
         {
             string usuarioDePrueba1 = "ezequiel_escobar";
-            gestor.loggearUsuarioEn(usuarioDePrueba1, terminalCentral);
+            string contraseñaUsser = "sueñoconoperativos";
+            gestor.loggearUsuarioEn(usuarioDePrueba1, contraseñaUsser, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba1);
 
             string usuarioDePrueba2 = "agus_grec";
-            gestor.loggearUsuarioEn(usuarioDePrueba2, terminalCentral);
+            string contraseñaUsser2 = "sueñoconjugar";
+            gestor.loggearUsuarioEn(usuarioDePrueba2,contraseñaUsser2, terminalCentral);
             Assert.IsTrue(terminalCentral.getUsuarioActivo() == usuarioDePrueba2);
 
 
