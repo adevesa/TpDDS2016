@@ -150,13 +150,10 @@
     <value>160, 259</value>
   </data>
   <data name="contador.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 17</value>
+    <value>0, 17</value>
   </data>
   <data name="contador.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="contador.Text" xml:space="preserve">
-    <value>label1</value>
   </data>
   <data name="&gt;&gt;contador.Name" xml:space="preserve">
     <value>contador</value>

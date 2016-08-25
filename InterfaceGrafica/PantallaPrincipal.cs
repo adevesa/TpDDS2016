@@ -92,12 +92,12 @@ namespace InterfaceGrafica
 
         private void BotonBuscar_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(110, 125);
+            BotonBuscar.Size = new Size(130, 130);
         }
 
         private void BotonBuscar_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(100, 115);
+            BotonBuscar.Size = new Size(120, 120);
         }
 
         private void BotonHistorial_MouseHover(object sender, EventArgs e)
@@ -116,6 +116,11 @@ namespace InterfaceGrafica
         }
 
         private void pictureBox1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCerrarSecion_Click(object sender, EventArgs e)
         {
 
         }

@@ -19,7 +19,7 @@ namespace InterfaceGrafica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaLogueo());
+            Application.Run(new PantallaDeCarga());
         }
     }
 }

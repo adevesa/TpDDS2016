@@ -126,7 +126,7 @@
     <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
   </data>
   <data name="NombreDeUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>228, 59</value>
+    <value>229, 66</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="NombreDeUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -160,7 +160,7 @@
     <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
   </data>
   <data name="Contraseña.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 147</value>
+    <value>179, 159</value>
   </data>
   <data name="Contraseña.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 0, 4, 0</value>

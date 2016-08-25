@@ -43,6 +43,7 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // contador
@@ -50,6 +51,7 @@
             resources.ApplyResources(this.contador, "contador");
             this.contador.BackColor = System.Drawing.Color.Transparent;
             this.contador.Name = "contador";
+            this.contador.Click += new System.EventHandler(this.contador_Click);
             // 
             // PantallaDeCarga
             // 
@@ -61,6 +63,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaDeCarga";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PantallaDeCarga_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PantallaDeCarga_FormClosed);
             this.Load += new System.EventHandler(this.PantallaDeCarga_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

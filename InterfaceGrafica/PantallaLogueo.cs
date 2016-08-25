@@ -62,9 +62,10 @@ namespace InterfaceGrafica
         {
 
             gestorDeUsuario.loggearUsuarioEn(IngresarUsuario.Text,IngresarContraseña.Text, terminal);
+            Program.usuario = IngresarUsuario.Text;
             this.Close();
             PantallaPrincipal principal = new PantallaPrincipal();
-            principal.Show();
+            principal.ShowDialog();
         }
 
         //Cambia de imagen al pasar el cursor sobre el boton

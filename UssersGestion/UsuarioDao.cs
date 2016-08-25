@@ -66,7 +66,8 @@ namespace UssersGestion
             //Administradores default
             crearUsuario("administrador","ezequiel_escobar","sueñoconoperativos", "ezequiel oscar escobar", "ezequieloscarescobar2@gmail.com", true);
             crearUsuario("administrador", "santi_candi","sueñoconfaltar","santiago candia","santiago.gcandia@gmail.com", true);
-            
+            crearUsuario("administrador", "asd", "asd", "Antonio Salmonel Darin", "asd@gmail.com", true);
+
             //Usuarios default
             crearUsuario("comun","agus_grec","sueñoconjugar", "agustin greco","grec.grec@gmail.com",false);
             crearUsuario("comun","agus_dev","sueñoconminovia", "agustin devesa","agus.devesa@gmail.com",false );
