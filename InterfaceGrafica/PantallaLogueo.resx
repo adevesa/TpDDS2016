@@ -117,4 +117,205 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NombreDeUsuario.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NombreDeUsuario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
+  </data>
+  <data name="NombreDeUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>228, 59</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NombreDeUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="NombreDeUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 30</value>
+  </data>
+  <data name="NombreDeUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="NombreDeUsuario.Text" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="NombreDeUsuario.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;NombreDeUsuario.Name" xml:space="preserve">
+    <value>NombreDeUsuario</value>
+  </data>
+  <data name="&gt;&gt;NombreDeUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;NombreDeUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NombreDeUsuario.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="Contraseña.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
+  </data>
+  <data name="Contraseña.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 147</value>
+  </data>
+  <data name="Contraseña.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="Contraseña.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="Contraseña.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 30</value>
+  </data>
+  <data name="Contraseña.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="Contraseña.Text" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Contraseña.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;Contraseña.Name" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="&gt;&gt;Contraseña.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Contraseña.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Contraseña.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="IngresarUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 100</value>
+  </data>
+  <data name="IngresarUsuario.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="IngresarUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>183, 22</value>
+  </data>
+  <data name="IngresarUsuario.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;IngresarUsuario.Name" xml:space="preserve">
+    <value>IngresarUsuario</value>
+  </data>
+  <data name="&gt;&gt;IngresarUsuario.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IngresarUsuario.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IngresarUsuario.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="IngresarContraseña.Location" type="System.Drawing.Point, System.Drawing">
+    <value>179, 193</value>
+  </data>
+  <data name="IngresarContraseña.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="IngresarContraseña.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="IngresarContraseña.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;IngresarContraseña.Name" xml:space="preserve">
+    <value>IngresarContraseña</value>
+  </data>
+  <data name="&gt;&gt;IngresarContraseña.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IngresarContraseña.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IngresarContraseña.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="BotonComenzar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>166, 277</value>
+  </data>
+  <data name="BotonComenzar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>207, 56</value>
+  </data>
+  <data name="BotonComenzar.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;BotonComenzar.Name" xml:space="preserve">
+    <value>BotonComenzar</value>
+  </data>
+  <data name="&gt;&gt;BotonComenzar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BotonComenzar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BotonComenzar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="BotonCerrar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="BotonCerrar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BotonCerrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 12</value>
+  </data>
+  <data name="BotonCerrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>34, 33</value>
+  </data>
+  <data name="BotonCerrar.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="BotonCerrar.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;BotonCerrar.Name" xml:space="preserve">
+    <value>BotonCerrar</value>
+  </data>
+  <data name="&gt;&gt;BotonCerrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BotonCerrar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BotonCerrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>529, 395</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Logueo</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PantallaLogueo</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

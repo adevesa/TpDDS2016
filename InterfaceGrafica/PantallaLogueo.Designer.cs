@@ -28,88 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaLogueo));
             this.NombreDeUsuario = new System.Windows.Forms.Label();
             this.Contraseña = new System.Windows.Forms.Label();
-            this.IngresoNameUsser = new System.Windows.Forms.TextBox();
-            this.ContenedorContraseña = new System.Windows.Forms.TextBox();
-            this.Ingresar = new System.Windows.Forms.Button();
-            this.Cancelar = new System.Windows.Forms.Button();
+            this.IngresarUsuario = new System.Windows.Forms.TextBox();
+            this.IngresarContraseña = new System.Windows.Forms.TextBox();
+            this.BotonComenzar = new System.Windows.Forms.PictureBox();
+            this.BotonCerrar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonComenzar)).BeginInit();
             this.SuspendLayout();
             // 
             // NombreDeUsuario
             // 
-            this.NombreDeUsuario.AutoSize = true;
-            this.NombreDeUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            resources.ApplyResources(this.NombreDeUsuario, "NombreDeUsuario");
+            this.NombreDeUsuario.BackColor = System.Drawing.Color.Transparent;
             this.NombreDeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NombreDeUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreDeUsuario.Location = new System.Drawing.Point(103, 98);
+            this.NombreDeUsuario.ForeColor = System.Drawing.Color.BurlyWood;
             this.NombreDeUsuario.Name = "NombreDeUsuario";
-            this.NombreDeUsuario.Size = new System.Drawing.Size(137, 20);
-            this.NombreDeUsuario.TabIndex = 0;
-            this.NombreDeUsuario.Text = "Nombre de usuario";
+            this.NombreDeUsuario.Click += new System.EventHandler(this.NombreDeUsuario_Click);
             // 
             // Contraseña
             // 
-            this.Contraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Contraseña.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contraseña.Location = new System.Drawing.Point(104, 161);
+            this.Contraseña.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.Contraseña, "Contraseña");
+            this.Contraseña.ForeColor = System.Drawing.Color.BurlyWood;
             this.Contraseña.Name = "Contraseña";
-            this.Contraseña.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Contraseña.Size = new System.Drawing.Size(136, 24);
-            this.Contraseña.TabIndex = 1;
-            this.Contraseña.Text = "Contraseña";
+            this.Contraseña.Click += new System.EventHandler(this.Contraseña_Click);
             // 
-            // IngresoNameUsser
+            // IngresarUsuario
             // 
-            this.IngresoNameUsser.Location = new System.Drawing.Point(102, 121);
-            this.IngresoNameUsser.Name = "IngresoNameUsser";
-            this.IngresoNameUsser.Size = new System.Drawing.Size(138, 20);
-            this.IngresoNameUsser.TabIndex = 2;
+            resources.ApplyResources(this.IngresarUsuario, "IngresarUsuario");
+            this.IngresarUsuario.Name = "IngresarUsuario";
+            this.IngresarUsuario.TextChanged += new System.EventHandler(this.IngresoNameUsser_TextChanged);
             // 
-            // ContenedorContraseña
+            // IngresarContraseña
             // 
-            this.ContenedorContraseña.Location = new System.Drawing.Point(103, 188);
-            this.ContenedorContraseña.Name = "ContenedorContraseña";
-            this.ContenedorContraseña.Size = new System.Drawing.Size(137, 20);
-            this.ContenedorContraseña.TabIndex = 3;
+            resources.ApplyResources(this.IngresarContraseña, "IngresarContraseña");
+            this.IngresarContraseña.Name = "IngresarContraseña";
+            this.IngresarContraseña.UseSystemPasswordChar = true;
+            this.IngresarContraseña.TextChanged += new System.EventHandler(this.ContenedorContraseña_TextChanged);
             // 
-            // Ingresar
+            // BotonComenzar
             // 
-            this.Ingresar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Ingresar.Location = new System.Drawing.Point(70, 232);
-            this.Ingresar.Name = "Ingresar";
-            this.Ingresar.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Ingresar.Size = new System.Drawing.Size(60, 28);
-            this.Ingresar.TabIndex = 4;
-            this.Ingresar.Text = "Ingresar";
-            this.Ingresar.UseVisualStyleBackColor = false;
+            this.BotonComenzar.BackColor = System.Drawing.Color.Transparent;
+            this.BotonComenzar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonComenzar.Image = global::InterfaceGrafica.Properties.Resources.comenzar;
+            resources.ApplyResources(this.BotonComenzar, "BotonComenzar");
+            this.BotonComenzar.Name = "BotonComenzar";
+            this.BotonComenzar.TabStop = false;
+            this.BotonComenzar.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.BotonComenzar.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.BotonComenzar.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
-            // Cancelar
+            // BotonCerrar
             // 
-            this.Cancelar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.Cancelar.Location = new System.Drawing.Point(161, 235);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(66, 24);
-            this.Cancelar.TabIndex = 5;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = false;
+            this.BotonCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
+            resources.ApplyResources(this.BotonCerrar, "BotonCerrar");
+            this.BotonCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonCerrar.Name = "BotonCerrar";
+            this.BotonCerrar.UseVisualStyleBackColor = false;
+            this.BotonCerrar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // PantallaLogueo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources._18902_en_1;
-            this.ClientSize = new System.Drawing.Size(397, 321);
-            this.Controls.Add(this.Cancelar);
-            this.Controls.Add(this.Ingresar);
-            this.Controls.Add(this.ContenedorContraseña);
-            this.Controls.Add(this.IngresoNameUsser);
+            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources._1440x900_city_skyline_minimalism_30121;
+            this.Controls.Add(this.BotonCerrar);
+            this.Controls.Add(this.BotonComenzar);
+            this.Controls.Add(this.IngresarContraseña);
+            this.Controls.Add(this.IngresarUsuario);
             this.Controls.Add(this.Contraseña);
             this.Controls.Add(this.NombreDeUsuario);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaLogueo";
-            this.Text = "Logueo";
             this.Load += new System.EventHandler(this.PantallaLogueo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.BotonComenzar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,9 +116,9 @@
 
         private System.Windows.Forms.Label NombreDeUsuario;
         private System.Windows.Forms.Label Contraseña;
-        private System.Windows.Forms.TextBox IngresoNameUsser;
-        private System.Windows.Forms.TextBox ContenedorContraseña;
-        private System.Windows.Forms.Button Ingresar;
-        private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.TextBox IngresarUsuario;
+        private System.Windows.Forms.TextBox IngresarContraseña;
+        private System.Windows.Forms.PictureBox BotonComenzar;
+        private System.Windows.Forms.Button BotonCerrar;
     }
 }

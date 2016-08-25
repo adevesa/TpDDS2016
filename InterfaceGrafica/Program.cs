@@ -11,6 +11,9 @@ namespace InterfaceGrafica
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+        public static string usuario = ""; //variable publica
+
         [STAThread]
         static void Main()
         {
