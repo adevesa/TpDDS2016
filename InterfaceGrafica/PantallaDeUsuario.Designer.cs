@@ -1,6 +1,6 @@
 ﻿namespace InterfaceGrafica
 {
-    partial class PantallaPrincipal
+    partial class PantallaDeUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -36,15 +36,12 @@
             this.Hora = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BotonBuscar = new System.Windows.Forms.PictureBox();
-            this.BotonHistorial = new System.Windows.Forms.PictureBox();
-            this.BotonConfig = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.CerrarSecion = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonHistorial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonConfig)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarSecion)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -122,47 +119,19 @@
             // BotonBuscar
             // 
             this.BotonBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BotonBuscar.BackgroundImage = global::InterfaceGrafica.Properties.Resources.buscar;
             this.BotonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonBuscar.Location = new System.Drawing.Point(144, 169);
+            this.BotonBuscar.Location = new System.Drawing.Point(163, 60);
             this.BotonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(400, 125);
+            this.BotonBuscar.Size = new System.Drawing.Size(350, 350);
             this.BotonBuscar.TabIndex = 10;
             this.BotonBuscar.TabStop = false;
+            this.toolTip1.SetToolTip(this.BotonBuscar, "Buscar POI");
             this.BotonBuscar.Click += new System.EventHandler(this.pictureBox1_Click);
             this.BotonBuscar.MouseLeave += new System.EventHandler(this.BotonBuscar_MouseLeave);
             this.BotonBuscar.MouseHover += new System.EventHandler(this.BotonBuscar_MouseHover);
-            // 
-            // BotonHistorial
-            // 
-            this.BotonHistorial.BackColor = System.Drawing.Color.Transparent;
-            this.BotonHistorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BotonHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonHistorial.Location = new System.Drawing.Point(144, 318);
-            this.BotonHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BotonHistorial.Name = "BotonHistorial";
-            this.BotonHistorial.Size = new System.Drawing.Size(400, 120);
-            this.BotonHistorial.TabIndex = 11;
-            this.BotonHistorial.TabStop = false;
-            this.BotonHistorial.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            this.BotonHistorial.MouseLeave += new System.EventHandler(this.BotonHistorial_MouseLeave);
-            this.BotonHistorial.MouseHover += new System.EventHandler(this.BotonHistorial_MouseHover);
-            // 
-            // BotonConfig
-            // 
-            this.BotonConfig.BackColor = System.Drawing.Color.Transparent;
-            this.BotonConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BotonConfig.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonConfig.Location = new System.Drawing.Point(144, 22);
-            this.BotonConfig.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BotonConfig.Name = "BotonConfig";
-            this.BotonConfig.Size = new System.Drawing.Size(400, 125);
-            this.BotonConfig.TabIndex = 12;
-            this.BotonConfig.TabStop = false;
-            this.BotonConfig.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.BotonConfig.MouseLeave += new System.EventHandler(this.pictureBox3_MouseLeave);
-            this.BotonConfig.MouseHover += new System.EventHandler(this.pictureBox3_MouseHover);
             // 
             // panel2
             // 
@@ -182,7 +151,7 @@
             this.CerrarSecion.BackgroundImage = global::InterfaceGrafica.Properties.Resources.cerrar_sesion;
             this.CerrarSecion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarSecion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarSecion.Location = new System.Drawing.Point(270, 504);
+            this.CerrarSecion.Location = new System.Drawing.Point(246, 500);
             this.CerrarSecion.Name = "CerrarSecion";
             this.CerrarSecion.Size = new System.Drawing.Size(132, 33);
             this.CerrarSecion.TabIndex = 14;
@@ -192,16 +161,14 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.BotonHistorial);
             this.panel3.Controls.Add(this.BotonBuscar);
             this.panel3.Controls.Add(this.CerrarSecion);
-            this.panel3.Controls.Add(this.BotonConfig);
             this.panel3.Location = new System.Drawing.Point(79, 11);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(597, 559);
             this.panel3.TabIndex = 15;
             // 
-            // PantallaPrincipal
+            // PantallaDeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,17 +182,14 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "PantallaPrincipal";
+            this.Name = "PantallaDeUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla Principal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PantallaPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.PantallaPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonHistorial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BotonConfig)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarSecion)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -242,10 +206,9 @@
         private System.Windows.Forms.Label Fecha;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox BotonBuscar;
-        private System.Windows.Forms.PictureBox BotonHistorial;
-        private System.Windows.Forms.PictureBox BotonConfig;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox CerrarSecion;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

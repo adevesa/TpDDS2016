@@ -39,7 +39,7 @@ namespace InterfaceGrafica
 
         private void BotonBuscar_MouseHover(object sender, EventArgs e)
         {
-            BotonAplicar.Size = new Size(95, 95);
+            BotonAplicar.Size = new Size(160, 160);
         }
 
         private void BotonAplicar_Click(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace InterfaceGrafica
 
         private void BotonAplicar_MouseLeave(object sender, EventArgs e)
         {
-            BotonAplicar.Size = new Size(90, 90);
+            BotonAplicar.Size = new Size(150, 150);
         }
     }
 }

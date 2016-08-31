@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallaCrearCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCrearCuenta.Designer.cs">
+      <DependentUpon>PantallaCrearCuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaHistorial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="PantallaDeConfig.Designer.cs">
       <DependentUpon>PantallaDeConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaDeUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaDeUsuario.Designer.cs">
+      <DependentUpon>PantallaDeUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
@@ -87,11 +99,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallaCrearCuenta.resx">
+      <DependentUpon>PantallaCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaHistorial.resx">
       <DependentUpon>PantallaHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaDeConfig.resx">
       <DependentUpon>PantallaDeConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaDeUsuario.resx">
+      <DependentUpon>PantallaDeUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
@@ -224,6 +242,72 @@
       <Project>{357f6fb7-9913-4c60-afaa-602149dc2239}</Project>
       <Name>UssersGestion</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orig_63734.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar sesion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inision sesion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inision sesion21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarPOI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarPoi2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfigurarBusqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfigurarBusqueda2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HistorialDeBusquedas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HistorialDeBusquedas2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarPOI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AgregarPOI2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deshacer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deshacer2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\botonRegistrarse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirmar2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrarse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Registrarse2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

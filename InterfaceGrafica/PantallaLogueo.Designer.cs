@@ -29,40 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PantallaLogueo));
-            this.NombreDeUsuario = new System.Windows.Forms.Label();
-            this.Contraseña = new System.Windows.Forms.Label();
             this.IngresarUsuario = new System.Windows.Forms.TextBox();
             this.IngresarContraseña = new System.Windows.Forms.TextBox();
             this.BotonComenzar = new System.Windows.Forms.PictureBox();
             this.BotonCerrar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BotonRegistrarse = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BotonComenzar)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonRegistrarse)).BeginInit();
             this.SuspendLayout();
-            // 
-            // NombreDeUsuario
-            // 
-            resources.ApplyResources(this.NombreDeUsuario, "NombreDeUsuario");
-            this.NombreDeUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.NombreDeUsuario.Cursor = System.Windows.Forms.Cursors.Default;
-            this.NombreDeUsuario.ForeColor = System.Drawing.Color.BurlyWood;
-            this.NombreDeUsuario.Name = "NombreDeUsuario";
-            this.NombreDeUsuario.Click += new System.EventHandler(this.NombreDeUsuario_Click);
-            // 
-            // Contraseña
-            // 
-            this.Contraseña.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.Contraseña, "Contraseña");
-            this.Contraseña.ForeColor = System.Drawing.Color.BurlyWood;
-            this.Contraseña.Name = "Contraseña";
-            this.Contraseña.Click += new System.EventHandler(this.Contraseña_Click);
             // 
             // IngresarUsuario
             // 
+            this.IngresarUsuario.BackColor = System.Drawing.Color.PeachPuff;
             resources.ApplyResources(this.IngresarUsuario, "IngresarUsuario");
             this.IngresarUsuario.Name = "IngresarUsuario";
             this.IngresarUsuario.TextChanged += new System.EventHandler(this.IngresoNameUsser_TextChanged);
             // 
             // IngresarContraseña
             // 
+            this.IngresarContraseña.BackColor = System.Drawing.Color.PeachPuff;
             resources.ApplyResources(this.IngresarContraseña, "IngresarContraseña");
             this.IngresarContraseña.Name = "IngresarContraseña";
             this.IngresarContraseña.UseSystemPasswordChar = true;
@@ -89,36 +78,70 @@
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.BotonRegistrarse);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.IngresarContraseña);
+            this.panel1.Controls.Add(this.IngresarUsuario);
+            this.panel1.Controls.Add(this.BotonComenzar);
+            resources.ApplyResources(this.panel1, "panel1");
+            this.panel1.Name = "panel1";
+            // 
+            // BotonRegistrarse
+            // 
+            this.BotonRegistrarse.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.BotonRegistrarse, "BotonRegistrarse");
+            this.BotonRegistrarse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BotonRegistrarse.Name = "BotonRegistrarse";
+            this.BotonRegistrarse.TabStop = false;
+            this.BotonRegistrarse.Click += new System.EventHandler(this.BotonRegistrarse_Click_1);
+            this.BotonRegistrarse.MouseLeave += new System.EventHandler(this.BotonRegistrarse_MouseLeave);
+            this.BotonRegistrarse.MouseHover += new System.EventHandler(this.BotonRegistrarse_MouseHover_1);
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Name = "label2";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Name = "label1";
+            // 
             // PantallaLogueo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources._1440x900_city_skyline_minimalism_30121;
+            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources.orig_63734;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BotonCerrar);
-            this.Controls.Add(this.BotonComenzar);
-            this.Controls.Add(this.IngresarContraseña);
-            this.Controls.Add(this.IngresarUsuario);
-            this.Controls.Add(this.Contraseña);
-            this.Controls.Add(this.NombreDeUsuario);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PantallaLogueo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PantallaLogueo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BotonComenzar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BotonRegistrarse)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label NombreDeUsuario;
-        private System.Windows.Forms.Label Contraseña;
         private System.Windows.Forms.TextBox IngresarUsuario;
         private System.Windows.Forms.TextBox IngresarContraseña;
         private System.Windows.Forms.PictureBox BotonComenzar;
         private System.Windows.Forms.Button BotonCerrar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox BotonRegistrarse;
     }
 }

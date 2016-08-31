@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="libro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\libro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="chrome_accept_apply_22369" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chrome_accept_apply_22369.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,8 +127,8 @@
   <data name="Cuadro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cuadro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="google-maps-new-interface" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\google-maps-new-interface.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="inision sesion2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inision sesion2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo-libro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-libro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,14 +139,29 @@
   <data name="Boton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Boton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="chrome_accept_apply_22369" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chrome_accept_apply_22369.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="orig_63734" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\orig_63734.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Deshacer2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deshacer2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="libro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="agregar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HistorialDeBusquedas2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HistorialDeBusquedas2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cuadro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cuadro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inision sesion21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inision sesion21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="comenzar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comenzar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,11 +169,26 @@
   <data name="botonBuscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botonBuscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Deshacer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deshacer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lineamarron" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lineamarron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ConfigurarBusqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfigurarBusqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="787538-dark-blue-digital-art-gray-minimalistic-orange-pastel-pastels-red-simple-simple-background-simplistic-squares-tapeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\787538-dark-blue-digital-art-gray-minimalistic-orange-pastel-pastels-red-simple-simple-background-simplistic-squares-tapeta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="botoncerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\botoncerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,26 +199,53 @@
   <data name="settings-circle-blue-128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings-circle-blue-128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BuscarPOI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarPOI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iniciar sesion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iniciar sesion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1440x900-city_skyline_minimalism-30121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1440x900-city_skyline_minimalism-30121.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lupa-psd-468x468" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lupa-psd-468x468.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="big_thumb_178c9f57852b89a220ba586c26d85e84" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\big_thumb_178c9f57852b89a220ba586c26d85e84.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cuadro1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cuadro1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="botonBuscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\botonBuscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cuadro2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cuadro2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AgregarPOI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarPOI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="google-maps-new-interface" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\google-maps-new-interface.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="big_thumb_178c9f57852b89a220ba586c26d85e84" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big_thumb_178c9f57852b89a220ba586c26d85e84.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonBuscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonBuscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AgregarPOI2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AgregarPOI2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfigurarBusqueda2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ConfigurarBusqueda2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="18902_en_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\18902_en_1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1440x900-city_skyline_minimalism-30121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1440x900-city_skyline_minimalism-30121.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sin título" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sin título.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="botonRegistrarse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\botonRegistrarse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HistorialDeBusquedas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HistorialDeBusquedas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="libro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="book_256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,10 +253,19 @@
   <data name="comenzar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\comenzar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BuscarPoi2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BuscarPoi2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Confirmar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirmar.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Confirmar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Confirmar2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Registrarse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Registrarse.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Registrarse2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Registrarse2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

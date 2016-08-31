@@ -41,12 +41,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("OCR A Extended", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.label1.Font = new System.Drawing.Font("OCR A Extended", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(25, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(398, 46);
+            this.label1.Size = new System.Drawing.Size(545, 63);
             this.label1.TabIndex = 1;
             this.label1.Text = "Configuración:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -58,7 +58,7 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(561, 0);
+            this.BotonCerrar.Location = new System.Drawing.Point(756, 12);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(32, 36);
             this.BotonCerrar.TabIndex = 3;
@@ -69,9 +69,9 @@
             // 
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(33, 115);
+            this.checkedListBox1.Location = new System.Drawing.Point(33, 183);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(232, 327);
+            this.checkedListBox1.Size = new System.Drawing.Size(393, 378);
             this.checkedListBox1.TabIndex = 4;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
@@ -81,9 +81,9 @@
             this.BotonAplicar.BackgroundImage = global::InterfaceGrafica.Properties.Resources.chrome_accept_apply_22369;
             this.BotonAplicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonAplicar.Location = new System.Drawing.Point(460, 318);
+            this.BotonAplicar.Location = new System.Drawing.Point(551, 293);
             this.BotonAplicar.Name = "BotonAplicar";
-            this.BotonAplicar.Size = new System.Drawing.Size(90, 90);
+            this.BotonAplicar.Size = new System.Drawing.Size(150, 150);
             this.BotonAplicar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BotonAplicar.TabIndex = 6;
             this.BotonAplicar.TabStop = false;
@@ -97,9 +97,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources._787538_dark_blue_digital_art_gray_minimalistic_orange_pastel_pastels_red_simple_simple_background_simplistic_squares_tapeta;
+            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources.fondo2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 500);
+            this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.BotonAplicar);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.BotonCerrar);

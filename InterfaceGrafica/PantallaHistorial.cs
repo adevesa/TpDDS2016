@@ -31,5 +31,15 @@ namespace InterfaceGrafica
         {
 
         }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            BotonAplicar.Size = new Size(160, 160);
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            BotonAplicar.Size = new Size(150, 150);
+        }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfaceGrafica
 {
-    public partial class PantallaPrincipal : Form
+    public partial class PantallaDeUsuario : Form
     {
-        public PantallaPrincipal()
+        public PantallaDeUsuario()
         {
             InitializeComponent();
         }
@@ -39,14 +39,11 @@ namespace InterfaceGrafica
 
         private void PantallaPrincipal_Load(object sender, EventArgs e)
         {
-            BotonBuscar.BackgroundImage = Properties.Resources.BuscarPOI;
-            BotonHistorial.BackgroundImage = Properties.Resources.HistorialDeBusquedas;
-            BotonConfig.BackgroundImage = Properties.Resources.ConfigurarBusqueda;
-
+          
 
             timer1.Enabled = true;
 
-            Usuario.Text = "Admin:" + Program.usuario;
+            Usuario.Text = "Usuario:" + Program.usuario;
 
             //Mostrar Fecha y Hora
             Fecha.Text = DateTime.Now.ToLongDateString();
@@ -56,27 +53,10 @@ namespace InterfaceGrafica
             //Centrar imagenes
             Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //captura el tamaño del monitor
 
-            //Lupa
-            //Int32 anchoDeLupa = (this.Width - BotonBuscar.Width) / 2;
-            //BotonBuscar.Location = new Point(anchoDeLupa, BotonBuscar.Location.Y);
-
-            //Libro
-            //Int32 anchoDeLibro = (this.Width - BotonHistorial.Width) / 4;
-            //BotonHistorial.Location = new Point(anchoDeLibro , BotonHistorial.Location.Y);
-
-            //Tuerca
-            //Int32 anchoDeTuerca = (this.Width + BotonConfig.Width) / 8 ;
-            //Int32 anchoDeTuerca = (anchoDeLupa - anchoDeLibro) + (this.Width / 2);
-            //BotonConfig.Location = new Point(anchoDeTuerca * 5 , BotonConfig.Location.Y);
 
             //Cerrar
             Int32 anchoDeX = (this.Width - BotonCerrar.Width) - 10;
             BotonCerrar.Location = new Point(anchoDeX, BotonCerrar.Location.Y);
-
-            //CerrarSecion
-            //Int32 anchoDeCerrarSecion = (this.Width - CerrarSecion.Width) / 2;
-            //Int32 largoDeCerrarSecion = (this.Width - CerrarSecion.Width) / 4;
-            //CerrarSecion.Location = new Point(anchoDeCerrarSecion, largoDeCerrarSecion * 3);
 
             //Centrar Panel3
             Int32 anchoDePanel = (this.Width - panel3.Width) / 2;
@@ -123,32 +103,32 @@ namespace InterfaceGrafica
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
-            BotonConfig.BackgroundImage = Properties.Resources.ConfigurarBusqueda2;
+            
         }
 
         private void pictureBox3_MouseLeave(object sender, EventArgs e)
         {
-            BotonConfig.BackgroundImage = Properties.Resources.ConfigurarBusqueda;
+            
         }
 
         private void BotonBuscar_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.BackgroundImage = Properties.Resources.BuscarPoi2;
+            BotonBuscar.Size = new Size(400, 400);
         }
 
         private void BotonBuscar_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.BackgroundImage = Properties.Resources.BuscarPOI;
+            BotonBuscar.Size = new Size(350, 350);
         }
 
         private void BotonHistorial_MouseHover(object sender, EventArgs e)
         {
-            BotonHistorial.BackgroundImage = Properties.Resources.HistorialDeBusquedas2;
+            
         }
 
         private void BotonHistorial_MouseLeave(object sender, EventArgs e)
         {
-            BotonHistorial.BackgroundImage = Properties.Resources.HistorialDeBusquedas;
+            
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -163,26 +143,19 @@ namespace InterfaceGrafica
 
         private void BotonCerrarSecion_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CerrarSecion_Click(object sender, EventArgs e)
         {
-
             PantallaLogueo loguin = new PantallaLogueo();
             loguin.Show();
-
-
+            
         }
 
         private void label1_Click_2(object sender, EventArgs e)
         {
 
-        }
-
-        private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
         }
     }
 }

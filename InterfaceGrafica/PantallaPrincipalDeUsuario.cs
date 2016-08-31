@@ -163,26 +163,19 @@ namespace InterfaceGrafica
 
         private void BotonCerrarSecion_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void CerrarSecion_Click(object sender, EventArgs e)
         {
-
             PantallaLogueo loguin = new PantallaLogueo();
             loguin.Show();
-
-
+            
         }
 
         private void label1_Click_2(object sender, EventArgs e)
         {
 
-        }
-
-        private void PantallaPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
         }
     }
 }

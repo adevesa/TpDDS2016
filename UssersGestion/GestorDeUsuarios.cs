@@ -76,8 +76,11 @@ namespace UssersGestion
             return this.usserDao.filtrarNombresDeUsuarios();
         }
 
-
-        
+        //no entendí un carajo lo que hiciste asi que cree esta función provisoria :D
+        public bool esAdmin(string unUsuario)
+        {
+            return buscarUsuario(unUsuario).esAdministrador();
+        }
 
 
     }

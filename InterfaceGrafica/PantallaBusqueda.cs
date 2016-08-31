@@ -34,12 +34,12 @@ namespace InterfaceGrafica
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            BotonAgregar.BackgroundImage = Properties.Resources.agregar2;
+            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI2;
         }
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            BotonAgregar.BackgroundImage = Properties.Resources.agregar1;
+            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -55,13 +55,13 @@ namespace InterfaceGrafica
         //cambia de tamaño al pasar el mouse
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(85,95);
+            BotonBuscar.Size = new Size(160,160);
         }
 
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(80, 90);
+            BotonBuscar.Size = new Size(150, 150);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -76,7 +76,23 @@ namespace InterfaceGrafica
 
         private void PantallaBusqueda_Load(object sender, EventArgs e)
         {
-            BotonAgregar.BackgroundImage = Properties.Resources.agregar1;
+            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI;
+            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer;
+        }
+
+        private void BotonDeshacer_MouseLeave(object sender, EventArgs e)
+        {
+            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer;
+        }
+
+        private void BotonDeshacer_MouseHover(object sender, EventArgs e)
+        {
+            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer2;
+        }
+
+        private void BotonDeshacer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
