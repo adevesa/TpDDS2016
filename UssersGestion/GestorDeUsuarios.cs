@@ -39,12 +39,19 @@ namespace UssersGestion
         //* @decryp: recibe un nombre de usuario (NO NOMBRE COMPLETO; recibe por ejemplo:"fede_capo2007"),
         //*  y una terminal. Establece la conexión entre ambos setteandole a la terminal que el usserActivo
         //* es el que realiza la petición. Además se settea en el usuario que la terminal utilizada es la recibida.
-        public void loggearUsuarioEn(string nombreDeUsuario,string contraseña, TerminalConsola terminal)
+        public bool loggearUsuarioEn(string nombreDeUsuario,string contraseña, TerminalConsola terminal)
         {
             Usuario usserBuscado = buscarUsuario(nombreDeUsuario);
             if (usserBuscado != null && usserBuscado.coincideContraseña(contraseña))
-            { loggerUsuario(usserBuscado, terminal); }
-            else { throw new System.InvalidOperationException("No se encuentra usuario en la base de datos"); }
+            {
+                loggerUsuario(usserBuscado, terminal);
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("No se encuentra usuario en la base de datos");
+                return false;
+            }
         }
         private void loggerUsuario(Usuario usser, TerminalConsola terminal)
         {
@@ -76,10 +83,9 @@ namespace UssersGestion
             return this.usserDao.filtrarNombresDeUsuarios();
         }
 
-        //no entendí un carajo lo que hiciste asi que cree esta función provisoria :D
-        public bool esAdmin(string unUsuario)
+        public bool esAdmin(string usuario)
         {
-            return buscarUsuario(unUsuario).esAdministrador();
+            return buscarUsuario(usuario).esAdministrador();
         }
 
 

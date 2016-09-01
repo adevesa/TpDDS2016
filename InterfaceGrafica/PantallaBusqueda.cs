@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consola;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaBusqueda : Form
     {
-        public PantallaBusqueda()
+        private TerminalConsola terminal;
+
+        public PantallaBusqueda(TerminalConsola terminalUtilizada)
         {
+            this.terminal = terminalUtilizada;
             InitializeComponent();
         }
 
@@ -27,9 +31,10 @@ namespace InterfaceGrafica
 
         }
 
+        //BOTON AGREGAR-- AGREGA UN CRITERIO DE BUSQUEDA//
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            string criterio_de_busqueda = TextoAgregar.Text.ToString();
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
@@ -47,9 +52,21 @@ namespace InterfaceGrafica
 
         }
 
+       
+        //BOTON QUE DISPARA LA ACCION DE BUSCAR//
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-
+            string criterio_de_busqueda = TextoAgregar.Text.ToString();
+            List<string> lista_obtenida = new List<string>();
+            lista_obtenida=terminal.mappearNombresPois(terminal.buscar(criterio_de_busqueda));
+            agregar_elementos_a_listBox(lista_obtenida);
+        }
+        private void agregar_elementos_a_listBox(List<string> resultados)
+        {
+            foreach(string nombrePoi in resultados)
+            {
+                listBox1.Items.Add(nombrePoi);
+            }
         }
 
         //cambia de tamaño al pasar el mouse
@@ -57,7 +74,6 @@ namespace InterfaceGrafica
         {
             BotonBuscar.Size = new Size(160,160);
         }
-
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
@@ -69,6 +85,7 @@ namespace InterfaceGrafica
 
         }
 
+        //BOX QUE MUESTRA LA LISTA DE POIS DEVUELTO POR EL SISTEMA//
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -90,7 +107,14 @@ namespace InterfaceGrafica
             BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer2;
         }
 
+        //BOTON DESHACER -- ELIMINA PALABRAS A BUSCAR//
         private void BotonDeshacer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //BOX QUE CONTIENE PALABRA A BUSCAR//
+        private void textoAgregar_TextChanged(object sender, EventArgs e)
         {
 
         }

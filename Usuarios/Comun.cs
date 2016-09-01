@@ -22,6 +22,6 @@ namespace Usuarios
         }
 
         //Metodos
-        public override bool esAdministrador() { return true; }
+        public override bool esAdministrador() { return false; }
     }
 }

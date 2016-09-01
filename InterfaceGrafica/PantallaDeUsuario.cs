@@ -7,16 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UssersGestion;
+using Consola;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaDeUsuario : Form
     {
-        public PantallaDeUsuario()
+        //ATRIBUTOS//
+        private TerminalConsola terminal;
+        private GestorDeUsuarios gestorDeUsuarios;
+        private string usuario;
+
+        //CONSTRUCTOR//
+        public PantallaDeUsuario(GestorDeUsuarios gestor, TerminalConsola terminal, string usuario)
         {
+            this.terminal = terminal;
+            this.gestorDeUsuarios = gestor;
+            this.usuario = usuario;
             InitializeComponent();
         }
 
+        //OBJETOS BOTONES//
         private void BotonCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -84,7 +96,7 @@ namespace InterfaceGrafica
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            PantallaBusqueda busqueda = new PantallaBusqueda();
+            PantallaBusqueda busqueda = new PantallaBusqueda(terminal);
             busqueda.ShowDialog();
         }
 
@@ -93,7 +105,6 @@ namespace InterfaceGrafica
             PantallaHistorial historial = new PantallaHistorial();
             historial.ShowDialog();
         }
-
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -148,9 +159,12 @@ namespace InterfaceGrafica
 
         private void CerrarSecion_Click(object sender, EventArgs e)
         {
+            gestorDeUsuarios.cerrarSesionDe(this.usuario, terminal);
             PantallaLogueo loguin = new PantallaLogueo();
-            loguin.Show();
-            
+            Program.borrarNombreUsuario();
+            loguin.ShowDialog();
+            this.Dispose();
+
         }
 
         private void label1_Click_2(object sender, EventArgs e)

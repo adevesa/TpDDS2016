@@ -12,14 +12,34 @@ namespace InterfaceGrafica
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static string usuario = ""; //variable publica
+        public static string usuario; 
+        
+        public static void setUsuario(string nameUsuario)
+        {
+            usuario = nameUsuario;
+        }
+
+        public static void borrarNombreUsuario()
+        {
+            usuario = null;
+        }
+
+        public static PantallaLogueo pantallaLog;
+        
+        public static void setPantallaLog(PantallaLogueo log)
+        {
+            pantallaLog = log;
+        }
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaDeCarga());
+            PantallaDeCarga formPantallaDeCarga = new PantallaDeCarga();
+            Application.Run(formPantallaDeCarga);
+            //formPantallaDeCarga.ShowDialog();
+
         }
     }
 }

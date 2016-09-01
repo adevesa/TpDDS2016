@@ -62,7 +62,7 @@ namespace Usuarios
         //* @name: esAdministrador()
         //* @decryp: por defecto retornará false. Cada clase hija redefinirá a true en caso de que cumpla
         //* con el criterio.
-        public virtual bool esAdministrador() { return false; }
+        public virtual bool esAdministrador() { return true; }
 
 
         public List<POI> buscar(string criterio)

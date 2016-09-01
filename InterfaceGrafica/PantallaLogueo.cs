@@ -14,25 +14,25 @@ namespace InterfaceGrafica
 {
     public partial class PantallaLogueo : Form
     {
-        TerminalConsola terminal = new TerminalConsola("Terminal de prueba", 5);
-        GestorDeUsuarios gestorDeUsuario = new GestorDeUsuarios();
+        //ATRIBUTOS//
+        private TerminalConsola terminal;
+        private GestorDeUsuarios gestorDeUsuario; 
 
-
+        //CONSTRUCTOR//
         public PantallaLogueo()
-        {
+        {   this.terminal = new TerminalConsola("Terminal de prueba", 5); 
+            this.gestorDeUsuario = new GestorDeUsuarios();
             InitializeComponent();
         }
 
+        //OBJETOS BOTONES//
         private void PantallaLogueo_Load(object sender, EventArgs e)
         {
-  
-
-        BotonComenzar.BackgroundImage = Properties.Resources.iniciar_sesion1;
+            BotonComenzar.BackgroundImage = Properties.Resources.iniciar_sesion1;
             BotonRegistrarse.BackgroundImage = Properties.Resources.Registrarse;
 
-            //Centrar Componentes
-            Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //captura el tamaño del monitor
-
+            //Centra los componentes, adaptandose al tamaño del monitor//
+            Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
 
             //Cerrar
             Int32 anchoDeX = (this.Width - BotonCerrar.Width) - 10;
@@ -70,31 +70,48 @@ namespace InterfaceGrafica
 
         }
 
+        //BOTON DE INICIAR SESION -- CONTIENE TODA LA LOGICA PARA LOGGEAR UN USUARIO//
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            string usuario = IngresarUsuario.Text.ToString();
+            string contraseña = IngresarContraseña.Text.ToString();
 
-            gestorDeUsuario.loggearUsuarioEn(IngresarUsuario.Text,IngresarContraseña.Text, terminal);
-            Program.usuario = IngresarUsuario.Text;
-            this.Close();
-
-            if (gestorDeUsuario.esAdmin(IngresarUsuario.Text))
+            bool existeUsuario = gestorDeUsuario.loggearUsuarioEn(usuario, contraseña, terminal);
+            if(existeUsuario)
             {
-                PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal();
-                pantallaDeAdmin.ShowDialog();
+                Program.setUsuario(usuario);
+                this.Close();
+
+                if (gestorDeUsuario.esAdmin(IngresarUsuario.Text.ToString()))
+                {
+                    //PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
+                    if (this.DialogResult == DialogResult.OK)
+                    {
+                        PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
+                        Application.Run(pantallaDeAdmin);
+                    }
+                }
+                else
+                {
+                    PantallaDeUsuario pantallaDeUsuario = new PantallaDeUsuario(gestorDeUsuario, terminal, usuario);
+                    pantallaDeUsuario.ShowDialog();
+                }
             }
             else
             {
-                PantallaDeUsuario pantallaDeUsuario = new PantallaDeUsuario();
-                pantallaDeUsuario.ShowDialog();
+                //REEMPLAZAR POR UNA PEQUEÑA VENTANA QUE DE AVISO DE ESTO//
+                Console.WriteLine("Usuario y/o contraseña incorrecto");
             }
 
         }
 
+        //----DISEÑO DE BOTONES----//
         //Cambia de imagen al pasar el cursor sobre el boton
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             BotonComenzar.BackgroundImage = Properties.Resources.inision_sesion2;
         }
+        
         //Vuelve a la imagen original al quitar el cursor del boton
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
@@ -120,9 +137,6 @@ namespace InterfaceGrafica
         {
             this.Close();
         }
-
-      
-
 
         private void BotonRegistrarse_Click_1(object sender, EventArgs e)
         {

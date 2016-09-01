@@ -22,35 +22,32 @@ namespace InterfaceGrafica
         {
 
         }
+        
         //Contador de porcentaje
         private void timer1_Tick(object sender, EventArgs e)
         {
             if(BarraDeCarga.Value<100)
             {
                 
-                BarraDeCarga.Value = BarraDeCarga.Value + 1; //le voy sumando de a 10 a la barra de carga
-                contador.Text = "Cargando..." + BarraDeCarga.Value + "%"; //muestra el valor de la barra de carga
+                BarraDeCarga.Value = BarraDeCarga.Value + 2; 
+                contador.Text = "Cargando..." + BarraDeCarga.Value + "%"; 
             }
             else
             {
                 timer1.Enabled = false; //desactivo el timer
                 this.Close(); //cierrar pantalla de carga
-          
-
-
             }
 
             
 
 
         }
+        
         //Abre la Pantalla de Logueo
         private void PantallaDeCarga_FormClosing(object sender, FormClosingEventArgs e)
         {
-
             PantallaLogueo logueo = new PantallaLogueo();
             logueo.ShowDialog();
-            
            
         }
 
