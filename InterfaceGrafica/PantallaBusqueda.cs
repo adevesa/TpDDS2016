@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Consola;
+using LibreriaClasesPoi;
 
 namespace InterfaceGrafica
 {
@@ -57,15 +58,24 @@ namespace InterfaceGrafica
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
             string criterio_de_busqueda = TextoAgregar.Text.ToString();
-            List<string> lista_obtenida = new List<string>();
-            lista_obtenida=terminal.mappearNombresPois(terminal.buscar(criterio_de_busqueda));
-            agregar_elementos_a_listBox(lista_obtenida);
+            List<POI> results = terminal.buscar(criterio_de_busqueda);
+            agregar_elementos_a_listView(results);
+            //List<string> lista_obtenida = new List<string>();
+            //lista_obtenida=terminal.mappearNombresPois(terminal.buscar(criterio_de_busqueda));
+            //agregar_elementos_a_listBox(lista_obtenida);
         }
-        private void agregar_elementos_a_listBox(List<string> resultados)
+        private void agregar_elementos_a_listView(List<POI> resultados)
         {
-            foreach(string nombrePoi in resultados)
+            foreach(POI poi in resultados)
             {
-                listBox1.Items.Add(nombrePoi);
+                ListViewItem item = new ListViewItem(poi.getNombre());
+                item.SubItems.Add(poi.getDireccion());
+                if (poi.estaDisponible(DateTime.Now))
+                {
+                    item.SubItems.Add("Si");
+                }
+                else { item.SubItems.Add("No"); }
+                ListViewPois.Items.Add(item);
             }
         }
 

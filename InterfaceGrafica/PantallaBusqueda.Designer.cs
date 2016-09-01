@@ -34,9 +34,12 @@
             this.TextoAgregar = new System.Windows.Forms.TextBox();
             this.BotonAgregar = new System.Windows.Forms.PictureBox();
             this.BotonBuscar = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.BotonDeshacer = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ListViewPois = new System.Windows.Forms.ListView();
+            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Disponibilidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.BotonAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonDeshacer)).BeginInit();
@@ -73,7 +76,7 @@
             // 
             this.TextoAgregar.BackColor = System.Drawing.Color.Tan;
             this.TextoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextoAgregar.Location = new System.Drawing.Point(9, 128);
+            this.TextoAgregar.Location = new System.Drawing.Point(26, 104);
             this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextoAgregar.Name = "TextoAgregar";
             this.TextoAgregar.Size = new System.Drawing.Size(261, 37);
@@ -114,17 +117,6 @@
             this.BotonBuscar.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.BotonBuscar.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(26, 239);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(544, 212);
-            this.listBox1.TabIndex = 6;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // BotonDeshacer
             // 
             this.BotonDeshacer.BackColor = System.Drawing.Color.Transparent;
@@ -141,6 +133,37 @@
             this.BotonDeshacer.MouseLeave += new System.EventHandler(this.BotonDeshacer_MouseLeave);
             this.BotonDeshacer.MouseHover += new System.EventHandler(this.BotonDeshacer_MouseHover);
             // 
+            // ListViewPois
+            // 
+            this.ListViewPois.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ListViewPois.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nombre,
+            this.Direccion,
+            this.Disponibilidad});
+            this.ListViewPois.Location = new System.Drawing.Point(21, 224);
+            this.ListViewPois.Name = "ListViewPois";
+            this.ListViewPois.Size = new System.Drawing.Size(547, 166);
+            this.ListViewPois.TabIndex = 8;
+            this.ListViewPois.UseCompatibleStateImageBehavior = false;
+            this.ListViewPois.View = System.Windows.Forms.View.Details;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Tag = "Nombre";
+            this.Nombre.Text = "Nombre";
+            this.Nombre.Width = 194;
+            // 
+            // Direccion
+            // 
+            this.Direccion.Tag = "Direccion";
+            this.Direccion.Text = "Dirección";
+            this.Direccion.Width = 189;
+            // 
+            // Disponibilidad
+            // 
+            this.Disponibilidad.Text = "Disponible";
+            this.Disponibilidad.Width = 157;
+            // 
             // PantallaBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +171,8 @@
             this.BackgroundImage = global::InterfaceGrafica.Properties.Resources.fondo2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
+            this.Controls.Add(this.ListViewPois);
             this.Controls.Add(this.BotonDeshacer);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.BotonAgregar);
             this.Controls.Add(this.TextoAgregar);
@@ -176,8 +199,11 @@
         private System.Windows.Forms.TextBox TextoAgregar;
         private System.Windows.Forms.PictureBox BotonAgregar;
         private System.Windows.Forms.PictureBox BotonBuscar;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.PictureBox BotonDeshacer;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ListView ListViewPois;
+        private System.Windows.Forms.ColumnHeader Nombre;
+        private System.Windows.Forms.ColumnHeader Direccion;
+        private System.Windows.Forms.ColumnHeader Disponibilidad;
     }
 }
