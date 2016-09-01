@@ -40,6 +40,7 @@
             this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Direccion = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Disponibilidad = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BotonAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BotonDeshacer)).BeginInit();
@@ -49,11 +50,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("OCR A Extended", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 10);
+            this.label1.Location = new System.Drawing.Point(18, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 66);
+            this.label1.Size = new System.Drawing.Size(208, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar POI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -64,20 +65,20 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(567, 10);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Location = new System.Drawing.Point(560, 11);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(24, 29);
+            this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 2;
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // TextoAgregar
             // 
-            this.TextoAgregar.BackColor = System.Drawing.Color.Tan;
+            this.TextoAgregar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.TextoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextoAgregar.Location = new System.Drawing.Point(26, 104);
-            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextoAgregar.Location = new System.Drawing.Point(26, 92);
+            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.TextoAgregar.Name = "TextoAgregar";
             this.TextoAgregar.Size = new System.Drawing.Size(261, 37);
             this.TextoAgregar.TabIndex = 3;
@@ -88,8 +89,8 @@
             this.BotonAgregar.BackColor = System.Drawing.Color.Transparent;
             this.BotonAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonAgregar.Location = new System.Drawing.Point(298, 92);
-            this.BotonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonAgregar.Location = new System.Drawing.Point(313, 92);
+            this.BotonAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonAgregar.Name = "BotonAgregar";
             this.BotonAgregar.Size = new System.Drawing.Size(94, 49);
             this.BotonAgregar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -105,8 +106,8 @@
             this.BotonBuscar.BackgroundImage = global::InterfaceGrafica.Properties.Resources.chrome_accept_apply_22369;
             this.BotonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonBuscar.Location = new System.Drawing.Point(438, 83);
-            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonBuscar.Location = new System.Drawing.Point(458, 83);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(112, 122);
             this.BotonBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -122,8 +123,8 @@
             this.BotonDeshacer.BackColor = System.Drawing.Color.Transparent;
             this.BotonDeshacer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonDeshacer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonDeshacer.Location = new System.Drawing.Point(298, 156);
-            this.BotonDeshacer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonDeshacer.Location = new System.Drawing.Point(313, 156);
+            this.BotonDeshacer.Margin = new System.Windows.Forms.Padding(2);
             this.BotonDeshacer.Name = "BotonDeshacer";
             this.BotonDeshacer.Size = new System.Drawing.Size(94, 49);
             this.BotonDeshacer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,9 +141,10 @@
             this.Nombre,
             this.Direccion,
             this.Disponibilidad});
-            this.ListViewPois.Location = new System.Drawing.Point(21, 224);
+            this.ListViewPois.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListViewPois.Location = new System.Drawing.Point(26, 236);
             this.ListViewPois.Name = "ListViewPois";
-            this.ListViewPois.Size = new System.Drawing.Size(547, 166);
+            this.ListViewPois.Size = new System.Drawing.Size(544, 240);
             this.ListViewPois.TabIndex = 8;
             this.ListViewPois.UseCompatibleStateImageBehavior = false;
             this.ListViewPois.View = System.Windows.Forms.View.Details;
@@ -151,26 +153,37 @@
             // 
             this.Nombre.Tag = "Nombre";
             this.Nombre.Text = "Nombre";
-            this.Nombre.Width = 194;
+            this.Nombre.Width = 206;
             // 
             // Direccion
             // 
             this.Direccion.Tag = "Direccion";
             this.Direccion.Text = "Dirección";
-            this.Direccion.Width = 189;
+            this.Direccion.Width = 258;
             // 
             // Disponibilidad
             // 
             this.Disponibilidad.Text = "Disponible";
             this.Disponibilidad.Width = 157;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 16);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Ingrese su búsqueda";
+            // 
             // PantallaBusqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources.fondo2;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.ListViewPois);
             this.Controls.Add(this.BotonDeshacer);
             this.Controls.Add(this.BotonBuscar);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.ColumnHeader Nombre;
         private System.Windows.Forms.ColumnHeader Direccion;
         private System.Windows.Forms.ColumnHeader Disponibilidad;
+        private System.Windows.Forms.Label label2;
     }
 }

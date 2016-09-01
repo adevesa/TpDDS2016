@@ -15,13 +15,13 @@ namespace TestLibreríaPoi
             cgpComunal5.agregarPalabraClave("cgp comunal 5", "cgp", "centro de gestion y participacion", "comuna 5");
             cgpComunal5.agregarPalabraClave("cgp comunal 5", "cgp", "centro de gestion y participacion", "comuna 5");
             cgpComunal5.crearServicio("consultas afip");
-            cgpComunal5.agregarHorarioDeAtencionAServicio("consultas afip", "lunes", "mañana", 8, 14);
+            cgpComunal5.agregarHorarioDeAtencionAServicio("consultas afip","mañana", 8, 14, "lunes", "martes", "miercoles", "jueves", "viernes");
 
 
             cgpComunal1.agregarPalabraClave("cgp comunal 1", "cgp", "centro de gestion y participacion", "comuna 1");
             cgpComunal1.agregarPalabraClave("cgp comunal 1", "cgp", "centro de gestion y participacion", "comuna 1");
             cgpComunal1.crearServicio("consultas afip");
-            cgpComunal1.agregarHorarioDeAtencionAServicio("consultas afip", "lunes", "mañana", 8, 14);
+            cgpComunal1.agregarHorarioDeAtencionAServicio("consultas afip", "mañana", 8, 14, "lunes", "martes", "miercoles", "jueves", "viernes");
         }
 
         [TestMethod]

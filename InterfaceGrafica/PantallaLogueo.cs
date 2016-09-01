@@ -84,12 +84,13 @@ namespace InterfaceGrafica
 
                 if (gestorDeUsuario.esAdmin(IngresarUsuario.Text.ToString()))
                 {
-                    //PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
-                    if (this.DialogResult == DialogResult.OK)
+                    PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
+                    pantallaDeAdmin.ShowDialog();
+                    /*if (this.DialogResult == DialogResult.OK)
                     {
                         PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
                         Application.Run(pantallaDeAdmin);
-                    }
+                    }*/
                 }
                 else
                 {
@@ -138,6 +139,7 @@ namespace InterfaceGrafica
             this.Close();
         }
 
+        //BOTON REGISTRAR//
         private void BotonRegistrarse_Click_1(object sender, EventArgs e)
         {
             PantallaCrearCuenta pantallaCrearCuenta = new PantallaCrearCuenta();
@@ -152,6 +154,11 @@ namespace InterfaceGrafica
         private void BotonRegistrarse_MouseLeave(object sender, EventArgs e)
         {
             BotonRegistrarse.BackgroundImage = Properties.Resources.Registrarse;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

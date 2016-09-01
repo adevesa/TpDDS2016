@@ -42,13 +42,16 @@ namespace Poi.Servicios
         //* @name: agregarDiaYHorario(string dia, string turno, int inico, int fin)
         //* @decryp: crea un nueo objeto "horario de atencion" con sus atributos correspondientes y los agrega
         //* a la lista de horariosDeAtencion
-        public void agregarDiaYHorario(string dia, string turno, int horarioDeApertura, int horarioDeCierre)
+        public void agregarDiaYHorario(string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
         {
-            HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
-            nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
-            this.horariosDeAtencion.Add(nuevoHorarioDeAtencion);
+            foreach (string dia in dias)
+            {
+                HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
+                nuevoHorarioDeAtencion.setPoiId(this.Id);
+                nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
+                this.horariosDeAtencion.Add(nuevoHorarioDeAtencion);
+            }
         }
-
         //* @name: estaDisponible(DateTime horarioYfechaActual)
         //* @decryp: recibe un objeto de la clase DateTime y verifica si el poi se encuentra
         //* disponible en dicho horario y fecha.

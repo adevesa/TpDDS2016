@@ -44,14 +44,14 @@
             // 
             // IngresarUsuario
             // 
-            this.IngresarUsuario.BackColor = System.Drawing.Color.PeachPuff;
+            this.IngresarUsuario.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.IngresarUsuario, "IngresarUsuario");
             this.IngresarUsuario.Name = "IngresarUsuario";
             this.IngresarUsuario.TextChanged += new System.EventHandler(this.IngresoNameUsser_TextChanged);
             // 
             // IngresarContraseña
             // 
-            this.IngresarContraseña.BackColor = System.Drawing.Color.PeachPuff;
+            this.IngresarContraseña.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this.IngresarContraseña, "IngresarContraseña");
             this.IngresarContraseña.Name = "IngresarContraseña";
             this.IngresarContraseña.UseSystemPasswordChar = true;
@@ -112,13 +112,13 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.label1.Name = "label1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // PantallaLogueo
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BackgroundImage = global::InterfaceGrafica.Properties.Resources.orig_63734;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.BotonCerrar);
             this.DoubleBuffered = true;

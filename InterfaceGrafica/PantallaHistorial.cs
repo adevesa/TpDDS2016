@@ -41,5 +41,10 @@ namespace InterfaceGrafica
         {
             BotonAplicar.Size = new Size(150, 150);
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

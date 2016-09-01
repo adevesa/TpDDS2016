@@ -82,12 +82,12 @@ namespace InterfaceGrafica
         //cambia de tamaño al pasar el mouse
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(160,160);
+           // BotonBuscar.Size = new Size(160,160);
         }
 
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(150, 150);
+           // BotonBuscar.Size = new Size(150, 150);
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -125,6 +125,11 @@ namespace InterfaceGrafica
 
         //BOX QUE CONTIENE PALABRA A BUSCAR//
         private void textoAgregar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }

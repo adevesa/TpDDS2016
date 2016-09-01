@@ -119,13 +119,13 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="IngresarUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 36pt</value>
+    <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="IngresarUsuario.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 86</value>
+    <value>0, 86</value>
   </data>
   <data name="IngresarUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 62</value>
+    <value>478, 44</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="IngresarUsuario.TabIndex" type="System.Int32, mscorlib">
@@ -144,13 +144,13 @@
     <value>4</value>
   </data>
   <data name="IngresarContraseña.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 36pt</value>
+    <value>Microsoft Sans Serif, 24pt</value>
   </data>
   <data name="IngresarContraseña.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 263</value>
+    <value>0, 257</value>
   </data>
   <data name="IngresarContraseña.Size" type="System.Drawing.Size, System.Drawing">
-    <value>341, 62</value>
+    <value>478, 44</value>
   </data>
   <data name="IngresarContraseña.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -172,7 +172,7 @@
     <value>Stretch</value>
   </data>
   <data name="BotonComenzar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 368</value>
+    <value>2, 368</value>
   </data>
   <data name="BotonComenzar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -232,7 +232,7 @@
     <value>NoControl</value>
   </data>
   <data name="BotonRegistrarse.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 368</value>
+    <value>299, 368</value>
   </data>
   <data name="BotonRegistrarse.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -259,19 +259,19 @@
     <value>True</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>OCR A Extended, 48pt, style=Bold</value>
+    <value>Century Gothic, 36pt</value>
   </data>
   <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>100, 15</value>
+    <value>130, 16</value>
   </data>
   <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 66</value>
+    <value>190, 58</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -295,16 +295,16 @@
     <value>True</value>
   </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>OCR A Extended, 48pt, style=Bold</value>
+    <value>Century Gothic, 36pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 193</value>
+    <value>87, 183</value>
   </data>
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>428, 66</value>
+    <value>298, 58</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>

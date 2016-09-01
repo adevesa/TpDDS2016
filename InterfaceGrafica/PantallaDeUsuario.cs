@@ -124,12 +124,12 @@ namespace InterfaceGrafica
 
         private void BotonBuscar_MouseHover(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(400, 400);
+           
         }
 
         private void BotonBuscar_MouseLeave(object sender, EventArgs e)
         {
-            BotonBuscar.Size = new Size(350, 350);
+            // BotonBuscar.Size = new Size(200, 200); NO SIRVE NI PA MIERDA
         }
 
         private void BotonHistorial_MouseHover(object sender, EventArgs e)

@@ -55,12 +55,17 @@ namespace OrigenesDeDatos
 
             LocalComercial abastoShopping = new LocalComercial("abasto shopping", "avenida corrientes 3247");
             abastoShopping.agregarPalabraClave("compras", "distraccion", "cine", "comida", "ropa", "abasto shopping");
+            abastoShopping.agregarDiaYHorario("full time", 10, 22, "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo");
             listBased.Add(abastoShopping);
+
             LocalComercial galeriaJardin = new LocalComercial("galeria jardin", "florida 537");
             galeriaJardin.agregarPalabraClave("tecnologia", "computadoras", "computadora", "tablets", "notebooks", "bajos precios", "placa madre", "galeria jardin");
+            galeriaJardin.agregarDiaYHorario("full time", 10, 18, "lunes", "martes", "miercoles", "jueves", "viernes", "sabado");
             listBased.Add(galeriaJardin);
+
             LocalComercial mcDonaldCordoba = new LocalComercial( "mc donald cordoba", "avenida córdoba 1188");
             mcDonaldCordoba.agregarPalabraClave("comida", "comida rapida", "hamburguesas", "papas fritas", "doble cuarto de libra", "mc flurry", "mc donald");
+            mcDonaldCordoba.agregarDiaYHorario("full time", 10, 22, "lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo");
             listBased.Add(mcDonaldCordoba);
 
             //Bancos//
@@ -86,13 +91,13 @@ namespace OrigenesDeDatos
             CGP cgpComunal5 = new CGP("cgp comunal 5", "sarandí 1273 almagro", 5);
             cgpComunal5.agregarPalabraClave("cgp comunal 5", "cgp", "centro de gestion y participacion", "comuna 5");
             cgpComunal5.crearServicio("consultas afip");
-            cgpComunal5.agregarHorarioDeAtencionAServicio("consultas afip", "lunes", "mañana", 8, 14);
+            cgpComunal5.agregarHorarioDeAtencionAServicio("consultas afip", "mañana", 8, 14, "lunes","martes", "miercoles", "jueves", "viernes");
             listBased.Add(cgpComunal5);
 
             CGP cgpComunal1 = new CGP("cgp comunal 1", "uruguay 740 monserrat", 1);
             cgpComunal1.agregarPalabraClave("cgp comunal 1", "cgp", "centro de gestion y participacion", "comuna 1");
             cgpComunal1.crearServicio("consultas afip");
-            cgpComunal1.agregarHorarioDeAtencionAServicio("consultas afip", "lunes", "mañana", 8, 14);
+            cgpComunal1.agregarHorarioDeAtencionAServicio("consultas afip", "mañana", 8, 14, "lunes", "martes", "miercoles", "jueves", "viernes");
             listBased.Add(cgpComunal1);
 
 

@@ -19,11 +19,7 @@ namespace LibreriaClasesPoi
 
         private void agregarHorariosFijos()
         {
-            agregarDiaYHorario("lunes", "mañana", 10, 15);
-            agregarDiaYHorario("martes", "mañana", 10, 15);
-            agregarDiaYHorario("miercoles", "mañana", 10, 15);
-            agregarDiaYHorario("jueves", "mañana", 10, 15);
-            agregarDiaYHorario("viernes", "mañana", 10, 15);
+            agregarDiaYHorario("horario bancario", 10, 15, "lunes", "martes", "miercoles", "jueves", "viernes");
 
         }
 

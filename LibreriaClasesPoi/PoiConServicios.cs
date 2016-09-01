@@ -54,10 +54,10 @@ namespace LibreriaClasesPoi
             this.servicios.Add(servicio);
         }
 
-        public void agregarHorarioDeAtencionAServicio(string nombreDelServicio, string dia, string turno, int horarioDeApertura, int horarioDeCierre)
+        public void agregarHorarioDeAtencionAServicio(string nombreDelServicio,string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
         {
             Servicio serviceBuscado = buscarServicio(nombreDelServicio);
-            serviceBuscado.agregarDiaYHorario(dia, turno, horarioDeApertura, horarioDeCierre);
+            serviceBuscado.agregarDiaYHorario(turno, horarioDeApertura, horarioDeCierre, dias);
         }
 
         public void agregarServicioSinLimiteHorario(string servicio)
