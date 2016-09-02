@@ -181,7 +181,7 @@ namespace InterfaceGrafica
         private void CerrarSecion_Click(object sender, EventArgs e)
         {
             gestorDeUsuarios.cerrarSesionDe(this.usuario, terminal);
-            PantallaLogueo loguin = new PantallaLogueo();
+            PantallaLogueo loguin = new PantallaLogueo(terminal, gestorDeUsuarios);
             Program.borrarNombreUsuario();
             loguin.ShowDialog();
             this.Dispose();

@@ -41,7 +41,6 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Enabled = false;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(20, 20);
@@ -59,7 +58,7 @@
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCerrar.Location = new System.Drawing.Point(567, 10);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(24, 29);
             this.BotonCerrar.TabIndex = 3;
@@ -71,7 +70,7 @@
             this.checkedListBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(25, 149);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(296, 304);
             this.checkedListBox1.TabIndex = 4;
@@ -84,7 +83,7 @@
             this.BotonAplicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonAplicar.Location = new System.Drawing.Point(413, 238);
-            this.BotonAplicar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonAplicar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonAplicar.Name = "BotonAplicar";
             this.BotonAplicar.Size = new System.Drawing.Size(112, 122);
             this.BotonAplicar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -108,7 +107,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaDeConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

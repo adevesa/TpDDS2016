@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Consola;
+using UssersGestion;
 
 namespace InterfaceGrafica
 {
@@ -12,8 +14,14 @@ namespace InterfaceGrafica
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static string usuario; 
-        
+
+         //ATRIBUTOS GLOBALES//
+        public static string usuario;
+        private static TerminalConsola terminal;
+        private static GestorDeUsuarios gestorDeUsuario;
+        public static PantallaLogueo pantallaLog;
+
+        //METODOS GLOBALES//
         public static void setUsuario(string nameUsuario)
         {
             usuario = nameUsuario;
@@ -24,8 +32,6 @@ namespace InterfaceGrafica
             usuario = null;
         }
 
-        public static PantallaLogueo pantallaLog;
-        
         public static void setPantallaLog(PantallaLogueo log)
         {
             pantallaLog = log;
@@ -36,9 +42,10 @@ namespace InterfaceGrafica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            PantallaDeCarga formPantallaDeCarga = new PantallaDeCarga();
+            terminal = new TerminalConsola("Terminal de prueba", 5);
+            gestorDeUsuario = new GestorDeUsuarios();
+            PantallaDeCarga formPantallaDeCarga = new PantallaDeCarga(terminal, gestorDeUsuario);
             Application.Run(formPantallaDeCarga);
-            //formPantallaDeCarga.ShowDialog();
 
         }
     }

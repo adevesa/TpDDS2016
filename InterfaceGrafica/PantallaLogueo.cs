@@ -19,9 +19,11 @@ namespace InterfaceGrafica
         private GestorDeUsuarios gestorDeUsuario; 
 
         //CONSTRUCTOR//
-        public PantallaLogueo()
-        {   this.terminal = new TerminalConsola("Terminal de prueba", 5); 
-            this.gestorDeUsuario = new GestorDeUsuarios();
+        public PantallaLogueo(TerminalConsola terminalUtilizada, GestorDeUsuarios gestor)
+        {   //this.terminal = new TerminalConsola("Terminal de prueba", 5); 
+            //this.gestorDeUsuario = new GestorDeUsuarios();
+            terminal = terminalUtilizada;
+            gestorDeUsuario = gestor;
             InitializeComponent();
         }
 

@@ -8,13 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using InterfaceGrafica;
+using Consola;
+using UssersGestion;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaDeCarga : Form
     {
-        public PantallaDeCarga()
+        //ATRIBUTOS//
+        private TerminalConsola terminal;
+        private GestorDeUsuarios gestorDeUsser;
+        //CONSTRUCTOR//
+        public PantallaDeCarga(TerminalConsola terminalUtilizada, GestorDeUsuarios gestor)
         {
+            this.terminal = terminalUtilizada;
+            this.gestorDeUsser = gestor;
             InitializeComponent();
         }
 
@@ -46,7 +54,7 @@ namespace InterfaceGrafica
         //Abre la Pantalla de Logueo
         private void PantallaDeCarga_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PantallaLogueo logueo = new PantallaLogueo();
+            PantallaLogueo logueo = new PantallaLogueo(terminal, gestorDeUsser);
             logueo.ShowDialog();
            
         }
