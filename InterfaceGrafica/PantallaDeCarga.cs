@@ -43,6 +43,9 @@ namespace InterfaceGrafica
             else
             {
                 timer1.Enabled = false; //desactivo el timer
+                PantallaLogueo logueo = new PantallaLogueo(terminal, gestorDeUsser);
+                this.Hide();
+                logueo.ShowDialog();
                 this.Close(); //cierrar pantalla de carga
             }
 
@@ -54,8 +57,9 @@ namespace InterfaceGrafica
         //Abre la Pantalla de Logueo
         private void PantallaDeCarga_FormClosing(object sender, FormClosingEventArgs e)
         {
-            PantallaLogueo logueo = new PantallaLogueo(terminal, gestorDeUsser);
-            logueo.ShowDialog();
+            //PantallaLogueo logueo = new PantallaLogueo(terminal, gestorDeUsser);
+           
+            //logueo.ShowDialog();
            
         }
 

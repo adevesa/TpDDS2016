@@ -77,7 +77,9 @@ namespace InterfaceGrafica
         private void BotonVolver_Click(object sender, EventArgs e)
         {
             //PantallaPrincipal fr = new PantallaPrincipal();
+            //this.Hide();
             //fr.ShowDialog();
+            //this.Close();
         }
     }
 }

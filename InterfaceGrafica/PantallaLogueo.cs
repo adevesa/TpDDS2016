@@ -61,7 +61,9 @@ namespace InterfaceGrafica
                 if (gestorDeUsuario.esAdmin(IngresarUsuario.Text.ToString()))
                 {
                     PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
+                    this.Hide();
                     pantallaDeAdmin.ShowDialog();
+                    this.Close();
                     /*if (this.DialogResult == DialogResult.OK)
                     {
                         PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
@@ -71,13 +73,16 @@ namespace InterfaceGrafica
                 else
                 {
                     PantallaDeUsuario pantallaDeUsuario = new PantallaDeUsuario(gestorDeUsuario, terminal, usuario);
+                    this.Hide();
                     pantallaDeUsuario.ShowDialog();
+                    this.Close();
+                    
                 }
             }
             else
             {
-                //REEMPLAZAR POR UNA PEQUEÑA VENTANA QUE DE AVISO DE ESTO//
-                Console.WriteLine("Usuario y/o contraseña incorrecto");
+               
+               MessageBox.Show("Usuario y/o contraseña incorrecto");
             }
         }
 

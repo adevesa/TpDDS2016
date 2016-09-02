@@ -163,8 +163,11 @@ namespace InterfaceGrafica
             gestorDeUsuarios.cerrarSesionDe(this.usuario, terminal);
             PantallaLogueo loguin = new PantallaLogueo(terminal, gestorDeUsuarios);
             Program.borrarNombreUsuario();
+            this.Hide();
             loguin.ShowDialog();
             this.Dispose();
+            this.Close();
+           
 
         }
 

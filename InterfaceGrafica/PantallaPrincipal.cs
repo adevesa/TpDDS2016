@@ -113,13 +113,17 @@ namespace InterfaceGrafica
         private void AdministrarPois_Click(object sender, EventArgs e)
         {
             PantallaAdministrarPois administrarAdmins = new PantallaAdministrarPois();
+            this.Hide();
             administrarAdmins.ShowDialog();
+            this.Close();
         }
 
         private void BotonConfig_Click(object sender, EventArgs e)
         {
             PantallaAdministrarUsuarios administarUsers = new PantallaAdministrarUsuarios();
+            this.Hide();
             administarUsers.ShowDialog();
+            this.Close();
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)
@@ -173,8 +177,11 @@ namespace InterfaceGrafica
             gestorDeUsuarios.cerrarSesionDe(this.usuario, terminal);
             PantallaLogueo loguin = new PantallaLogueo(terminal, gestorDeUsuarios);
             Program.borrarNombreUsuario();
+            this.Hide();
             loguin.ShowDialog();
             this.Dispose();
+            this.Close();
+            
         }
 
         private void label1_Click_2(object sender, EventArgs e)

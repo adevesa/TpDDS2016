@@ -85,7 +85,9 @@ namespace InterfaceGrafica
         {
             
             //PantallaPrincipal fr = new PantallaPrincipal();
+            //this.Hide();
             //fr.ShowDialog();
+            //this.Close()
         }
     }
 }
