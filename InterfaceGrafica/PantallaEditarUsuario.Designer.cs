@@ -1,6 +1,6 @@
 ﻿namespace InterfaceGrafica
 {
-    partial class PantallaCrearCuenta
+    partial class PantallaEditarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.IngresarUsuario = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.UsuarioAEditar = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NuevaContraseña = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.NuevoEmail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.NuevoNombre = new System.Windows.Forms.TextBox();
             this.BotonDesHacer2 = new System.Windows.Forms.Button();
             this.BotonConfirmar2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.OpcionSi = new System.Windows.Forms.RadioButton();
+            this.OpcionNo = new System.Windows.Forms.RadioButton();
             this.BotonCerrar = new System.Windows.Forms.Button();
+            this.BotonBuscar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,36 +55,36 @@
             this.label1.Location = new System.Drawing.Point(11, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 44);
+            this.label1.Size = new System.Drawing.Size(262, 44);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Registrarse";
+            this.label1.Text = "Editar usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // IngresarUsuario
             // 
             this.IngresarUsuario.BackColor = System.Drawing.Color.White;
-            this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngresarUsuario.Location = new System.Drawing.Point(225, 113);
+            this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngresarUsuario.Location = new System.Drawing.Point(287, 112);
             this.IngresarUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.IngresarUsuario.Name = "IngresarUsuario";
-            this.IngresarUsuario.Size = new System.Drawing.Size(183, 34);
+            this.IngresarUsuario.Size = new System.Drawing.Size(245, 41);
             this.IngresarUsuario.TabIndex = 7;
             // 
-            // label5
+            // UsuarioAEditar
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(13, 114);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 36);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Usuario";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.UsuarioAEditar.AutoSize = true;
+            this.UsuarioAEditar.BackColor = System.Drawing.Color.Transparent;
+            this.UsuarioAEditar.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioAEditar.ForeColor = System.Drawing.Color.Black;
+            this.UsuarioAEditar.Location = new System.Drawing.Point(26, 112);
+            this.UsuarioAEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsuarioAEditar.Name = "UsuarioAEditar";
+            this.UsuarioAEditar.Size = new System.Drawing.Size(247, 36);
+            this.UsuarioAEditar.TabIndex = 11;
+            this.UsuarioAEditar.Text = "Usuario a editar:";
+            this.UsuarioAEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UsuarioAEditar.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 
@@ -88,24 +92,24 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(13, 186);
+            this.label2.Location = new System.Drawing.Point(91, 257);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(183, 36);
+            this.label2.Size = new System.Drawing.Size(288, 36);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Contraseña";
+            this.label2.Text = "Nueva contraseña:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
-            // textBox1
+            // NuevaContraseña
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(225, 185);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 34);
-            this.textBox1.TabIndex = 13;
+            this.NuevaContraseña.BackColor = System.Drawing.Color.White;
+            this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevaContraseña.Location = new System.Drawing.Point(453, 259);
+            this.NuevaContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevaContraseña.Name = "NuevaContraseña";
+            this.NuevaContraseña.Size = new System.Drawing.Size(183, 34);
+            this.NuevaContraseña.TabIndex = 13;
             // 
             // label6
             // 
@@ -113,24 +117,24 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(13, 329);
+            this.label6.Location = new System.Drawing.Point(178, 323);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 36);
+            this.label6.Size = new System.Drawing.Size(201, 36);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Email";
+            this.label6.Text = "Nuevo Email:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // NuevoEmail
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(225, 327);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(183, 34);
-            this.textBox3.TabIndex = 18;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.NuevoEmail.BackColor = System.Drawing.Color.White;
+            this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoEmail.Location = new System.Drawing.Point(453, 327);
+            this.NuevoEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevoEmail.Name = "NuevoEmail";
+            this.NuevoEmail.Size = new System.Drawing.Size(183, 34);
+            this.NuevoEmail.TabIndex = 18;
+            this.NuevoEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label7
             // 
@@ -138,31 +142,30 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(13, 260);
+            this.label7.Location = new System.Drawing.Point(139, 187);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 36);
+            this.label7.Size = new System.Drawing.Size(240, 36);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Nombre";
+            this.label7.Text = "Nuevo Nombre:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox4
+            // NuevoNombre
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(225, 258);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 34);
-            this.textBox4.TabIndex = 22;
+            this.NuevoNombre.BackColor = System.Drawing.Color.White;
+            this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoNombre.Location = new System.Drawing.Point(453, 191);
+            this.NuevoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevoNombre.Name = "NuevoNombre";
+            this.NuevoNombre.Size = new System.Drawing.Size(183, 34);
+            this.NuevoNombre.TabIndex = 22;
             // 
             // BotonDesHacer2
             // 
-            this.BotonDesHacer2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonDesHacer2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonDesHacer2.ForeColor = System.Drawing.Color.Black;
-            this.BotonDesHacer2.Location = new System.Drawing.Point(263, 482);
+            this.BotonDesHacer2.Location = new System.Drawing.Point(443, 482);
             this.BotonDesHacer2.Name = "BotonDesHacer2";
             this.BotonDesHacer2.Size = new System.Drawing.Size(145, 56);
             this.BotonDesHacer2.TabIndex = 23;
@@ -171,10 +174,9 @@
             // 
             // BotonConfirmar2
             // 
-            this.BotonConfirmar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonConfirmar2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonConfirmar2.ForeColor = System.Drawing.Color.Black;
-            this.BotonConfirmar2.Location = new System.Drawing.Point(51, 482);
+            this.BotonConfirmar2.Location = new System.Drawing.Point(205, 482);
             this.BotonConfirmar2.Name = "BotonConfirmar2";
             this.BotonConfirmar2.Size = new System.Drawing.Size(145, 56);
             this.BotonConfirmar2.TabIndex = 24;
@@ -182,13 +184,49 @@
             this.BotonConfirmar2.UseVisualStyleBackColor = true;
             this.BotonConfirmar2.Click += new System.EventHandler(this.BotonConfirmar2_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(79, 394);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(300, 36);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Convertir en admin:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // OpcionSi
+            // 
+            this.OpcionSi.AutoSize = true;
+            this.OpcionSi.Location = new System.Drawing.Point(491, 409);
+            this.OpcionSi.Name = "OpcionSi";
+            this.OpcionSi.Size = new System.Drawing.Size(41, 21);
+            this.OpcionSi.TabIndex = 26;
+            this.OpcionSi.TabStop = true;
+            this.OpcionSi.Text = "Si";
+            this.OpcionSi.UseVisualStyleBackColor = true;
+            // 
+            // OpcionNo
+            // 
+            this.OpcionNo.AutoSize = true;
+            this.OpcionNo.Location = new System.Drawing.Point(560, 409);
+            this.OpcionNo.Name = "OpcionNo";
+            this.OpcionNo.Size = new System.Drawing.Size(47, 21);
+            this.OpcionNo.TabIndex = 27;
+            this.OpcionNo.TabStop = true;
+            this.OpcionNo.Text = "No";
+            this.OpcionNo.UseVisualStyleBackColor = true;
+            // 
             // BotonCerrar
             // 
             this.BotonCerrar.BackColor = System.Drawing.Color.Transparent;
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(399, 23);
+            this.BotonCerrar.Location = new System.Drawing.Point(749, 11);
             this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
@@ -196,22 +234,37 @@
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
             // 
-            // PantallaCrearCuenta
+            // BotonBuscar
+            // 
+            this.BotonBuscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonBuscar.ForeColor = System.Drawing.Color.Black;
+            this.BotonBuscar.Location = new System.Drawing.Point(560, 106);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(145, 56);
+            this.BotonBuscar.TabIndex = 28;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // PantallaEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(451, 601);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.BotonBuscar);
+            this.Controls.Add(this.OpcionNo);
+            this.Controls.Add(this.OpcionSi);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.BotonConfirmar2);
             this.Controls.Add(this.BotonDesHacer2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.NuevoNombre);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.NuevoEmail);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.NuevaContraseña);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.UsuarioAEditar);
             this.Controls.Add(this.IngresarUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BotonCerrar);
@@ -219,7 +272,7 @@
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "PantallaCrearCuenta";
+            this.Name = "PantallaEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PantallaCrearCuenta_Load);
@@ -232,15 +285,19 @@
 
         private System.Windows.Forms.Button BotonCerrar;
         private System.Windows.Forms.TextBox IngresarUsuario;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label UsuarioAEditar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NuevaContraseña;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox NuevoEmail;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox NuevoNombre;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonDesHacer2;
         private System.Windows.Forms.Button BotonConfirmar2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RadioButton OpcionSi;
+        private System.Windows.Forms.RadioButton OpcionNo;
+        private System.Windows.Forms.Button BotonBuscar;
     }
 }

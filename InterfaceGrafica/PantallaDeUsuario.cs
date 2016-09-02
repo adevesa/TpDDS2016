@@ -108,7 +108,7 @@ namespace InterfaceGrafica
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            PantallaDeConfig config = new PantallaDeConfig();
+            PantallaAdministrarUsuarios config = new PantallaAdministrarUsuarios();
             config.ShowDialog();
         }
 

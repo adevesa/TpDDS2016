@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfaceGrafica
 {
-    public partial class PantallaCrearCuenta : Form
+    public partial class PantallaEditarUsuario : Form
     {
-        public PantallaCrearCuenta()
+        public PantallaEditarUsuario()
         {
             InitializeComponent();
         }

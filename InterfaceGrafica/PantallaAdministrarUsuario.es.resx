@@ -117,4 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NombreDeUsuario.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
+  </data>
+  <data name="NombreDeUsuario.Location" type="System.Drawing.Point, System.Drawing">
+    <value>229, 87</value>
+  </data>
+  <data name="NombreDeUsuario.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 30</value>
+  </data>
+  <data name="NombreDeUsuario.Text" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="Contraseña.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Harlow Solid Italic, 13.8pt, style=Italic</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Ingresar.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="Ingresar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>234, 286</value>
+  </data>
+  <data name="Ingresar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 80</value>
+  </data>
+  <data name="Ingresar.Text" xml:space="preserve">
+    <value>Comenzar</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
 </root>

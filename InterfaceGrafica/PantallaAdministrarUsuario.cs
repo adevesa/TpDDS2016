@@ -30,8 +30,8 @@ namespace InterfaceGrafica
         //OBJETOS BOTONES//
         private void PantallaLogueo_Load(object sender, EventArgs e)
         {
-            
-            
+            BotonComenzar.BackgroundImage = Properties.Resources.iniciar_sesion1;
+            BotonRegistrarse.BackgroundImage = Properties.Resources.Registrarse;
 
             //Centra los componentes, adaptandose al tamaño del monitor//
             Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
@@ -47,13 +47,39 @@ namespace InterfaceGrafica
 
         }
 
-        private void IniciarSesion_Click(object sender, EventArgs e)
+        private void ContenedorContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IngresoNameUsser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Ingresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreDeUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //BOTON DE INICIAR SESION -- CONTIENE TODA LA LOGICA PARA LOGGEAR UN USUARIO//
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             string usuario = IngresarUsuario.Text.ToString();
             string contraseña = IngresarContraseña.Text.ToString();
 
             bool existeUsuario = gestorDeUsuario.loggearUsuarioEn(usuario, contraseña, terminal);
-            if (existeUsuario)
+            if(existeUsuario)
             {
                 Program.setUsuario(usuario);
                 this.Close();
@@ -79,42 +105,36 @@ namespace InterfaceGrafica
                 //REEMPLAZAR POR UNA PEQUEÑA VENTANA QUE DE AVISO DE ESTO//
                 Console.WriteLine("Usuario y/o contraseña incorrecto");
             }
-        }
-
-
-        private void CrearCuenta_Click(object sender, EventArgs e)
-        {
-            PantallaCrearCuenta pantallaCrearCuenta = new PantallaCrearCuenta();
-            pantallaCrearCuenta.ShowDialog();
-        }
-
-        private void ContenedorContraseña_TextChanged(object sender, EventArgs e)
-        {
 
         }
-
-        private void IngresoNameUsser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ingresar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NombreDeUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
-      
-
 
         //----DISEÑO DE BOTONES----//
+        //Cambia de imagen al pasar el cursor sobre el boton
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            BotonComenzar.BackgroundImage = Properties.Resources.inision_sesion2;
+        }
         
+        //Vuelve a la imagen original al quitar el cursor del boton
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            BotonComenzar.BackgroundImage = Properties.Resources.iniciar_sesion1;
+        }
 
-      
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+
+        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -124,18 +144,23 @@ namespace InterfaceGrafica
         //BOTON REGISTRAR//
         private void BotonRegistrarse_Click_1(object sender, EventArgs e)
         {
-            
+            PantallaCrearCuenta pantallaCrearCuenta = new PantallaCrearCuenta();
+            pantallaCrearCuenta.ShowDialog();
         }
 
-        
+        private void BotonRegistrarse_MouseHover_1(object sender, EventArgs e)
+        {
+            BotonRegistrarse.BackgroundImage = Properties.Resources.Registrarse2;
+        }
+
+        private void BotonRegistrarse_MouseLeave(object sender, EventArgs e)
+        {
+            BotonRegistrarse.BackgroundImage = Properties.Resources.Registrarse;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-
-      
-
-        
     }
 }

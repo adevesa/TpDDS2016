@@ -1,6 +1,6 @@
 ﻿namespace InterfaceGrafica
 {
-    partial class PantallaCrearCuenta
+    partial class PantallaCrearAdministrador
     {
         /// <summary>
         /// Required designer variable.
@@ -37,9 +37,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.BotonCerrar = new System.Windows.Forms.Button();
             this.BotonDesHacer2 = new System.Windows.Forms.Button();
             this.BotonConfirmar2 = new System.Windows.Forms.Button();
-            this.BotonCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,9 +51,9 @@
             this.label1.Location = new System.Drawing.Point(11, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 44);
+            this.label1.Size = new System.Drawing.Size(379, 44);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Registrarse";
+            this.label1.Text = "Crear administrador";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -157,6 +157,20 @@
             this.textBox4.Size = new System.Drawing.Size(183, 34);
             this.textBox4.TabIndex = 22;
             // 
+            // BotonCerrar
+            // 
+            this.BotonCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
+            this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCerrar.Location = new System.Drawing.Point(400, 11);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonCerrar.Name = "BotonCerrar";
+            this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
+            this.BotonCerrar.TabIndex = 3;
+            this.BotonCerrar.UseVisualStyleBackColor = false;
+            this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
+            // 
             // BotonDesHacer2
             // 
             this.BotonDesHacer2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -182,21 +196,7 @@
             this.BotonConfirmar2.UseVisualStyleBackColor = true;
             this.BotonConfirmar2.Click += new System.EventHandler(this.BotonConfirmar2_Click);
             // 
-            // BotonCerrar
-            // 
-            this.BotonCerrar.BackColor = System.Drawing.Color.Transparent;
-            this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
-            this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(399, 23);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
-            this.BotonCerrar.TabIndex = 3;
-            this.BotonCerrar.UseVisualStyleBackColor = false;
-            this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
-            // 
-            // PantallaCrearCuenta
+            // PantallaCrearAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -219,7 +219,7 @@
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "PantallaCrearCuenta";
+            this.Name = "PantallaCrearAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PantallaCrearCuenta_Load);

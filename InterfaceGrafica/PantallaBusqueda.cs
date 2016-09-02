@@ -33,19 +33,11 @@ namespace InterfaceGrafica
         }
 
         //BOTON AGREGAR-- AGREGA UN CRITERIO DE BUSQUEDA//
-        private void pictureBox1_Click(object sender, EventArgs e)
+
+
+        private void Agregar_Click(object sender, EventArgs e)
         {
             string criterio_de_busqueda = TextoAgregar.Text.ToString();
-        }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI2;
-        }
-
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -103,22 +95,13 @@ namespace InterfaceGrafica
 
         private void PantallaBusqueda_Load(object sender, EventArgs e)
         {
-            BotonAgregar.BackgroundImage = Properties.Resources.AgregarPOI;
-            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer;
+            
         }
 
-        private void BotonDeshacer_MouseLeave(object sender, EventArgs e)
-        {
-            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer;
-        }
-
-        private void BotonDeshacer_MouseHover(object sender, EventArgs e)
-        {
-            BotonDeshacer.BackgroundImage = Properties.Resources.Deshacer2;
-        }
+        
 
         //BOTON DESHACER -- ELIMINA PALABRAS A BUSCAR//
-        private void BotonDeshacer_Click(object sender, EventArgs e)
+        private void Deshacer_Click(object sender, EventArgs e)
         {
 
         }
@@ -133,5 +116,7 @@ namespace InterfaceGrafica
         {
 
         }
+
+       
     }
 }

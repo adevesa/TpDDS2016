@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfaceGrafica
 {
-    public partial class PantallaCrearCuenta : Form
+    public partial class PantallaCrearPOI : Form
     {
-        public PantallaCrearCuenta()
+        public PantallaCrearPOI()
         {
             InitializeComponent();
         }
@@ -66,5 +66,10 @@ namespace InterfaceGrafica
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PantallaHorarios horarios = new PantallaHorarios();
+            horarios.ShowDialog();
+        }
     }
 }

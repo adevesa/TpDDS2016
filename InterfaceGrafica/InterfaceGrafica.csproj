@@ -49,6 +49,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PantallaAdministrarPois.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaAdministrarPois.Designer.cs">
+      <DependentUpon>PantallaAdministrarPois.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaBorrarPoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaBorrarPoi.Designer.cs">
+      <DependentUpon>PantallaBorrarPoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaEditarPOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaEditarPOI.Designer.cs">
+      <DependentUpon>PantallaEditarPOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaHorarios.Designer.cs">
+      <DependentUpon>PantallaHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCrearPOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCrearPOI.Designer.cs">
+      <DependentUpon>PantallaCrearPOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaEditarUsuario.Designer.cs">
+      <DependentUpon>PantallaEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaCrearAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaCrearAdministrador.Designer.cs">
+      <DependentUpon>PantallaCrearAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,11 +103,11 @@
     <Compile Include="PantallaHistorial.Designer.cs">
       <DependentUpon>PantallaHistorial.cs</DependentUpon>
     </Compile>
-    <Compile Include="PantallaDeConfig.cs">
+    <Compile Include="PantallaAdministrarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PantallaDeConfig.Designer.cs">
-      <DependentUpon>PantallaDeConfig.cs</DependentUpon>
+    <Compile Include="PantallaAdministrarUsuarios.Designer.cs">
+      <DependentUpon>PantallaAdministrarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaDeUsuario.cs">
       <SubType>Form</SubType>
@@ -99,14 +141,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PantallaAdministrarPois.resx">
+      <DependentUpon>PantallaAdministrarPois.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaBorrarPoi.resx">
+      <DependentUpon>PantallaBorrarPoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaEditarPOI.resx">
+      <DependentUpon>PantallaEditarPOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaHorarios.resx">
+      <DependentUpon>PantallaHorarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCrearPOI.resx">
+      <DependentUpon>PantallaCrearPOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaEditarUsuario.resx">
+      <DependentUpon>PantallaEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaCrearAdministrador.resx">
+      <DependentUpon>PantallaCrearAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaCrearCuenta.resx">
       <DependentUpon>PantallaCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaHistorial.resx">
       <DependentUpon>PantallaHistorial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PantallaDeConfig.resx">
-      <DependentUpon>PantallaDeConfig.cs</DependentUpon>
+    <EmbeddedResource Include="PantallaAdministrarUsuarios.resx">
+      <DependentUpon>PantallaAdministrarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaDeUsuario.resx">
       <DependentUpon>PantallaDeUsuario.cs</DependentUpon>

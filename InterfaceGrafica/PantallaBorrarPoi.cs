@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfaceGrafica
 {
-    public partial class PantallaCrearCuenta : Form
+    public partial class PantallaBorrarPoi : Form
     {
-        public PantallaCrearCuenta()
+        public PantallaBorrarPoi()
         {
             InitializeComponent();
         }
@@ -28,6 +28,7 @@ namespace InterfaceGrafica
 
         private void BotonConfirmar2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("¿Estas seguro?");
             this.Close();
         }
 
@@ -66,5 +67,9 @@ namespace InterfaceGrafica
 
         }
 
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
