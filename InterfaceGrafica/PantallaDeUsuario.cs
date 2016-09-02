@@ -51,16 +51,14 @@ namespace InterfaceGrafica
 
         private void PantallaPrincipal_Load(object sender, EventArgs e)
         {
-          
-
             timer1.Enabled = true;
+
 
             Usuario.Text = "Usuario:" + Program.usuario;
 
             //Mostrar Fecha y Hora
             Fecha.Text = DateTime.Now.ToLongDateString();
-            Hora.Text = DateTime.Now.ToLongTimeString();
-            timer1.Enabled = true;
+            
 
             //Centrar imagenes
             Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize; //captura el tamaño del monitor
@@ -91,7 +89,8 @@ namespace InterfaceGrafica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            Hora.Text = DateTime.Now.ToLongTimeString();
+            timer1.Enabled = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

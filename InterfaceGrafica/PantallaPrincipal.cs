@@ -59,8 +59,7 @@ namespace InterfaceGrafica
 
             //Mostrar Fecha y Hora
             Fecha.Text = DateTime.Now.ToLongDateString();
-            Hora.Text = "Hora de Conexión: " + DateTime.Now.ToLongTimeString();
-            timer1.Enabled = true;
+            
 
             //Centrar imagenes
             Size resolucionPantalla = System.Windows.Forms.SystemInformation.PrimaryMonitorSize;
@@ -93,7 +92,8 @@ namespace InterfaceGrafica
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            Hora.Text = DateTime.Now.ToLongTimeString();
+            timer1.Enabled = true;
         }
 
 
