@@ -19,7 +19,7 @@ namespace Consola
         private string nombre;
         private Coordenada coordenada;
         private int comuna;
-        private Buscador buscador;
+        public Buscador buscador;
         private string  mailAdministrador;
         private string usuarioActivo;
         private int duracionMaximaDeBusqueda;

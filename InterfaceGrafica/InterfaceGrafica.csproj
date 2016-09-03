@@ -301,13 +301,29 @@
       <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
       <Name>Consola</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HorariosDeAtencion\HorariosDeAtencion.csproj">
+      <Project>{c5440c21-bdf0-401d-873c-a136b55dac58}</Project>
+      <Name>HorariosDeAtencion</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OrigenesDeDatos\OrigenesDeDatos.csproj">
+      <Project>{9b6f1fee-b454-467e-a5e1-dcfbf9bc7119}</Project>
+      <Name>OrigenesDeDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositorio\RepositorioYbuscador.csproj">
+      <Project>{5b09d534-2d22-40e8-a09f-7dedffd3e296}</Project>
+      <Name>RepositorioYbuscador</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UssersGestion\UssersGestion.csproj">
       <Project>{357f6fb7-9913-4c60-afaa-602149dc2239}</Project>
       <Name>UssersGestion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Usuarios\Usuarios.csproj">
+      <Project>{d0360fb9-421f-43c9-abc7-a2e39140419e}</Project>
+      <Name>Usuarios</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

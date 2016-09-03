@@ -12,8 +12,13 @@ namespace InterfaceGrafica
 {
     public partial class PantallaAdministrarUsuarios : Form
     {
-        public PantallaAdministrarUsuarios()
+        //ATRIBUTOS//
+        private string administrador;
+
+        //CONSTRUCTOR//
+        public PantallaAdministrarUsuarios(string admin)
         {
+            this.administrador = admin;
             InitializeComponent();
         }
 
@@ -62,24 +67,27 @@ namespace InterfaceGrafica
            
         }
 
+        //BOTON QUE ABRE PANTALLA DE EDITAR USUARIO//
         private void BotonEditarUsuario_Click(object sender, EventArgs e)
         {
-            PantallaEditarUsuario fr = new PantallaEditarUsuario();
+            PantallaEditarUsuario fr = new PantallaEditarUsuario(administrador);
             fr.ShowDialog();
         }
 
+        //BOTON QUE ABRE PANTALLA PARA CREAR ADMINISTRADOR//
         private void button1_Click(object sender, EventArgs e)
         {
-            PantallaCrearAdministrador fr = new PantallaCrearAdministrador();
+            PantallaCrearAdministrador fr = new PantallaCrearAdministrador(administrador);
             fr.ShowDialog();
         }
 
+        //BOTON VOLVER -- RETORNA A PANTALLA PRINCIPAL DE ADMINISTRADOR//
         private void BotonVolver_Click(object sender, EventArgs e)
         {
-            //PantallaPrincipal fr = new PantallaPrincipal();
-            //this.Hide();
-            //fr.ShowDialog();
-            //this.Close();
+            PantallaPrincipal fr = new PantallaPrincipal(Program.gestorDeUsuario, Program.terminal, administrador);
+            this.Hide();
+            fr.ShowDialog();
+            this.Close();
         }
     }
 }

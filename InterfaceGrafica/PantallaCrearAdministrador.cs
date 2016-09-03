@@ -7,13 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UssersGestion;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaCrearAdministrador : Form
     {
-        public PantallaCrearAdministrador()
+        //ATRIBUTOS//
+        private string admin;
+
+        //CONSTRUCTOR
+        public PantallaCrearAdministrador(string administrador)
         {
+            this.admin = administrador;
             InitializeComponent();
         }
 
@@ -26,8 +32,14 @@ namespace InterfaceGrafica
             this.Close();
         }
 
+        //BOTON CONFIRMAR -- CREA UN NUEVO ADMINISTRADOR//
         private void BotonConfirmar2_Click(object sender, EventArgs e)
         {
+            string nombreDeUsuario = IngresarUsuario.Text.ToString();
+            string contraseña = Contraseña.Text.ToString() ;
+            string nombreCompleto = Nombre.Text.ToString() ;
+            string email = Mail.Text.ToString() ;
+            Program.gestorDeUsuario.crearUsuario("administrador",nombreDeUsuario, contraseña, nombreCompleto, email);
             this.Close();
         }
 
@@ -66,5 +78,18 @@ namespace InterfaceGrafica
 
         }
 
+        private void IngresarUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //BOTON DESHACER -- BORRA TODOS LOS CAMPOS//
+        private void BotonDesHacer2_Click(object sender, EventArgs e)
+        {
+            IngresarUsuario.Clear();
+            Contraseña.Clear();
+            Nombre.Clear();
+            Mail.Clear();
+        }
     }
 }

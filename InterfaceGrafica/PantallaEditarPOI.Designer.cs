@@ -38,24 +38,24 @@
             this.BotonCerrar = new System.Windows.Forms.Button();
             this.BotonConfirmar2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.POIaEditar = new System.Windows.Forms.TextBox();
-            this.PalabrasClaves = new System.Windows.Forms.TextBox();
+            this.Nombre = new System.Windows.Forms.TextBox();
+            this.PalabraClave = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.AnioDeBaja = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.MesDeBaja = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.DiaDeBaja = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.Rubros = new System.Windows.Forms.ComboBox();
             this.ListaDePalabrasClaves = new System.Windows.Forms.ListBox();
             this.BotonAgregar = new System.Windows.Forms.Button();
             this.BotonQuitar = new System.Windows.Forms.Button();
             this.BotonBuscarPOI = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnioDeBaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MesDeBaja)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaDeBaja)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -64,10 +64,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 44);
+            this.label1.Size = new System.Drawing.Size(155, 36);
             this.label1.TabIndex = 4;
             this.label1.Text = "Editar POI";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -79,10 +78,9 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(130, 112);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(98, 91);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 36);
+            this.label5.Size = new System.Drawing.Size(152, 27);
             this.label5.TabIndex = 11;
             this.label5.Text = "Poi a Editar :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -94,10 +92,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(428, 266);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(321, 216);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 36);
+            this.label2.Size = new System.Drawing.Size(118, 27);
             this.label2.TabIndex = 12;
             this.label2.Text = "Comuna:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -107,11 +104,11 @@
             // 
             this.Comuna.BackColor = System.Drawing.Color.White;
             this.Comuna.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Comuna.Location = new System.Drawing.Point(585, 270);
-            this.Comuna.Margin = new System.Windows.Forms.Padding(4);
+            this.Comuna.Location = new System.Drawing.Point(439, 219);
             this.Comuna.Name = "Comuna";
-            this.Comuna.Size = new System.Drawing.Size(183, 34);
+            this.Comuna.Size = new System.Drawing.Size(138, 28);
             this.Comuna.TabIndex = 13;
+            this.Comuna.TextChanged += new System.EventHandler(this.Comuna_TextChanged);
             // 
             // label6
             // 
@@ -119,10 +116,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(42, 247);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(32, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 36);
+            this.label6.Size = new System.Drawing.Size(83, 27);
             this.label6.TabIndex = 17;
             this.label6.Text = "Fecha";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,10 +129,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(30, 187);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(22, 152);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 36);
+            this.label7.Size = new System.Drawing.Size(128, 27);
             this.label7.TabIndex = 21;
             this.label7.Text = "Dirección:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,10 +141,9 @@
             // 
             this.Direccion.BackColor = System.Drawing.Color.White;
             this.Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(184, 193);
-            this.Direccion.Margin = new System.Windows.Forms.Padding(4);
+            this.Direccion.Location = new System.Drawing.Point(138, 157);
             this.Direccion.Name = "Direccion";
-            this.Direccion.Size = new System.Drawing.Size(183, 34);
+            this.Direccion.Size = new System.Drawing.Size(138, 28);
             this.Direccion.TabIndex = 22;
             // 
             // BotonCerrar
@@ -158,10 +152,10 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(749, 11);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonCerrar.Location = new System.Drawing.Point(562, 9);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
+            this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 3;
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
@@ -170,9 +164,10 @@
             // 
             this.BotonConfirmar2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonConfirmar2.ForeColor = System.Drawing.Color.Black;
-            this.BotonConfirmar2.Location = new System.Drawing.Point(585, 503);
+            this.BotonConfirmar2.Location = new System.Drawing.Point(439, 409);
+            this.BotonConfirmar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonConfirmar2.Name = "BotonConfirmar2";
-            this.BotonConfirmar2.Size = new System.Drawing.Size(145, 56);
+            this.BotonConfirmar2.Size = new System.Drawing.Size(109, 46);
             this.BotonConfirmar2.TabIndex = 24;
             this.BotonConfirmar2.Text = "Confirmar";
             this.BotonConfirmar2.UseVisualStyleBackColor = true;
@@ -184,33 +179,30 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(30, 346);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(22, 281);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(245, 36);
+            this.label3.Size = new System.Drawing.Size(200, 27);
             this.label3.TabIndex = 25;
             this.label3.Text = "Palabras claves:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // POIaEditar
+            // Nombre
             // 
-            this.POIaEditar.BackColor = System.Drawing.Color.White;
-            this.POIaEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.POIaEditar.Location = new System.Drawing.Point(338, 116);
-            this.POIaEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.POIaEditar.Name = "POIaEditar";
-            this.POIaEditar.Size = new System.Drawing.Size(183, 41);
-            this.POIaEditar.TabIndex = 37;
+            this.Nombre.BackColor = System.Drawing.Color.White;
+            this.Nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.Location = new System.Drawing.Point(254, 94);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(138, 35);
+            this.Nombre.TabIndex = 37;
             // 
-            // PalabrasClaves
+            // PalabraClave
             // 
-            this.PalabrasClaves.BackColor = System.Drawing.Color.White;
-            this.PalabrasClaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PalabrasClaves.Location = new System.Drawing.Point(61, 405);
-            this.PalabrasClaves.Margin = new System.Windows.Forms.Padding(4);
-            this.PalabrasClaves.Name = "PalabrasClaves";
-            this.PalabrasClaves.Size = new System.Drawing.Size(183, 34);
-            this.PalabrasClaves.TabIndex = 38;
+            this.PalabraClave.BackColor = System.Drawing.Color.White;
+            this.PalabraClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PalabraClave.Location = new System.Drawing.Point(46, 329);
+            this.PalabraClave.Name = "PalabraClave";
+            this.PalabraClave.Size = new System.Drawing.Size(138, 28);
+            this.PalabraClave.TabIndex = 38;
             // 
             // label10
             // 
@@ -218,10 +210,9 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(448, 193);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(336, 157);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 36);
+            this.label10.Size = new System.Drawing.Size(84, 27);
             this.label10.TabIndex = 39;
             this.label10.Text = "Rubro:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,32 +223,32 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(30, 283);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(22, 230);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 36);
+            this.label4.Size = new System.Drawing.Size(108, 27);
             this.label4.TabIndex = 28;
             this.label4.Text = "de baja:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown3
+            // AnioDeBaja
             // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(314, 266);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.AnioDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnioDeBaja.Location = new System.Drawing.Point(236, 216);
+            this.AnioDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnioDeBaja.Maximum = new decimal(new int[] {
             2100,
             0,
             0,
             0});
-            this.numericUpDown3.Minimum = new decimal(new int[] {
+            this.AnioDeBaja.Minimum = new decimal(new int[] {
             2016,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(81, 34);
-            this.numericUpDown3.TabIndex = 42;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.AnioDeBaja.Name = "AnioDeBaja";
+            this.AnioDeBaja.Size = new System.Drawing.Size(61, 28);
+            this.AnioDeBaja.TabIndex = 42;
+            this.AnioDeBaja.Value = new decimal(new int[] {
             2016,
             0,
             0,
@@ -269,32 +260,32 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(293, 260);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(220, 211);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 36);
+            this.label9.Size = new System.Drawing.Size(22, 27);
             this.label9.TabIndex = 33;
             this.label9.Text = "/";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown2
+            // MesDeBaja
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(251, 266);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.MesDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MesDeBaja.Location = new System.Drawing.Point(188, 216);
+            this.MesDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MesDeBaja.Maximum = new decimal(new int[] {
             12,
             0,
             0,
             0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
+            this.MesDeBaja.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(46, 34);
-            this.numericUpDown2.TabIndex = 41;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.MesDeBaja.Name = "MesDeBaja";
+            this.MesDeBaja.Size = new System.Drawing.Size(34, 28);
+            this.MesDeBaja.TabIndex = 41;
+            this.MesDeBaja.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -306,32 +297,32 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(227, 264);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(170, 214);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(28, 36);
+            this.label8.Size = new System.Drawing.Size(22, 27);
             this.label8.TabIndex = 31;
             this.label8.Text = "/";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown1
+            // DiaDeBaja
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(184, 266);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.DiaDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DiaDeBaja.Location = new System.Drawing.Point(138, 216);
+            this.DiaDeBaja.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DiaDeBaja.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.DiaDeBaja.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 34);
-            this.numericUpDown1.TabIndex = 40;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.DiaDeBaja.Name = "DiaDeBaja";
+            this.DiaDeBaja.Size = new System.Drawing.Size(34, 28);
+            this.DiaDeBaja.TabIndex = 40;
+            this.DiaDeBaja.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -341,9 +332,10 @@
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(561, 368);
+            this.button1.Location = new System.Drawing.Point(421, 299);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 107);
+            this.button1.Size = new System.Drawing.Size(144, 87);
             this.button1.TabIndex = 43;
             this.button1.Text = "Horarios de atención";
             this.button1.UseVisualStyleBackColor = true;
@@ -358,9 +350,10 @@
             "CGP",
             "Local comercial",
             "Parada de colectivo"});
-            this.Rubros.Location = new System.Drawing.Point(561, 196);
+            this.Rubros.Location = new System.Drawing.Point(421, 159);
+            this.Rubros.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Rubros.Name = "Rubros";
-            this.Rubros.Size = new System.Drawing.Size(203, 33);
+            this.Rubros.Size = new System.Drawing.Size(153, 28);
             this.Rubros.TabIndex = 44;
             this.Rubros.Text = "Elija uno";
             // 
@@ -368,64 +361,71 @@
             // 
             this.ListaDePalabrasClaves.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaDePalabrasClaves.FormattingEnabled = true;
-            this.ListaDePalabrasClaves.ItemHeight = 25;
-            this.ListaDePalabrasClaves.Location = new System.Drawing.Point(314, 368);
+            this.ListaDePalabrasClaves.ItemHeight = 20;
+            this.ListaDePalabrasClaves.Location = new System.Drawing.Point(236, 299);
+            this.ListaDePalabrasClaves.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ListaDePalabrasClaves.Name = "ListaDePalabrasClaves";
-            this.ListaDePalabrasClaves.Size = new System.Drawing.Size(198, 204);
+            this.ListaDePalabrasClaves.Size = new System.Drawing.Size(150, 164);
             this.ListaDePalabrasClaves.TabIndex = 45;
             // 
             // BotonAgregar
             // 
             this.BotonAgregar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAgregar.ForeColor = System.Drawing.Color.Black;
-            this.BotonAgregar.Location = new System.Drawing.Point(19, 459);
+            this.BotonAgregar.Location = new System.Drawing.Point(14, 373);
+            this.BotonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonAgregar.Name = "BotonAgregar";
-            this.BotonAgregar.Size = new System.Drawing.Size(128, 45);
+            this.BotonAgregar.Size = new System.Drawing.Size(96, 37);
             this.BotonAgregar.TabIndex = 46;
             this.BotonAgregar.Text = "Agregar";
             this.BotonAgregar.UseVisualStyleBackColor = true;
+            this.BotonAgregar.Click += new System.EventHandler(this.BotonAgregar_Click);
             // 
             // BotonQuitar
             // 
             this.BotonQuitar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonQuitar.ForeColor = System.Drawing.Color.Black;
-            this.BotonQuitar.Location = new System.Drawing.Point(153, 459);
+            this.BotonQuitar.Location = new System.Drawing.Point(115, 373);
+            this.BotonQuitar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonQuitar.Name = "BotonQuitar";
-            this.BotonQuitar.Size = new System.Drawing.Size(128, 45);
+            this.BotonQuitar.Size = new System.Drawing.Size(96, 37);
             this.BotonQuitar.TabIndex = 47;
             this.BotonQuitar.Text = "Quitar";
             this.BotonQuitar.UseVisualStyleBackColor = true;
+            this.BotonQuitar.Click += new System.EventHandler(this.BotonQuitar_Click);
             // 
             // BotonBuscarPOI
             // 
             this.BotonBuscarPOI.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscarPOI.ForeColor = System.Drawing.Color.Black;
-            this.BotonBuscarPOI.Location = new System.Drawing.Point(561, 110);
+            this.BotonBuscarPOI.Location = new System.Drawing.Point(421, 89);
+            this.BotonBuscarPOI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonBuscarPOI.Name = "BotonBuscarPOI";
-            this.BotonBuscarPOI.Size = new System.Drawing.Size(155, 56);
+            this.BotonBuscarPOI.Size = new System.Drawing.Size(116, 46);
             this.BotonBuscarPOI.TabIndex = 48;
             this.BotonBuscarPOI.Text = "Buscar POI";
             this.BotonBuscarPOI.UseVisualStyleBackColor = true;
+            this.BotonBuscarPOI.Click += new System.EventHandler(this.BotonBuscarPOI_Click);
             // 
             // PantallaEditarPOI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.BotonBuscarPOI);
             this.Controls.Add(this.BotonQuitar);
             this.Controls.Add(this.BotonAgregar);
             this.Controls.Add(this.ListaDePalabrasClaves);
             this.Controls.Add(this.Rubros);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.AnioDeBaja);
+            this.Controls.Add(this.MesDeBaja);
+            this.Controls.Add(this.DiaDeBaja);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.PalabrasClaves);
-            this.Controls.Add(this.POIaEditar);
+            this.Controls.Add(this.PalabraClave);
+            this.Controls.Add(this.Nombre);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -442,14 +442,14 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaEditarPOI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PantallaCrearCuenta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AnioDeBaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MesDeBaja)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DiaDeBaja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,15 +467,15 @@
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonConfirmar2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox POIaEditar;
-        private System.Windows.Forms.TextBox PalabrasClaves;
+        private System.Windows.Forms.TextBox Nombre;
+        private System.Windows.Forms.TextBox PalabraClave;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown AnioDeBaja;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown MesDeBaja;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown DiaDeBaja;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox Rubros;
         private System.Windows.Forms.ListBox ListaDePalabrasClaves;

@@ -38,10 +38,9 @@
             // 
             this.PoiABorrar.BackColor = System.Drawing.Color.White;
             this.PoiABorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PoiABorrar.Location = new System.Drawing.Point(19, 93);
-            this.PoiABorrar.Margin = new System.Windows.Forms.Padding(4);
+            this.PoiABorrar.Location = new System.Drawing.Point(26, 76);
             this.PoiABorrar.Name = "PoiABorrar";
-            this.PoiABorrar.Size = new System.Drawing.Size(306, 45);
+            this.PoiABorrar.Size = new System.Drawing.Size(230, 37);
             this.PoiABorrar.TabIndex = 7;
             // 
             // label5
@@ -50,12 +49,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(13, 33);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(68, 33);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 36);
+            this.label5.Size = new System.Drawing.Size(143, 27);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Poi a borrar:";
+            this.label5.Text = "Poi a borrar";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -64,9 +62,10 @@
             this.BotonAceptar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonAceptar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAceptar.ForeColor = System.Drawing.Color.Black;
-            this.BotonAceptar.Location = new System.Drawing.Point(19, 145);
+            this.BotonAceptar.Location = new System.Drawing.Point(26, 118);
+            this.BotonAceptar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.Size = new System.Drawing.Size(145, 56);
+            this.BotonAceptar.Size = new System.Drawing.Size(109, 46);
             this.BotonAceptar.TabIndex = 24;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
@@ -77,9 +76,10 @@
             this.BotonCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonCancelar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonCancelar.ForeColor = System.Drawing.Color.Black;
-            this.BotonCancelar.Location = new System.Drawing.Point(170, 145);
+            this.BotonCancelar.Location = new System.Drawing.Point(147, 118);
+            this.BotonCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(145, 56);
+            this.BotonCancelar.Size = new System.Drawing.Size(109, 46);
             this.BotonCancelar.TabIndex = 25;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
@@ -87,11 +87,11 @@
             // 
             // PantallaBorrarPoi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(373, 219);
+            this.ClientSize = new System.Drawing.Size(280, 178);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.label5);
@@ -99,7 +99,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaBorrarPoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

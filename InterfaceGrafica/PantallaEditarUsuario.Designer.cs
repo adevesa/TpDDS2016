@@ -52,10 +52,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(11, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(8, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 44);
+            this.label1.Size = new System.Drawing.Size(208, 36);
             this.label1.TabIndex = 4;
             this.label1.Text = "Editar usuario";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,10 +64,9 @@
             // 
             this.IngresarUsuario.BackColor = System.Drawing.Color.White;
             this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngresarUsuario.Location = new System.Drawing.Point(287, 112);
-            this.IngresarUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.IngresarUsuario.Location = new System.Drawing.Point(223, 91);
             this.IngresarUsuario.Name = "IngresarUsuario";
-            this.IngresarUsuario.Size = new System.Drawing.Size(245, 41);
+            this.IngresarUsuario.Size = new System.Drawing.Size(185, 35);
             this.IngresarUsuario.TabIndex = 7;
             // 
             // UsuarioAEditar
@@ -77,10 +75,9 @@
             this.UsuarioAEditar.BackColor = System.Drawing.Color.Transparent;
             this.UsuarioAEditar.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioAEditar.ForeColor = System.Drawing.Color.Black;
-            this.UsuarioAEditar.Location = new System.Drawing.Point(26, 112);
-            this.UsuarioAEditar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsuarioAEditar.Location = new System.Drawing.Point(9, 94);
             this.UsuarioAEditar.Name = "UsuarioAEditar";
-            this.UsuarioAEditar.Size = new System.Drawing.Size(247, 36);
+            this.UsuarioAEditar.Size = new System.Drawing.Size(197, 27);
             this.UsuarioAEditar.TabIndex = 11;
             this.UsuarioAEditar.Text = "Usuario a editar:";
             this.UsuarioAEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,10 +89,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(91, 257);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(68, 209);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 36);
+            this.label2.Size = new System.Drawing.Size(230, 27);
             this.label2.TabIndex = 12;
             this.label2.Text = "Nueva contraseña:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -105,10 +101,9 @@
             // 
             this.NuevaContraseña.BackColor = System.Drawing.Color.White;
             this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevaContraseña.Location = new System.Drawing.Point(453, 259);
-            this.NuevaContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevaContraseña.Location = new System.Drawing.Point(340, 210);
             this.NuevaContraseña.Name = "NuevaContraseña";
-            this.NuevaContraseña.Size = new System.Drawing.Size(183, 34);
+            this.NuevaContraseña.Size = new System.Drawing.Size(138, 28);
             this.NuevaContraseña.TabIndex = 13;
             // 
             // label6
@@ -117,10 +112,9 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(178, 323);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(134, 262);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(201, 36);
+            this.label6.Size = new System.Drawing.Size(162, 27);
             this.label6.TabIndex = 17;
             this.label6.Text = "Nuevo Email:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,10 +123,9 @@
             // 
             this.NuevoEmail.BackColor = System.Drawing.Color.White;
             this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoEmail.Location = new System.Drawing.Point(453, 327);
-            this.NuevoEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevoEmail.Location = new System.Drawing.Point(340, 266);
             this.NuevoEmail.Name = "NuevoEmail";
-            this.NuevoEmail.Size = new System.Drawing.Size(183, 34);
+            this.NuevoEmail.Size = new System.Drawing.Size(138, 28);
             this.NuevoEmail.TabIndex = 18;
             this.NuevoEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -142,10 +135,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(139, 187);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(104, 152);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(240, 36);
+            this.label7.Size = new System.Drawing.Size(192, 27);
             this.label7.TabIndex = 21;
             this.label7.Text = "Nuevo Nombre:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -155,19 +147,19 @@
             // 
             this.NuevoNombre.BackColor = System.Drawing.Color.White;
             this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoNombre.Location = new System.Drawing.Point(453, 191);
-            this.NuevoNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.NuevoNombre.Location = new System.Drawing.Point(340, 155);
             this.NuevoNombre.Name = "NuevoNombre";
-            this.NuevoNombre.Size = new System.Drawing.Size(183, 34);
+            this.NuevoNombre.Size = new System.Drawing.Size(138, 28);
             this.NuevoNombre.TabIndex = 22;
             // 
             // BotonDesHacer2
             // 
             this.BotonDesHacer2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonDesHacer2.ForeColor = System.Drawing.Color.Black;
-            this.BotonDesHacer2.Location = new System.Drawing.Point(443, 482);
+            this.BotonDesHacer2.Location = new System.Drawing.Point(332, 392);
+            this.BotonDesHacer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonDesHacer2.Name = "BotonDesHacer2";
-            this.BotonDesHacer2.Size = new System.Drawing.Size(145, 56);
+            this.BotonDesHacer2.Size = new System.Drawing.Size(109, 46);
             this.BotonDesHacer2.TabIndex = 23;
             this.BotonDesHacer2.Text = "Deshacer";
             this.BotonDesHacer2.UseVisualStyleBackColor = true;
@@ -176,9 +168,10 @@
             // 
             this.BotonConfirmar2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonConfirmar2.ForeColor = System.Drawing.Color.Black;
-            this.BotonConfirmar2.Location = new System.Drawing.Point(205, 482);
+            this.BotonConfirmar2.Location = new System.Drawing.Point(154, 392);
+            this.BotonConfirmar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonConfirmar2.Name = "BotonConfirmar2";
-            this.BotonConfirmar2.Size = new System.Drawing.Size(145, 56);
+            this.BotonConfirmar2.Size = new System.Drawing.Size(109, 46);
             this.BotonConfirmar2.TabIndex = 24;
             this.BotonConfirmar2.Text = "Confirmar";
             this.BotonConfirmar2.UseVisualStyleBackColor = true;
@@ -190,10 +183,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(79, 394);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(59, 320);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 36);
+            this.label3.Size = new System.Drawing.Size(239, 27);
             this.label3.TabIndex = 25;
             this.label3.Text = "Convertir en admin:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,9 +193,10 @@
             // OpcionSi
             // 
             this.OpcionSi.AutoSize = true;
-            this.OpcionSi.Location = new System.Drawing.Point(491, 409);
+            this.OpcionSi.Location = new System.Drawing.Point(368, 332);
+            this.OpcionSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpcionSi.Name = "OpcionSi";
-            this.OpcionSi.Size = new System.Drawing.Size(41, 21);
+            this.OpcionSi.Size = new System.Drawing.Size(34, 17);
             this.OpcionSi.TabIndex = 26;
             this.OpcionSi.TabStop = true;
             this.OpcionSi.Text = "Si";
@@ -212,9 +205,10 @@
             // OpcionNo
             // 
             this.OpcionNo.AutoSize = true;
-            this.OpcionNo.Location = new System.Drawing.Point(560, 409);
+            this.OpcionNo.Location = new System.Drawing.Point(420, 332);
+            this.OpcionNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OpcionNo.Name = "OpcionNo";
-            this.OpcionNo.Size = new System.Drawing.Size(47, 21);
+            this.OpcionNo.Size = new System.Drawing.Size(39, 17);
             this.OpcionNo.TabIndex = 27;
             this.OpcionNo.TabStop = true;
             this.OpcionNo.Text = "No";
@@ -226,10 +220,10 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(749, 11);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonCerrar.Location = new System.Drawing.Point(562, 9);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
+            this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 3;
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
@@ -238,20 +232,22 @@
             // 
             this.BotonBuscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BotonBuscar.Location = new System.Drawing.Point(560, 106);
+            this.BotonBuscar.Location = new System.Drawing.Point(439, 80);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(145, 56);
+            this.BotonBuscar.Size = new System.Drawing.Size(109, 46);
             this.BotonBuscar.TabIndex = 28;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // PantallaEditarUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.OpcionNo);
             this.Controls.Add(this.OpcionSi);
@@ -271,7 +267,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

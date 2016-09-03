@@ -15,10 +15,10 @@ namespace InterfaceGrafica
         /// </summary>
         /// 
 
-         //ATRIBUTOS GLOBALES//
+        //ATRIBUTOS GLOBALES//
         public static string usuario;
-        private static TerminalConsola terminal;
-        private static GestorDeUsuarios gestorDeUsuario;
+        public static TerminalConsola terminal;
+        public static GestorDeUsuarios gestorDeUsuario;
         public static PantallaLogueo pantallaLog;
 
         //METODOS GLOBALES//

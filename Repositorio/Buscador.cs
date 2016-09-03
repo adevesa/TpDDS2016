@@ -11,6 +11,10 @@ namespace Repositorio
     public class Buscador
     {
 
+        //Constructor//
+        public Buscador()
+        {
+        }
         public List<POI> find(string criterio)
         {
             RepositorioDePois repositorio = RepositorioDePois.getInstance();

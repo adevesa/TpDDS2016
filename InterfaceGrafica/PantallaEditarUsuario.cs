@@ -7,13 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using UssersGestion;
+using Usuarios;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaEditarUsuario : Form
     {
-        public PantallaEditarUsuario()
+        //ATRIBUTOS//
+        private string admin;
+
+        //CONSTRUCTOR//
+        public PantallaEditarUsuario(string administrador)
         {
+            this.admin = administrador;
             InitializeComponent();
         }
 
@@ -26,8 +33,10 @@ namespace InterfaceGrafica
             this.Close();
         }
 
+        //BOTON CONFIRMAR CAMBIOS//
         private void BotonConfirmar2_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
@@ -66,5 +75,17 @@ namespace InterfaceGrafica
 
         }
 
+        //BOTON BUSCAR USUARIO//
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            /*string usuarioBuscado = IngresarUsuario.Text.ToString();
+            Usuario usserBuscado = Program.gestorDeUsuario.buscarUsuario(usuarioBuscado);
+            rellenar_los_datos(usserBuscado);*/
+        }
+
+        private void rellenar_los_datos(Usuario usser)
+        {
+
+        }
     }
 }

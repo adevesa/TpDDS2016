@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Repositorio;
 
 namespace InterfaceGrafica
 {
     public partial class PantallaBorrarPoi : Form
     {
+        //Atributos//
+        private RepositorioDePois repo;
+
         public PantallaBorrarPoi()
         {
+            repo = RepositorioDePois.getInstance();
             InitializeComponent();
         }
 
@@ -26,10 +31,17 @@ namespace InterfaceGrafica
             this.Close();
         }
 
+        //BOTON CONFIRMAR BORRADO -- ELIMINA EL POI//
         private void BotonConfirmar2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Estas seguro?");
-            this.Close();
+            if (repo.verificarExistencia(PoiABorrar.Text.ToString()))
+            {
+                MessageBox.Show("ATENCION: se borrará un poi");
+                repo.localOrigin.borrar2(repo.localOrigin.buscarPoiLlamado(PoiABorrar.Text.ToString()));
+                this.Close();
+            }
+            else MessageBox.Show("No existe el poi que intenta eliminar");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)

@@ -64,11 +64,6 @@ namespace InterfaceGrafica
                     this.Hide();
                     pantallaDeAdmin.ShowDialog();
                     this.Close();
-                    /*if (this.DialogResult == DialogResult.OK)
-                    {
-                        PantallaPrincipal pantallaDeAdmin = new PantallaPrincipal(gestorDeUsuario, terminal, usuario);
-                        Application.Run(pantallaDeAdmin);
-                    }*/
                 }
                 else
                 {

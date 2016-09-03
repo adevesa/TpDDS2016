@@ -21,7 +21,7 @@ namespace LibreriaClasesPoi
         public int Comuna { get; set; }
         private List<HorarioDeAtencion> horarioDeAtencion;
         private List<string> palabrasClaves;
-        private DateTime fechaDeBaja;
+        public DateTime fechaDeBaja;
 
         //INIT
         public void init(string nombre)
@@ -53,6 +53,8 @@ namespace LibreriaClasesPoi
         public List<string> getPalabrasClaves() { return palabrasClaves; }
 
         public void setFechaDeBaja(DateTime fechaDeBaja) { this.fechaDeBaja = fechaDeBaja; }
+
+        public List<HorarioDeAtencion> getHorarioDeAtencion() { return this.horarioDeAtencion; }
 
         //Metodos 
 
@@ -115,6 +117,10 @@ namespace LibreriaClasesPoi
             
         }
 
+        public void agregarHorarioDeAtencion(HorarioDeAtencion horarioDeAtencion)
+        {
+            this.horarioDeAtencion.Add(horarioDeAtencion);
+        }
 
         //* @name: agregarPalabraClave(strings palabras) 
         //* @decryp: rebibe una o varios string que representan palabras claves y los agrega

@@ -105,10 +105,11 @@ namespace InterfaceGrafica
             historial.ShowDialog();
         }
 
+        //REVISAR ACA//
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            PantallaAdministrarUsuarios config = new PantallaAdministrarUsuarios();
-            config.ShowDialog();
+            //PantallaAdministrarUsuarios config = new PantallaAdministrarUsuarios();
+            //config.ShowDialog();
         }
 
         private void pictureBox3_MouseHover(object sender, EventArgs e)

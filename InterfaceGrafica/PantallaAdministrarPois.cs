@@ -12,8 +12,13 @@ namespace InterfaceGrafica
 {
     public partial class PantallaAdministrarPois : Form
     {
-        public PantallaAdministrarPois()
+        //ATRIBUTOS//
+        private string admin;
+        
+        //CONSTRUCTOR//
+        public PantallaAdministrarPois(string administrador)
         {
+            this.admin = administrador;
             InitializeComponent();
         }
 
@@ -62,32 +67,35 @@ namespace InterfaceGrafica
            
         }
 
-
+        //BOTON EDITAR POI -- ABRE PANTALLA DE EDICION DE POI//
         private void BotonEditarPOI_Click(object sender, EventArgs e)
         {
             PantallaEditarPOI fr = new PantallaEditarPOI();
             fr.ShowDialog();
         }
 
+        //BOTON ELIMINAR POI -- ABRE PANTALLA DE ELIMINACION DE POI//
         private void BotonElimiarPOI_Click(object sender, EventArgs e)
         {
             PantallaBorrarPoi fr = new PantallaBorrarPoi();
             fr.ShowDialog();
         }
 
+        //BOTON CREAR POI -- ABRE LA PANTALLA DE CREACION DE POI//
         private void CrearPOI_Click(object sender, EventArgs e)
         {
             PantallaCrearPOI fr = new PantallaCrearPOI();
             fr.ShowDialog();
         }
 
+        //BOTON VOLVER -- RETORNA A PANTALLA PRINCIPAL DE ADMINISTRADOR//
         private void BotonVolver_Click(object sender, EventArgs e)
         {
-            
-            //PantallaPrincipal fr = new PantallaPrincipal();
-            //this.Hide();
-            //fr.ShowDialog();
-            //this.Close()
+
+            PantallaPrincipal fr = new PantallaPrincipal(Program.gestorDeUsuario, Program.terminal, admin);
+            this.Hide();
+            fr.ShowDialog();
+            this.Close();
         }
     }
 }

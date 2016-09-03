@@ -96,31 +96,33 @@ namespace InterfaceGrafica
             timer1.Enabled = true;
         }
 
-
+        //BOTON QUE ABRE PANTALLA DE HISTORIAL DE BUSQUEDAS//
         private void HistorialDeBusquedas_Click(object sender, EventArgs e)
         {
             PantallaHistorial historial = new PantallaHistorial();
             historial.ShowDialog();
         }
 
-
+        //BOTON QUE ABRE LA PANTALLA DE BUSUQEDA DE POIS//
         private void BuscarPOIs_Click(object sender, EventArgs e)
         {
             PantallaBusqueda busqueda = new PantallaBusqueda(terminal);
             busqueda.ShowDialog();
         }
 
+        //BOTON QUE INICIA PANTALLA DE ADMIN DE POIS//
         private void AdministrarPois_Click(object sender, EventArgs e)
         {
-            PantallaAdministrarPois administrarAdmins = new PantallaAdministrarPois();
+            PantallaAdministrarPois administrarAdmins = new PantallaAdministrarPois(usuario);
             this.Hide();
             administrarAdmins.ShowDialog();
             this.Close();
         }
 
+        //BOTON QUE INICIA PANTALLA DE ADMIN DE USUARIOS//
         private void BotonConfig_Click(object sender, EventArgs e)
         {
-            PantallaAdministrarUsuarios administarUsers = new PantallaAdministrarUsuarios();
+            PantallaAdministrarUsuarios administarUsers = new PantallaAdministrarUsuarios(usuario);
             this.Hide();
             administarUsers.ShowDialog();
             this.Close();
