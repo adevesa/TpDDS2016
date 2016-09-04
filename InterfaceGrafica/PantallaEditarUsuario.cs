@@ -87,5 +87,10 @@ namespace InterfaceGrafica
         {
 
         }
+
+        private void OpcionSi_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

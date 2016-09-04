@@ -40,6 +40,8 @@
             this.CerrarSecion = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarSecion)).BeginInit();
@@ -54,7 +56,7 @@
             this.BotonCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.BotonCerrar.Location = new System.Drawing.Point(565, 9);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(26, 27);
             this.BotonCerrar.TabIndex = 7;
@@ -70,7 +72,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 466);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 22);
             this.panel1.TabIndex = 8;
@@ -125,10 +127,10 @@
             this.BotonBuscar.BackgroundImage = global::InterfaceGrafica.Properties.Resources.buscar;
             this.BotonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonBuscar.Location = new System.Drawing.Point(122, 49);
-            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonBuscar.Location = new System.Drawing.Point(97, 64);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(262, 284);
+            this.BotonBuscar.Size = new System.Drawing.Size(302, 284);
             this.BotonBuscar.TabIndex = 10;
             this.BotonBuscar.TabStop = false;
             this.toolTip1.SetToolTip(this.BotonBuscar, "Buscar POI");
@@ -142,7 +144,7 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(600, 0);
             this.panel2.TabIndex = 13;
@@ -155,7 +157,7 @@
             this.CerrarSecion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarSecion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CerrarSecion.Location = new System.Drawing.Point(184, 406);
-            this.CerrarSecion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CerrarSecion.Margin = new System.Windows.Forms.Padding(2);
             this.CerrarSecion.Name = "CerrarSecion";
             this.CerrarSecion.Size = new System.Drawing.Size(99, 27);
             this.CerrarSecion.TabIndex = 14;
@@ -165,19 +167,41 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.BotonBuscar);
             this.panel3.Controls.Add(this.CerrarSecion);
             this.panel3.Location = new System.Drawing.Point(59, 9);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(448, 454);
             this.panel3.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 26);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "bienvenido";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(43, 366);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(383, 19);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Para comenzar su búsqueda, presione el ícono de arriba";
             // 
             // PantallaDeUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(153)))), ((int)(((byte)(222)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.panel3);
@@ -186,7 +210,7 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaDeUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla Principal";
@@ -197,6 +221,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarSecion)).EndInit();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,5 +240,7 @@
         private System.Windows.Forms.PictureBox CerrarSecion;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

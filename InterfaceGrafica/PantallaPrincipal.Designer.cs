@@ -55,10 +55,10 @@
             this.panel1.Controls.Add(this.Hora);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(0, 574);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 466);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 27);
+            this.panel1.Size = new System.Drawing.Size(600, 22);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -67,9 +67,10 @@
             this.Fecha.AutoSize = true;
             this.Fecha.BackColor = System.Drawing.Color.Transparent;
             this.Fecha.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fecha.Location = new System.Drawing.Point(495, 0);
+            this.Fecha.Location = new System.Drawing.Point(371, 0);
+            this.Fecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(70, 23);
+            this.Fecha.Size = new System.Drawing.Size(58, 17);
             this.Fecha.TabIndex = 2;
             this.Fecha.Text = "Fecha";
             this.Fecha.Click += new System.EventHandler(this.label1_Click_1);
@@ -79,9 +80,10 @@
             this.Usuario.AutoSize = true;
             this.Usuario.BackColor = System.Drawing.Color.Transparent;
             this.Usuario.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Usuario.Location = new System.Drawing.Point(247, 0);
+            this.Usuario.Location = new System.Drawing.Point(185, 0);
+            this.Usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Usuario.Name = "Usuario";
-            this.Usuario.Size = new System.Drawing.Size(94, 23);
+            this.Usuario.Size = new System.Drawing.Size(78, 17);
             this.Usuario.TabIndex = 1;
             this.Usuario.Text = "Usuario";
             this.Usuario.Click += new System.EventHandler(this.label1_Click);
@@ -91,9 +93,10 @@
             this.Hora.AutoSize = true;
             this.Hora.BackColor = System.Drawing.Color.Transparent;
             this.Hora.Font = new System.Drawing.Font("OCR A Extended", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hora.Location = new System.Drawing.Point(13, 0);
+            this.Hora.Location = new System.Drawing.Point(10, 0);
+            this.Hora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Hora.Name = "Hora";
-            this.Hora.Size = new System.Drawing.Size(58, 23);
+            this.Hora.Size = new System.Drawing.Size(48, 17);
             this.Hora.TabIndex = 0;
             this.Hora.Text = "Hora";
             this.Hora.Click += new System.EventHandler(this.Hora_Click);
@@ -108,9 +111,9 @@
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 0);
+            this.panel2.Size = new System.Drawing.Size(600, 0);
             this.panel2.TabIndex = 13;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -122,29 +125,31 @@
             this.panel3.Controls.Add(this.AdministrarPois);
             this.panel3.Controls.Add(this.BotonAdministrarUsuarios);
             this.panel3.Controls.Add(this.CerrarSecion);
-            this.panel3.Location = new System.Drawing.Point(79, 11);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(59, 9);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(597, 559);
+            this.panel3.Size = new System.Drawing.Size(448, 454);
             this.panel3.TabIndex = 15;
             // 
             // HistorialDeBusquedas
             // 
-            this.HistorialDeBusquedas.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HistorialDeBusquedas.Location = new System.Drawing.Point(100, 355);
+            this.HistorialDeBusquedas.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HistorialDeBusquedas.Location = new System.Drawing.Point(0, 288);
+            this.HistorialDeBusquedas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HistorialDeBusquedas.Name = "HistorialDeBusquedas";
-            this.HistorialDeBusquedas.Size = new System.Drawing.Size(453, 90);
+            this.HistorialDeBusquedas.Size = new System.Drawing.Size(448, 73);
             this.HistorialDeBusquedas.TabIndex = 19;
-            this.HistorialDeBusquedas.Text = "Historial De Busquedas";
+            this.HistorialDeBusquedas.Text = "Historial de búsquedas";
             this.HistorialDeBusquedas.UseVisualStyleBackColor = true;
             this.HistorialDeBusquedas.Click += new System.EventHandler(this.HistorialDeBusquedas_Click);
             // 
             // BuscarPOIs
             // 
-            this.BuscarPOIs.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarPOIs.Location = new System.Drawing.Point(100, 243);
+            this.BuscarPOIs.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BuscarPOIs.Location = new System.Drawing.Point(0, 197);
+            this.BuscarPOIs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BuscarPOIs.Name = "BuscarPOIs";
-            this.BuscarPOIs.Size = new System.Drawing.Size(453, 90);
+            this.BuscarPOIs.Size = new System.Drawing.Size(448, 73);
             this.BuscarPOIs.TabIndex = 18;
             this.BuscarPOIs.Text = "Buscar POIs";
             this.BuscarPOIs.UseVisualStyleBackColor = true;
@@ -152,10 +157,11 @@
             // 
             // AdministrarPois
             // 
-            this.AdministrarPois.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdministrarPois.Location = new System.Drawing.Point(100, 124);
+            this.AdministrarPois.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdministrarPois.Location = new System.Drawing.Point(2, 101);
+            this.AdministrarPois.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AdministrarPois.Name = "AdministrarPois";
-            this.AdministrarPois.Size = new System.Drawing.Size(453, 90);
+            this.AdministrarPois.Size = new System.Drawing.Size(446, 73);
             this.AdministrarPois.TabIndex = 17;
             this.AdministrarPois.Text = "Administrar POIs";
             this.AdministrarPois.UseVisualStyleBackColor = true;
@@ -163,10 +169,11 @@
             // 
             // BotonAdministrarUsuarios
             // 
-            this.BotonAdministrarUsuarios.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonAdministrarUsuarios.Location = new System.Drawing.Point(100, 16);
+            this.BotonAdministrarUsuarios.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAdministrarUsuarios.Location = new System.Drawing.Point(2, 11);
+            this.BotonAdministrarUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonAdministrarUsuarios.Name = "BotonAdministrarUsuarios";
-            this.BotonAdministrarUsuarios.Size = new System.Drawing.Size(453, 90);
+            this.BotonAdministrarUsuarios.Size = new System.Drawing.Size(444, 73);
             this.BotonAdministrarUsuarios.TabIndex = 16;
             this.BotonAdministrarUsuarios.Text = "Administrar Usuarios";
             this.BotonAdministrarUsuarios.UseVisualStyleBackColor = true;
@@ -178,10 +185,10 @@
             this.CerrarSecion.BackgroundImage = global::InterfaceGrafica.Properties.Resources.cerrar_sesion;
             this.CerrarSecion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarSecion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarSecion.Location = new System.Drawing.Point(269, 505);
-            this.CerrarSecion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CerrarSecion.Location = new System.Drawing.Point(179, 402);
+            this.CerrarSecion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CerrarSecion.Name = "CerrarSecion";
-            this.CerrarSecion.Size = new System.Drawing.Size(132, 33);
+            this.CerrarSecion.Size = new System.Drawing.Size(99, 27);
             this.CerrarSecion.TabIndex = 14;
             this.CerrarSecion.TabStop = false;
             this.CerrarSecion.Click += new System.EventHandler(this.CerrarSecion_Click);
@@ -193,28 +200,28 @@
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonCerrar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.BotonCerrar.Location = new System.Drawing.Point(753, 11);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonCerrar.Location = new System.Drawing.Point(565, 9);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(35, 33);
+            this.BotonCerrar.Size = new System.Drawing.Size(26, 27);
             this.BotonCerrar.TabIndex = 7;
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.BotonCerrar_Click);
             // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 601);
+            this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.BotonCerrar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla Principal";

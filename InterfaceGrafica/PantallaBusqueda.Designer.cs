@@ -49,11 +49,10 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(24, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.label1.Location = new System.Drawing.Point(18, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 54);
+            this.label1.Size = new System.Drawing.Size(208, 42);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar POI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -64,10 +63,10 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(747, 14);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonCerrar.Location = new System.Drawing.Point(560, 11);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonCerrar.Name = "BotonCerrar";
-            this.BotonCerrar.Size = new System.Drawing.Size(39, 36);
+            this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 2;
             this.BotonCerrar.UseVisualStyleBackColor = false;
             this.BotonCerrar.Click += new System.EventHandler(this.button1_Click);
@@ -76,10 +75,10 @@
             // 
             this.TextoAgregar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.TextoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextoAgregar.Location = new System.Drawing.Point(35, 113);
-            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TextoAgregar.Location = new System.Drawing.Point(26, 92);
+            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TextoAgregar.Name = "TextoAgregar";
-            this.TextoAgregar.Size = new System.Drawing.Size(347, 45);
+            this.TextoAgregar.Size = new System.Drawing.Size(261, 37);
             this.TextoAgregar.TabIndex = 3;
             this.TextoAgregar.TextChanged += new System.EventHandler(this.textoAgregar_TextChanged);
             // 
@@ -89,10 +88,10 @@
             this.BotonBuscar.BackgroundImage = global::InterfaceGrafica.Properties.Resources.chrome_accept_apply_22369;
             this.BotonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BotonBuscar.Location = new System.Drawing.Point(611, 102);
-            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BotonBuscar.Location = new System.Drawing.Point(458, 83);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(149, 150);
+            this.BotonBuscar.Size = new System.Drawing.Size(112, 122);
             this.BotonBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.BotonBuscar.TabIndex = 5;
             this.BotonBuscar.TabStop = false;
@@ -103,16 +102,15 @@
             // 
             // ListViewPois
             // 
-            this.ListViewPois.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ListViewPois.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ListViewPois.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Nombre,
             this.Direccion,
             this.Disponibilidad});
             this.ListViewPois.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ListViewPois.Location = new System.Drawing.Point(35, 290);
-            this.ListViewPois.Margin = new System.Windows.Forms.Padding(4);
+            this.ListViewPois.Location = new System.Drawing.Point(26, 236);
             this.ListViewPois.Name = "ListViewPois";
-            this.ListViewPois.Size = new System.Drawing.Size(724, 294);
+            this.ListViewPois.Size = new System.Drawing.Size(544, 240);
             this.ListViewPois.TabIndex = 8;
             this.ListViewPois.UseCompatibleStateImageBehavior = false;
             this.ListViewPois.View = System.Windows.Forms.View.Details;
@@ -138,21 +136,21 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(23, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.Size = new System.Drawing.Size(134, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Ingrese su búsqueda";
             // 
             // Agregar
             // 
             this.Agregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Agregar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Agregar.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agregar.ForeColor = System.Drawing.Color.Black;
-            this.Agregar.Location = new System.Drawing.Point(425, 102);
+            this.Agregar.Location = new System.Drawing.Point(319, 83);
+            this.Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Agregar.Name = "Agregar";
-            this.Agregar.Size = new System.Drawing.Size(145, 56);
+            this.Agregar.Size = new System.Drawing.Size(109, 46);
             this.Agregar.TabIndex = 26;
             this.Agregar.Text = "Aceptar";
             this.Agregar.UseVisualStyleBackColor = true;
@@ -161,11 +159,12 @@
             // Deshacer
             // 
             this.Deshacer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Deshacer.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deshacer.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deshacer.ForeColor = System.Drawing.Color.Black;
-            this.Deshacer.Location = new System.Drawing.Point(425, 196);
+            this.Deshacer.Location = new System.Drawing.Point(319, 159);
+            this.Deshacer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Deshacer.Name = "Deshacer";
-            this.Deshacer.Size = new System.Drawing.Size(145, 56);
+            this.Deshacer.Size = new System.Drawing.Size(109, 46);
             this.Deshacer.TabIndex = 27;
             this.Deshacer.Text = "Deshacer";
             this.Deshacer.UseVisualStyleBackColor = true;
@@ -173,11 +172,11 @@
             // 
             // PantallaBusqueda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 601);
+            this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.Deshacer);
             this.Controls.Add(this.Agregar);
             this.Controls.Add(this.label2);
@@ -188,7 +187,6 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PantallaBusqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaBusqueda";

@@ -51,7 +51,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.DarkGreen;
             this.label1.Location = new System.Drawing.Point(8, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 36);
@@ -63,23 +63,23 @@
             // IngresarUsuario
             // 
             this.IngresarUsuario.BackColor = System.Drawing.Color.White;
-            this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IngresarUsuario.Location = new System.Drawing.Point(223, 91);
+            this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngresarUsuario.Location = new System.Drawing.Point(222, 98);
             this.IngresarUsuario.Name = "IngresarUsuario";
-            this.IngresarUsuario.Size = new System.Drawing.Size(185, 35);
+            this.IngresarUsuario.Size = new System.Drawing.Size(202, 29);
             this.IngresarUsuario.TabIndex = 7;
             // 
             // UsuarioAEditar
             // 
             this.UsuarioAEditar.AutoSize = true;
             this.UsuarioAEditar.BackColor = System.Drawing.Color.Transparent;
-            this.UsuarioAEditar.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsuarioAEditar.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioAEditar.ForeColor = System.Drawing.Color.Black;
             this.UsuarioAEditar.Location = new System.Drawing.Point(9, 94);
             this.UsuarioAEditar.Name = "UsuarioAEditar";
-            this.UsuarioAEditar.Size = new System.Drawing.Size(197, 27);
+            this.UsuarioAEditar.Size = new System.Drawing.Size(176, 29);
             this.UsuarioAEditar.TabIndex = 11;
-            this.UsuarioAEditar.Text = "Usuario a editar:";
+            this.UsuarioAEditar.Text = "Usuario a editar";
             this.UsuarioAEditar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.UsuarioAEditar.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -87,45 +87,45 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(68, 209);
+            this.label2.Location = new System.Drawing.Point(9, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 27);
+            this.label2.Size = new System.Drawing.Size(200, 29);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Nueva contraseña:";
+            this.label2.Text = "Nueva contraseña";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // NuevaContraseña
             // 
             this.NuevaContraseña.BackColor = System.Drawing.Color.White;
-            this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevaContraseña.Location = new System.Drawing.Point(340, 210);
+            this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevaContraseña.Location = new System.Drawing.Point(222, 210);
             this.NuevaContraseña.Name = "NuevaContraseña";
-            this.NuevaContraseña.Size = new System.Drawing.Size(138, 28);
+            this.NuevaContraseña.Size = new System.Drawing.Size(202, 29);
             this.NuevaContraseña.TabIndex = 13;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(134, 262);
+            this.label6.Location = new System.Drawing.Point(9, 264);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(162, 27);
+            this.label6.Size = new System.Drawing.Size(143, 29);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Nuevo Email:";
+            this.label6.Text = "Nuevo Email";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // NuevoEmail
             // 
             this.NuevoEmail.BackColor = System.Drawing.Color.White;
-            this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoEmail.Location = new System.Drawing.Point(340, 266);
+            this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoEmail.Location = new System.Drawing.Point(222, 266);
             this.NuevoEmail.Name = "NuevoEmail";
-            this.NuevoEmail.Size = new System.Drawing.Size(138, 28);
+            this.NuevoEmail.Size = new System.Drawing.Size(202, 29);
             this.NuevoEmail.TabIndex = 18;
             this.NuevoEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -133,31 +133,31 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(104, 152);
+            this.label7.Location = new System.Drawing.Point(9, 153);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(192, 27);
+            this.label7.Size = new System.Drawing.Size(171, 29);
             this.label7.TabIndex = 21;
-            this.label7.Text = "Nuevo Nombre:";
+            this.label7.Text = "Nuevo nombre";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // NuevoNombre
             // 
             this.NuevoNombre.BackColor = System.Drawing.Color.White;
-            this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoNombre.Location = new System.Drawing.Point(340, 155);
+            this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoNombre.Location = new System.Drawing.Point(222, 153);
             this.NuevoNombre.Name = "NuevoNombre";
-            this.NuevoNombre.Size = new System.Drawing.Size(138, 28);
+            this.NuevoNombre.Size = new System.Drawing.Size(202, 29);
             this.NuevoNombre.TabIndex = 22;
             // 
             // BotonDesHacer2
             // 
-            this.BotonDesHacer2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonDesHacer2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonDesHacer2.ForeColor = System.Drawing.Color.Black;
-            this.BotonDesHacer2.Location = new System.Drawing.Point(332, 392);
-            this.BotonDesHacer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonDesHacer2.Location = new System.Drawing.Point(358, 392);
+            this.BotonDesHacer2.Margin = new System.Windows.Forms.Padding(2);
             this.BotonDesHacer2.Name = "BotonDesHacer2";
             this.BotonDesHacer2.Size = new System.Drawing.Size(109, 46);
             this.BotonDesHacer2.TabIndex = 23;
@@ -166,10 +166,10 @@
             // 
             // BotonConfirmar2
             // 
-            this.BotonConfirmar2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonConfirmar2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonConfirmar2.ForeColor = System.Drawing.Color.Black;
-            this.BotonConfirmar2.Location = new System.Drawing.Point(154, 392);
-            this.BotonConfirmar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonConfirmar2.Location = new System.Drawing.Point(180, 392);
+            this.BotonConfirmar2.Margin = new System.Windows.Forms.Padding(2);
             this.BotonConfirmar2.Name = "BotonConfirmar2";
             this.BotonConfirmar2.Size = new System.Drawing.Size(109, 46);
             this.BotonConfirmar2.TabIndex = 24;
@@ -181,37 +181,38 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(59, 320);
+            this.label3.Location = new System.Drawing.Point(9, 320);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 27);
+            this.label3.Size = new System.Drawing.Size(141, 29);
             this.label3.TabIndex = 25;
-            this.label3.Text = "Convertir en admin:";
+            this.label3.Text = "Tipo usuario";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // OpcionSi
             // 
             this.OpcionSi.AutoSize = true;
-            this.OpcionSi.Location = new System.Drawing.Point(368, 332);
-            this.OpcionSi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OpcionSi.Location = new System.Drawing.Point(222, 330);
+            this.OpcionSi.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionSi.Name = "OpcionSi";
-            this.OpcionSi.Size = new System.Drawing.Size(34, 17);
+            this.OpcionSi.Size = new System.Drawing.Size(88, 17);
             this.OpcionSi.TabIndex = 26;
             this.OpcionSi.TabStop = true;
-            this.OpcionSi.Text = "Si";
+            this.OpcionSi.Text = "Administrador";
             this.OpcionSi.UseVisualStyleBackColor = true;
+            this.OpcionSi.CheckedChanged += new System.EventHandler(this.OpcionSi_CheckedChanged);
             // 
             // OpcionNo
             // 
             this.OpcionNo.AutoSize = true;
-            this.OpcionNo.Location = new System.Drawing.Point(420, 332);
-            this.OpcionNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.OpcionNo.Location = new System.Drawing.Point(332, 330);
+            this.OpcionNo.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionNo.Name = "OpcionNo";
-            this.OpcionNo.Size = new System.Drawing.Size(39, 17);
+            this.OpcionNo.Size = new System.Drawing.Size(58, 17);
             this.OpcionNo.TabIndex = 27;
             this.OpcionNo.TabStop = true;
-            this.OpcionNo.Text = "No";
+            this.OpcionNo.Text = "Común";
             this.OpcionNo.UseVisualStyleBackColor = true;
             // 
             // BotonCerrar
@@ -221,7 +222,7 @@
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCerrar.Location = new System.Drawing.Point(562, 9);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 3;
@@ -230,12 +231,12 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonBuscar.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BotonBuscar.Location = new System.Drawing.Point(439, 80);
-            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonBuscar.Location = new System.Drawing.Point(451, 98);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(109, 46);
+            this.BotonBuscar.Size = new System.Drawing.Size(109, 29);
             this.BotonBuscar.TabIndex = 28;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
@@ -245,7 +246,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(92)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.BotonBuscar);
@@ -267,7 +268,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaEditarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";

@@ -200,5 +200,10 @@ namespace InterfaceGrafica
         {
 
         }
+
+        private void Comuna_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
