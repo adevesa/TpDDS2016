@@ -44,6 +44,13 @@
             this.OpcionNo = new System.Windows.Forms.RadioButton();
             this.BotonCerrar = new System.Windows.Forms.Button();
             this.BotonBuscar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.InfoActual = new System.Windows.Forms.ListView();
+            this.NombreActual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ContraseñaActual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.EmailActual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TipoActual = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +75,7 @@
             this.IngresarUsuario.Name = "IngresarUsuario";
             this.IngresarUsuario.Size = new System.Drawing.Size(202, 29);
             this.IngresarUsuario.TabIndex = 7;
+            this.IngresarUsuario.TextChanged += new System.EventHandler(this.IngresarUsuario_TextChanged);
             // 
             // UsuarioAEditar
             // 
@@ -89,7 +97,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(9, 210);
+            this.label2.Location = new System.Drawing.Point(9, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 29);
             this.label2.TabIndex = 12;
@@ -101,7 +109,7 @@
             // 
             this.NuevaContraseña.BackColor = System.Drawing.Color.White;
             this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevaContraseña.Location = new System.Drawing.Point(222, 210);
+            this.NuevaContraseña.Location = new System.Drawing.Point(222, 292);
             this.NuevaContraseña.Name = "NuevaContraseña";
             this.NuevaContraseña.Size = new System.Drawing.Size(202, 29);
             this.NuevaContraseña.TabIndex = 13;
@@ -112,7 +120,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(9, 264);
+            this.label6.Location = new System.Drawing.Point(9, 340);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(143, 29);
             this.label6.TabIndex = 17;
@@ -123,7 +131,7 @@
             // 
             this.NuevoEmail.BackColor = System.Drawing.Color.White;
             this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoEmail.Location = new System.Drawing.Point(222, 266);
+            this.NuevoEmail.Location = new System.Drawing.Point(222, 341);
             this.NuevoEmail.Name = "NuevoEmail";
             this.NuevoEmail.Size = new System.Drawing.Size(202, 29);
             this.NuevoEmail.TabIndex = 18;
@@ -135,7 +143,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(9, 153);
+            this.label7.Location = new System.Drawing.Point(9, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 29);
             this.label7.TabIndex = 21;
@@ -147,7 +155,7 @@
             // 
             this.NuevoNombre.BackColor = System.Drawing.Color.White;
             this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NuevoNombre.Location = new System.Drawing.Point(222, 153);
+            this.NuevoNombre.Location = new System.Drawing.Point(222, 239);
             this.NuevoNombre.Name = "NuevoNombre";
             this.NuevoNombre.Size = new System.Drawing.Size(202, 29);
             this.NuevoNombre.TabIndex = 22;
@@ -156,7 +164,7 @@
             // 
             this.BotonDesHacer2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonDesHacer2.ForeColor = System.Drawing.Color.Black;
-            this.BotonDesHacer2.Location = new System.Drawing.Point(358, 392);
+            this.BotonDesHacer2.Location = new System.Drawing.Point(369, 460);
             this.BotonDesHacer2.Margin = new System.Windows.Forms.Padding(2);
             this.BotonDesHacer2.Name = "BotonDesHacer2";
             this.BotonDesHacer2.Size = new System.Drawing.Size(109, 46);
@@ -168,7 +176,7 @@
             // 
             this.BotonConfirmar2.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonConfirmar2.ForeColor = System.Drawing.Color.Black;
-            this.BotonConfirmar2.Location = new System.Drawing.Point(180, 392);
+            this.BotonConfirmar2.Location = new System.Drawing.Point(201, 460);
             this.BotonConfirmar2.Margin = new System.Windows.Forms.Padding(2);
             this.BotonConfirmar2.Name = "BotonConfirmar2";
             this.BotonConfirmar2.Size = new System.Drawing.Size(109, 46);
@@ -183,7 +191,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(9, 320);
+            this.label3.Location = new System.Drawing.Point(9, 396);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 29);
             this.label3.TabIndex = 25;
@@ -193,7 +201,7 @@
             // OpcionSi
             // 
             this.OpcionSi.AutoSize = true;
-            this.OpcionSi.Location = new System.Drawing.Point(222, 330);
+            this.OpcionSi.Location = new System.Drawing.Point(222, 408);
             this.OpcionSi.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionSi.Name = "OpcionSi";
             this.OpcionSi.Size = new System.Drawing.Size(88, 17);
@@ -206,7 +214,7 @@
             // OpcionNo
             // 
             this.OpcionNo.AutoSize = true;
-            this.OpcionNo.Location = new System.Drawing.Point(332, 330);
+            this.OpcionNo.Location = new System.Drawing.Point(344, 408);
             this.OpcionNo.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionNo.Name = "OpcionNo";
             this.OpcionNo.Size = new System.Drawing.Size(58, 17);
@@ -214,6 +222,7 @@
             this.OpcionNo.TabStop = true;
             this.OpcionNo.Text = "Común";
             this.OpcionNo.UseVisualStyleBackColor = true;
+            this.OpcionNo.CheckedChanged += new System.EventHandler(this.OpcionNo_CheckedChanged);
             // 
             // BotonCerrar
             // 
@@ -221,7 +230,7 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(562, 9);
+            this.BotonCerrar.Location = new System.Drawing.Point(615, 19);
             this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
@@ -242,13 +251,71 @@
             this.BotonBuscar.UseVisualStyleBackColor = true;
             this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Narrow", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(9, 165);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 27);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Información acutal";
+            // 
+            // InfoActual
+            // 
+            this.InfoActual.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NombreActual,
+            this.ContraseñaActual,
+            this.EmailActual,
+            this.TipoActual});
+            this.InfoActual.Location = new System.Drawing.Point(222, 143);
+            this.InfoActual.Name = "InfoActual";
+            this.InfoActual.Size = new System.Drawing.Size(549, 60);
+            this.InfoActual.TabIndex = 30;
+            this.InfoActual.UseCompatibleStateImageBehavior = false;
+            this.InfoActual.View = System.Windows.Forms.View.Details;
+            // 
+            // NombreActual
+            // 
+            this.NombreActual.Text = "Nombre actual";
+            this.NombreActual.Width = 137;
+            // 
+            // ContraseñaActual
+            // 
+            this.ContraseñaActual.Text = "Contraseña actual";
+            this.ContraseñaActual.Width = 143;
+            // 
+            // EmailActual
+            // 
+            this.EmailActual.Text = "Email actual";
+            this.EmailActual.Width = 193;
+            // 
+            // TipoActual
+            // 
+            this.TipoActual.Text = "Tipo";
+            this.TipoActual.Width = 70;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(11, 523);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(385, 13);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "*Si deja el espacio en blanco no se realizarán cambios en el atributo en cuestión" +
+    "";
+            // 
             // PantallaEditarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(92)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(600, 488);
+            this.ClientSize = new System.Drawing.Size(783, 545);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.InfoActual);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.OpcionNo);
             this.Controls.Add(this.OpcionSi);
@@ -296,5 +363,12 @@
         private System.Windows.Forms.RadioButton OpcionSi;
         private System.Windows.Forms.RadioButton OpcionNo;
         private System.Windows.Forms.Button BotonBuscar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ListView InfoActual;
+        private System.Windows.Forms.ColumnHeader NombreActual;
+        private System.Windows.Forms.ColumnHeader ContraseñaActual;
+        private System.Windows.Forms.ColumnHeader EmailActual;
+        private System.Windows.Forms.ColumnHeader TipoActual;
+        private System.Windows.Forms.Label label5;
     }
 }

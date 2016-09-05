@@ -27,9 +27,9 @@ namespace AlmacenadorBusquedas
             getbusquedas().Add(nuevaBusqueda);
         }
 
-        static public List<busquedaPorFecha> generarReportePorFecha(string fecha)
+        static public List<busquedaPorFecha> generarReportePorFecha(DateTime inicio, DateTime fin)
         {
-            return BusquedasPorFecha.generarReportePorFecha(fecha, getbusquedas());
+            return BusquedasPorFecha.generarReporte(inicio, fin, busquedas);
         }
 
         static public List<busquedaPorUsuario> generarReportePorUsuario(string nombreDelUsuario)

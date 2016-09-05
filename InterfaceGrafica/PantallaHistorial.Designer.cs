@@ -39,9 +39,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BotonAplicar = new System.Windows.Forms.PictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label6 = new System.Windows.Forms.Label();
+            this.Info = new System.Windows.Forms.ListView();
+            this.Nombre = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Fecha = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Palabra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.BotonAplicar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,7 +55,7 @@
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCerrar.Location = new System.Drawing.Point(559, 10);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(32, 29);
             this.BotonCerrar.TabIndex = 3;
@@ -118,6 +121,7 @@
             this.Desde.Name = "Desde";
             this.Desde.Size = new System.Drawing.Size(99, 28);
             this.Desde.TabIndex = 8;
+            this.Desde.TextChanged += new System.EventHandler(this.Desde_TextChanged);
             // 
             // Hasta
             // 
@@ -161,7 +165,7 @@
             this.BotonAplicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonAplicar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonAplicar.Location = new System.Drawing.Point(239, 75);
-            this.BotonAplicar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonAplicar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonAplicar.Name = "BotonAplicar";
             this.BotonAplicar.Size = new System.Drawing.Size(112, 122);
             this.BotonAplicar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -171,16 +175,6 @@
             this.BotonAplicar.Click += new System.EventHandler(this.pictureBox1_MouseHover);
             this.BotonAplicar.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.BotonAplicar.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(23, 254);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(542, 199);
-            this.listBox1.TabIndex = 13;
             // 
             // label6
             // 
@@ -192,6 +186,33 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "(dd/mm/aaaa)";
             // 
+            // Info
+            // 
+            this.Info.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nombre,
+            this.Fecha,
+            this.Palabra});
+            this.Info.Location = new System.Drawing.Point(37, 263);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(522, 196);
+            this.Info.TabIndex = 15;
+            this.Info.UseCompatibleStateImageBehavior = false;
+            this.Info.View = System.Windows.Forms.View.Details;
+            // 
+            // Nombre
+            // 
+            this.Nombre.Text = "Usuario";
+            this.Nombre.Width = 137;
+            // 
+            // Fecha
+            // 
+            this.Fecha.Text = "Fecha";
+            // 
+            // Palabra
+            // 
+            this.Palabra.Text = "PalabraBuscada";
+            this.Palabra.Width = 123;
+            // 
             // PantallaHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,8 +220,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(196)))), ((int)(((byte)(200)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
+            this.Controls.Add(this.Info);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.BotonAplicar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -214,7 +235,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PantallaHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
@@ -236,8 +257,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox BotonAplicar;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListView Info;
+        private System.Windows.Forms.ColumnHeader Nombre;
+        private System.Windows.Forms.ColumnHeader Fecha;
+        private System.Windows.Forms.ColumnHeader Palabra;
     }
 }

@@ -297,6 +297,10 @@
     <None Include="Resources\cerrar_sesion.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AlmacenadorDeBusquedas\AlmacenadorBusquedas.csproj">
+      <Project>{b9106923-859b-4ce0-a5dc-abfcdf7eadc5}</Project>
+      <Name>AlmacenadorBusquedas</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Consola\Consola.csproj">
       <Project>{5e63776b-4098-4aac-b082-6ac8720a7acf}</Project>
       <Name>Consola</Name>

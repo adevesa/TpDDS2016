@@ -34,12 +34,14 @@ namespace InterfaceGrafica
 
         //BOTON AGREGAR-- AGREGA UN CRITERIO DE BUSQUEDA//
 
-
         private void Agregar_Click(object sender, EventArgs e)
         {
             string criterio_de_busqueda = TextoAgregar.Text.ToString();
+            ListViewItem imte = new ListViewItem(criterio_de_busqueda);
+            TextoAgregar.Clear();
         }
 
+        
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -52,10 +54,25 @@ namespace InterfaceGrafica
             string criterio_de_busqueda = TextoAgregar.Text.ToString();
             List<POI> results = terminal.buscar(criterio_de_busqueda);
             agregar_elementos_a_listView(results);
-            //List<string> lista_obtenida = new List<string>();
-            //lista_obtenida=terminal.mappearNombresPois(terminal.buscar(criterio_de_busqueda));
-            //agregar_elementos_a_listBox(lista_obtenida);
+
         }
+        private List<string> recuperar_elementos_listBox()
+        {
+            List<string> palabras_a_buscar = new List<string>();
+            int cantidad_elemtentos = Palabras.Items.Count;
+            int contador;
+            string[] palabras = new string[cantidad_elemtentos];
+            for(contador=0; contador < cantidad_elemtentos; contador++)
+            {
+                Palabras.Items.CopyTo(palabras, contador);
+            }
+            foreach(string palabra in palabras)
+            {
+                palabras_a_buscar.Add(palabra);
+            }
+            return palabras_a_buscar;
+        }
+
         private void agregar_elementos_a_listView(List<POI> resultados)
         {
             foreach(POI poi in resultados)
@@ -103,7 +120,7 @@ namespace InterfaceGrafica
         //BOTON DESHACER -- ELIMINA PALABRAS A BUSCAR//
         private void Deshacer_Click(object sender, EventArgs e)
         {
-
+            Palabras.SelectedItems.Clear();
         }
 
         //BOX QUE CONTIENE PALABRA A BUSCAR//
@@ -117,6 +134,9 @@ namespace InterfaceGrafica
 
         }
 
-       
+        private void ListViewPois_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.Agregar = new System.Windows.Forms.Button();
             this.Deshacer = new System.Windows.Forms.Button();
+            this.Palabras = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.BotonBuscar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCerrar.Location = new System.Drawing.Point(560, 11);
-            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
             this.BotonCerrar.TabIndex = 2;
@@ -76,7 +77,7 @@
             this.TextoAgregar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.TextoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextoAgregar.Location = new System.Drawing.Point(26, 92);
-            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TextoAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.TextoAgregar.Name = "TextoAgregar";
             this.TextoAgregar.Size = new System.Drawing.Size(261, 37);
             this.TextoAgregar.TabIndex = 3;
@@ -89,7 +90,7 @@
             this.BotonBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BotonBuscar.Location = new System.Drawing.Point(458, 83);
-            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(112, 122);
             this.BotonBuscar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -114,6 +115,7 @@
             this.ListViewPois.TabIndex = 8;
             this.ListViewPois.UseCompatibleStateImageBehavior = false;
             this.ListViewPois.View = System.Windows.Forms.View.Details;
+            this.ListViewPois.SelectedIndexChanged += new System.EventHandler(this.ListViewPois_SelectedIndexChanged);
             // 
             // Nombre
             // 
@@ -148,7 +150,7 @@
             this.Agregar.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agregar.ForeColor = System.Drawing.Color.Black;
             this.Agregar.Location = new System.Drawing.Point(319, 83);
-            this.Agregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Agregar.Margin = new System.Windows.Forms.Padding(2);
             this.Agregar.Name = "Agregar";
             this.Agregar.Size = new System.Drawing.Size(109, 46);
             this.Agregar.TabIndex = 26;
@@ -162,13 +164,21 @@
             this.Deshacer.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deshacer.ForeColor = System.Drawing.Color.Black;
             this.Deshacer.Location = new System.Drawing.Point(319, 159);
-            this.Deshacer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Deshacer.Margin = new System.Windows.Forms.Padding(2);
             this.Deshacer.Name = "Deshacer";
             this.Deshacer.Size = new System.Drawing.Size(109, 46);
             this.Deshacer.TabIndex = 27;
             this.Deshacer.Text = "Deshacer";
             this.Deshacer.UseVisualStyleBackColor = true;
             this.Deshacer.Click += new System.EventHandler(this.Deshacer_Click);
+            // 
+            // Palabras
+            // 
+            this.Palabras.Location = new System.Drawing.Point(31, 140);
+            this.Palabras.Name = "Palabras";
+            this.Palabras.Size = new System.Drawing.Size(255, 84);
+            this.Palabras.TabIndex = 28;
+            this.Palabras.UseCompatibleStateImageBehavior = false;
             // 
             // PantallaBusqueda
             // 
@@ -177,6 +187,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(600, 488);
+            this.Controls.Add(this.Palabras);
             this.Controls.Add(this.Deshacer);
             this.Controls.Add(this.Agregar);
             this.Controls.Add(this.label2);
@@ -211,5 +222,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button Agregar;
         private System.Windows.Forms.Button Deshacer;
+        private System.Windows.Forms.ListView Palabras;
     }
 }
