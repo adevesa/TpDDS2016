@@ -313,6 +313,10 @@
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Mapeo\Mapeo.csproj">
+      <Project>{79c0f072-134f-4981-bc07-278c1310ada2}</Project>
+      <Name>Mapeo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\OrigenesDeDatos\OrigenesDeDatos.csproj">
       <Project>{9b6f1fee-b454-467e-a5e1-dcfbf9bc7119}</Project>
       <Name>OrigenesDeDatos</Name>

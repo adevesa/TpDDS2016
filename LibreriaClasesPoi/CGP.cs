@@ -10,17 +10,21 @@ namespace LibreriaClasesPoi
     public class CGP:PoiConServicios
     {
         //Atributos
-        public string ZonasAledañas { get; set; }
-        public string NombreDirector { get; set; }
-        public string Telefono { get; set; }
+        public virtual string ZonasAledañas { get; set; }
+        public virtual string NombreDirector { get; set; }
+        public virtual string Telefono { get; set; }
 
         //Constructores
+        public CGP()
+        {
+
+        }
+
         public CGP(string nombre,string direccion, int comuna)
         {
             setDireccion(direccion);
             setComuna(comuna);
-            initService(nombre);
-            
+            initService(nombre);    
         }
 
         public CGP(int numeroComuna, string domicilio)
@@ -29,7 +33,6 @@ namespace LibreriaClasesPoi
             setDireccion(domicilio);
             initService("sin nombre");
             setComuna(numeroComuna);
-
         }
 
         //Métodos

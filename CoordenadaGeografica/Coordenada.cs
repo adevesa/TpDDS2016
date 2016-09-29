@@ -49,13 +49,20 @@ namespace CoordenadaGeografica
 
         public bool localizar(string direccion)
         {
-            //Llamada a Google maps//
+            if(direccion != null)
+            {
+                //Llamada a Google maps//
 
-            var _request = new GeocodingRequest { Address = this.convertirDireccion(direccion) };
-            var _result = GoogleMaps.Geocode.Query(_request);
-            setLatitud(_result.Results.First().Geometry.Location.Latitude);
-            setLongitud(_result.Results.First().Geometry.Location.Longitude);
-            return (_result.Status == Status.OK);
+                var _request = new GeocodingRequest { Address = this.convertirDireccion(direccion) };
+                var _result = GoogleMaps.Geocode.Query(_request);
+                setLatitud(_result.Results.First().Geometry.Location.Latitude);
+                setLongitud(_result.Results.First().Geometry.Location.Longitude);
+                return (_result.Status == Status.OK);
+            }
+            else
+            {
+                return false;
+            }
 
             //Status.OK, _result.Status//
             // ("40.7140415,-73.9613119", _result.Results.First().Geometry.Location.LocationString);//

@@ -13,13 +13,13 @@ namespace LibreriaClasesPoi
         private List<Servicio> servicios;
 
         //Getters
-        public List<Servicio> getServicios() { return this.servicios; }
+        public virtual List<Servicio> getServicios() { return this.servicios; }
 
                 //Metodos abstractos
 
         //* @name: initService()
         //* @decryp: genera una nueva lista de servicios y la settea.
-        public void initService(string nombre)
+        public virtual void initService(string nombre)
         {
             base.init(nombre);
             servicios = new List<Servicio>();
@@ -34,13 +34,13 @@ namespace LibreriaClasesPoi
         }
 
         //Metodos de manipulación de servicios 
-        public bool estaServicioDisponible(string servicio, DateTime momento)
+        public virtual bool estaServicioDisponible(string servicio, DateTime momento)
         {
             Servicio service = buscarServicio(servicio);
             return service.estaDisponible(momento);
         }
 
-        public void crearServicio(string nombreDelServicio)
+        public virtual void crearServicio(string nombreDelServicio)
         {
             Servicio service = new Servicio();
             service.setNombreDelServicio(nombreDelServicio);
@@ -48,19 +48,19 @@ namespace LibreriaClasesPoi
             agregarServicio(service);
         }
 
-        public void agregarServicio(Servicio servicio)
+        public virtual void agregarServicio(Servicio servicio)
         {
             servicio.setPoiId(this.getId());
             this.servicios.Add(servicio);
         }
 
-        public void agregarHorarioDeAtencionAServicio(string nombreDelServicio,string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
+        public virtual void agregarHorarioDeAtencionAServicio(string nombreDelServicio,string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
         {
             Servicio serviceBuscado = buscarServicio(nombreDelServicio);
             serviceBuscado.agregarDiaYHorario(turno, horarioDeApertura, horarioDeCierre, dias);
         }
 
-        public void agregarServicioSinLimiteHorario(string servicio)
+        public virtual void agregarServicioSinLimiteHorario(string servicio)
         {
             Servicio nuevoServicio = new Servicio();
             nuevoServicio.setNombreDelServicio(servicio);

@@ -11,6 +11,11 @@ namespace LibreriaClasesPoi
     public class Banco:PoiConServicios
     {
         //Constructor
+        public Banco()
+        {
+
+        }
+
         public Banco(string nombre) 
         {
             initService(nombre);

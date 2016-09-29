@@ -218,9 +218,9 @@ namespace InterfaceGrafica
             //if(poi.fechaDeBaja.Equals(null)) { }
            // else
             //{
-                AnioDeBaja.Value = int.Parse(poi.fechaDeBaja.Year.ToString());
-                MesDeBaja.Value = int.Parse(poi.fechaDeBaja.Month.ToString());
-                DiaDeBaja.Value = int.Parse(poi.fechaDeBaja.Day.ToString());
+                AnioDeBaja.Value = int.Parse(poi.getFechaBaja().Year.ToString());
+                MesDeBaja.Value = int.Parse(poi.getFechaBaja().Month.ToString());
+                DiaDeBaja.Value = int.Parse(poi.getFechaBaja().Day.ToString());
             //}
         }
 

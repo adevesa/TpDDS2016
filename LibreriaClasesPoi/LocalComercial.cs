@@ -10,16 +10,20 @@ namespace LibreriaClasesPoi
     public class LocalComercial:POI 
     {
         //Atributos
-        public double CriterioDeCercania { get; set; }
+        public virtual double CriterioDeCercania { get; set; }
         private List<string> rubros;
         
         //Setters y getters
-        public void setCriterioDeCercania(double criterio) { this.CriterioDeCercania = criterio; }
-        public double getCriterioDeCercania() { return this.CriterioDeCercania; }
+        public virtual void setCriterioDeCercania(double criterio) { this.CriterioDeCercania = criterio; }
+        public virtual double getCriterioDeCercania() { return this.CriterioDeCercania; }
 
-        public List<string> getRubros() { return this.rubros; }
+        public virtual List<string> getRubros() { return this.rubros; }
 
         //Constructores
+        public LocalComercial()
+        {
+
+        }
         public  LocalComercial(string nombre, string direccion)
         {
             base.init(nombre);
@@ -48,7 +52,7 @@ namespace LibreriaClasesPoi
         }
 
         //Agregar rubros//
-        public void agregarRubro(params string[] rubro)
+        public virtual void agregarRubro(params string[] rubro)
         {
             foreach(string unRubro in rubro)
             agregarElemA(this.getRubros(), unRubro);

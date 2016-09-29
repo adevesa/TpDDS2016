@@ -73,7 +73,7 @@
             this.IngresarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IngresarUsuario.Location = new System.Drawing.Point(222, 98);
             this.IngresarUsuario.Name = "IngresarUsuario";
-            this.IngresarUsuario.Size = new System.Drawing.Size(202, 29);
+            this.IngresarUsuario.Size = new System.Drawing.Size(418, 29);
             this.IngresarUsuario.TabIndex = 7;
             this.IngresarUsuario.TextChanged += new System.EventHandler(this.IngresarUsuario_TextChanged);
             // 
@@ -111,7 +111,7 @@
             this.NuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevaContraseña.Location = new System.Drawing.Point(222, 292);
             this.NuevaContraseña.Name = "NuevaContraseña";
-            this.NuevaContraseña.Size = new System.Drawing.Size(202, 29);
+            this.NuevaContraseña.Size = new System.Drawing.Size(418, 29);
             this.NuevaContraseña.TabIndex = 13;
             // 
             // label6
@@ -133,7 +133,7 @@
             this.NuevoEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoEmail.Location = new System.Drawing.Point(222, 341);
             this.NuevoEmail.Name = "NuevoEmail";
-            this.NuevoEmail.Size = new System.Drawing.Size(202, 29);
+            this.NuevoEmail.Size = new System.Drawing.Size(418, 29);
             this.NuevoEmail.TabIndex = 18;
             this.NuevoEmail.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -157,7 +157,7 @@
             this.NuevoNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NuevoNombre.Location = new System.Drawing.Point(222, 239);
             this.NuevoNombre.Name = "NuevoNombre";
-            this.NuevoNombre.Size = new System.Drawing.Size(202, 29);
+            this.NuevoNombre.Size = new System.Drawing.Size(418, 29);
             this.NuevoNombre.TabIndex = 22;
             // 
             // BotonDesHacer2
@@ -191,7 +191,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(9, 396);
+            this.label3.Location = new System.Drawing.Point(9, 402);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 29);
             this.label3.TabIndex = 25;
@@ -201,10 +201,11 @@
             // OpcionSi
             // 
             this.OpcionSi.AutoSize = true;
-            this.OpcionSi.Location = new System.Drawing.Point(222, 408);
+            this.OpcionSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpcionSi.Location = new System.Drawing.Point(235, 408);
             this.OpcionSi.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionSi.Name = "OpcionSi";
-            this.OpcionSi.Size = new System.Drawing.Size(88, 17);
+            this.OpcionSi.Size = new System.Drawing.Size(117, 22);
             this.OpcionSi.TabIndex = 26;
             this.OpcionSi.TabStop = true;
             this.OpcionSi.Text = "Administrador";
@@ -214,10 +215,11 @@
             // OpcionNo
             // 
             this.OpcionNo.AutoSize = true;
-            this.OpcionNo.Location = new System.Drawing.Point(344, 408);
+            this.OpcionNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OpcionNo.Location = new System.Drawing.Point(420, 408);
             this.OpcionNo.Margin = new System.Windows.Forms.Padding(2);
             this.OpcionNo.Name = "OpcionNo";
-            this.OpcionNo.Size = new System.Drawing.Size(58, 17);
+            this.OpcionNo.Size = new System.Drawing.Size(75, 22);
             this.OpcionNo.TabIndex = 27;
             this.OpcionNo.TabStop = true;
             this.OpcionNo.Text = "Común";
@@ -230,7 +232,7 @@
             this.BotonCerrar.BackgroundImage = global::InterfaceGrafica.Properties.Resources._54528;
             this.BotonCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BotonCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCerrar.Location = new System.Drawing.Point(615, 19);
+            this.BotonCerrar.Location = new System.Drawing.Point(743, 19);
             this.BotonCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonCerrar.Name = "BotonCerrar";
             this.BotonCerrar.Size = new System.Drawing.Size(29, 29);
@@ -242,7 +244,7 @@
             // 
             this.BotonBuscar.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BotonBuscar.Location = new System.Drawing.Point(451, 98);
+            this.BotonBuscar.Location = new System.Drawing.Point(662, 98);
             this.BotonBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(109, 29);
@@ -254,13 +256,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Narrow", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei UI Light", 17.25F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(9, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 27);
+            this.label4.Size = new System.Drawing.Size(203, 29);
             this.label4.TabIndex = 29;
-            this.label4.Text = "Información acutal";
+            this.label4.Text = "Información actual";
             // 
             // InfoActual
             // 

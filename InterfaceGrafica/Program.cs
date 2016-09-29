@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Consola;
 using UssersGestion;
+using Mapeo;
 
 namespace InterfaceGrafica
 {
@@ -14,13 +15,15 @@ namespace InterfaceGrafica
         /// The main entry point for the application.
         /// </summary>
         /// 
-
+    
         //ATRIBUTOS GLOBALES//
         public static string usuario;
         public static TerminalConsola terminal;
         public static GestorDeUsuarios gestorDeUsuario;
         public static PantallaLogueo pantallaLog;
 
+        //public static MapManager mapper = new MapManager();
+       
         //METODOS GLOBALES//
         public static void setUsuario(string nameUsuario)
         {
@@ -42,6 +45,7 @@ namespace InterfaceGrafica
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //mapper.init();
             terminal = new TerminalConsola("Terminal de prueba", 5);
             gestorDeUsuario = new GestorDeUsuarios();
             PantallaDeCarga formPantallaDeCarga = new PantallaDeCarga(terminal, gestorDeUsuario);

@@ -28,7 +28,7 @@ namespace Mapper
                 db.ConnectionProvider<DriverConnectionProvider>();
                 db.Dialect<MsSql2012Dialect>();
                 db.Driver<SqlClientDriver>();
-                db.ConnectionString = @"Server=.\TPDDS2016;Database=tpdds2016;User=tpdds2016;Password=tpdds2016;";
+                db.ConnectionString = @"Data Source=localhost\SQLSERVER2012;Database=TPDDS2016;User=tpdds2016;Password=tpdds2016;";
                 db.BatchSize = 30;
                 db.KeywordsAutoImport = Hbm2DDLKeyWords.AutoQuote;
                 db.Timeout = 10;

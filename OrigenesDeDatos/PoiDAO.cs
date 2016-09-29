@@ -4,30 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibreriaClasesPoi;
-
+using Mapeo;
+using Mapper;
 
 namespace OrigenesDeDatos
 {
     public class PoiDAO
     {
         public List<POI> pois;
+        public MapManager mapper;
 
+        public void cerrar()
+        {
+            this.mapper.cerrar_transaccion();
+        }
+       
         //Constructor
         public PoiDAO()
         {
             this.pois = new List<POI>();
+            this.mapper = new MapManager();
+            mapper.init();
+            mapper.comenzar_transaccion();
             cargarPoisBasicos();
+            mapper.impactar_en_bd();
         }
 
         //Crear Poi//
         public void crear(POI unPoi)
         {
+            mapper.guardar_datos(unPoi);
             pois.Add(unPoi);
         }
 
         //Actualizar Poi//
         public void actualizar(POI unPoi)
         {
+            mapper.actualizar_datos(unPoi);
             borrar(unPoi.getId());
             crear(unPoi);
         }
@@ -70,7 +83,8 @@ namespace OrigenesDeDatos
 
             //Bancos//
 
-            Banco bancoNacion = new Banco( "banco nacion");
+            Banco bancoNacion = new Banco( "Banco Nacion");
+            bancoNacion.setDireccion("Av. Corrientes 4279");
             bancoNacion.agregarPalabraClave("banco nacion", "banco", "efectivo", "cambio", "dolar", "peso");
             bancoNacion.agregarServicioSinLimiteHorario("cobro cheques");
             bancoNacion.agregarServicioSinLimiteHorario("depositos");
@@ -80,9 +94,12 @@ namespace OrigenesDeDatos
             //Parada de colectivos//
 
             ParadaDeColectivo parada115Once = new ParadaDeColectivo("parada 115 once");
+            parada115Once.setDireccion("Bartolomé Mitre 2819");
             parada115Once.agregarPalabraClave("parada 115 once", "115", "bondi", "colectivo");
             listBased.Add(parada115Once);
+
             ParadaDeColectivo parada100Obelisco = new ParadaDeColectivo("parada 100 obelisco");
+            parada100Obelisco.setDireccion("Av. 9 de Julio 1043 ");
             parada100Obelisco.agregarPalabraClave("parada 100 once", "100", "bondi", "colectivo");
             listBased.Add(parada100Obelisco);
 

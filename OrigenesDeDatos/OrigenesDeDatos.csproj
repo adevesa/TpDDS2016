@@ -60,6 +60,14 @@
       <Project>{9004cccc-5c91-41a9-b5f1-e6e176f40c73}</Project>
       <Name>LibreriaClasesPoi</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Mapeo\Mapeo.csproj">
+      <Project>{79c0f072-134f-4981-bc07-278c1310ada2}</Project>
+      <Name>Mapeo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapper\Mapper.csproj">
+      <Project>{1561706c-37a1-490d-8460-030fdd716b36}</Project>
+      <Name>Mapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

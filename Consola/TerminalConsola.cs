@@ -48,7 +48,6 @@ namespace Consola
             this.comuna = comuna;
             this.duracionMaximaDeBusqueda = 50;
             this.buscador = new Buscador();
-
         }
 
 
@@ -102,6 +101,10 @@ namespace Consola
             this.setUsuarioActivo(null);
         }
 
+        public void cerrar()
+        {
+            buscador.cerrar();
+        }
                             //METODOS SECUNDARIOS//
         public List<string> mappearNombresPois(List<POI> pois)
         {

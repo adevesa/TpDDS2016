@@ -11,6 +11,10 @@ namespace LibreriaClasesPoi
     {
         
         //CONSTRUCTOR//
+        public ParadaDeColectivo()
+        {
+
+        }
         public ParadaDeColectivo(string nombre)
         {
             base.init(nombre);

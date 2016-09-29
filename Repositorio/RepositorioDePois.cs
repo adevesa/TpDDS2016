@@ -18,8 +18,6 @@ namespace Repositorio
         {
             localOrigin = new OrigenLocal();
             origenes = new List<Origenes>();
-            //buscadorDePOI = new Buscador();
-
         }
 
         public static RepositorioDePois getInstance()
@@ -31,7 +29,6 @@ namespace Repositorio
         //Atributos
         private List<Origenes> origenes;
         public OrigenLocal localOrigin { get; set; }
-        //public Buscador buscadorDePOI { get; set; }
         
         //Metodos 
     

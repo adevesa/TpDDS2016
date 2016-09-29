@@ -10,19 +10,23 @@ namespace Repositorio
 {
     public class Buscador
     {
-
+        RepositorioDePois repositorio;
         //Constructor//
         public Buscador()
         {
+            this.repositorio = RepositorioDePois.getInstance();
         }
+
         public List<POI> find(string criterio)
         {
-            RepositorioDePois repositorio = RepositorioDePois.getInstance();
             List<POI> poisBuscados = repositorio.localOrigin.find(criterio);
-
             return poisBuscados;
         }
 
+        public void cerrar()
+        {
+            repositorio.localOrigin.dao.cerrar();
+        }
         public List<string> mappearNombresPois(List<POI> pois)
         {
 
