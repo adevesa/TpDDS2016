@@ -54,10 +54,13 @@
   <ItemGroup>
     <Compile Include="BancoMap.cs" />
     <Compile Include="CGPMap.cs" />
+    <Compile Include="HorarioDeAtencionMap.cs" />
     <Compile Include="LocalComercialMap.cs" />
     <Compile Include="MapManager.cs" />
     <Compile Include="ParadaDeColectivoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicioMap.cs" />
+    <Compile Include="TurnoMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LibreriaClasesPoi\LibreriaClasesPoi.csproj">

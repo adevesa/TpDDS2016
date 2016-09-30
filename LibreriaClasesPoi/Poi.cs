@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CoordenadaGeografica;
-using HorariosDeAtencion;
 using Poi.GeneraciónDeIDs;
 using System.Globalization;
 using System.Threading;
@@ -19,8 +18,8 @@ namespace LibreriaClasesPoi
         private Coordenada coordenada;
         public virtual string Direccion { get; set; }
         public virtual int Comuna { get; set; }
-        private List<HorarioDeAtencion> horarioDeAtencion;
-        private List<string> palabrasClaves;
+        public virtual IList<HorarioDeAtencion> horarioDeAtencion { get; set; }
+        private IList<string> palabrasClaves;
         private  DateTime fechaDeBaja;
 
         //INIT
@@ -49,11 +48,11 @@ namespace LibreriaClasesPoi
 
         public virtual Coordenada getCoordenada() { return coordenada; }
 
-        public virtual List<string> getPalabrasClaves() { return palabrasClaves; }
+        public virtual List<string> getPalabrasClaves() { return (List<string>) palabrasClaves; }
 
         public virtual void setFechaDeBaja(DateTime fechaDeBaja) { this.fechaDeBaja = fechaDeBaja; }
         public virtual DateTime getFechaBaja() { return this.fechaDeBaja; }
-        public virtual List<HorarioDeAtencion> getHorarioDeAtencion() { return this.horarioDeAtencion; }
+        public virtual IList<HorarioDeAtencion> getHorarioDeAtencion() { return this.horarioDeAtencion; }
 
         //Metodos 
 
@@ -106,16 +105,14 @@ namespace LibreriaClasesPoi
         //* el hoarrio de cierre del turno. Agrega dicha informacion a la lista de hoariosDeAtencion.
         public virtual void agregarDiaYHorario(string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
         {
-            foreach(string dia in dias)
+            foreach (string dia in dias)
             {
                 HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
-                nuevoHorarioDeAtencion.setPoiId(this.Id);
                 nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
                 this.horarioDeAtencion.Add(nuevoHorarioDeAtencion);
             }
-            
-        }
 
+        }
         public virtual void agregarHorarioDeAtencion(HorarioDeAtencion horarioDeAtencion)
         {
             this.horarioDeAtencion.Add(horarioDeAtencion);
@@ -129,7 +126,7 @@ namespace LibreriaClasesPoi
             foreach(string palabra in palabras)
             {
                 if (this.getPalabrasClaves().Contains(palabra)) { }
-                else agregarElemA(this.palabrasClaves, palabra);
+                else agregarElemA(getPalabrasClaves(), palabra);
             }
         }
         public virtual void agregarElemA(List<string> lista, string palabra)

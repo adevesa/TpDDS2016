@@ -20,9 +20,6 @@ namespace Mapeo
             Property(paradaDeColectivo => paradaDeColectivo.Nombre, map => map.NotNullable(true));
             Property(paradaDeColectivo => paradaDeColectivo.Comuna, map => map.NotNullable(false));
             Property(paradaDeColectivo => paradaDeColectivo.Direccion, map => map.NotNullable(true));
-            
-
-
         }
 
     }

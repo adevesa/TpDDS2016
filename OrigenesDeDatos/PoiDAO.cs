@@ -25,9 +25,7 @@ namespace OrigenesDeDatos
             this.pois = new List<POI>();
             this.mapper = new MapManager();
             mapper.init();
-            mapper.comenzar_transaccion();
             cargarPoisBasicos();
-            mapper.impactar_en_bd();
         }
 
         //Crear Poi//

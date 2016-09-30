@@ -55,6 +55,8 @@
     <Compile Include="Banco.cs" />
     <Compile Include="CGP.cs" />
     <Compile Include="GeneraciónDeIDs\IDGenerator.cs" />
+    <Compile Include="Horarios\HorarioDeAtencion.cs" />
+    <Compile Include="Horarios\Turno.cs" />
     <Compile Include="Poi.cs" />
     <Compile Include="LocalComercial.cs" />
     <Compile Include="ParadaDeColectivo.cs" />
@@ -66,10 +68,6 @@
     <ProjectReference Include="..\CoordenadaGeografica\CoordenadaGeografica.csproj">
       <Project>{188f9533-3661-4e87-b199-71622a9f8d0b}</Project>
       <Name>CoordenadaGeografica</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HorariosDeAtencion\HorariosDeAtencion.csproj">
-      <Project>{c5440c21-bdf0-401d-873c-a136b55dac58}</Project>
-      <Name>HorariosDeAtencion</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

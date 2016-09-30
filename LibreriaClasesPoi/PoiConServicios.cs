@@ -10,10 +10,10 @@ namespace LibreriaClasesPoi
     public abstract class PoiConServicios:POI
     {
         //Atributos
-        private List<Servicio> servicios;
+        public virtual IList<Servicio> servicios { get; set; }
 
         //Getters
-        public virtual List<Servicio> getServicios() { return this.servicios; }
+        public virtual List<Servicio> getServicios() { return (List<Servicio>)this.servicios; }
 
                 //Metodos abstractos
 
@@ -50,7 +50,6 @@ namespace LibreriaClasesPoi
 
         public virtual void agregarServicio(Servicio servicio)
         {
-            servicio.setPoiId(this.getId());
             this.servicios.Add(servicio);
         }
 
@@ -68,7 +67,7 @@ namespace LibreriaClasesPoi
             agregarServicio(nuevoServicio);
         }
 
-        private Servicio buscarServicio(string servicioBuscado)
+        protected Servicio buscarServicio(string servicioBuscado)
         {
             Servicio service = new Servicio();
             service = this.getServicios().Find(unServico => unServico.servicioCoincide(servicioBuscado));

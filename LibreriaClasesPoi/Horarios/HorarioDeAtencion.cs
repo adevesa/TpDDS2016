@@ -3,26 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Poi.Servicios;
 
 
-namespace HorariosDeAtencion
+namespace LibreriaClasesPoi
 {
-    
+
     public class HorarioDeAtencion
     {
         //Atributos
-        public int Id { get; set; }
-        public int PoiId { get; set; }
-        public int ServicioId { get; set; }
-        public string Dia { get; set; }
-        private List<Turno> turnosDeAtencion;
+        public virtual int Id { get; set; }
+        public virtual Banco banco { get; set; }
+        public virtual CGP cgp { get; set; }
+        public virtual LocalComercial localComercial { get; set; }
+        public virtual Servicio servicio { get; set; }
+
+        public virtual string Dia { get; set; }
+        public virtual IList<Turno> turnosDeAtencion { get; set; }
 
         //Setters y getters
-        public void setDia(string dia) { this.Dia = dia; }
-        public string getDia(){ return this.Dia; }
-
-        public void setPoiId(int idPoi) { this.PoiId = idPoi; }
-        public void setServicioId(int idServicio) { this.ServicioId = idServicio; }
+        public virtual void setDia(string dia) { this.Dia = dia; }
+        public virtual string getDia(){ return this.Dia; }
 
         //Constructor
         public HorarioDeAtencion(string dia)
@@ -31,13 +32,18 @@ namespace HorariosDeAtencion
             this.turnosDeAtencion = new List<Turno>();
         }
 
+        public HorarioDeAtencion()
+        {
+
+        }
         //Metodos
 
         //* @name: agregarHorarioPorTurno
         //* @decryp: recibe un string ("mañana", "tarde", "noche") y dos int(hora inicio, hora fin)
-        public void agregarHorarioPorTurno(string turno, int horarioDeApertura, int horarioDeCierre)
+        public virtual void agregarHorarioPorTurno(string turno, int horarioDeApertura, int horarioDeCierre)
         {
             Turno nuevoTurno = new Turno(this.Id);
+            nuevoTurno.horarioDeAtencion = this;
             nuevoTurno.setNombreDelTurno(turno);
             nuevoTurno.setHorarioDeInicio(horarioDeApertura);
             nuevoTurno.setHorarioDeFin(horarioDeCierre);
@@ -47,7 +53,7 @@ namespace HorariosDeAtencion
 
         //* @name: estaDisponile
         //* @decryp: recibe hora y fecha actual y retorna un booleano para informar si la clase está disponible
-        public  bool estaDisponible(DateTime horarioYfechaActual)
+        public virtual bool estaDisponible(DateTime horarioYfechaActual)
         {
             string dia = horarioYfechaActual.ToString("dddd");
             if (this.getDia() !=dia)

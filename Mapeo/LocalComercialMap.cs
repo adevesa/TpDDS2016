@@ -13,8 +13,6 @@ namespace Mapeo
     {
         public LocalComercialMap()
         {
-            
-
             //* @define: genera un id automático
             Id(unLocalComercial => unLocalComercial.Id, map => map.Generator(Generators.HighLow, x => x.Params(new { max_low = 1800 })));
 
@@ -23,8 +21,14 @@ namespace Mapeo
             Property(unLocalComercial => unLocalComercial.Comuna, map => map.NotNullable(false));
             Property(unLocalComercial => unLocalComercial.Direccion, map => map.NotNullable(true));
             Property(unLocalComercial => unLocalComercial.CriterioDeCercania, map => map.NotNullable(false) );
-         
-
+            Bag(poi => poi.horarioDeAtencion, map =>
+            {
+                map.Key(x => x.Column("LocalComercialId"));
+                map.Table("LocalComercialHorarios");
+                map.Cascade(Cascade.All);
+            }, rel => rel.ManyToMany(horario => horario.Column("HorarioDeAtencionId"))
+              );
+        
         }
     }
 }

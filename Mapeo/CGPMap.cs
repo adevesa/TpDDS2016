@@ -24,7 +24,20 @@ namespace Mapeo
             Property(cgp => cgp.Telefono, map => map.NotNullable(false));
             Property(cgp => cgp.NombreDirector, map => map.NotNullable(false));
             Property(cgp => cgp.ZonasAledañas, map => map.NotNullable(false));
-
+            Bag(poi => poi.horarioDeAtencion, map =>
+            {
+                map.Key(x => x.Column("CGPId"));
+                map.Table("CGPHorarios");
+                map.Cascade(Cascade.All);
+            }, rel => rel.ManyToMany(horario => horario.Column("HorarioDeAtencionId"))
+              );
+            Bag(cgp => cgp.servicios, map =>
+            {
+                map.Key(x => x.Column("CGPId"));
+                map.Table("CGPServicios");
+                map.Cascade(Cascade.All);
+            }, rel => rel.ManyToMany(horario => horario.Column("ServicioId"))
+              );
         }
 
     }

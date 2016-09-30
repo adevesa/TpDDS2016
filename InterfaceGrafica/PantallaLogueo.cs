@@ -115,7 +115,6 @@ namespace InterfaceGrafica
        
         private void button1_Click_1(object sender, EventArgs e)
         {
-            terminal.cerrar();
             this.Close();
         }
 

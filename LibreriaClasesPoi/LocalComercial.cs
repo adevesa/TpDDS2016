@@ -36,9 +36,25 @@ namespace LibreriaClasesPoi
             base.init(nombre);
             this.rubros = new List<string>();
         }
-        
+
         //METODOS PRINCIPALES//
 
+
+        //* @name: agregarDiaYHorario(string dia, string turno, int apertura, int cierre) 
+        //* @decryp: recibe por parámetro un string día, un string turno (mañana, tarde o noche),
+        //* un int que representa el horario de apertura del turno y un int que representa
+        //* el hoarrio de cierre del turno. Agrega dicha informacion a la lista de hoariosDeAtencion.
+        public override void agregarDiaYHorario(string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
+        {
+            foreach (string dia in dias)
+            {
+                HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
+                nuevoHorarioDeAtencion.localComercial = this;
+                nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
+                this.horarioDeAtencion.Add(nuevoHorarioDeAtencion);
+            }
+
+        }
         //Cercania
         public override bool cercanoDe(POI poi)
         {

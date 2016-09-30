@@ -21,8 +21,21 @@ namespace Mapeo
             Property(banco => banco.Nombre, map => map.NotNullable(true));
             Property(banco => banco.Comuna, map => map.NotNullable(false));
             Property(banco => banco.Direccion, map => map.NotNullable(true));
-            
-
+            Bag(poi => poi.horarioDeAtencion, map =>
+                                                     {
+                                                         map.Key(x => x.Column("BancoId"));
+                                                         map.Table("BancoHorarios");
+                                                         map.Cascade(Cascade.All);
+                                                     }, rel => rel.ManyToMany( horario => horario.Column("HorarioDeAtencionId"))
+               );
+            Bag(banco => banco.servicios, map =>
+            {
+                map.Key(x => x.Column("BancoId"));
+                map.Table("BancoServicios");
+                map.Cascade(Cascade.All);
+            }, rel => rel.ManyToMany(horario => horario.Column("ServicioId"))
+              );
         }
     }
 }
+

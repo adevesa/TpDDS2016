@@ -49,8 +49,9 @@ namespace OrigenesDeDatos
         //Buscar//
         public List<POI> find(String criterio)
         {
-            return dao.pois.FindAll(poi => poi.buscarCoincidencia(criterio));
-
+            //return dao.pois.FindAll(poi => poi.buscarCoincidencia(criterio));
+            List<POI> lista = (List<POI>)dao.mapper.recuperar_pois(criterio);
+            return lista;
         }
 
         //Buscar poi x nombre

@@ -3,27 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HorariosDeAtencion;
+using LibreriaClasesPoi;
 
 namespace Poi.Servicios
 {
     public class Servicio
     {
         //Atributos
-        public int Id { get; set; }
-        public int PoiId { get; set; }
-        public string NombreServicio { get; set; }
-        private List<HorarioDeAtencion> horariosDeAtencion;
-        public bool NoTieneLimiteHorario { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string NombreServicio { get; set; }
+        public virtual Banco banco { get; set; }
+        public virtual CGP cgp { get; set; }
+        public virtual IList<HorarioDeAtencion> horariosDeAtencion { get; set; }
+        public virtual bool NoTieneLimiteHorario { get; set; }
 
         //Setters y getters
-        public void setNombreDelServicio(string nombre) { this.NombreServicio = nombre; }
-        public string getNombreDelServicio() { return this.NombreServicio; }
+        public virtual void setNombreDelServicio(string nombre) { this.NombreServicio = nombre; }
+        public virtual string getNombreDelServicio() { return this.NombreServicio; }
 
-        public void setNoTieneLimiteHorario(bool valorDeVerdad) { this.NoTieneLimiteHorario = valorDeVerdad; }
-        public bool getNoTieneLimiteHorario() { return this.NoTieneLimiteHorario; }
+        public virtual void setNoTieneLimiteHorario(bool valorDeVerdad) { this.NoTieneLimiteHorario = valorDeVerdad; }
+        public virtual bool getNoTieneLimiteHorario() { return this.NoTieneLimiteHorario; }
 
-        public void setPoiId(int idPoi) { this.PoiId = idPoi; }
         //Constructor
         public Servicio()
         {
@@ -34,7 +34,7 @@ namespace Poi.Servicios
 
         //* @name: servicioCoincide(string)
         //* @decryp: recibe un string  y verifica si el nombre del servicio es igual al string recibido.
-        public bool servicioCoincide(string palabraBuscada)
+        public virtual bool servicioCoincide(string palabraBuscada)
         {
             return this.getNombreDelServicio() == palabraBuscada;
         }
@@ -42,12 +42,12 @@ namespace Poi.Servicios
         //* @name: agregarDiaYHorario(string dia, string turno, int inico, int fin)
         //* @decryp: crea un nueo objeto "horario de atencion" con sus atributos correspondientes y los agrega
         //* a la lista de horariosDeAtencion
-        public void agregarDiaYHorario(string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
+        public virtual void agregarDiaYHorario(string turno, int horarioDeApertura, int horarioDeCierre, params string[] dias)
         {
             foreach (string dia in dias)
             {
                 HorarioDeAtencion nuevoHorarioDeAtencion = new HorarioDeAtencion(dia);
-                nuevoHorarioDeAtencion.setPoiId(this.Id);
+                nuevoHorarioDeAtencion.servicio = this;
                 nuevoHorarioDeAtencion.agregarHorarioPorTurno(turno, horarioDeApertura, horarioDeCierre);
                 this.horariosDeAtencion.Add(nuevoHorarioDeAtencion);
             }
@@ -55,7 +55,7 @@ namespace Poi.Servicios
         //* @name: estaDisponible(DateTime horarioYfechaActual)
         //* @decryp: recibe un objeto de la clase DateTime y verifica si el poi se encuentra
         //* disponible en dicho horario y fecha.
-        public bool estaDisponible(DateTime horarioYfecha)
+        public virtual bool estaDisponible(DateTime horarioYfecha)
         {
             if (NoTieneLimiteHorario)
             {

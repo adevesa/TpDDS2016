@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Repositorio;
 using LibreriaClasesPoi;
-using HorariosDeAtencion;
 
 namespace InterfaceGrafica
 {

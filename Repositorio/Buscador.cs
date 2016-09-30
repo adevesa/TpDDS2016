@@ -10,7 +10,7 @@ namespace Repositorio
 {
     public class Buscador
     {
-        RepositorioDePois repositorio;
+        public RepositorioDePois repositorio;
         //Constructor//
         public Buscador()
         {
